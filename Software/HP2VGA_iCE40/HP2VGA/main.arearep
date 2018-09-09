@@ -11,15 +11,15 @@ I/O cells:      0
                            SB_DFFSR        11          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        39          100.0
-                            SB_LUT4        84          100.0
+                            SB_LUT4        88          100.0
                       SB_PLL40_CORE         1          100.0
 SUB MODULES
                           O_COUNTER         1
                                  RX         1
                                  TX         1
                              TX_PLL         1
-                        vga_control         1
-                              TOTAL       187
+                        VGA_CONTROL         1
+                              TOTAL       191
 ----------------------------------------------------------------------
 Report for cell RX.v1
 Instance Path : receive_module
@@ -29,7 +29,7 @@ Instance Path : receive_module
                              SB_DFF         1          100.0
                             SB_DFFE         1          100.0
                           SB_DFFESR         6           33.3
-                            SB_LUT4        13           15.5
+                            SB_LUT4        13           14.8
 SUB MODULES
                           O_COUNTER         1
                               TOTAL        27
@@ -42,7 +42,7 @@ Instance Path : receive_module.rx_counter
                              SB_DFF         1          100.0
                             SB_DFFE         1          100.0
                           SB_DFFESR         6           33.3
-                            SB_LUT4        13           15.5
+                            SB_LUT4        13           14.8
                               TOTAL        26
 ----------------------------------------------------------------------
 Report for cell TX.v1
@@ -52,20 +52,20 @@ Instance Path : transmit_module
                            SB_CARRY        21           80.8
                           SB_DFFESR        12           66.7
                            SB_DFFSR        11          100.0
-                            SB_LUT4        71           84.5
+                            SB_LUT4        75           85.2
 SUB MODULES
-                        vga_control         1
-                              TOTAL       116
+                        VGA_CONTROL         1
+                              TOTAL       120
 ----------------------------------------------------------------------
-Report for cell vga_control.v1
+Report for cell VGA_CONTROL.v1
 Instance Path : transmit_module.video_signal_controller
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        21           80.8
                           SB_DFFESR        12           66.7
                            SB_DFFSR        11          100.0
-                            SB_LUT4        71           84.5
-                              TOTAL       115
+                            SB_LUT4        75           85.2
+                              TOTAL       119
 ----------------------------------------------------------------------
 Report for cell TX_PLL.v1
 Instance Path : tx_pll

@@ -38,7 +38,7 @@ module TX(
     wire VGA_VISIBLE;
     wire unsigned [11:0] VGA_X, VGA_Y;
     wire [7:0] DEBUG_VIDEO_R, DEBUG_VIDEO_G, DEBUG_VIDEO_B;
-    vga_control video_signal_controller(    .VIDEO_CLK(CLK), //CLK input at correct pixel frequency
+    VGA_CONTROL video_signal_controller(    .VIDEO_CLK(CLK), //CLK input at correct pixel frequency
                                             .ENABLE(ENABLE), //enable module
                                             .RESET(0), //resets device
                                             .VGA_X_O(VGA_X), //x position of vga
@@ -51,9 +51,6 @@ module TX(
                                             .VGA_BLUE(DEBUG_VIDEO_B),
                                             .SYNC(VGA_SYNC),
                                             .SYNC_EN(VGA_SYNC_EN));
-    
-    //TODO This line should be moved inside vga controller
-    wire DISP_VISIBLE = VGA_VISIBLE && VGA_X < 1024 && VGA_Y < 600;
     
     assign VGA_R = VGA_VISIBLE ? DEBUG_VIDEO_R : 0;
     assign VGA_G = VGA_VISIBLE ? DEBUG_VIDEO_G : 0;
@@ -80,7 +77,7 @@ module TX(
         //VGA_SYNC_BUFFER2 <= VGA_SYNC_BUFFER;
         //VGA_VIDEO <= DISP_VISIBLE_DELAY ? BRAM_DOUT : 0; //clock in new data
         
-        BRAM_ADDR <= DISP_VISIBLE ? ((VGA_X*576)>>10) + ((VGA_Y*378)/600)*576 : 0; //set up address for next pixel 
+        BRAM_ADDR <= VGA_VISIBLE ? ((VGA_X*576)>>10) + ((VGA_Y*378)/600)*576 : 0; //set up address for next pixel 
     end
     
 endmodule

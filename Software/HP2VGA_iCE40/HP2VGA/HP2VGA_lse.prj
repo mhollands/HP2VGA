@@ -31,11 +31,11 @@
 
 -ver "../main.v"
 -ver "../TX_PLL.v"
--ver "../vga_control.v"
 -ver "../RAM.v"
 -ver "../TX.v"
 -ver "../RX.v"
 -ver "../O_COUNTER.v"
+-ver "../VGA_CONTROL.v"
 -p "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/HP2VGA"
 
 #set result format/file last

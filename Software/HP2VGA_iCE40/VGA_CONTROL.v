@@ -23,7 +23,7 @@
  //At each pixel clock we increment the VGA_X location. After one full line we increment VGA_Y and reset VGA_X to zero.
  //VGA_X = 0  is at the start of the back porch
  // The order of events from (VGA_X, VGA_Y) = (0,0) is FRONT_PORCH, SYNC, BACK_PORCH, VIDEO (for both vertical and horizontal)
-module vga_control( input VIDEO_CLK, //CLK input at correct pixel frequency
+module VGA_CONTROL( input VIDEO_CLK, //CLK input at correct pixel frequency
                     input ENABLE, //enable module
                     input RESET, //resets device
                     output wire [11:0] VGA_X_O, //x position of vga video
@@ -51,7 +51,7 @@ module vga_control( input VIDEO_CLK, //CLK input at correct pixel frequency
 
     reg [11:0] VGA_X, VGA_Y;
     //TODO should this also only be when VGA_Y is less than V_TOTAL as it can now go higher than that due to sync
-    assign VGA_VISIBLE = (VGA_X >= H_BACK_PORCH + H_SYNC_PULSE + H_FRONT_PORCH) && (VGA_Y >= V_BACK_PORCH + V_SYNC_PULSE + V_FRONT_PORCH);
+    assign VGA_VISIBLE = (VGA_X >= H_BACK_PORCH + H_SYNC_PULSE + H_FRONT_PORCH) && (VGA_Y >= V_BACK_PORCH + V_SYNC_PULSE + V_FRONT_PORCH) && (VGA_Y < V_TOTAL) && (VGA_X < H_TOTAL);
     assign VGA_HS = ~((VGA_X >= H_FRONT_PORCH) && (VGA_X < H_FRONT_PORCH + H_SYNC_PULSE));
     assign VGA_VS = ((VGA_Y >= V_FRONT_PORCH) && (VGA_Y < V_FRONT_PORCH + V_SYNC_PULSE));  
 

@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Sep 09 06:22:51 2018
+Sun Sep 09 19:07:20 2018
 
 
 Command Line:  C:\lscc\iCEcube2.2017.08\LSE\bin\nt\synthesis.exe -f HP2VGA_lse.prj 
@@ -69,11 +69,11 @@ The -syn option is FALSE.
 -p E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/HP2VGA (searchpath added)
 Verilog design file = ../main.v
 Verilog design file = ../TX_PLL.v
-Verilog design file = ../vga_control.v
 Verilog design file = ../RAM.v
 Verilog design file = ../TX.v
 Verilog design file = ../RX.v
 Verilog design file = ../O_COUNTER.v
+Verilog design file = ../VGA_CONTROL.v
 -sdc option: SDC file input not used.
 Technology check ok...
 
@@ -83,7 +83,6 @@ Compile design.
 Compile Design Begin
 Analyzing Verilog file ../main.v. VERI-1482
 Analyzing Verilog file ../tx_pll.v. VERI-1482
-Analyzing Verilog file ../vga_control.v. VERI-1482
 Analyzing Verilog file ../ram.v. VERI-1482
 Analyzing Verilog file ../tx.v. VERI-1482
 WARNING - synthesis: ../tx.v(39): keyword 'unsigned' is not allowed here in this mode of verilog. VERI-1411
@@ -96,6 +95,7 @@ WARNING - synthesis: ../o_counter.v(46): identifier Y is used before its declara
 WARNING - synthesis: ../o_counter.v(47): identifier X is used before its declaration. VERI-1875
 WARNING - synthesis: ../o_counter.v(48): identifier Y is used before its declaration. VERI-1875
 WARNING - synthesis: ../o_counter.v(50): identifier Y is used before its declaration. VERI-1875
+Analyzing Verilog file ../vga_control.v. VERI-1482
 Analyzing Verilog file C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
 WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
 WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
@@ -122,7 +122,7 @@ WARNING - synthesis: ../o_counter.v(68): expression size 32 truncated to fit in 
 WARNING - synthesis: ../o_counter.v(78): expression size 32 truncated to fit in target size 6. VERI-1209
 WARNING - synthesis: ../main.v(35): actual bit length 1 differs from formal bit length 8 for port BRAM_DIN. VERI-1330
 INFO - synthesis: ../tx.v(23): compiling module TX. VERI-1018
-INFO - synthesis: ../vga_control.v(26): compiling module vga_control. VERI-1018
+INFO - synthesis: ../vga_control.v(26): compiling module VGA_CONTROL. VERI-1018
 WARNING - synthesis: ../vga_control.v(58): expression size 32 truncated to fit in target size 12. VERI-1209
 WARNING - synthesis: ../vga_control.v(59): expression size 32 truncated to fit in target size 12. VERI-1209
 WARNING - synthesis: ../vga_control.v(62): expression size 32 truncated to fit in target size 8. VERI-1209
@@ -131,10 +131,10 @@ WARNING - synthesis: ../vga_control.v(64): expression size 32 truncated to fit i
 WARNING - synthesis: ../vga_control.v(73): expression size 32 truncated to fit in target size 12. VERI-1209
 WARNING - synthesis: ../vga_control.v(79): expression size 32 truncated to fit in target size 12. VERI-1209
 WARNING - synthesis: ../tx.v(43): actual bit length 32 differs from formal bit length 1 for port RESET. VERI-1330
-WARNING - synthesis: ../tx.v(58): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: ../tx.v(59): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: ../tx.v(60): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: ../tx.v(83): expression size 32 truncated to fit in target size 14. VERI-1209
+WARNING - synthesis: ../tx.v(55): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: ../tx.v(56): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: ../tx.v(57): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: ../tx.v(80): expression size 32 truncated to fit in target size 14. VERI-1209
 WARNING - synthesis: ../main.v(47): actual bit length 32 differs from formal bit length 1 for port ENABLE. VERI-1330
 WARNING - synthesis: ../main.v(56): actual bit length 32 differs from formal bit length 1 for port VGA_SYNC_EN. VERI-1330
 Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
@@ -175,7 +175,7 @@ SB_DFFESR => 18
 SB_DFFSR => 11
 SB_GB_IO => 1
 SB_IO => 39
-SB_LUT4 => 84
+SB_LUT4 => 88
 SB_PLL40_CORE => 1
 ################### End Area Report ##################
 
@@ -190,15 +190,15 @@ Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : transmit_module/video_signal_controller/VGA_VISIBLE, loads : 24
-  Net : transmit_module/video_signal_controller/n310, loads : 23
-  Net : transmit_module/video_signal_controller/n761, loads : 12
-  Net : receive_module/rx_counter/n1017, loads : 7
-  Net : transmit_module/video_signal_controller/VGA_Y_6, loads : 7
-  Net : transmit_module/video_signal_controller/VGA_Y_1, loads : 7
-  Net : transmit_module/video_signal_controller/VGA_Y_2, loads : 7
-  Net : transmit_module/video_signal_controller/VGA_Y_4, loads : 7
-  Net : transmit_module/video_signal_controller/VGA_Y_5, loads : 7
-  Net : transmit_module/video_signal_controller/VGA_Y_3, loads : 7
+  Net : transmit_module/video_signal_controller/n336, loads : 24
+  Net : transmit_module/video_signal_controller/n346, loads : 12
+  Net : transmit_module/video_signal_controller/VGA_Y_3, loads : 8
+  Net : transmit_module/video_signal_controller/VGA_Y_2, loads : 8
+  Net : transmit_module/video_signal_controller/VGA_Y_1, loads : 8
+  Net : transmit_module/video_signal_controller/VGA_Y_4, loads : 8
+  Net : receive_module/rx_counter/n1197, loads : 7
+  Net : transmit_module/video_signal_controller/VGA_X_7, loads : 7
+  Net : transmit_module/video_signal_controller/VGA_X_5, loads : 7
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -208,10 +208,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
-clk1 [get_nets ADV_CLK_c]               |            -|            -|     0  
+clk1 [get_nets TVP_CLK_c]               |   50.000 MHz|   91.249 MHz|     7  
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
-clk0 [get_nets TVP_CLK_c]               |   50.000 MHz|   91.249 MHz|     7  
+clk0 [get_nets ADV_CLK_c]               |            -|            -|     0  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -219,8 +219,8 @@ clk0 [get_nets TVP_CLK_c]               |   50.000 MHz|   91.249 MHz|     7
 All constraints were met.
 
 
-Peak Memory Usage: 39.020  MB
+Peak Memory Usage: 38.707  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.344  secs
+Elapsed CPU time for LSE flow : 1.547  secs
 --------------------------------------------------------------
