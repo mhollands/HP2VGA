@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:12:22
 
-* File Generated:     Sep 9 2018 01:26:40
+* File Generated:     Sep 9 2018 06:15:23
 
 * Purpose:            
 
@@ -35,8 +35,8 @@ I2053: Starting placement of the design
 =============================================================
 
 Input Design Statistics
-    Number of LUTs      	:	80
-    Number of DFFs      	:	30
+    Number of LUTs      	:	81
+    Number of DFFs      	:	31
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	26
     Number of RAMs      	:	0
@@ -50,19 +50,18 @@ Input Design Statistics
 
 Phase 1
 I2077: Start design legalization
-W2216: SB_GB_IO 'TVP_VSYNC_pad' is assigned to a non-GB pin 'J5'. Replacing it with SB_IO 'TVP_VSYNC_pad' and SB_GB 'TVP_VSYNC_pad_gb'
 
 Design Legalization Statistics
-    Number of feedthru LUTs inserted to legalize input of DFFs     	:	0
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	1
     Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
     Number of LUTs replicated for LUTs driving multiple DFFs       	:	0
     Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
-    Number of feedthru LUTs inserted to legalize global signals    	:	0
+    Number of feedthru LUTs inserted to legalize global signals    	:	1
     Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
-    Total LUTs inserted                                            	:	0
+    Total LUTs inserted                                            	:	2
     Total CARRYs inserted                                          	:	0
 
 
@@ -78,23 +77,23 @@ SDC-Info-1101: Duty cycle not specified for clock. Assuming 50 percent dutycycle
 SDC-Info-1101: Duty cycle not specified for clock. Assuming 50 percent dutycycle.
 Info-1404: Inferred PLL generated clock at tx_pll.TX_PLL_inst/PLLOUTCORE
 Info-1404: Inferred PLL generated clock at tx_pll.TX_PLL_inst/PLLOUTGLOBAL
-Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "TVP_VSYNC_pad", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "in3" to pin "lcout" of instance "GB_BUFFER_TVP_CLK_c_THRU_LUT4_0_LC_82", in the clock network. Converting the timing arc to positive-unate
 
 Design Statistics after Packing
-    Number of LUTs      	:	81
-    Number of DFFs      	:	30
+    Number of LUTs      	:	84
+    Number of DFFs      	:	31
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	26
 
 Device Utilization Summary after Packing
     Sequential LogicCells
-        LUT and DFF      	:	4
+        LUT and DFF      	:	5
         LUT, DFF and CARRY	:	26
     Combinational LogicCells
-        Only LUT         	:	51
+        Only LUT         	:	53
         CARRY Only       	:	0
         LUT with CARRY   	:	0
-    LogicCells                  :	81/7680
+    LogicCells                  :	84/7680
     PLBs                        :	12/960
     BRAMs                       :	0/32
     IOs and GBIOs               :	40/93
@@ -110,24 +109,24 @@ Phase 5
 I2088: Phase 5, elapsed time : 0.1 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 13.8 (sec)
+I2088: Phase 6, elapsed time : 18.9 (sec)
 
 Final Design Statistics
-    Number of LUTs      	:	81
-    Number of DFFs      	:	30
+    Number of LUTs      	:	84
+    Number of DFFs      	:	31
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	26
     Number of RAMs      	:	0
     Number of ROMs      	:	0
-    Number of IOs       	:	40
-    Number of GBIOs     	:	0
-    Number of GBs       	:	1
+    Number of IOs       	:	39
+    Number of GBIOs     	:	1
+    Number of GBs       	:	0
     Number of WarmBoot  	:	0
     Number of PLLs      	:	1
 
 Device Utilization Summary
-    LogicCells                  :	81/7680
-    PLBs                        :	25/960
+    LogicCells                  :	84/7680
+    PLBs                        :	33/960
     BRAMs                       :	0/32
     IOs and GBIOs               :	40/93
     PLLs                        :	1/2
@@ -146,10 +145,10 @@ analysis after routing.
                      Clock Summary 
 =====================================================================
 Number of clocks: 5
-Clock: TVP_CLK | Frequency: N/A | Target: 20.00 MHz
-Clock: TVP_VSYNC | Frequency: 245.52 MHz | Target: 0.00 MHz
-Clock: main|TVP_VSYNC | Frequency: N/A | Target: 100.00 MHz
-Clock: tx_pll.TX_PLL_inst/PLLOUTCORE | Frequency: 165.74 MHz | Target: 48.75 MHz
+Clock: TVP_CLK | Frequency: 275.61 MHz | Target: 20.00 MHz
+Clock: TVP_VSYNC | Frequency: N/A | Target: 0.00 MHz
+Clock: main|TVP_CLK | Frequency: N/A | Target: 50.00 MHz
+Clock: tx_pll.TX_PLL_inst/PLLOUTCORE | Frequency: 163.76 MHz | Target: 48.75 MHz
 Clock: tx_pll.TX_PLL_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 48.75 MHz
 
 =====================================================================
@@ -158,5 +157,5 @@ Clock: tx_pll.TX_PLL_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 48.75 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 15.9 sec.
+I2076: Placer run-time: 21.3 sec.
 

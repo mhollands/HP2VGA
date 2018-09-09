@@ -1,22 +1,18 @@
-@P:  Worst Slack : -1.169
-@P:  TX_PLL|PLLOUTCORE_derived_clock - Estimated Frequency : 128.4 MHz
-@P:  TX_PLL|PLLOUTCORE_derived_clock - Requested Frequency : 151.0 MHz
-@P:  TX_PLL|PLLOUTCORE_derived_clock - Estimated Period : 7.790
-@P:  TX_PLL|PLLOUTCORE_derived_clock - Requested Period : 6.622
-@P:  TX_PLL|PLLOUTCORE_derived_clock - Slack : -1.169
-@P:  main|TVP_CLK - Estimated Frequency : NA
-@P:  main|TVP_CLK - Requested Frequency : 151.0 MHz
-@P:  main|TVP_CLK - Estimated Period : NA
-@P:  main|TVP_CLK - Requested Period : 6.622
-@P:  main|TVP_CLK - Slack : NA
-@P:  main|TVP_VSYNC - Estimated Frequency : 166.1 MHz
-@P:  main|TVP_VSYNC - Requested Frequency : 195.4 MHz
-@P:  main|TVP_VSYNC - Estimated Period : 6.020
-@P:  main|TVP_VSYNC - Requested Period : 5.117
-@P:  main|TVP_VSYNC - Slack : -0.903
-@P: main Part : ice40hx8kct256
-@P: main I/O primitives : 34
-@P: main I/O Register bits : 0
-@P: main Register bits (Non I/O) : 30 (0%)
-@P: main Total Luts : 83 (1%)
+@P:  Worst Slack : NA
+@P:  RAM|rclk - Estimated Frequency : NA
+@P:  RAM|rclk - Requested Frequency : 1.0 MHz
+@P:  RAM|rclk - Estimated Period : NA
+@P:  RAM|rclk - Requested Period : 1000.000
+@P:  RAM|rclk - Slack : NA
+@P:  RAM|wclk - Estimated Frequency : NA
+@P:  RAM|wclk - Requested Frequency : 1.0 MHz
+@P:  RAM|wclk - Estimated Period : NA
+@P:  RAM|wclk - Requested Period : 1000.000
+@P:  RAM|wclk - Slack : NA
+@P: RAM Part : ice40hx8kct256
+@P: RAM I/O primitives : 47
+@P: RAM I/O Register bits : 0
+@P: RAM Register bits (Non I/O) : 3 (0%)
+@P: RAM Block Rams : 32 of 32 (100%)
+@P: RAM Total Luts : 64 (0%)
 @P:  CPU Time : 0h:00m:01s

@@ -32,7 +32,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Bui
 ProjectName=HP2VGA
 Vendor=SiliconBlue
 Synthesis=lse
-ProjectVFiles=../main.v=work,../TX_PLL.v,../vga_control.v,../RAM.v
+ProjectVFiles=../main.v=work,../TX_PLL.v,../vga_control.v,../RAM.v,../TX.v,../RX.v
 ProjectCFiles=
 CurImplementation=HP2VGA_Implmnt
 Implementations=HP2VGA_Implmnt
@@ -60,8 +60,8 @@ RWCheckOnRam=False
 RemoveDuplicateRegisters=True
 ResolvedMixedDrivers=False
 ResourceSharing=True
-TargetFrequency=
-TopLevelUnit=
+TargetFrequency=50
+TopLevelUnit=main
 UseIORegister=Auto
 VHDL2008=False
 VerilogIncludeSearchPath=

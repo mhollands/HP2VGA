@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Sep 9 2018 01:27:00
+* File Generated:     Sep 9 2018 06:15:48
 
 * Purpose:            Detailed IO and package pin info
 
@@ -123,7 +123,7 @@ K2, PIO, not used, , , , , , leftBank
 K3, PIO, not used, , , , , , bottomBank
 K4, PIO, not used, , , , , , bottomBank
 K5, PIO, not used, , , , , , bottomBank
-K6, PIO_GBIN, TVP_CLK, Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
+K6, PIO_GBIN, TVP_CLK, Input, glb Buff, SB_LVCMOS, Pull Up, Simple Input, bottomBank
 K7, PIO, not used, , , , , , bottomBank
 K8, CDONE, not used, , , , , , bottomBank
 K9, SPI_SO, not used, , , , , , bottomBank

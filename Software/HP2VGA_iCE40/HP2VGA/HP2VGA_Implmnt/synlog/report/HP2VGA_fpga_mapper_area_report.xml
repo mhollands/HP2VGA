@@ -9,18 +9,18 @@ The file contains the area information from mapper to be displayed as part of th
 <title>Resource Usage</title>
 </report_link>
 <parameter tooltip="Total PADS used" name="PADS">
-<data>41</data>
+<data>47</data>
 </parameter>
 <parameter tooltip="Total FLOPS used" name="FLOPS">
-<data>30</data>
+<data>3</data>
 </parameter>
 <parameter tcl_name="v_ram" tooltip="Total RAMS used" name="RAMS">
-<data>0</data>
+<data>32</data>
 </parameter>
 <parameter tooltip="Total CARRYS used" name="CARRYS">
-<data>26</data>
+<data>0</data>
 </parameter>
 <parameter tcl_name="total_luts" tooltip="Total LUTS used" name="LUTS">
-<data>83</data>
+<data>64</data>
 </parameter>
 </report_table>

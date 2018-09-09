@@ -9,6 +9,7 @@
 # ##############################################################################
 
 ####---- CreateClock list ----1
+//TODO need to create TX_PLL clock
 create_clock  -period 50.00 -name {TVP_CLK} [get_ports {TVP_CLK}] 
 create_clock  -period 16666666.67 -name {TVP_VSYNC} [get_ports {TVP_VSYNC}] 
 

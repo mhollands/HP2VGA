@@ -7,6 +7,7 @@ add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE4
 add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/TX_PLL.v"
 add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/vga_control.v"
 add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/RAM.v"
+add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/TX.v"
 
 
 

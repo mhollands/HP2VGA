@@ -1,30 +1,56 @@
 ----------------------------------------------------------------------
 Report for cell main.TECH
-Register bits:  30 of 7680 (0.391%)
+Register bits:  31 of 7680 (0.404%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        26          100.0
                              SB_DFF         1          100.0
-                          SB_DFFESR        12          100.0
-                           SB_DFFSR        17          100.0
+                            SB_DFFE         1          100.0
+                          SB_DFFESR        18          100.0
+                           SB_DFFSR        11          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        39          100.0
-                            SB_LUT4        80          100.0
+                            SB_LUT4        81          100.0
                       SB_PLL40_CORE         1          100.0
 SUB MODULES
+                                 RX         1
+                                 TX         1
                              TX_PLL         1
                         vga_control         1
-                              TOTAL       179
+                              TOTAL       183
 ----------------------------------------------------------------------
-Report for cell vga_control.v1
-Instance Path : video_signal_controller
+Report for cell RX.v1
+Instance Path : receive_module
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY         5           19.2
+                             SB_DFF         1          100.0
+                            SB_DFFE         1          100.0
+                          SB_DFFESR         6           33.3
+                            SB_LUT4        12           14.8
+                              TOTAL        25
+----------------------------------------------------------------------
+Report for cell TX.v1
+Instance Path : transmit_module
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        21           80.8
-                          SB_DFFESR        12          100.0
-                           SB_DFFSR        11           64.7
-                            SB_LUT4        69           86.3
+                          SB_DFFESR        12           66.7
+                           SB_DFFSR        11          100.0
+                            SB_LUT4        69           85.2
+SUB MODULES
+                        vga_control         1
+                              TOTAL       114
+----------------------------------------------------------------------
+Report for cell vga_control.v1
+Instance Path : transmit_module.video_signal_controller
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        21           80.8
+                          SB_DFFESR        12           66.7
+                           SB_DFFSR        11          100.0
+                            SB_LUT4        69           85.2
                               TOTAL       113
 ----------------------------------------------------------------------
 Report for cell TX_PLL.v1

@@ -1,0 +1,13 @@
+----------------------------------------------------------------------
+Report for cell vga_control.TECH
+Register bits:  24 of 7680 (0.313%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        38          100.0
+                             SB_DFF         6          100.0
+                            SB_DFFE        18          100.0
+                           SB_GB_IO         1          100.0
+                              SB_IO        55          100.0
+                            SB_LUT4       120          100.0
+                              TOTAL       238

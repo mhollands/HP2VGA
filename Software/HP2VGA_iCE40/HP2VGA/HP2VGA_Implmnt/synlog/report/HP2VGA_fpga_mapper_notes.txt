@@ -1,14 +1,14 @@
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 @N: MT206 |Auto Constrain mode is enabled
-@N: MO231 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\vga_control.v":67:4:67:9|Found counter in view:work.vga_control(verilog) instance VGA_Y[11:0] 
-@N: FX271 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\vga_control.v":72:15:72:34|Replicating instance video_signal_controller.VGA_X11lto10_0 (in view: work.main(verilog)) with 23 loads 1 time to improve timing.
-@N: FX1017 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\main.v":19:8:19:13|SB_GB inserted on the net ADV_CLK_c.
-@N: FX1016 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\main.v":5:12:5:20|SB_GB_IO inserted on the port TVP_VSYNC.
+@N: MF794 |RAM mem[7:0] required 3 registers during mapping 
+@N: MF794 |RAM mem[7:0] required 3 registers during mapping 
+@N: MF794 |RAM mem[7:0] required 3 registers during mapping 
+@N: FX1016 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v":6:23:6:26|SB_GB_IO inserted on the port rclk.
+@N: FX1016 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v":6:17:6:20|SB_GB_IO inserted on the port wclk.
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
 @N: FX1056 |Writing EDF file: E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.edf
-@N: MT615 |Found clock TX_PLL|PLLOUTCORE_derived_clock with period 6.62ns 
 @N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
 @N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
 @N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack

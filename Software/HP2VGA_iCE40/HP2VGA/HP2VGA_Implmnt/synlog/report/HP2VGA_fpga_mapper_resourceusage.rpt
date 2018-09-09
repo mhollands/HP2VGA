@@ -1,29 +1,27 @@
 ---------------------------------------
-Resource Usage Report for main 
+Resource Usage Report for RAM 
 
 Mapping to part: ice40hx8kct256
 Cell usage:
-GND             2 uses
-SB_CARRY        26 uses
-SB_DFF          7 uses
-SB_DFFE         12 uses
-SB_DFFSR        11 uses
-SB_GB           1 use
-SB_PLL40_CORE   1 use
-VCC             2 uses
-SB_LUT4         83 uses
+SB_DFF          3 uses
+SB_RAM2048x2    32 uses
+SB_LUT4         64 uses
 
-I/O ports: 41
-I/O primitives: 34
-SB_GB_IO       1 use
-SB_IO          33 uses
+I/O ports: 47
+I/O primitives: 47
+SB_GB_IO       2 uses
+SB_IO          45 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   30 (0%)
+Register bits not including I/Os:   3 (0%)
+
+RAM/ROM usage summary
+Block Rams : 32 of 32 (100%)
+
 
 @S |Mapping Summary:
-Total  LUTs: 83 (1%)
+Total  LUTs: 64 (0%)
 
 Distribution of All Consumed LUTs = LUT4 
-Distribution of All Consumed Luts 83 = 83 
+Distribution of All Consumed Luts 64 = 64 
 

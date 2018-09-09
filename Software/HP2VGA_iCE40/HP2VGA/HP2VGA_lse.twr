@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Sun Sep 09 01:26:36 2018
+Sun Sep 09 04:16:20 2018
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -10,7 +10,7 @@ Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Design:     main
+Design:     vga_control
 Constraint file:  
 Report level:    verbose report, limited to 3 items per constraint
 --------------------------------------------------------------------------------
@@ -18,122 +18,160 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 10.000000 -name clk1 [get_nets TVP_VSYNC_c]
-            64 items scored, 1 timing error detected.
+Constraint: create_clock -period 10.000000 -name clk0 [get_nets VIDEO_CLK_c]
+            594 items scored, 80 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 0.959ns
+Error:  The following path violates requirements by 11.979ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFSR   C              FRAME_COUNTER_63__i0  (from TVP_VSYNC_c +)
-   Destination:    SB_DFFSR   D              FRAME_COUNTER_63__i5  (to TVP_VSYNC_c +)
+   Source:         SB_DFF     C              VGA_Y__i1  (from VIDEO_CLK_c +)
+   Destination:    SB_DFFE    D              VGA_Y__i12  (to VIDEO_CLK_c +)
 
-   Delay:                  10.826ns  (26.0% logic, 74.0% route), 7 logic levels.
+   Delay:                  21.846ns  (26.0% logic, 74.0% route), 14 logic levels.
 
  Constraint Details:
 
-     10.826ns data_path FRAME_COUNTER_63__i0 to FRAME_COUNTER_63__i5 violates
+     21.846ns data_path VGA_Y__i1 to VGA_Y__i12 violates
      10.000ns delay constraint less
-      0.133ns L_S requirement (totaling 9.867ns) by 0.959ns
+      0.133ns L_S requirement (totaling 9.867ns) by 11.979ns
 
- Path Details: FRAME_COUNTER_63__i0 to FRAME_COUNTER_63__i5
+ Path Details: VGA_Y__i1 to VGA_Y__i12
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              FRAME_COUNTER_63__i0 (from TVP_VSYNC_c)
-Route         3   e 1.339                                  FRAME_COUNTER[0]
-LUT4        ---     0.408             I1 to CO             FRAME_COUNTER_63_add_4_2
-Route         2   e 1.158                                  n543
-LUT4        ---     0.408             CI to CO             FRAME_COUNTER_63_add_4_3
-Route         2   e 1.158                                  n544
-LUT4        ---     0.408             CI to CO             FRAME_COUNTER_63_add_4_4
-Route         2   e 1.158                                  n545
-LUT4        ---     0.408             CI to CO             FRAME_COUNTER_63_add_4_5
-Route         2   e 1.158                                  n546
-LUT4        ---     0.408             CI to CO             FRAME_COUNTER_63_add_4_6
-Route         1   e 1.020                                  n547
-LUT4        ---     0.408             I3 to O              FRAME_COUNTER_63_add_4_7_lut
-Route         1   e 1.020                                  n30
+L_CO        ---     0.367              C to Q              VGA_Y__i1 (from VIDEO_CLK_c)
+Route         8   e 1.535                                  VGA_Y_O_c_0
+LUT4        ---     0.408             I0 to CO             add_54_2
+Route         2   e 1.158                                  n1832
+LUT4        ---     0.408             CI to CO             add_54_3
+Route         2   e 1.158                                  n1833
+LUT4        ---     0.408             CI to CO             add_54_4
+Route         2   e 1.158                                  n1834
+LUT4        ---     0.408             CI to CO             add_54_5
+Route         2   e 1.158                                  n1835
+LUT4        ---     0.408             CI to CO             add_54_6
+Route         2   e 1.158                                  n1836
+LUT4        ---     0.408             CI to CO             add_54_7
+Route         2   e 1.158                                  n1837
+LUT4        ---     0.408             CI to CO             add_54_8
+Route         2   e 1.158                                  n1838
+LUT4        ---     0.408             CI to CO             add_54_9
+Route         2   e 1.158                                  n1839
+LUT4        ---     0.408             CI to CO             add_54_10
+Route         2   e 1.158                                  n1840
+LUT4        ---     0.408             CI to CO             add_54_11
+Route         2   e 1.158                                  n1841
+LUT4        ---     0.408             CI to CO             add_54_12
+Route         1   e 1.020                                  n1842
+LUT4        ---     0.408             I3 to O              add_54_13_lut
+Route         1   e 1.020                                  n526
+LUT4        ---     0.408             I2 to O              i1_2_lut_3_lut
+Route         1   e 1.020                                  n14
                   --------
-                   10.826  (26.0% logic, 74.0% route), 7 logic levels.
+                   21.846  (26.0% logic, 74.0% route), 14 logic levels.
 
 
-Passed:  The following path meets requirements by 0.469ns
+Error:  The following path violates requirements by 11.922ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFSR   C              FRAME_COUNTER_63__i0  (from TVP_VSYNC_c +)
-   Destination:    SB_DFFSR   D              FRAME_COUNTER_63__i4  (to TVP_VSYNC_c +)
+   Source:         SB_DFF     C              VGA_X__i1  (from VIDEO_CLK_c +)
+   Destination:    SB_DFFE    D              VGA_X__i12  (to VIDEO_CLK_c +)
 
-   Delay:                   9.398ns  (25.6% logic, 74.4% route), 6 logic levels.
+   Delay:                  21.789ns  (26.0% logic, 74.0% route), 14 logic levels.
 
  Constraint Details:
 
-      9.398ns data_path FRAME_COUNTER_63__i0 to FRAME_COUNTER_63__i4 meets
+     21.789ns data_path VGA_X__i1 to VGA_X__i12 violates
      10.000ns delay constraint less
-      0.133ns L_S requirement (totaling 9.867ns) by 0.469ns
+      0.133ns L_S requirement (totaling 9.867ns) by 11.922ns
 
- Path Details: FRAME_COUNTER_63__i0 to FRAME_COUNTER_63__i4
+ Path Details: VGA_X__i1 to VGA_X__i12
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              FRAME_COUNTER_63__i0 (from TVP_VSYNC_c)
-Route         3   e 1.339                                  FRAME_COUNTER[0]
-LUT4        ---     0.408             I1 to CO             FRAME_COUNTER_63_add_4_2
-Route         2   e 1.158                                  n543
-LUT4        ---     0.408             CI to CO             FRAME_COUNTER_63_add_4_3
-Route         2   e 1.158                                  n544
-LUT4        ---     0.408             CI to CO             FRAME_COUNTER_63_add_4_4
-Route         2   e 1.158                                  n545
-LUT4        ---     0.408             CI to CO             FRAME_COUNTER_63_add_4_5
-Route         2   e 1.158                                  n546
-LUT4        ---     0.408             I3 to O              FRAME_COUNTER_63_add_4_6_lut
-Route         1   e 1.020                                  n31
+L_CO        ---     0.367              C to Q              VGA_X__i1 (from VIDEO_CLK_c)
+Route         6   e 1.478                                  VGA_X_O_c_0
+LUT4        ---     0.408             I0 to CO             add_53_2
+Route         2   e 1.158                                  n1843
+LUT4        ---     0.408             CI to CO             add_53_3
+Route         2   e 1.158                                  n1844
+LUT4        ---     0.408             CI to CO             add_53_4
+Route         2   e 1.158                                  n1845
+LUT4        ---     0.408             CI to CO             add_53_5
+Route         2   e 1.158                                  n1846
+LUT4        ---     0.408             CI to CO             add_53_6
+Route         2   e 1.158                                  n1847
+LUT4        ---     0.408             CI to CO             add_53_7
+Route         2   e 1.158                                  n1848
+LUT4        ---     0.408             CI to CO             add_53_8
+Route         2   e 1.158                                  n1849
+LUT4        ---     0.408             CI to CO             add_53_9
+Route         2   e 1.158                                  n1850
+LUT4        ---     0.408             CI to CO             add_53_10
+Route         2   e 1.158                                  n1851
+LUT4        ---     0.408             CI to CO             add_53_11
+Route         2   e 1.158                                  n1852
+LUT4        ---     0.408             CI to CO             add_53_12
+Route         1   e 1.020                                  n1853
+LUT4        ---     0.408             I3 to O              add_53_13_lut
+Route         1   e 1.020                                  n512
+LUT4        ---     0.408             I2 to O              i1_2_lut_3_lut_4_lut
+Route         1   e 1.020                                  n1956
                   --------
-                    9.398  (25.6% logic, 74.4% route), 6 logic levels.
+                   21.789  (26.0% logic, 74.0% route), 14 logic levels.
 
 
-Passed:  The following path meets requirements by 0.607ns
+Error:  The following path violates requirements by 10.551ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFSR   C              FRAME_COUNTER_63__i1  (from TVP_VSYNC_c +)
-   Destination:    SB_DFFSR   D              FRAME_COUNTER_63__i5  (to TVP_VSYNC_c +)
+   Source:         SB_DFF     C              VGA_Y__i1  (from VIDEO_CLK_c +)
+   Destination:    SB_DFFE    D              VGA_Y__i11  (to VIDEO_CLK_c +)
 
-   Delay:                   9.260ns  (26.0% logic, 74.0% route), 6 logic levels.
+   Delay:                  20.418ns  (25.8% logic, 74.2% route), 13 logic levels.
 
  Constraint Details:
 
-      9.260ns data_path FRAME_COUNTER_63__i1 to FRAME_COUNTER_63__i5 meets
+     20.418ns data_path VGA_Y__i1 to VGA_Y__i11 violates
      10.000ns delay constraint less
-      0.133ns L_S requirement (totaling 9.867ns) by 0.607ns
+      0.133ns L_S requirement (totaling 9.867ns) by 10.551ns
 
- Path Details: FRAME_COUNTER_63__i1 to FRAME_COUNTER_63__i5
+ Path Details: VGA_Y__i1 to VGA_Y__i11
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              FRAME_COUNTER_63__i1 (from TVP_VSYNC_c)
-Route         3   e 1.339                                  FRAME_COUNTER[1]
-LUT4        ---     0.408             I1 to CO             FRAME_COUNTER_63_add_4_3
-Route         2   e 1.158                                  n544
-LUT4        ---     0.408             CI to CO             FRAME_COUNTER_63_add_4_4
-Route         2   e 1.158                                  n545
-LUT4        ---     0.408             CI to CO             FRAME_COUNTER_63_add_4_5
-Route         2   e 1.158                                  n546
-LUT4        ---     0.408             CI to CO             FRAME_COUNTER_63_add_4_6
-Route         1   e 1.020                                  n547
-LUT4        ---     0.408             I3 to O              FRAME_COUNTER_63_add_4_7_lut
-Route         1   e 1.020                                  n30
+L_CO        ---     0.367              C to Q              VGA_Y__i1 (from VIDEO_CLK_c)
+Route         8   e 1.535                                  VGA_Y_O_c_0
+LUT4        ---     0.408             I0 to CO             add_54_2
+Route         2   e 1.158                                  n1832
+LUT4        ---     0.408             CI to CO             add_54_3
+Route         2   e 1.158                                  n1833
+LUT4        ---     0.408             CI to CO             add_54_4
+Route         2   e 1.158                                  n1834
+LUT4        ---     0.408             CI to CO             add_54_5
+Route         2   e 1.158                                  n1835
+LUT4        ---     0.408             CI to CO             add_54_6
+Route         2   e 1.158                                  n1836
+LUT4        ---     0.408             CI to CO             add_54_7
+Route         2   e 1.158                                  n1837
+LUT4        ---     0.408             CI to CO             add_54_8
+Route         2   e 1.158                                  n1838
+LUT4        ---     0.408             CI to CO             add_54_9
+Route         2   e 1.158                                  n1839
+LUT4        ---     0.408             CI to CO             add_54_10
+Route         2   e 1.158                                  n1840
+LUT4        ---     0.408             CI to CO             add_54_11
+Route         2   e 1.158                                  n1841
+LUT4        ---     0.408             I3 to O              add_54_12_lut
+Route         1   e 1.020                                  n527
+LUT4        ---     0.408             I2 to O              i1_2_lut_3_lut_adj_1
+Route         1   e 1.020                                  n16
                   --------
-                    9.260  (26.0% logic, 74.0% route), 6 logic levels.
+                   20.418  (25.8% logic, 74.2% route), 13 logic levels.
 
-Warning: 10.959 ns is the maximum delay for this constraint.
+Warning: 21.979 ns is the maximum delay for this constraint.
 
-
-
-================================================================================
-Constraint: create_clock -period 10.000000 -name clk0 [get_nets ADV_CLK_c]
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
 
 Timing Report Summary
 --------------
@@ -142,10 +180,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 10.000000 -name    |             |             |
-clk1 [get_nets TVP_VSYNC_c]             |    10.000 ns|    10.959 ns|     7 *
-                                        |             |             |
-create_clock -period 10.000000 -name    |             |             |
-clk0 [get_nets ADV_CLK_c]               |            -|            -|     0  
+clk0 [get_nets VIDEO_CLK_c]             |    10.000 ns|    21.979 ns|    14 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -155,19 +190,47 @@ clk0 [get_nets ADV_CLK_c]               |            -|            -|     0
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-FRAME_COUNTER[0]                        |       3|       1|     99.00%
+n1837                                   |       2|      30|     37.50%
                                         |        |        |
-n30                                     |       1|       1|     99.00%
+n1848                                   |       2|      30|     37.50%
                                         |        |        |
-n543                                    |       2|       1|     99.00%
+n1836                                   |       2|      29|     36.25%
                                         |        |        |
-n544                                    |       2|       1|     99.00%
+n1838                                   |       2|      29|     36.25%
                                         |        |        |
-n545                                    |       2|       1|     99.00%
+n1847                                   |       2|      29|     36.25%
                                         |        |        |
-n546                                    |       2|       1|     99.00%
+n1849                                   |       2|      29|     36.25%
                                         |        |        |
-n547                                    |       1|       1|     99.00%
+n1846                                   |       2|      27|     33.75%
+                                        |        |        |
+n1835                                   |       2|      26|     32.50%
+                                        |        |        |
+n1839                                   |       2|      26|     32.50%
+                                        |        |        |
+n1850                                   |       2|      26|     32.50%
+                                        |        |        |
+n1845                                   |       2|      23|     28.75%
+                                        |        |        |
+n1834                                   |       2|      21|     26.25%
+                                        |        |        |
+n1840                                   |       2|      21|     26.25%
+                                        |        |        |
+n1851                                   |       2|      21|     26.25%
+                                        |        |        |
+n1844                                   |       2|      17|     21.25%
+                                        |        |        |
+n1833                                   |       2|      15|     18.75%
+                                        |        |        |
+n1841                                   |       2|      15|     18.75%
+                                        |        |        |
+n1852                                   |       2|      15|     18.75%
+                                        |        |        |
+VGA_X_O_c_0                             |       6|      10|     12.50%
+                                        |        |        |
+VGA_X_O_c_1                             |       6|       9|     11.25%
+                                        |        |        |
+n1843                                   |       2|       9|     11.25%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -175,10 +238,10 @@ n547                                    |       1|       1|     99.00%
 Timing summary:
 ---------------
 
-Timing errors: 1  Score: 959
+Timing errors: 80  Score: 347985
 
-Constraints cover  64 paths, 23 nets, and 50 connections (14.5% coverage)
+Constraints cover  594 paths, 112 nets, and 253 connections (50.4% coverage)
 
 
-Peak memory: 37576704 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 36958208 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

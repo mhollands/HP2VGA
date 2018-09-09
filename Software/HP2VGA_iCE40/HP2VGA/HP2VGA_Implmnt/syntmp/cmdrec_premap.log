@@ -1,13 +1,13 @@
 C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt"   -part iCE40HX8K  -package CT256    -maxfan 10000 -RWCheckOnRam 0 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -summaryfile "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synlog\report\HP2VGA_premap.xml"  -oedif  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.edf"  -conchk_prepass  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA_cck.rpt"   -autoconstraint  -freq 1.000   "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_mult.srs"  -flow prepass  -gcc_prepass  -osrd  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_prem.srd"  -qsap  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.sap"  -devicelib  C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v  -ologparam  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\syntmp\HP2VGA.plg"  -osyn  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_prem.srd"  -prjdir  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\"  -prjname  HP2VGA_syn  -log  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synlog\HP2VGA_premap.srr" 
-rc:1 success:1 runtime:1
+rc:1 success:1 runtime:2
 file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.edf|io:o|time:0|size:0|exec:0
-file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA_cck.rpt|io:o|time:1536454731|size:2899|exec:0
-file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_mult.srs|io:i|time:1536454729|size:3987|exec:0
-file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_prem.srd|io:o|time:1536454730|size:10425|exec:0
-file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.sap|io:o|time:1536454731|size:884|exec:0
+file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA_cck.rpt|io:o|time:1536495201|size:2609|exec:0
+file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_mult.srs|io:i|time:1536495200|size:1483|exec:0
+file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_prem.srd|io:o|time:1536495201|size:2813|exec:0
+file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.sap|io:o|time:1536495201|size:394|exec:0
 file:C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v|io:i|time:1534812775|size:224837|exec:0
 file:"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\syntmp\HP2VGA.plg"|io:o|time:0|size:0|exec:0
-file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_prem.srd|io:o|time:1536454730|size:10425|exec:0
-file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synlog\HP2VGA_premap.srr|io:o|time:1536454731|size:4011|exec:0
+file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_prem.srd|io:o|time:1536495201|size:2813|exec:0
+file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synlog\HP2VGA_premap.srr|io:o|time:1536495201|size:3941|exec:0
 file:C:\lscc\iCEcube2.2017.08\synpbase\bin\m_generic.exe|io:i|time:1534812755|size:17853440|exec:1
 file:C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe|io:i|time:1534812758|size:32355840|exec:1

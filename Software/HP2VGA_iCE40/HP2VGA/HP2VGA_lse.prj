@@ -8,6 +8,7 @@
 #constraint file
 
 #options
+-frequency 50
 -optimization_goal Timing
 -twr_paths 3
 -bram_utilization 100.00
@@ -25,12 +26,15 @@
 -resolve_mixed_drivers 0
 -RWCheckOnRam 0
 -fix_gated_clocks 1
+-top main
 -loop_limit 1950
 
 -ver "../main.v"
 -ver "../TX_PLL.v"
 -ver "../vga_control.v"
 -ver "../RAM.v"
+-ver "../TX.v"
+-ver "../RX.v"
 -p "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/HP2VGA"
 
 #set result format/file last
