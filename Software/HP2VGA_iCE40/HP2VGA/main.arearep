@@ -1,17 +1,17 @@
 ----------------------------------------------------------------------
 Report for cell main.TECH
-Register bits:  31 of 7680 (0.404%)
+Register bits:  33 of 7680 (0.430%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        26          100.0
-                             SB_DFF         1          100.0
+                             SB_DFF         3          100.0
                             SB_DFFE         1          100.0
                           SB_DFFESR        18          100.0
                            SB_DFFSR        11          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        39          100.0
-                            SB_LUT4        88          100.0
+                            SB_LUT4        87          100.0
                       SB_PLL40_CORE         1          100.0
 SUB MODULES
                           O_COUNTER         1
@@ -19,53 +19,55 @@ SUB MODULES
                                  TX         1
                              TX_PLL         1
                         VGA_CONTROL         1
-                              TOTAL       191
+                              TOTAL       192
 ----------------------------------------------------------------------
 Report for cell RX.v1
 Instance Path : receive_module
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY         5           19.2
-                             SB_DFF         1          100.0
+                             SB_DFF         1           33.3
                             SB_DFFE         1          100.0
                           SB_DFFESR         6           33.3
-                            SB_LUT4        13           14.8
+                            SB_LUT4        12           13.8
 SUB MODULES
                           O_COUNTER         1
-                              TOTAL        27
+                              TOTAL        26
 ----------------------------------------------------------------------
 Report for cell O_COUNTER.v1
 Instance Path : receive_module.rx_counter
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY         5           19.2
-                             SB_DFF         1          100.0
+                             SB_DFF         1           33.3
                             SB_DFFE         1          100.0
                           SB_DFFESR         6           33.3
-                            SB_LUT4        13           14.8
-                              TOTAL        26
+                            SB_LUT4        12           13.8
+                              TOTAL        25
 ----------------------------------------------------------------------
 Report for cell TX.v1
 Instance Path : transmit_module
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        21           80.8
+                             SB_DFF         2           66.7
                           SB_DFFESR        12           66.7
                            SB_DFFSR        11          100.0
-                            SB_LUT4        75           85.2
+                            SB_LUT4        75           86.2
 SUB MODULES
                         VGA_CONTROL         1
-                              TOTAL       120
+                              TOTAL       122
 ----------------------------------------------------------------------
 Report for cell VGA_CONTROL.v1
 Instance Path : transmit_module.video_signal_controller
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        21           80.8
+                             SB_DFF         2           66.7
                           SB_DFFESR        12           66.7
                            SB_DFFSR        11          100.0
-                            SB_LUT4        75           85.2
-                              TOTAL       119
+                            SB_LUT4        75           86.2
+                              TOTAL       121
 ----------------------------------------------------------------------
 Report for cell TX_PLL.v1
 Instance Path : tx_pll

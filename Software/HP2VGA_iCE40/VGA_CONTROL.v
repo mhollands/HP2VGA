@@ -28,8 +28,8 @@ module VGA_CONTROL( input VIDEO_CLK, //CLK input at correct pixel frequency
                     input RESET, //resets device
                     output wire [11:0] VGA_X_O, //x position of vga video
                     output wire [11:0] VGA_Y_O, //y position of vga video
-                    output VGA_HS, //horizontal sync
-                    output VGA_VS, //vertical sync
+                    output reg VGA_HS, //horizontal sync
+                    output reg VGA_VS, //vertical sync
                     output VGA_VISIBLE, //high if we are in active video region
                     output wire [7:0] VGA_RED, //red debug signal
                     output wire [7:0] VGA_BLUE, //blue debug signal
@@ -50,10 +50,10 @@ module VGA_CONTROL( input VIDEO_CLK, //CLK input at correct pixel frequency
     parameter V_TOTAL = 622;
 
     reg [11:0] VGA_X, VGA_Y;
-    //TODO should this also only be when VGA_Y is less than V_TOTAL as it can now go higher than that due to sync
+    
     assign VGA_VISIBLE = (VGA_X >= H_BACK_PORCH + H_SYNC_PULSE + H_FRONT_PORCH) && (VGA_Y >= V_BACK_PORCH + V_SYNC_PULSE + V_FRONT_PORCH) && (VGA_Y < V_TOTAL) && (VGA_X < H_TOTAL);
-    assign VGA_HS = ~((VGA_X >= H_FRONT_PORCH) && (VGA_X < H_FRONT_PORCH + H_SYNC_PULSE));
-    assign VGA_VS = ((VGA_Y >= V_FRONT_PORCH) && (VGA_Y < V_FRONT_PORCH + V_SYNC_PULSE));  
+    //assign VGA_HS = ~((VGA_X >= H_FRONT_PORCH) && (VGA_X < H_FRONT_PORCH + H_SYNC_PULSE));
+    //assign VGA_VS = ((VGA_Y >= V_FRONT_PORCH) && (VGA_Y < V_FRONT_PORCH + V_SYNC_PULSE));  
 
     assign VGA_X_O = VGA_X - H_FRONT_PORCH - H_SYNC_PULSE - H_BACK_PORCH;
     assign VGA_Y_O = VGA_Y - V_FRONT_PORCH - V_SYNC_PULSE - V_BACK_PORCH;
@@ -66,6 +66,8 @@ module VGA_CONTROL( input VIDEO_CLK, //CLK input at correct pixel frequency
     //at every clock edge
     always @(posedge VIDEO_CLK)
     begin
+        VGA_HS <= ~((VGA_X >= H_FRONT_PORCH) && (VGA_X < H_FRONT_PORCH + H_SYNC_PULSE));
+        VGA_VS <= ((VGA_Y >= V_FRONT_PORCH) && (VGA_Y < V_FRONT_PORCH + V_SYNC_PULSE));  
         //if enabled
         if(ENABLE) begin
             //increment VGA_X and VGA_Y

@@ -3,6 +3,7 @@ module main(
 	input wire TVP_CLK, 
 	input wire TVP_HSYNC,
 	input wire TVP_VSYNC,
+	//input wire [9:0] TVP_VIDEO,
 	output wire LED, 
 	output wire ADV_HSYNC,
 	output wire ADV_VSYNC,
@@ -27,21 +28,22 @@ module main(
 	wire [13:0] RX_ADDR;
 	wire RX_WE;
 	wire PULSE_1HZ;
-	wire RX_DIN;
+	wire [7:0] RX_DATA;
 	RX receive_module(
 			.O_CLK(TVP_CLK),
 		    .ENABLE(1'b1),
 		    .BRAM_ADDR(RX_ADDR),
-		    .BRAM_DIN(RX_DIN),
+		    .BRAM_DIN(RX_DATA),
 		    .BRAM_WE(RX_WE),
 		    .O_HS(TVP_HSYNC),
 		    .O_VS(TVP_VSYNC),
-		    .VIDEO(10'h000),
+		    .VIDEO(8'h00),
 		    .PULSE_1HZ(PULSE_1HZ),
 		    .SYNC(RX_TX_SYNC));
 	
 	// Instantiate TX Module
 	wire [13:0] TX_ADDR;
+	wire [7:0] TX_DATA;
 	TX transmit_module(
 			    .CLK(TX_CLK),
 			    .ENABLE(1),
@@ -56,8 +58,7 @@ module main(
 			    .VGA_SYNC_EN(0));
 
 	//Instantiate the line buffer
-	//wire [7:0] RAM_OUT;
-	//RAM line_buffer(FRAME_COUNTER, 1, {2'b00,FRAME_COUNTER,FRAME_COUNTER} , 0, FRAME_COUNTER, TX_CLK, RAM_OUT);
+	//RAM line_buffer(RX_DATA, RX_WE, RX_ADDR , TVP_CLK, TX_ADDR, TX_CLK, TX_DATA);
 
 	// Output all of the remaining ADV signals
 	assign ADV_CLK = TX_CLK;

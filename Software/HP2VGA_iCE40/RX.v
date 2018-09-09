@@ -47,8 +47,8 @@ module RX(
                             .PULSE_1HZ(PULSE_1HZ),
                             .SYNC(SYNC));
 
-    //assign BRAM_ADDR = O_X + O_Y * 576;
-    //assign BRAM_DIN = VIDEO[9:2];
-    //assign BRAM_WE = O_VISIBLE;
+    assign BRAM_ADDR = O_X + O_Y * 576;
+    assign BRAM_DIN = VIDEO[9:2];
+    assign BRAM_WE = O_VISIBLE;
     
 endmodule

@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2018 9 9 21 37 32 125)
+      (timeStamp 2018 9 9 23 24 17 123)
       (author "Lattice Semiconductor Corp.")
       (program "EDIF Writer"(version "lse"))
     )
@@ -48,6 +48,17 @@
         )
       )
     )
+    (cell SB_DFF
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port Q (direction OUTPUT))
+          (port C (direction INPUT))
+          (port D (direction INPUT))
+        )
+      )
+    )
     (cell SB_CARRY
       (cellType generic)
       (view (rename INTERFACE_c "INTERFACE")
@@ -68,17 +79,6 @@
           (port Q (direction OUTPUT))
           (port C (direction INPUT))
           (port E (direction INPUT))
-          (port D (direction INPUT))
-        )
-      )
-    )
-    (cell SB_DFF
-      (cellType generic)
-      (view (rename INTERFACE_c "INTERFACE")
-        (viewType netlist)
-        (interface
-          (port Q (direction OUTPUT))
-          (port C (direction INPUT))
           (port D (direction INPUT))
         )
       )
@@ -140,15 +140,6 @@
         (property IO_STANDARD (string "SB_LVCMOS"))
       )
     )
-    (cell GND
-      (cellType generic)
-      (view (rename INTERFACE_c "INTERFACE")
-        (viewType netlist)
-        (interface
-          (port Y (direction OUTPUT))
-        )
-      )
-    )
     (cell SB_PLL40_CORE
       (cellType generic)
       (view (rename INTERFACE_c "INTERFACE")
@@ -183,6 +174,15 @@
         (property EXTERNAL_DIVIDE_FACTOR (integer 1))
       )
     )
+    (cell GND
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port Y (direction OUTPUT))
+        )
+      )
+    )
   )
   (library work
     (edifLevel 0)
@@ -192,357 +192,344 @@
       (view v1
         (viewType netlist)
         (interface
+          (port DEBUG_c_7 (direction INPUT))
+          (port LED_c (direction OUTPUT))
           (port GND_net (direction INPUT))
           (port TVP_CLK_c (direction INPUT))
           (port TVP_VSYNC_c (direction INPUT))
           (port VCC_net (direction INPUT))
-          (port DEBUG_c_7 (direction INPUT))
-          (port LED_c (direction OUTPUT))
         )
         (contents
-          (instance FRAME_COUNTER_74_add_4_4_lut
+          (instance i1_2_lut
             (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
+            (property LUT_INIT (string "8888"))
           )
-          (instance FRAME_COUNTER_74__i0
+          (instance i591_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "6a6a"))
+          )
+          (instance FRAME_COUNTER_71__i2
             (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
           )
-          (instance FRAME_COUNTER_74__i1
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance FRAME_COUNTER_74_add_4_4
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance FRAME_COUNTER_74_add_4_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance i2_2_lut_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "2020"))
-          )
-          (instance FRAME_COUNTER_74_add_4_3
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance i210_2_lut_rep_8
+          (instance i2_2_lut
             (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
             (property LUT_INIT (string "2222"))
-          )
-          (instance PULSE_1HZ_46
-            (viewRef INTERFACE_c (cellRef SB_DFFE (libraryref PrimitivesExt)))
-          )
-          (instance FRAME_COUNTER_74__i2
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance FRAME_COUNTER_74__i3
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
           )
           (instance old_VS_49
             (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
           )
-          (instance FRAME_COUNTER_74__i4
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance FRAME_COUNTER_74__i5
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance FRAME_COUNTER_74_add_4_7_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance FRAME_COUNTER_74_add_4_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance FRAME_COUNTER_74_add_4_6_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance FRAME_COUNTER_74_add_4_6
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance FRAME_COUNTER_74_add_4_2
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance FRAME_COUNTER_74_add_4_5_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance i2_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8080"))
-          )
-          (instance i1_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "bbbb"))
-          )
-          (instance i1059_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "cc6c"))
-          )
-          (instance i1_2_lut_adj_13
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8888"))
-          )
-          (instance FRAME_COUNTER_74_add_4_5
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
           (instance i4_4_lut
             (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "0080"))
+            (property LUT_INIT (string "8000"))
           )
-          (net n33
-            (joined
-              (portRef O (instanceRef FRAME_COUNTER_74_add_4_4_lut))
-              (portRef D (instanceRef FRAME_COUNTER_74__i2))
-            )
+          (instance FRAME_COUNTER_71_add_4_2
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
           )
-          (net GND_net
-            (joined
-              (portRef GND_net)
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_4))
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_3))
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_6_lut))
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_6))
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_5_lut))
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_5))
-              (portRef I2 (instanceRef i1_2_lut_adj_13))
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_2_lut))
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_5_lut))
-              (portRef I2 (instanceRef i1_2_lut))
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_3_lut))
-              (portRef I3 (instanceRef i210_2_lut_rep_8))
-              (portRef I3 (instanceRef i2_2_lut_3_lut))
-              (portRef I2 (instanceRef i210_2_lut_rep_8))
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_2))
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_7_lut))
-              (portRef I3 (instanceRef i1_2_lut))
-              (portRef I3 (instanceRef i1_2_lut_adj_13))
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_7_lut))
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_4_lut))
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_3_lut))
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_2_lut))
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_6_lut))
-              (portRef I3 (instanceRef i2_3_lut))
-              (portRef I0 (instanceRef FRAME_COUNTER_74_add_4_4_lut))
-            )
+          (instance FRAME_COUNTER_71__i3
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
           )
-          (net FRAME_COUNTER_2
-            (joined
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_4))
-              (portRef I0 (instanceRef i1_2_lut))
-              (portRef Q (instanceRef FRAME_COUNTER_74__i2))
-              (portRef I2 (instanceRef FRAME_COUNTER_74_add_4_4_lut))
-              (portRef I3 (instanceRef i4_4_lut))
-            )
+          (instance FRAME_COUNTER_71__i1
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
           )
-          (net n1010
-            (joined
-              (portRef CO (instanceRef FRAME_COUNTER_74_add_4_3))
-              (portRef CI (instanceRef FRAME_COUNTER_74_add_4_4))
-              (portRef I3 (instanceRef FRAME_COUNTER_74_add_4_4_lut))
-            )
+          (instance FRAME_COUNTER_71_add_4_6_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
           )
-          (net n35
-            (joined
-              (portRef O (instanceRef FRAME_COUNTER_74_add_4_2_lut))
-              (portRef D (instanceRef FRAME_COUNTER_74__i0))
-            )
+          (instance FRAME_COUNTER_71__i4
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
           )
-          (net n1197
-            (joined
-              (portRef O (instanceRef i210_2_lut_rep_8))
-              (portRef E (instanceRef FRAME_COUNTER_74__i3))
-              (portRef E (instanceRef FRAME_COUNTER_74__i5))
-              (portRef E (instanceRef FRAME_COUNTER_74__i4))
-              (portRef E (instanceRef FRAME_COUNTER_74__i2))
-              (portRef E (instanceRef FRAME_COUNTER_74__i1))
-              (portRef E (instanceRef FRAME_COUNTER_74__i0))
-              (portRef E (instanceRef PULSE_1HZ_46))
-            )
+          (instance FRAME_COUNTER_71_add_4_6
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
           )
-          (net FRAME_COUNTER_0
-            (joined
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_2))
-              (portRef I1 (instanceRef i2_3_lut))
-              (portRef I2 (instanceRef FRAME_COUNTER_74_add_4_2_lut))
-              (portRef Q (instanceRef FRAME_COUNTER_74__i0))
-            )
+          (instance FRAME_COUNTER_71__i5
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
           )
-          (net TVP_CLK_c
-            (joined
-              (portRef TVP_CLK_c)
-              (portRef C (instanceRef FRAME_COUNTER_74__i1))
-              (portRef C (instanceRef old_VS_49))
-              (portRef C (instanceRef FRAME_COUNTER_74__i0))
-              (portRef C (instanceRef FRAME_COUNTER_74__i4))
-              (portRef C (instanceRef FRAME_COUNTER_74__i2))
-              (portRef C (instanceRef FRAME_COUNTER_74__i3))
-              (portRef C (instanceRef PULSE_1HZ_46))
-              (portRef C (instanceRef FRAME_COUNTER_74__i5))
-            )
-            (property SET_AS_NETWORK (string "TVP_CLK_c"))
-            (property is_clock (string "1"))
+          (instance FRAME_COUNTER_71__i0
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
           )
-          (net n401
-            (joined
-              (portRef O (instanceRef i4_4_lut))
-              (portRef R (instanceRef FRAME_COUNTER_74__i4))
-              (portRef R (instanceRef FRAME_COUNTER_74__i2))
-              (portRef R (instanceRef FRAME_COUNTER_74__i5))
-              (portRef R (instanceRef FRAME_COUNTER_74__i0))
-              (portRef R (instanceRef FRAME_COUNTER_74__i1))
-              (portRef R (instanceRef FRAME_COUNTER_74__i3))
-            )
+          (instance i2_3_lut_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "2000"))
           )
-          (net n34
-            (joined
-              (portRef O (instanceRef FRAME_COUNTER_74_add_4_3_lut))
-              (portRef D (instanceRef FRAME_COUNTER_74__i1))
-            )
+          (instance PULSE_1HZ_46
+            (viewRef INTERFACE_c (cellRef SB_DFFE (libraryref PrimitivesExt)))
           )
-          (net FRAME_COUNTER_1
-            (joined
-              (portRef I1 (instanceRef i1_2_lut))
-              (portRef I2 (instanceRef FRAME_COUNTER_74_add_4_3_lut))
-              (portRef I2 (instanceRef i4_4_lut))
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_3))
-              (portRef Q (instanceRef FRAME_COUNTER_74__i1))
-            )
+          (instance FRAME_COUNTER_71_add_4_3
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
           )
-          (net n1011
-            (joined
-              (portRef CO (instanceRef FRAME_COUNTER_74_add_4_4))
-              (portRef CI (instanceRef FRAME_COUNTER_74_add_4_5))
-              (portRef I3 (instanceRef FRAME_COUNTER_74_add_4_5_lut))
-            )
+          (instance FRAME_COUNTER_71_add_4_5_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
           )
-          (net n1009
-            (joined
-              (portRef CO (instanceRef FRAME_COUNTER_74_add_4_2))
-              (portRef CI (instanceRef FRAME_COUNTER_74_add_4_3))
-              (portRef I3 (instanceRef FRAME_COUNTER_74_add_4_3_lut))
-            )
+          (instance i45_2_lut_rep_7
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "2222"))
           )
-          (net old_VS
-            (joined
-              (portRef I0 (instanceRef i2_2_lut_3_lut))
-              (portRef I0 (instanceRef i210_2_lut_rep_8))
-              (portRef Q (instanceRef old_VS_49))
-            )
+          (instance FRAME_COUNTER_71_add_4_4
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
           )
-          (net TVP_VSYNC_c
-            (joined
-              (portRef TVP_VSYNC_c)
-              (portRef I1 (instanceRef i210_2_lut_rep_8))
-              (portRef D (instanceRef old_VS_49))
-              (portRef I1 (instanceRef i2_2_lut_3_lut))
-            )
+          (instance FRAME_COUNTER_71_add_4_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
           )
-          (net FRAME_COUNTER_5
-            (joined
-              (portRef I2 (instanceRef i2_2_lut_3_lut))
-              (portRef I2 (instanceRef FRAME_COUNTER_74_add_4_7_lut))
-              (portRef I2 (instanceRef i1059_4_lut))
-              (portRef Q (instanceRef FRAME_COUNTER_74__i5))
-            )
+          (instance FRAME_COUNTER_71_add_4_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
           )
-          (net n7
-            (joined
-              (portRef O (instanceRef i2_2_lut_3_lut))
-              (portRef I0 (instanceRef i4_4_lut))
-            )
+          (instance FRAME_COUNTER_71_add_4_5
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
           )
-          (net PULSE_1HZ_N_61
-            (joined
-              (portRef O (instanceRef i1059_4_lut))
-              (portRef D (instanceRef PULSE_1HZ_46))
-            )
+          (instance FRAME_COUNTER_71_add_4_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance FRAME_COUNTER_71_add_4_7_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
           )
           (net PULSE_1HZ
             (joined
               (portRef Q (instanceRef PULSE_1HZ_46))
-              (portRef I0 (instanceRef i1_2_lut_adj_13))
-              (portRef I1 (instanceRef i1059_4_lut))
-            )
-          )
-          (net n32
-            (joined
-              (portRef O (instanceRef FRAME_COUNTER_74_add_4_5_lut))
-              (portRef D (instanceRef FRAME_COUNTER_74__i3))
-            )
-          )
-          (net FRAME_COUNTER_3
-            (joined
-              (portRef I2 (instanceRef FRAME_COUNTER_74_add_4_5_lut))
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_5))
-              (portRef I0 (instanceRef i2_3_lut))
-              (portRef Q (instanceRef FRAME_COUNTER_74__i3))
-            )
-          )
-          (net n31
-            (joined
-              (portRef O (instanceRef FRAME_COUNTER_74_add_4_6_lut))
-              (portRef D (instanceRef FRAME_COUNTER_74__i4))
-            )
-          )
-          (net FRAME_COUNTER_4
-            (joined
-              (portRef I2 (instanceRef FRAME_COUNTER_74_add_4_6_lut))
-              (portRef I2 (instanceRef i2_3_lut))
-              (portRef I1 (instanceRef FRAME_COUNTER_74_add_4_6))
-              (portRef Q (instanceRef FRAME_COUNTER_74__i4))
-            )
-          )
-          (net n30
-            (joined
-              (portRef O (instanceRef FRAME_COUNTER_74_add_4_7_lut))
-              (portRef D (instanceRef FRAME_COUNTER_74__i5))
-            )
-          )
-          (net n1013
-            (joined
-              (portRef CO (instanceRef FRAME_COUNTER_74_add_4_6))
-              (portRef I3 (instanceRef FRAME_COUNTER_74_add_4_7_lut))
-            )
-          )
-          (net VCC_net
-            (joined
-              (portRef VCC_net)
-              (portRef CI (instanceRef FRAME_COUNTER_74_add_4_2))
-              (portRef I3 (instanceRef FRAME_COUNTER_74_add_4_2_lut))
-            )
-          )
-          (net n1012
-            (joined
-              (portRef CO (instanceRef FRAME_COUNTER_74_add_4_5))
-              (portRef CI (instanceRef FRAME_COUNTER_74_add_4_6))
-              (portRef I3 (instanceRef FRAME_COUNTER_74_add_4_6_lut))
-            )
-          )
-          (net n982
-            (joined
-              (portRef O (instanceRef i2_3_lut))
-              (portRef I0 (instanceRef i1059_4_lut))
-              (portRef I1 (instanceRef i4_4_lut))
-            )
-          )
-          (net n4
-            (joined
-              (portRef O (instanceRef i1_2_lut))
-              (portRef I3 (instanceRef i1059_4_lut))
+              (portRef I0 (instanceRef i1_2_lut))
+              (portRef I0 (instanceRef i591_3_lut))
             )
           )
           (net DEBUG_c_7
             (joined
               (portRef DEBUG_c_7)
-              (portRef I1 (instanceRef i1_2_lut_adj_13))
+              (portRef I1 (instanceRef i1_2_lut))
             )
           )
           (net LED_c
             (joined
               (portRef LED_c)
-              (portRef O (instanceRef i1_2_lut_adj_13))
+              (portRef O (instanceRef i1_2_lut))
+            )
+          )
+          (net GND_net
+            (joined
+              (portRef GND_net)
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_5))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_4_lut))
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_4))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_3_lut))
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_3))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_2_lut))
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_2))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_7_lut))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_6_lut))
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_6))
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_6_lut))
+              (portRef I3 (instanceRef i591_3_lut))
+              (portRef I2 (instanceRef i1_2_lut))
+              (portRef I3 (instanceRef i1_2_lut))
+              (portRef I3 (instanceRef i2_2_lut))
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_5_lut))
+              (portRef I2 (instanceRef i2_2_lut))
+              (portRef I3 (instanceRef i45_2_lut_rep_7))
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_4_lut))
+              (portRef I2 (instanceRef i45_2_lut_rep_7))
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_3_lut))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_5_lut))
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_2_lut))
+              (portRef I0 (instanceRef FRAME_COUNTER_71_add_4_7_lut))
+            )
+          )
+          (net FRAME_COUNTER_5
+            (joined
+              (portRef I2 (instanceRef FRAME_COUNTER_71_add_4_7_lut))
+              (portRef I2 (instanceRef i2_3_lut_4_lut))
+              (portRef I1 (instanceRef i591_3_lut))
+              (portRef Q (instanceRef FRAME_COUNTER_71__i5))
+            )
+          )
+          (net n704
+            (joined
+              (portRef O (instanceRef i4_4_lut))
+              (portRef I3 (instanceRef i2_3_lut_4_lut))
+              (portRef I2 (instanceRef i591_3_lut))
+            )
+          )
+          (net PULSE_1HZ_N_80
+            (joined
+              (portRef O (instanceRef i591_3_lut))
+              (portRef D (instanceRef PULSE_1HZ_46))
+            )
+          )
+          (net n33
+            (joined
+              (portRef O (instanceRef FRAME_COUNTER_71_add_4_4_lut))
+              (portRef D (instanceRef FRAME_COUNTER_71__i2))
+            )
+          )
+          (net n815
+            (joined
+              (portRef O (instanceRef i45_2_lut_rep_7))
+              (portRef E (instanceRef FRAME_COUNTER_71__i1))
+              (portRef E (instanceRef FRAME_COUNTER_71__i5))
+              (portRef E (instanceRef FRAME_COUNTER_71__i4))
+              (portRef E (instanceRef FRAME_COUNTER_71__i3))
+              (portRef E (instanceRef FRAME_COUNTER_71__i2))
+              (portRef E (instanceRef FRAME_COUNTER_71__i0))
+              (portRef E (instanceRef PULSE_1HZ_46))
+            )
+          )
+          (net FRAME_COUNTER_2
+            (joined
+              (portRef I2 (instanceRef FRAME_COUNTER_71_add_4_4_lut))
+              (portRef I1 (instanceRef i2_2_lut))
+              (portRef Q (instanceRef FRAME_COUNTER_71__i2))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_4))
+            )
+          )
+          (net TVP_CLK_c
+            (joined
+              (portRef TVP_CLK_c)
+              (portRef C (instanceRef FRAME_COUNTER_71__i1))
+              (portRef C (instanceRef old_VS_49))
+              (portRef C (instanceRef FRAME_COUNTER_71__i0))
+              (portRef C (instanceRef FRAME_COUNTER_71__i5))
+              (portRef C (instanceRef FRAME_COUNTER_71__i2))
+              (portRef C (instanceRef FRAME_COUNTER_71__i3))
+              (portRef C (instanceRef FRAME_COUNTER_71__i4))
+              (portRef C (instanceRef PULSE_1HZ_46))
+            )
+            (property SET_AS_NETWORK (string "TVP_CLK_c"))
+            (property is_clock (string "1"))
+          )
+          (net n392
+            (joined
+              (portRef O (instanceRef i2_3_lut_4_lut))
+              (portRef R (instanceRef FRAME_COUNTER_71__i4))
+              (portRef R (instanceRef FRAME_COUNTER_71__i5))
+              (portRef R (instanceRef FRAME_COUNTER_71__i3))
+              (portRef R (instanceRef FRAME_COUNTER_71__i0))
+              (portRef R (instanceRef FRAME_COUNTER_71__i1))
+              (portRef R (instanceRef FRAME_COUNTER_71__i2))
+            )
+          )
+          (net FRAME_COUNTER_4
+            (joined
+              (portRef I2 (instanceRef FRAME_COUNTER_71_add_4_6_lut))
+              (portRef I0 (instanceRef i2_2_lut))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_6))
+              (portRef Q (instanceRef FRAME_COUNTER_71__i4))
+            )
+          )
+          (net n7
+            (joined
+              (portRef O (instanceRef i2_2_lut))
+              (portRef I0 (instanceRef i4_4_lut))
+            )
+          )
+          (net TVP_VSYNC_c
+            (joined
+              (portRef TVP_VSYNC_c)
+              (portRef I1 (instanceRef i45_2_lut_rep_7))
+              (portRef D (instanceRef old_VS_49))
+              (portRef I1 (instanceRef i2_3_lut_4_lut))
+            )
+          )
+          (net old_VS
+            (joined
+              (portRef I0 (instanceRef i2_3_lut_4_lut))
+              (portRef Q (instanceRef old_VS_49))
+              (portRef I0 (instanceRef i45_2_lut_rep_7))
+            )
+          )
+          (net FRAME_COUNTER_1
+            (joined
+              (portRef I2 (instanceRef FRAME_COUNTER_71_add_4_3_lut))
+              (portRef I1 (instanceRef i4_4_lut))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_3))
+              (portRef Q (instanceRef FRAME_COUNTER_71__i1))
+            )
+          )
+          (net FRAME_COUNTER_0
+            (joined
+              (portRef I2 (instanceRef i4_4_lut))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_2))
+              (portRef I2 (instanceRef FRAME_COUNTER_71_add_4_2_lut))
+              (portRef Q (instanceRef FRAME_COUNTER_71__i0))
+            )
+          )
+          (net FRAME_COUNTER_3
+            (joined
+              (portRef I2 (instanceRef FRAME_COUNTER_71_add_4_5_lut))
+              (portRef I1 (instanceRef FRAME_COUNTER_71_add_4_5))
+              (portRef I3 (instanceRef i4_4_lut))
+              (portRef Q (instanceRef FRAME_COUNTER_71__i3))
+            )
+          )
+          (net VCC_net
+            (joined
+              (portRef VCC_net)
+              (portRef CI (instanceRef FRAME_COUNTER_71_add_4_2))
+              (portRef I3 (instanceRef FRAME_COUNTER_71_add_4_2_lut))
+            )
+          )
+          (net n613
+            (joined
+              (portRef CO (instanceRef FRAME_COUNTER_71_add_4_2))
+              (portRef CI (instanceRef FRAME_COUNTER_71_add_4_3))
+              (portRef I3 (instanceRef FRAME_COUNTER_71_add_4_3_lut))
+            )
+          )
+          (net n32
+            (joined
+              (portRef O (instanceRef FRAME_COUNTER_71_add_4_5_lut))
+              (portRef D (instanceRef FRAME_COUNTER_71__i3))
+            )
+          )
+          (net n34
+            (joined
+              (portRef O (instanceRef FRAME_COUNTER_71_add_4_3_lut))
+              (portRef D (instanceRef FRAME_COUNTER_71__i1))
+            )
+          )
+          (net n31
+            (joined
+              (portRef O (instanceRef FRAME_COUNTER_71_add_4_6_lut))
+              (portRef D (instanceRef FRAME_COUNTER_71__i4))
+            )
+          )
+          (net n616
+            (joined
+              (portRef CO (instanceRef FRAME_COUNTER_71_add_4_5))
+              (portRef CI (instanceRef FRAME_COUNTER_71_add_4_6))
+              (portRef I3 (instanceRef FRAME_COUNTER_71_add_4_6_lut))
+            )
+          )
+          (net n617
+            (joined
+              (portRef CO (instanceRef FRAME_COUNTER_71_add_4_6))
+              (portRef I3 (instanceRef FRAME_COUNTER_71_add_4_7_lut))
+            )
+          )
+          (net n30
+            (joined
+              (portRef O (instanceRef FRAME_COUNTER_71_add_4_7_lut))
+              (portRef D (instanceRef FRAME_COUNTER_71__i5))
+            )
+          )
+          (net n35
+            (joined
+              (portRef O (instanceRef FRAME_COUNTER_71_add_4_2_lut))
+              (portRef D (instanceRef FRAME_COUNTER_71__i0))
+            )
+          )
+          (net n614
+            (joined
+              (portRef CO (instanceRef FRAME_COUNTER_71_add_4_3))
+              (portRef CI (instanceRef FRAME_COUNTER_71_add_4_4))
+              (portRef I3 (instanceRef FRAME_COUNTER_71_add_4_4_lut))
+            )
+          )
+          (net n615
+            (joined
+              (portRef CO (instanceRef FRAME_COUNTER_71_add_4_4))
+              (portRef CI (instanceRef FRAME_COUNTER_71_add_4_5))
+              (portRef I3 (instanceRef FRAME_COUNTER_71_add_4_5_lut))
             )
           )
         )
@@ -553,16 +540,28 @@
       (view v1
         (viewType netlist)
         (interface
+          (port DEBUG_c_7 (direction INPUT))
+          (port LED_c (direction OUTPUT))
           (port GND_net (direction INPUT))
           (port TVP_CLK_c (direction INPUT))
           (port TVP_VSYNC_c (direction INPUT))
           (port VCC_net (direction INPUT))
-          (port DEBUG_c_7 (direction INPUT))
-          (port LED_c (direction OUTPUT))
         )
         (contents
           (instance rx_counter
             (viewRef v1 (cellRef O_COUNTER))
+          )
+          (net DEBUG_c_7
+            (joined
+              (portRef DEBUG_c_7)
+              (portRef DEBUG_c_7 (instanceRef rx_counter))
+            )
+          )
+          (net LED_c
+            (joined
+              (portRef LED_c)
+              (portRef LED_c (instanceRef rx_counter))
+            )
           )
           (net GND_net
             (joined
@@ -590,18 +589,6 @@
               (portRef VCC_net (instanceRef rx_counter))
             )
           )
-          (net DEBUG_c_7
-            (joined
-              (portRef DEBUG_c_7)
-              (portRef DEBUG_c_7 (instanceRef rx_counter))
-            )
-          )
-          (net LED_c
-            (joined
-              (portRef LED_c)
-              (portRef LED_c (instanceRef rx_counter))
-            )
-          )
         )
       )
     )
@@ -610,462 +597,66 @@
       (view v1
         (viewType netlist)
         (interface
-          (port ADV_B_c_3 (direction OUTPUT))
-          (port GND_net (direction INPUT))
           (port ADV_CLK_c (direction INPUT))
-          (port ADV_B_c_6 (direction OUTPUT))
-          (port ADV_B_c_0 (direction OUTPUT))
-          (port VCC_net (direction INPUT))
-          (port VGA_HS_N_267 (direction OUTPUT))
-          (port ADV_VSYNC_c (direction OUTPUT))
-          (port ADV_B_c_2 (direction OUTPUT))
           (port ADV_R_c_7 (direction OUTPUT))
-          (port ADV_R_c_6 (direction OUTPUT))
-          (port ADV_R_c_5 (direction OUTPUT))
-          (port ADV_R_c_4 (direction OUTPUT))
-          (port ADV_R_c_3 (direction OUTPUT))
-          (port ADV_R_c_2 (direction OUTPUT))
-          (port ADV_R_c_1 (direction OUTPUT))
-          (port ADV_R_c_0 (direction OUTPUT))
+          (port GND_net (direction INPUT))
           (port ADV_G_c_7 (direction OUTPUT))
-          (port ADV_G_c_0 (direction OUTPUT))
           (port ADV_G_c_6 (direction OUTPUT))
+          (port ADV_B_c_3 (direction OUTPUT))
           (port ADV_B_c_5 (direction OUTPUT))
           (port ADV_G_c_5 (direction OUTPUT))
           (port ADV_G_c_4 (direction OUTPUT))
           (port ADV_B_c_4 (direction OUTPUT))
+          (port ADV_B_c_0 (direction OUTPUT))
+          (port ADV_R_c_6 (direction OUTPUT))
+          (port ADV_B_c_2 (direction OUTPUT))
+          (port ADV_R_c_5 (direction OUTPUT))
+          (port ADV_VSYNC_c (direction OUTPUT))
+          (port ADV_R_c_4 (direction OUTPUT))
+          (port ADV_HSYNC_c (direction OUTPUT))
           (port ADV_G_c_3 (direction OUTPUT))
+          (port ADV_B_c_6 (direction OUTPUT))
+          (port ADV_R_c_3 (direction OUTPUT))
           (port ADV_G_c_2 (direction OUTPUT))
           (port ADV_B_c_1 (direction OUTPUT))
           (port ADV_G_c_1 (direction OUTPUT))
+          (port ADV_G_c_0 (direction OUTPUT))
           (port ADV_B_c_7 (direction OUTPUT))
+          (port ADV_R_c_2 (direction OUTPUT))
+          (port VCC_net (direction INPUT))
+          (port ADV_R_c_1 (direction OUTPUT))
+          (port ADV_R_c_0 (direction OUTPUT))
         )
         (contents
-          (instance i467_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8888"))
-          )
-          (instance VGA_Y_71__i2
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance i464_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8888"))
-          )
-          (instance i1126_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "ffec"))
-          )
-          (instance VGA_Y_71__i1
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73__i11
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance i408_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8888"))
-          )
-          (instance i1_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8888"))
-          )
-          (instance i517_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "eccc"))
-          )
-          (instance i137_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "c8c8"))
-          )
-          (instance i1064_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "eeee"))
-          )
-          (instance VGA_X_72_73_add_4_11_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73_add_4_9_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73__i10
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73_add_4_8
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73_add_4_6
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance i1_2_lut_adj_8
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "eeee"))
-          )
-          (instance VGA_X_72_73_add_4_3
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73_add_4_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73_add_4_11
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73_add_4_9
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73_add_4_7_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73_add_4_5_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73_add_4_5
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
           (instance i3_4_lut
             (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
             (property LUT_INIT (string "fffe"))
           )
-          (instance VGA_X_72_73_add_4_7
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73_add_4_2
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71_add_4_5_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73_add_4_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73__i9
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73__i8
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73__i7
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73_add_4_10_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73__i6
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73__i5
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73__i4
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73__i3
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71_add_4_13_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73__i2
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71_add_4_5
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71__i3
+          (instance VGA_Y_72__i8
             (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
           )
-          (instance VGA_X_72_73_add_4_8_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_Y_71_add_4_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73_add_4_6_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_X_72_73_add_4_4
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73_add_4_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance i502_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "eccc"))
-          )
-          (instance VGA_Y_71__i4
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71__i7
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73_add_4_10
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance i140_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "c8c0"))
-          )
-          (instance i3_4_lut_adj_9
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "fffe"))
-          )
-          (instance i1131_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "fcfd"))
-          )
-          (instance i1_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "3332"))
-          )
-          (instance VGA_Y_71__i8
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance i1_2_lut_adj_10
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "eeee"))
-          )
-          (instance i2_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "feee"))
-          )
-          (instance VGA_Y_71__i5
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance i1120_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "fefe"))
-          )
-          (instance VGA_Y_71_add_4_12_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance i2_4_lut_adj_11
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "0c4c"))
-          )
-          (instance i4_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "20a0"))
-          )
-          (instance VGA_Y_71__i9
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73__i1
-            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
-          )
-          (instance i6_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "0004"))
-          )
-          (instance i8_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "0002"))
-          )
-          (instance i468_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8888"))
-          )
-          (instance VGA_Y_71__i6
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance i3_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8080"))
-          )
-          (instance VGA_Y_71__i10
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71_add_4_12
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71__i0
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance i477_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance i5_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "f7f7"))
-          )
-          (instance VGA_Y_71__i11
-            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
-          )
-          (instance i6_4_lut_adj_12
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "ffbf"))
-          )
-          (instance i1134_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "0400"))
-          )
-          (instance i478_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance i529_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "c8c0"))
-          )
-          (instance i105_2_lut_3_lut_4_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "f0e0"))
-          )
-          (instance i479_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance i484_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance i1_2_lut_rep_6_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "fefe"))
-          )
-          (instance VGA_Y_71_add_4_11_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance i485_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance VGA_Y_71_add_4_11
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance i486_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance i218_2_lut_rep_7
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "eeee"))
-          )
-          (instance VGA_Y_71_add_4_4
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71_add_4_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_Y_71_add_4_10_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_Y_71_add_4_3
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71_add_4_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_Y_71_add_4_10
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71_add_4_2
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71_add_4_9_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance i422_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance VGA_Y_71_add_4_9
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_Y_71_add_4_8_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance i427_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance i470_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance i405_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance VGA_Y_71_add_4_8
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance i471_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance VGA_Y_71_add_4_7_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance i465_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8888"))
-          )
-          (instance i472_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
-          )
-          (instance i473_2_lut
+          (instance i476_2_lut
             (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
             (property LUT_INIT (string "4444"))
           )
           (instance i466_2_lut
             (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8888"))
-          )
-          (instance i474_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
             (property LUT_INIT (string "4444"))
           )
-          (instance i475_2_lut
+          (instance VGA_Y_72__i9
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72__i10
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72__i11
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance i5_3_lut
             (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "4444"))
+            (property LUT_INIT (string "f7f7"))
           )
-          (instance i2_3_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "fefe"))
-          )
-          (instance VGA_Y_71_add_4_7
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance VGA_X_72_73_add_4_12_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_Y_71_add_4_6_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "C33C"))
-          )
-          (instance VGA_Y_71_add_4_6
-            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
-          )
-          (instance i469_2_lut
-            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
-            (property LUT_INIT (string "8888"))
-          )
-          (instance i476_2_lut
+          (instance i467_2_lut
             (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
             (property LUT_INIT (string "4444"))
           )
@@ -1073,930 +664,945 @@
             (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
             (property LUT_INIT (string "8888"))
           )
-          (net VGA_Y_3
-            (joined
-              (portRef I0 (instanceRef i485_2_lut))
-              (portRef I0 (instanceRef i467_2_lut))
-              (portRef Q (instanceRef VGA_Y_71__i3))
-              (portRef I1 (instanceRef i8_4_lut))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_5_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_5))
-              (portRef I2 (instanceRef i6_4_lut_adj_12))
-              (portRef I2 (instanceRef i140_4_lut))
-              (portRef I2 (instanceRef i502_4_lut))
-            )
+          (instance i461_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8888"))
           )
-          (net VGA_VISIBLE
-            (joined
-              (portRef I1 (instanceRef i468_2_lut))
-              (portRef O (instanceRef i4_4_lut))
-              (portRef I1 (instanceRef i408_2_lut))
-              (portRef I1 (instanceRef i464_2_lut))
-              (portRef I1 (instanceRef i467_2_lut))
-              (portRef I1 (instanceRef i463_2_lut))
-              (portRef I1 (instanceRef i405_2_lut))
-              (portRef I1 (instanceRef i476_2_lut))
-              (portRef I1 (instanceRef i469_2_lut))
-              (portRef I1 (instanceRef i475_2_lut))
-              (portRef I1 (instanceRef i474_2_lut))
-              (portRef I1 (instanceRef i466_2_lut))
-              (portRef I1 (instanceRef i473_2_lut))
-              (portRef I1 (instanceRef i472_2_lut))
-              (portRef I1 (instanceRef i465_2_lut))
-              (portRef I1 (instanceRef i471_2_lut))
-              (portRef I1 (instanceRef i470_2_lut))
-              (portRef I1 (instanceRef i427_2_lut))
-              (portRef I1 (instanceRef i422_2_lut))
-              (portRef I1 (instanceRef i486_2_lut))
-              (portRef I1 (instanceRef i485_2_lut))
-              (portRef I1 (instanceRef i484_2_lut))
-              (portRef I1 (instanceRef i479_2_lut))
-              (portRef I1 (instanceRef i478_2_lut))
-              (portRef I1 (instanceRef i477_2_lut))
-            )
+          (instance i468_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
           )
-          (net ADV_B_c_3
-            (joined
-              (portRef ADV_B_c_3)
-              (portRef O (instanceRef i467_2_lut))
-            )
+          (instance i6_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "ffbf"))
           )
-          (net GND_net
-            (joined
-              (portRef GND_net)
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_5))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_4_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_4))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_3))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_2_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_2))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_8_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_8))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_7_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_7))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_6_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_6))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_5_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_2))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_12_lut))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_11_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_11))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_10_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_10))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_9_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_9))
-              (portRef I3 (instanceRef i477_2_lut))
-              (portRef I2 (instanceRef i486_2_lut))
-              (portRef I2 (instanceRef i218_2_lut_rep_7))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_3_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_2_lut))
-              (portRef I3 (instanceRef i476_2_lut))
-              (portRef I2 (instanceRef i477_2_lut))
-              (portRef I3 (instanceRef i3_3_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_7_lut))
-              (portRef I2 (instanceRef i422_2_lut))
-              (portRef I3 (instanceRef i472_2_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_6_lut))
-              (portRef I3 (instanceRef i469_2_lut))
-              (portRef I2 (instanceRef i427_2_lut))
-              (portRef I3 (instanceRef i473_2_lut))
-              (portRef I2 (instanceRef i470_2_lut))
-              (portRef I2 (instanceRef i405_2_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_7_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_8))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_8_lut))
-              (portRef I2 (instanceRef i476_2_lut))
-              (portRef I2 (instanceRef i484_2_lut))
-              (portRef I3 (instanceRef i1_2_lut_rep_6_3_lut))
-              (portRef I2 (instanceRef i479_2_lut))
-              (portRef I2 (instanceRef i465_2_lut))
-              (portRef I3 (instanceRef i485_2_lut))
-              (portRef I3 (instanceRef i486_2_lut))
-              (portRef I2 (instanceRef i472_2_lut))
-              (portRef I3 (instanceRef i218_2_lut_rep_7))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_10_lut))
-              (portRef I2 (instanceRef i1_2_lut_adj_10))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_4_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_6_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_3_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_12))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_12_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_13_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_5_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_10_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_4_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_5_lut))
-              (portRef I3 (instanceRef i1120_3_lut))
-              (portRef I3 (instanceRef i1_2_lut_adj_10))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_13_lut))
-              (portRef I2 (instanceRef i475_2_lut))
-              (portRef I3 (instanceRef i466_2_lut))
-              (portRef I3 (instanceRef i465_2_lut))
-              (portRef I2 (instanceRef i478_2_lut))
-              (portRef I3 (instanceRef i475_2_lut))
-              (portRef I2 (instanceRef i485_2_lut))
-              (portRef I2 (instanceRef i469_2_lut))
-              (portRef I3 (instanceRef i479_2_lut))
-              (portRef I3 (instanceRef i484_2_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_11_lut))
-              (portRef I3 (instanceRef i422_2_lut))
-              (portRef I2 (instanceRef i473_2_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_9_lut))
-              (portRef I2 (instanceRef i466_2_lut))
-              (portRef I3 (instanceRef i5_3_lut))
-              (portRef I3 (instanceRef i474_2_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_12_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_2_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_7))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_9_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_10))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_9_lut))
-              (portRef I3 (instanceRef i463_2_lut))
-              (portRef I2 (instanceRef i1_2_lut_adj_8))
-              (portRef I3 (instanceRef i1_2_lut_adj_8))
-              (portRef I2 (instanceRef i463_2_lut))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_3_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_10_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_11))
-              (portRef I3 (instanceRef i478_2_lut))
-              (portRef I2 (instanceRef i474_2_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_2_lut))
-              (portRef I3 (instanceRef i468_2_lut))
-              (portRef I2 (instanceRef i468_2_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_12_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_3_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_8_lut))
-              (portRef I3 (instanceRef i470_2_lut))
-              (portRef I3 (instanceRef i427_2_lut))
-              (portRef I3 (instanceRef i2_3_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_7_lut))
-              (portRef I3 (instanceRef i471_2_lut))
-              (portRef I2 (instanceRef i471_2_lut))
-              (portRef I3 (instanceRef i1064_2_lut))
-              (portRef I3 (instanceRef i405_2_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_9))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_3))
-              (portRef I3 (instanceRef i137_3_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_11_lut))
-              (portRef I3 (instanceRef i1_2_lut))
-              (portRef I2 (instanceRef i1_2_lut))
-              (portRef I3 (instanceRef i408_2_lut))
-              (portRef I2 (instanceRef i408_2_lut))
-              (portRef I3 (instanceRef i464_2_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_6_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_6))
-              (portRef I2 (instanceRef i464_2_lut))
-              (portRef I3 (instanceRef i467_2_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_4))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_4_lut))
-              (portRef I0 (instanceRef VGA_Y_71_add_4_5))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_5_lut))
-              (portRef I2 (instanceRef i1064_2_lut))
-              (portRef I2 (instanceRef i467_2_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_11_lut))
-              (portRef I0 (instanceRef VGA_X_72_73_add_4_8_lut))
-            )
+          (instance i102_2_lut_3_lut_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "f0e0"))
           )
-          (net n51
-            (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_4_lut))
-              (portRef D (instanceRef VGA_Y_71__i2))
-            )
+          (instance i469_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
           )
-          (net n336
-            (joined
-              (portRef O (instanceRef i529_4_lut))
-              (portRef E (instanceRef VGA_Y_71__i11))
-              (portRef R (instanceRef VGA_X_72_73__i10))
-              (portRef R (instanceRef VGA_X_72_73__i9))
-              (portRef R (instanceRef VGA_X_72_73__i8))
-              (portRef R (instanceRef VGA_X_72_73__i7))
-              (portRef R (instanceRef VGA_X_72_73__i6))
-              (portRef R (instanceRef VGA_X_72_73__i5))
-              (portRef R (instanceRef VGA_X_72_73__i4))
-              (portRef R (instanceRef VGA_X_72_73__i3))
-              (portRef R (instanceRef VGA_X_72_73__i2))
-              (portRef E (instanceRef VGA_Y_71__i3))
-              (portRef E (instanceRef VGA_Y_71__i6))
-              (portRef E (instanceRef VGA_Y_71__i2))
-              (portRef E (instanceRef VGA_Y_71__i0))
-              (portRef R (instanceRef VGA_X_72_73__i1))
-              (portRef E (instanceRef VGA_Y_71__i5))
-              (portRef E (instanceRef VGA_Y_71__i8))
-              (portRef E (instanceRef VGA_Y_71__i10))
-              (portRef E (instanceRef VGA_Y_71__i9))
-              (portRef E (instanceRef VGA_Y_71__i7))
-              (portRef E (instanceRef VGA_Y_71__i4))
-              (portRef E (instanceRef VGA_Y_71__i1))
-              (portRef I1 (instanceRef i5_3_lut))
-              (portRef R (instanceRef VGA_X_72_73__i11))
-            )
+          (instance i462_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8888"))
           )
-          (net VGA_Y_2
-            (joined
-              (portRef Q (instanceRef VGA_Y_71__i2))
-              (portRef I3 (instanceRef i6_4_lut))
-              (portRef I0 (instanceRef i486_2_lut))
-              (portRef I0 (instanceRef i5_3_lut))
-              (portRef I0 (instanceRef i502_4_lut))
-              (portRef I3 (instanceRef i140_4_lut))
-              (portRef I0 (instanceRef i468_2_lut))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_4_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_4))
-            )
+          (instance i417_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8888"))
           )
-          (net ADV_CLK_c
-            (joined
-              (portRef ADV_CLK_c)
-              (portRef C (instanceRef VGA_X_72_73__i11))
-              (portRef C (instanceRef VGA_Y_71__i11))
-              (portRef C (instanceRef VGA_Y_71__i1))
-              (portRef C (instanceRef VGA_Y_71__i2))
-              (portRef C (instanceRef VGA_Y_71__i3))
-              (portRef C (instanceRef VGA_Y_71__i4))
-              (portRef C (instanceRef VGA_Y_71__i5))
-              (portRef C (instanceRef VGA_Y_71__i6))
-              (portRef C (instanceRef VGA_Y_71__i7))
-              (portRef C (instanceRef VGA_Y_71__i8))
-              (portRef C (instanceRef VGA_Y_71__i9))
-              (portRef C (instanceRef VGA_Y_71__i10))
-              (portRef C (instanceRef VGA_X_72_73__i1))
-              (portRef C (instanceRef VGA_X_72_73__i2))
-              (portRef C (instanceRef VGA_X_72_73__i3))
-              (portRef C (instanceRef VGA_X_72_73__i4))
-              (portRef C (instanceRef VGA_X_72_73__i5))
-              (portRef C (instanceRef VGA_X_72_73__i6))
-              (portRef C (instanceRef VGA_X_72_73__i7))
-              (portRef C (instanceRef VGA_X_72_73__i8))
-              (portRef C (instanceRef VGA_X_72_73__i9))
-              (portRef C (instanceRef VGA_X_72_73__i10))
-              (portRef C (instanceRef VGA_Y_71__i0))
-            )
-            (property SET_AS_NETWORK (string "ADV_CLK_c"))
-            (property is_clock (string "1"))
+          (instance i478_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
           )
-          (net n346
-            (joined
-              (portRef R (instanceRef VGA_Y_71__i5))
-              (portRef R (instanceRef VGA_Y_71__i0))
-              (portRef R (instanceRef VGA_Y_71__i11))
-              (portRef R (instanceRef VGA_Y_71__i6))
-              (portRef R (instanceRef VGA_Y_71__i3))
-              (portRef R (instanceRef VGA_Y_71__i2))
-              (portRef R (instanceRef VGA_Y_71__i9))
-              (portRef R (instanceRef VGA_Y_71__i8))
-              (portRef R (instanceRef VGA_Y_71__i4))
-              (portRef R (instanceRef VGA_Y_71__i1))
-              (portRef R (instanceRef VGA_Y_71__i10))
-              (portRef R (instanceRef VGA_Y_71__i7))
-              (portRef O (instanceRef i1134_4_lut))
-            )
+          (instance VGA_X_73_74_add_4_12_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
           )
-          (net VGA_Y_6
-            (joined
-              (portRef I0 (instanceRef i464_2_lut))
-              (portRef I1 (instanceRef i1_2_lut_adj_8))
-              (portRef I1 (instanceRef i1_2_lut))
-              (portRef Q (instanceRef VGA_Y_71__i6))
-              (portRef I0 (instanceRef i478_2_lut))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_8_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_8))
-            )
+          (instance VGA_X_73_74_add_4_11_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
           )
-          (net ADV_B_c_6
-            (joined
-              (portRef ADV_B_c_6)
-              (portRef O (instanceRef i464_2_lut))
-            )
+          (instance i464_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8888"))
           )
-          (net n1144
-            (joined
-              (portRef O (instanceRef i2_3_lut))
-              (portRef I0 (instanceRef i1126_4_lut))
-            )
+          (instance i479_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
           )
-          (net VGA_X_9
-            (joined
-              (portRef I1 (instanceRef i1126_4_lut))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_11))
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_11_lut))
-              (portRef Q (instanceRef VGA_X_72_73__i10))
-              (portRef I2 (instanceRef i1_4_lut))
-              (portRef I2 (instanceRef i529_4_lut))
-              (portRef I3 (instanceRef i2_4_lut_adj_11))
-            )
+          (instance VGA_X_73_74_add_4_11
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
           )
-          (net VGA_X_7
-            (joined
-              (portRef I1 (instanceRef i1_2_lut_rep_6_3_lut))
-              (portRef I0 (instanceRef i470_2_lut))
-              (portRef Q (instanceRef VGA_X_72_73__i8))
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_9_lut))
-              (portRef I1 (instanceRef i218_2_lut_rep_7))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_9))
-              (portRef I1 (instanceRef i105_2_lut_3_lut_4_lut))
-              (portRef I2 (instanceRef i1126_4_lut))
-            )
+          (instance VGA_X_73_74_add_4_10_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
           )
-          (net VGA_X_10
-            (joined
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_12_lut))
-              (portRef I3 (instanceRef i1126_4_lut))
-              (portRef I3 (instanceRef i1_4_lut))
-              (portRef I1 (instanceRef i529_4_lut))
-              (portRef Q (instanceRef VGA_X_72_73__i11))
-              (portRef I2 (instanceRef i2_4_lut_adj_11))
-            )
+          (instance i8_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "0002"))
           )
-          (net n1181
-            (joined
-              (portRef O (instanceRef i1126_4_lut))
-              (portRef I1 (instanceRef i1131_4_lut))
-            )
+          (instance VGA_X_73_74_add_4_10
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
           )
-          (net n52
-            (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_3_lut))
-              (portRef D (instanceRef VGA_Y_71__i1))
-            )
+          (instance i1_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8888"))
           )
-          (net VGA_Y_1
-            (joined
-              (portRef I0 (instanceRef i469_2_lut))
-              (portRef I3 (instanceRef i502_4_lut))
-              (portRef I3 (instanceRef i6_4_lut_adj_12))
-              (portRef Q (instanceRef VGA_Y_71__i1))
-              (portRef I0 (instanceRef i140_4_lut))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_3_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_3))
-              (portRef I1 (instanceRef i1_2_lut_adj_10))
-              (portRef I0 (instanceRef i422_2_lut))
-            )
+          (instance VGA_VS_49
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
           )
-          (net n50
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_12_lut))
-              (portRef D (instanceRef VGA_X_72_73__i11))
-            )
+          (instance VGA_X_73_74_add_4_9_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
           )
-          (net VGA_Y_0
-            (joined
-              (portRef Q (instanceRef VGA_Y_71__i0))
-              (portRef I0 (instanceRef i427_2_lut))
-              (portRef I0 (instanceRef i1_2_lut_adj_10))
-              (portRef I0 (instanceRef i408_2_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_2))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_2_lut))
-              (portRef I1 (instanceRef i6_4_lut_adj_12))
-            )
+          (instance i687_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eeee"))
           )
-          (net ADV_B_c_0
-            (joined
-              (portRef ADV_B_c_0)
-              (portRef O (instanceRef i408_2_lut))
-            )
+          (instance VGA_X_73_74_add_4_9
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
           )
-          (net VGA_Y_5
-            (joined
-              (portRef I0 (instanceRef i465_2_lut))
-              (portRef I0 (instanceRef i1_2_lut_adj_8))
-              (portRef I0 (instanceRef i1_2_lut))
-              (portRef Q (instanceRef VGA_Y_71__i5))
-              (portRef I0 (instanceRef i479_2_lut))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_7_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_7))
-            )
+          (instance i6_4_lut_adj_8
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "0004"))
           )
-          (net n1099
-            (joined
-              (portRef O (instanceRef i1_2_lut))
-              (portRef I3 (instanceRef i1134_4_lut))
-              (portRef I3 (instanceRef i2_4_lut))
-            )
+          (instance i500_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eccc"))
           )
-          (net VGA_X_0
-            (joined
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_2))
-              (portRef I0 (instanceRef i405_2_lut))
-              (portRef Q (instanceRef VGA_X_72_73__i1))
-              (portRef I0 (instanceRef i517_4_lut))
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_2_lut))
-            )
+          (instance i140_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "c8c0"))
           )
-          (net n1195
-            (joined
-              (portRef O (instanceRef i1_2_lut_rep_6_3_lut))
-              (portRef I1 (instanceRef i517_4_lut))
-            )
+          (instance VGA_X_73_74_add_4_8_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
           )
-          (net n8
-            (joined
-              (portRef O (instanceRef i3_3_lut))
-              (portRef I2 (instanceRef i517_4_lut))
-            )
+          (instance i753_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "0400"))
           )
-          (net VGA_X_1
+          (instance i3_4_lut_adj_9
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "fffe"))
+          )
+          (instance i480_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
+          )
+          (instance VGA_Y_72__i1
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance i1_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "3332"))
+          )
+          (instance VGA_Y_72__i5
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_HS_48
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74__i1
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance i2_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "feee"))
+          )
+          (instance i471_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
+          )
+          (instance VGA_Y_72__i2
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance i2_4_lut_adj_10
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "0c4c"))
+          )
+          (instance VGA_Y_72__i6
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance i4_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "20a0"))
+          )
+          (instance VGA_Y_72__i3
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72__i0
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74_add_4_8
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74_add_4_7_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_Y_72__i4
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance i2_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "fefe"))
+          )
+          (instance VGA_Y_72_add_4_3
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i460_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8888"))
+          )
+          (instance i745_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "ffec"))
+          )
+          (instance VGA_X_73_74_add_4_7
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i1_2_lut_rep_6_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "fefe"))
+          )
+          (instance i481_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
+          )
+          (instance i3_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8080"))
+          )
+          (instance i138_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "c8c8"))
+          )
+          (instance i750_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "fcfd"))
+          )
+          (instance i472_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
+          )
+          (instance i218_2_lut_rep_8
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eeee"))
+          )
+          (instance VGA_X_73_74__i11
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74__i10
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance i465_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8888"))
+          )
+          (instance i474_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
+          )
+          (instance VGA_X_73_74_add_4_6_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_X_73_74_add_4_6
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74_add_4_5_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_X_73_74__i9
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74__i8
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance i416_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
+          )
+          (instance VGA_X_73_74__i7
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74__i6
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74__i5
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74__i4
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74__i3
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance i459_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8888"))
+          )
+          (instance VGA_X_73_74__i2
+            (viewRef INTERFACE_c (cellRef SB_DFFSR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74_add_4_5
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i482_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
+          )
+          (instance VGA_X_73_74_add_4_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_X_73_74_add_4_4
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72_add_4_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_X_73_74_add_4_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_X_73_74_add_4_3
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74_add_4_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_Y_72__i7
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance VGA_X_73_74_add_4_2
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72_add_4_13_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_Y_72_add_4_12_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_Y_72_add_4_12
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72_add_4_11_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_Y_72_add_4_11
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i1_2_lut_adj_11
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eeee"))
+          )
+          (instance VGA_Y_72_add_4_10_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_Y_72_add_4_10
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i504_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eccc"))
+          )
+          (instance i483_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
+          )
+          (instance VGA_Y_72_add_4_9_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance i524_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "c8c0"))
+          )
+          (instance VGA_Y_72_add_4_9
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72_add_4_8_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_Y_72_add_4_8
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72_add_4_7_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_Y_72_add_4_7
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72_add_4_6_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_Y_72_add_4_6
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72_add_4_5_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance VGA_Y_72_add_4_5
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72_add_4_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance i1_2_lut_adj_12
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eeee"))
+          )
+          (instance VGA_Y_72_add_4_2
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72_add_4_4
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance VGA_Y_72_add_4_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance i739_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "fefe"))
+          )
+          (instance i401_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
+          )
+          (net VGA_Y_7
             (joined
-              (portRef Q (instanceRef VGA_X_72_73__i2))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_3))
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_3_lut))
-              (portRef I3 (instanceRef i517_4_lut))
+              (portRef I0 (instanceRef i2_4_lut))
+              (portRef I2 (instanceRef VGA_Y_72_add_4_9_lut))
+              (portRef I2 (instanceRef i739_3_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_9))
+              (portRef I0 (instanceRef i459_2_lut))
+              (portRef I0 (instanceRef i3_4_lut))
+              (portRef Q (instanceRef VGA_Y_72__i7))
               (portRef I0 (instanceRef i476_2_lut))
-            )
-          )
-          (net n547
-            (joined
-              (portRef O (instanceRef i517_4_lut))
-              (portRef I0 (instanceRef i529_4_lut))
-            )
-          )
-          (net VGA_X_3
-            (joined
-              (portRef I0 (instanceRef i137_3_lut))
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_5_lut))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_5))
-              (portRef Q (instanceRef VGA_X_72_73__i4))
-              (portRef I1 (instanceRef i3_3_lut))
-              (portRef I0 (instanceRef i474_2_lut))
-            )
-          )
-          (net VGA_X_5
-            (joined
-              (portRef I3 (instanceRef i105_2_lut_3_lut_4_lut))
-              (portRef I0 (instanceRef i472_2_lut))
-              (portRef Q (instanceRef VGA_X_72_73__i6))
-              (portRef I0 (instanceRef i2_3_lut))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_7))
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_7_lut))
-              (portRef I2 (instanceRef i1_2_lut_rep_6_3_lut))
-              (portRef I1 (instanceRef i137_3_lut))
-            )
-          )
-          (net VGA_X_4
-            (joined
-              (portRef Q (instanceRef VGA_X_72_73__i5))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_6))
-              (portRef I0 (instanceRef i473_2_lut))
-              (portRef I2 (instanceRef i137_3_lut))
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_6_lut))
-              (portRef I2 (instanceRef i3_3_lut))
-              (portRef I2 (instanceRef i2_3_lut))
-            )
-          )
-          (net n12
-            (joined
-              (portRef O (instanceRef i137_3_lut))
-              (portRef I0 (instanceRef i1131_4_lut))
-            )
-          )
-          (net VGA_Y_11
-            (joined
-              (portRef I2 (instanceRef i3_4_lut))
-              (portRef I0 (instanceRef i1064_2_lut))
-              (portRef Q (instanceRef VGA_Y_71__i11))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_13_lut))
             )
           )
           (net VGA_Y_10
             (joined
               (portRef I1 (instanceRef i3_4_lut))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_12_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_12))
-              (portRef I1 (instanceRef i1064_2_lut))
-              (portRef Q (instanceRef VGA_Y_71__i10))
+              (portRef I2 (instanceRef VGA_Y_72_add_4_12_lut))
+              (portRef Q (instanceRef VGA_Y_72__i10))
+              (portRef I1 (instanceRef i687_2_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_12))
             )
           )
-          (net n1119
+          (net VGA_Y_11
             (joined
-              (portRef O (instanceRef i1064_2_lut))
-              (portRef I1 (instanceRef i1_4_lut))
-              (portRef I0 (instanceRef i6_4_lut))
-            )
-          )
-          (net n51_adj_278
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_11_lut))
-              (portRef D (instanceRef VGA_X_72_73__i10))
-            )
-          )
-          (net n1007
-            (joined
-              (portRef CO (instanceRef VGA_X_72_73_add_4_10))
-              (portRef CI (instanceRef VGA_X_72_73_add_4_11))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_11_lut))
-            )
-          )
-          (net n53
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_9_lut))
-              (portRef D (instanceRef VGA_X_72_73__i8))
-            )
-          )
-          (net n1005
-            (joined
-              (portRef CO (instanceRef VGA_X_72_73_add_4_8))
-              (portRef CI (instanceRef VGA_X_72_73_add_4_9))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_9_lut))
-            )
-          )
-          (net n1004
-            (joined
-              (portRef CO (instanceRef VGA_X_72_73_add_4_7))
-              (portRef CI (instanceRef VGA_X_72_73_add_4_8))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_8_lut))
-            )
-          )
-          (net VGA_X_6
-            (joined
-              (portRef Q (instanceRef VGA_X_72_73__i7))
-              (portRef I0 (instanceRef i471_2_lut))
-              (portRef I1 (instanceRef i2_3_lut))
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_8_lut))
-              (portRef I0 (instanceRef i218_2_lut_rep_7))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_8))
-              (portRef I0 (instanceRef i1_2_lut_rep_6_3_lut))
-              (portRef I0 (instanceRef i105_2_lut_3_lut_4_lut))
-            )
-          )
-          (net n1002
-            (joined
-              (portRef CO (instanceRef VGA_X_72_73_add_4_5))
-              (portRef CI (instanceRef VGA_X_72_73_add_4_6))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_6_lut))
-            )
-          )
-          (net n1003
-            (joined
-              (portRef CO (instanceRef VGA_X_72_73_add_4_6))
-              (portRef CI (instanceRef VGA_X_72_73_add_4_7))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_7_lut))
-            )
-          )
-          (net n318
-            (joined
-              (portRef O (instanceRef i1_2_lut_adj_8))
-              (portRef I2 (instanceRef i3_4_lut_adj_9))
-              (portRef I2 (instanceRef i6_4_lut))
-            )
-          )
-          (net n999
-            (joined
-              (portRef CO (instanceRef VGA_X_72_73_add_4_2))
-              (portRef CI (instanceRef VGA_X_72_73_add_4_3))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_3_lut))
-            )
-          )
-          (net n1000
-            (joined
-              (portRef CO (instanceRef VGA_X_72_73_add_4_3))
-              (portRef CI (instanceRef VGA_X_72_73_add_4_4))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_4_lut))
-            )
-          )
-          (net n60
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_2_lut))
-              (portRef D (instanceRef VGA_X_72_73__i1))
-            )
-          )
-          (net VCC_net
-            (joined
-              (portRef VCC_net)
-              (portRef CI (instanceRef VGA_Y_71_add_4_2))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_2_lut))
-              (portRef CI (instanceRef VGA_X_72_73_add_4_2))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_2_lut))
-            )
-          )
-          (net n1008
-            (joined
-              (portRef CO (instanceRef VGA_X_72_73_add_4_11))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_12_lut))
-            )
-          )
-          (net n1006
-            (joined
-              (portRef CO (instanceRef VGA_X_72_73_add_4_9))
-              (portRef CI (instanceRef VGA_X_72_73_add_4_10))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_10_lut))
-            )
-          )
-          (net n55
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_7_lut))
-              (portRef D (instanceRef VGA_X_72_73__i6))
-            )
-          )
-          (net n57
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_5_lut))
-              (portRef D (instanceRef VGA_X_72_73__i4))
-            )
-          )
-          (net n1001
-            (joined
-              (portRef CO (instanceRef VGA_X_72_73_add_4_4))
-              (portRef CI (instanceRef VGA_X_72_73_add_4_5))
-              (portRef I3 (instanceRef VGA_X_72_73_add_4_5_lut))
-            )
-          )
-          (net VGA_Y_7
-            (joined
-              (portRef I0 (instanceRef i477_2_lut))
-              (portRef I2 (instanceRef i1120_3_lut))
-              (portRef I0 (instanceRef i2_4_lut))
-              (portRef Q (instanceRef VGA_Y_71__i7))
-              (portRef I0 (instanceRef i463_2_lut))
-              (portRef I0 (instanceRef i3_4_lut))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_9_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_9))
+              (portRef I0 (instanceRef i687_2_lut))
+              (portRef I2 (instanceRef i3_4_lut))
+              (portRef Q (instanceRef VGA_Y_72__i11))
+              (portRef I2 (instanceRef VGA_Y_72_add_4_13_lut))
             )
           )
           (net VGA_Y_8
             (joined
-              (portRef Q (instanceRef VGA_Y_71__i8))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_10_lut))
+              (portRef I2 (instanceRef VGA_Y_72_add_4_10_lut))
+              (portRef Q (instanceRef VGA_Y_72__i8))
               (portRef I3 (instanceRef i3_4_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_10))
               (portRef I1 (instanceRef i2_4_lut))
-              (portRef I1 (instanceRef i1120_3_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_10))
+              (portRef I0 (instanceRef i739_3_lut))
             )
           )
-          (net n1105
+          (net n718
             (joined
               (portRef O (instanceRef i3_4_lut))
-              (portRef I0 (instanceRef i6_4_lut_adj_12))
+              (portRef I0 (instanceRef i6_4_lut))
               (portRef I1 (instanceRef i3_4_lut_adj_9))
-            )
-          )
-          (net n50_adj_279
-            (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_5_lut))
-              (portRef D (instanceRef VGA_Y_71__i3))
-            )
-          )
-          (net n1016
-            (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_4))
-              (portRef CI (instanceRef VGA_Y_71_add_4_5))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_5_lut))
-            )
-          )
-          (net n58
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_4_lut))
-              (portRef D (instanceRef VGA_X_72_73__i3))
-            )
-          )
-          (net VGA_X_2
-            (joined
-              (portRef Q (instanceRef VGA_X_72_73__i3))
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_4_lut))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_4))
-              (portRef I0 (instanceRef i3_3_lut))
-              (portRef I0 (instanceRef i475_2_lut))
-            )
-          )
-          (net n52_adj_280
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_10_lut))
-              (portRef D (instanceRef VGA_X_72_73__i9))
-            )
-          )
-          (net VGA_X_8
-            (joined
-              (portRef Q (instanceRef VGA_X_72_73__i9))
-              (portRef I2 (instanceRef i105_2_lut_3_lut_4_lut))
-              (portRef I2 (instanceRef i1131_4_lut))
-              (portRef I3 (instanceRef i529_4_lut))
-              (portRef I2 (instanceRef VGA_X_72_73_add_4_10_lut))
-              (portRef I1 (instanceRef VGA_X_72_73_add_4_10))
-            )
-          )
-          (net n54
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_8_lut))
-              (portRef D (instanceRef VGA_X_72_73__i7))
-            )
-          )
-          (net n56
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_6_lut))
-              (portRef D (instanceRef VGA_X_72_73__i5))
-            )
-          )
-          (net n42
-            (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_13_lut))
-              (portRef D (instanceRef VGA_Y_71__i11))
-            )
-          )
-          (net n1024
-            (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_12))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_13_lut))
-            )
-          )
-          (net n59
-            (joined
-              (portRef O (instanceRef VGA_X_72_73_add_4_3_lut))
-              (portRef D (instanceRef VGA_X_72_73__i2))
-            )
-          )
-          (net n1017
-            (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_5))
-              (portRef CI (instanceRef VGA_Y_71_add_4_6))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_6_lut))
-            )
-          )
-          (net n1015
-            (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_3))
-              (portRef CI (instanceRef VGA_Y_71_add_4_4))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_4_lut))
-            )
-          )
-          (net VGA_Y_4
-            (joined
-              (portRef I3 (instanceRef i8_4_lut))
-              (portRef I2 (instanceRef VGA_Y_71_add_4_6_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_6))
-              (portRef Q (instanceRef VGA_Y_71__i4))
-              (portRef I2 (instanceRef i5_3_lut))
-              (portRef I1 (instanceRef i502_4_lut))
-              (portRef I0 (instanceRef i466_2_lut))
-              (portRef I1 (instanceRef i140_4_lut))
-              (portRef I0 (instanceRef i484_2_lut))
-            )
-          )
-          (net n532
-            (joined
-              (portRef O (instanceRef i502_4_lut))
-              (portRef I2 (instanceRef i2_4_lut))
-            )
-          )
-          (net n49
-            (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_6_lut))
-              (portRef D (instanceRef VGA_Y_71__i4))
-            )
-          )
-          (net n46
-            (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_9_lut))
-              (portRef D (instanceRef VGA_Y_71__i7))
-            )
-          )
-          (net n10
-            (joined
-              (portRef O (instanceRef i140_4_lut))
-              (portRef I0 (instanceRef i3_4_lut_adj_9))
-            )
-          )
-          (net VGA_Y_9
-            (joined
-              (portRef I2 (instanceRef VGA_Y_71_add_4_11_lut))
-              (portRef I1 (instanceRef i1134_4_lut))
-              (portRef Q (instanceRef VGA_Y_71__i9))
-              (portRef I3 (instanceRef i4_4_lut))
-              (portRef I1 (instanceRef VGA_Y_71_add_4_11))
-              (portRef I3 (instanceRef i3_4_lut_adj_9))
-              (portRef I0 (instanceRef i1120_3_lut))
-            )
-          )
-          (net VGA_VISIBLE_N_275
-            (joined
-              (portRef O (instanceRef i3_4_lut_adj_9))
-              (portRef I1 (instanceRef i2_4_lut_adj_11))
-            )
-          )
-          (net n1196
-            (joined
-              (portRef O (instanceRef i218_2_lut_rep_7))
-              (portRef I3 (instanceRef i1131_4_lut))
-            )
-          )
-          (net VGA_HS_N_267
-            (joined
-              (portRef VGA_HS_N_267)
-              (portRef O (instanceRef i1131_4_lut))
-            )
-          )
-          (net n18
-            (joined
-              (portRef O (instanceRef i105_2_lut_3_lut_4_lut))
-              (portRef I0 (instanceRef i2_4_lut_adj_11))
-              (portRef I0 (instanceRef i1_4_lut))
-            )
-          )
-          (net n6
-            (joined
-              (portRef O (instanceRef i1_4_lut))
-              (portRef I2 (instanceRef i4_4_lut))
             )
           )
           (net n45
             (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_10_lut))
-              (portRef D (instanceRef VGA_Y_71__i8))
+              (portRef O (instanceRef VGA_Y_72_add_4_10_lut))
+              (portRef D (instanceRef VGA_Y_72__i8))
             )
           )
-          (net n22
+          (net n330
             (joined
-              (portRef O (instanceRef i1_2_lut_adj_10))
-              (portRef I1 (instanceRef i6_4_lut))
+              (portRef O (instanceRef i524_4_lut))
+              (portRef E (instanceRef VGA_Y_72__i7))
+              (portRef E (instanceRef VGA_Y_72__i2))
+              (portRef E (instanceRef VGA_Y_72__i1))
+              (portRef E (instanceRef VGA_Y_72__i11))
+              (portRef E (instanceRef VGA_Y_72__i10))
+              (portRef E (instanceRef VGA_Y_72__i9))
+              (portRef E (instanceRef VGA_Y_72__i8))
+              (portRef E (instanceRef VGA_Y_72__i3))
+              (portRef R (instanceRef VGA_X_73_74__i1))
+              (portRef R (instanceRef VGA_X_73_74__i11))
+              (portRef E (instanceRef VGA_Y_72__i0))
+              (portRef E (instanceRef VGA_Y_72__i6))
+              (portRef I1 (instanceRef i5_3_lut))
+              (portRef E (instanceRef VGA_Y_72__i5))
+              (portRef R (instanceRef VGA_X_73_74__i10))
+              (portRef R (instanceRef VGA_X_73_74__i9))
+              (portRef R (instanceRef VGA_X_73_74__i8))
+              (portRef R (instanceRef VGA_X_73_74__i7))
+              (portRef R (instanceRef VGA_X_73_74__i6))
+              (portRef R (instanceRef VGA_X_73_74__i5))
+              (portRef R (instanceRef VGA_X_73_74__i4))
+              (portRef R (instanceRef VGA_X_73_74__i3))
+              (portRef E (instanceRef VGA_Y_72__i4))
+              (portRef R (instanceRef VGA_X_73_74__i2))
             )
           )
-          (net n1125
+          (net ADV_CLK_c
             (joined
-              (portRef O (instanceRef i2_4_lut))
-              (portRef I1 (instanceRef i4_4_lut))
+              (portRef ADV_CLK_c)
+              (portRef C (instanceRef VGA_HS_48))
+              (portRef C (instanceRef VGA_X_73_74__i3))
+              (portRef C (instanceRef VGA_X_73_74__i1))
+              (portRef C (instanceRef VGA_Y_72__i11))
+              (portRef C (instanceRef VGA_X_73_74__i2))
+              (portRef C (instanceRef VGA_Y_72__i0))
+              (portRef C (instanceRef VGA_X_73_74__i4))
+              (portRef C (instanceRef VGA_X_73_74__i5))
+              (portRef C (instanceRef VGA_X_73_74__i6))
+              (portRef C (instanceRef VGA_X_73_74__i7))
+              (portRef C (instanceRef VGA_X_73_74__i8))
+              (portRef C (instanceRef VGA_X_73_74__i9))
+              (portRef C (instanceRef VGA_X_73_74__i10))
+              (portRef C (instanceRef VGA_X_73_74__i11))
+              (portRef C (instanceRef VGA_Y_72__i1))
+              (portRef C (instanceRef VGA_Y_72__i2))
+              (portRef C (instanceRef VGA_Y_72__i3))
+              (portRef C (instanceRef VGA_Y_72__i4))
+              (portRef C (instanceRef VGA_Y_72__i5))
+              (portRef C (instanceRef VGA_Y_72__i6))
+              (portRef C (instanceRef VGA_Y_72__i7))
+              (portRef C (instanceRef VGA_Y_72__i8))
+              (portRef C (instanceRef VGA_Y_72__i9))
+              (portRef C (instanceRef VGA_Y_72__i10))
+              (portRef C (instanceRef VGA_VS_49))
+            )
+            (property SET_AS_NETWORK (string "ADV_CLK_c"))
+            (property is_clock (string "1"))
+          )
+          (net n334
+            (joined
+              (portRef R (instanceRef VGA_Y_72__i5))
+              (portRef R (instanceRef VGA_Y_72__i0))
+              (portRef R (instanceRef VGA_Y_72__i11))
+              (portRef R (instanceRef VGA_Y_72__i6))
+              (portRef R (instanceRef VGA_Y_72__i3))
+              (portRef R (instanceRef VGA_Y_72__i2))
+              (portRef R (instanceRef VGA_Y_72__i9))
+              (portRef R (instanceRef VGA_Y_72__i8))
+              (portRef R (instanceRef VGA_Y_72__i4))
+              (portRef R (instanceRef VGA_Y_72__i1))
+              (portRef R (instanceRef VGA_Y_72__i10))
+              (portRef R (instanceRef VGA_Y_72__i7))
+              (portRef O (instanceRef i753_4_lut))
             )
           )
-          (net n48
+          (net VGA_VISIBLE
             (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_7_lut))
-              (portRef D (instanceRef VGA_Y_71__i5))
-            )
-          )
-          (net n1175
-            (joined
-              (portRef O (instanceRef i1120_3_lut))
-              (portRef I2 (instanceRef i8_4_lut))
-            )
-          )
-          (net n43
-            (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_12_lut))
-              (portRef D (instanceRef VGA_Y_71__i10))
-            )
-          )
-          (net n1023
-            (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_11))
-              (portRef CI (instanceRef VGA_Y_71_add_4_12))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_12_lut))
-            )
-          )
-          (net n7
-            (joined
-              (portRef O (instanceRef i2_4_lut_adj_11))
-              (portRef I0 (instanceRef i4_4_lut))
-            )
-          )
-          (net n44
-            (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_11_lut))
-              (portRef D (instanceRef VGA_Y_71__i9))
-            )
-          )
-          (net n15
-            (joined
-              (portRef O (instanceRef i6_4_lut))
-              (portRef I0 (instanceRef i8_4_lut))
-            )
-          )
-          (net ADV_VSYNC_c
-            (joined
-              (portRef ADV_VSYNC_c)
-              (portRef O (instanceRef i8_4_lut))
-            )
-          )
-          (net ADV_B_c_2
-            (joined
-              (portRef ADV_B_c_2)
-              (portRef O (instanceRef i468_2_lut))
-            )
-          )
-          (net n47
-            (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_8_lut))
-              (portRef D (instanceRef VGA_Y_71__i6))
-            )
-          )
-          (net n53_adj_281
-            (joined
-              (portRef O (instanceRef VGA_Y_71_add_4_2_lut))
-              (portRef D (instanceRef VGA_Y_71__i0))
+              (portRef I1 (instanceRef i460_2_lut))
+              (portRef O (instanceRef i4_4_lut))
+              (portRef I1 (instanceRef i464_2_lut))
+              (portRef I1 (instanceRef i417_2_lut))
+              (portRef I1 (instanceRef i463_2_lut))
+              (portRef I1 (instanceRef i459_2_lut))
+              (portRef I1 (instanceRef i416_2_lut))
+              (portRef I1 (instanceRef i474_2_lut))
+              (portRef I1 (instanceRef i465_2_lut))
+              (portRef I1 (instanceRef i472_2_lut))
+              (portRef I1 (instanceRef i471_2_lut))
+              (portRef I1 (instanceRef i462_2_lut))
+              (portRef I1 (instanceRef i469_2_lut))
+              (portRef I1 (instanceRef i468_2_lut))
+              (portRef I1 (instanceRef i461_2_lut))
+              (portRef I1 (instanceRef i467_2_lut))
+              (portRef I1 (instanceRef i466_2_lut))
+              (portRef I1 (instanceRef i401_2_lut))
+              (portRef I1 (instanceRef i483_2_lut))
+              (portRef I1 (instanceRef i482_2_lut))
+              (portRef I1 (instanceRef i481_2_lut))
+              (portRef I1 (instanceRef i480_2_lut))
+              (portRef I1 (instanceRef i479_2_lut))
+              (portRef I1 (instanceRef i478_2_lut))
+              (portRef I1 (instanceRef i476_2_lut))
             )
           )
           (net ADV_R_c_7
             (joined
               (portRef ADV_R_c_7)
-              (portRef O (instanceRef i477_2_lut))
+              (portRef O (instanceRef i476_2_lut))
+            )
+          )
+          (net GND_net
+            (joined
+              (portRef GND_net)
+              (portRef I0 (instanceRef VGA_Y_72_add_4_11))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_3_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_3))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_2_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_2))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_10))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_7))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_6_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_6))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_5_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_5))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_4_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_4))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_9_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_9_lut))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_9_lut))
+              (portRef I2 (instanceRef i687_2_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_12_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_8_lut))
+              (portRef I2 (instanceRef i465_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_8_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_9_lut))
+              (portRef I3 (instanceRef i1_2_lut))
+              (portRef I2 (instanceRef i1_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_10_lut))
+              (portRef I3 (instanceRef i479_2_lut))
+              (portRef I2 (instanceRef i479_2_lut))
+              (portRef I3 (instanceRef i464_2_lut))
+              (portRef I3 (instanceRef i466_2_lut))
+              (portRef I2 (instanceRef i466_2_lut))
+              (portRef I3 (instanceRef i476_2_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_8))
+              (portRef I2 (instanceRef i476_2_lut))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_12_lut))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_11_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_11))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_4))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_4_lut))
+              (portRef I3 (instanceRef i401_2_lut))
+              (portRef I2 (instanceRef i478_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_3))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_5))
+              (portRef I2 (instanceRef i464_2_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_9))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_11_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_8))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_7_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_7))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_6_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_6))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_5_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_2))
+              (portRef I2 (instanceRef i417_2_lut))
+              (portRef I3 (instanceRef i478_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_12_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_11_lut))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_3_lut))
+              (portRef I3 (instanceRef i462_2_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_7_lut))
+              (portRef I2 (instanceRef i462_2_lut))
+              (portRef I3 (instanceRef i469_2_lut))
+              (portRef I2 (instanceRef i469_2_lut))
+              (portRef I3 (instanceRef i480_2_lut))
+              (portRef I3 (instanceRef i472_2_lut))
+              (portRef I3 (instanceRef i218_2_lut_rep_8))
+              (portRef I3 (instanceRef i465_2_lut))
+              (portRef I3 (instanceRef i739_3_lut))
+              (portRef I3 (instanceRef i482_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_10))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_13_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_12))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_10_lut))
+              (portRef I3 (instanceRef i468_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_9))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_8_lut))
+              (portRef I2 (instanceRef i468_2_lut))
+              (portRef I3 (instanceRef i467_2_lut))
+              (portRef I3 (instanceRef i461_2_lut))
+              (portRef I2 (instanceRef i461_2_lut))
+              (portRef I2 (instanceRef i463_2_lut))
+              (portRef I2 (instanceRef i467_2_lut))
+              (portRef I3 (instanceRef i5_3_lut))
+              (portRef I2 (instanceRef i218_2_lut_rep_8))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_4_lut))
+              (portRef I3 (instanceRef i460_2_lut))
+              (portRef I2 (instanceRef i481_2_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_13_lut))
+              (portRef I2 (instanceRef i472_2_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_11_lut))
+              (portRef I3 (instanceRef i1_2_lut_adj_11))
+              (portRef I3 (instanceRef i417_2_lut))
+              (portRef I3 (instanceRef i463_2_lut))
+              (portRef I3 (instanceRef i1_2_lut_rep_6_3_lut))
+              (portRef I3 (instanceRef i481_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_3_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_2_lut))
+              (portRef I2 (instanceRef i483_2_lut))
+              (portRef I2 (instanceRef i1_2_lut_adj_11))
+              (portRef I3 (instanceRef i416_2_lut))
+              (portRef I3 (instanceRef i459_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_5_lut))
+              (portRef I2 (instanceRef i460_2_lut))
+              (portRef I3 (instanceRef i138_3_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_12_lut))
+              (portRef I3 (instanceRef i3_3_lut))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_10_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_4_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_8_lut))
+              (portRef I3 (instanceRef i474_2_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_10_lut))
+              (portRef I2 (instanceRef i471_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_7_lut))
+              (portRef I2 (instanceRef i474_2_lut))
+              (portRef I0 (instanceRef VGA_X_73_74_add_4_6_lut))
+              (portRef I2 (instanceRef i416_2_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_7_lut))
+              (portRef I2 (instanceRef i459_2_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_5_lut))
+              (portRef I2 (instanceRef i482_2_lut))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_3_lut))
+              (portRef I3 (instanceRef i1_2_lut_adj_12))
+              (portRef I2 (instanceRef i1_2_lut_adj_12))
+              (portRef I0 (instanceRef VGA_Y_72_add_4_6_lut))
+              (portRef I3 (instanceRef i2_3_lut))
+              (portRef I2 (instanceRef i401_2_lut))
+              (portRef I3 (instanceRef i471_2_lut))
+              (portRef I3 (instanceRef i483_2_lut))
+              (portRef I3 (instanceRef i687_2_lut))
+              (portRef I2 (instanceRef i480_2_lut))
+            )
+          )
+          (net VGA_X_7
+            (joined
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_9))
+              (portRef I2 (instanceRef i745_4_lut))
+              (portRef I1 (instanceRef i102_2_lut_3_lut_4_lut))
+              (portRef I1 (instanceRef i1_2_lut_rep_6_3_lut))
+              (portRef I1 (instanceRef i218_2_lut_rep_8))
+              (portRef Q (instanceRef VGA_X_73_74__i8))
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_9_lut))
+              (portRef I0 (instanceRef i466_2_lut))
+            )
+          )
+          (net ADV_G_c_7
+            (joined
+              (portRef ADV_G_c_7)
+              (portRef O (instanceRef i466_2_lut))
+            )
+          )
+          (net n44
+            (joined
+              (portRef O (instanceRef VGA_Y_72_add_4_11_lut))
+              (portRef D (instanceRef VGA_Y_72__i9))
+            )
+          )
+          (net VGA_Y_9
+            (joined
+              (portRef Q (instanceRef VGA_Y_72__i9))
+              (portRef I2 (instanceRef VGA_Y_72_add_4_11_lut))
+              (portRef I3 (instanceRef i3_4_lut_adj_9))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_11))
+              (portRef I1 (instanceRef i753_4_lut))
+              (portRef I3 (instanceRef i4_4_lut))
+              (portRef I1 (instanceRef i739_3_lut))
+            )
+          )
+          (net n43
+            (joined
+              (portRef O (instanceRef VGA_Y_72_add_4_12_lut))
+              (portRef D (instanceRef VGA_Y_72__i10))
+            )
+          )
+          (net n42
+            (joined
+              (portRef O (instanceRef VGA_Y_72_add_4_13_lut))
+              (portRef D (instanceRef VGA_Y_72__i11))
+            )
+          )
+          (net VGA_Y_2
+            (joined
+              (portRef Q (instanceRef VGA_Y_72__i2))
+              (portRef I0 (instanceRef i5_3_lut))
+              (portRef I0 (instanceRef i482_2_lut))
+              (portRef I3 (instanceRef i6_4_lut_adj_8))
+              (portRef I3 (instanceRef i140_4_lut))
+              (portRef I2 (instanceRef VGA_Y_72_add_4_4_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_4))
+              (portRef I0 (instanceRef i464_2_lut))
+              (portRef I0 (instanceRef i500_4_lut))
+            )
+          )
+          (net VGA_Y_4
+            (joined
+              (portRef I0 (instanceRef i480_2_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_6))
+              (portRef I2 (instanceRef i5_3_lut))
+              (portRef I2 (instanceRef VGA_Y_72_add_4_6_lut))
+              (portRef Q (instanceRef VGA_Y_72__i4))
+              (portRef I0 (instanceRef i462_2_lut))
+              (portRef I1 (instanceRef i140_4_lut))
+              (portRef I3 (instanceRef i8_4_lut))
+              (portRef I1 (instanceRef i500_4_lut))
             )
           )
           (net n14
             (joined
               (portRef O (instanceRef i5_3_lut))
-              (portRef I2 (instanceRef i1134_4_lut))
+              (portRef I2 (instanceRef i753_4_lut))
             )
           )
-          (net n15_adj_282
+          (net VGA_X_6
             (joined
-              (portRef O (instanceRef i6_4_lut_adj_12))
-              (portRef I0 (instanceRef i1134_4_lut))
+              (portRef Q (instanceRef VGA_X_73_74__i7))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_8))
+              (portRef I0 (instanceRef i218_2_lut_rep_8))
+              (portRef I1 (instanceRef i2_3_lut))
+              (portRef I0 (instanceRef i467_2_lut))
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_8_lut))
+              (portRef I0 (instanceRef i1_2_lut_rep_6_3_lut))
+              (portRef I0 (instanceRef i102_2_lut_3_lut_4_lut))
+            )
+          )
+          (net ADV_G_c_6
+            (joined
+              (portRef ADV_G_c_6)
+              (portRef O (instanceRef i467_2_lut))
+            )
+          )
+          (net VGA_Y_3
+            (joined
+              (portRef I1 (instanceRef i8_4_lut))
+              (portRef I2 (instanceRef i140_4_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_5))
+              (portRef I0 (instanceRef i463_2_lut))
+              (portRef I2 (instanceRef i500_4_lut))
+              (portRef I2 (instanceRef VGA_Y_72_add_4_5_lut))
+              (portRef Q (instanceRef VGA_Y_72__i3))
+              (portRef I2 (instanceRef i6_4_lut))
+              (portRef I0 (instanceRef i481_2_lut))
+            )
+          )
+          (net ADV_B_c_3
+            (joined
+              (portRef ADV_B_c_3)
+              (portRef O (instanceRef i463_2_lut))
+            )
+          )
+          (net VGA_Y_5
+            (joined
+              (portRef I2 (instanceRef VGA_Y_72_add_4_7_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_7))
+              (portRef I0 (instanceRef i461_2_lut))
+              (portRef I0 (instanceRef i479_2_lut))
+              (portRef I0 (instanceRef i1_2_lut_adj_11))
+              (portRef I1 (instanceRef i1_2_lut))
+              (portRef Q (instanceRef VGA_Y_72__i5))
+            )
+          )
+          (net ADV_B_c_5
+            (joined
+              (portRef ADV_B_c_5)
+              (portRef O (instanceRef i461_2_lut))
+            )
+          )
+          (net VGA_X_5
+            (joined
+              (portRef I3 (instanceRef i102_2_lut_3_lut_4_lut))
+              (portRef Q (instanceRef VGA_X_73_74__i6))
+              (portRef I0 (instanceRef i2_3_lut))
+              (portRef I2 (instanceRef i1_2_lut_rep_6_3_lut))
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_7_lut))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_7))
+              (portRef I1 (instanceRef i138_3_lut))
+              (portRef I0 (instanceRef i468_2_lut))
+            )
+          )
+          (net ADV_G_c_5
+            (joined
+              (portRef ADV_G_c_5)
+              (portRef O (instanceRef i468_2_lut))
+            )
+          )
+          (net VGA_Y_0
+            (joined
+              (portRef I0 (instanceRef i417_2_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_2))
+              (portRef I2 (instanceRef VGA_Y_72_add_4_2_lut))
+              (portRef Q (instanceRef VGA_Y_72__i0))
+              (portRef I0 (instanceRef i401_2_lut))
+              (portRef I1 (instanceRef i6_4_lut))
+              (portRef I0 (instanceRef i1_2_lut_adj_12))
+            )
+          )
+          (net VGA_Y_1
+            (joined
+              (portRef I0 (instanceRef i140_4_lut))
+              (portRef I2 (instanceRef VGA_Y_72_add_4_3_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_3))
+              (portRef I3 (instanceRef i500_4_lut))
+              (portRef I3 (instanceRef i6_4_lut))
+              (portRef Q (instanceRef VGA_Y_72__i1))
+              (portRef I1 (instanceRef i1_2_lut_adj_12))
+              (portRef I0 (instanceRef i465_2_lut))
+              (portRef I0 (instanceRef i483_2_lut))
+            )
+          )
+          (net n15
+            (joined
+              (portRef O (instanceRef i6_4_lut))
+              (portRef I0 (instanceRef i753_4_lut))
+            )
+          )
+          (net VGA_X_8
+            (joined
+              (portRef I2 (instanceRef i102_2_lut_3_lut_4_lut))
+              (portRef Q (instanceRef VGA_X_73_74__i9))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_10))
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_10_lut))
+              (portRef I2 (instanceRef i750_4_lut))
+              (portRef I3 (instanceRef i524_4_lut))
+            )
+          )
+          (net n18
+            (joined
+              (portRef O (instanceRef i102_2_lut_3_lut_4_lut))
+              (portRef I0 (instanceRef i2_4_lut_adj_10))
+              (portRef I0 (instanceRef i1_4_lut))
+            )
+          )
+          (net VGA_X_4
+            (joined
+              (portRef I2 (instanceRef i138_3_lut))
+              (portRef I2 (instanceRef i3_3_lut))
+              (portRef Q (instanceRef VGA_X_73_74__i5))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_6))
+              (portRef I2 (instanceRef i2_3_lut))
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_6_lut))
+              (portRef I0 (instanceRef i469_2_lut))
+            )
+          )
+          (net ADV_G_c_4
+            (joined
+              (portRef ADV_G_c_4)
+              (portRef O (instanceRef i469_2_lut))
+            )
+          )
+          (net ADV_B_c_4
+            (joined
+              (portRef ADV_B_c_4)
+              (portRef O (instanceRef i462_2_lut))
+            )
+          )
+          (net ADV_B_c_0
+            (joined
+              (portRef ADV_B_c_0)
+              (portRef O (instanceRef i417_2_lut))
+            )
+          )
+          (net VGA_Y_6
+            (joined
+              (portRef I2 (instanceRef VGA_Y_72_add_4_8_lut))
+              (portRef I1 (instanceRef VGA_Y_72_add_4_8))
+              (portRef I1 (instanceRef i1_2_lut_adj_11))
+              (portRef Q (instanceRef VGA_Y_72__i6))
+              (portRef I0 (instanceRef i1_2_lut))
+              (portRef I0 (instanceRef i460_2_lut))
+              (portRef I0 (instanceRef i478_2_lut))
             )
           )
           (net ADV_R_c_6
@@ -2005,154 +1611,555 @@
               (portRef O (instanceRef i478_2_lut))
             )
           )
+          (net n50
+            (joined
+              (portRef O (instanceRef VGA_X_73_74_add_4_12_lut))
+              (portRef D (instanceRef VGA_X_73_74__i11))
+            )
+          )
+          (net VGA_X_10
+            (joined
+              (portRef I1 (instanceRef i524_4_lut))
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_12_lut))
+              (portRef I3 (instanceRef i1_4_lut))
+              (portRef I2 (instanceRef i2_4_lut_adj_10))
+              (portRef Q (instanceRef VGA_X_73_74__i11))
+              (portRef I3 (instanceRef i745_4_lut))
+            )
+          )
+          (net n638
+            (joined
+              (portRef CO (instanceRef VGA_X_73_74_add_4_11))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_12_lut))
+            )
+          )
+          (net n51
+            (joined
+              (portRef O (instanceRef VGA_X_73_74_add_4_11_lut))
+              (portRef D (instanceRef VGA_X_73_74__i10))
+            )
+          )
+          (net VGA_X_9
+            (joined
+              (portRef I3 (instanceRef i2_4_lut_adj_10))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_11))
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_11_lut))
+              (portRef I1 (instanceRef i745_4_lut))
+              (portRef I2 (instanceRef i524_4_lut))
+              (portRef Q (instanceRef VGA_X_73_74__i10))
+              (portRef I2 (instanceRef i1_4_lut))
+            )
+          )
+          (net n637
+            (joined
+              (portRef CO (instanceRef VGA_X_73_74_add_4_10))
+              (portRef CI (instanceRef VGA_X_73_74_add_4_11))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_11_lut))
+            )
+          )
+          (net ADV_B_c_2
+            (joined
+              (portRef ADV_B_c_2)
+              (portRef O (instanceRef i464_2_lut))
+            )
+          )
           (net ADV_R_c_5
             (joined
               (portRef ADV_R_c_5)
               (portRef O (instanceRef i479_2_lut))
             )
           )
+          (net n52
+            (joined
+              (portRef O (instanceRef VGA_X_73_74_add_4_10_lut))
+              (portRef D (instanceRef VGA_X_73_74__i9))
+            )
+          )
+          (net n636
+            (joined
+              (portRef CO (instanceRef VGA_X_73_74_add_4_9))
+              (portRef CI (instanceRef VGA_X_73_74_add_4_10))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_10_lut))
+            )
+          )
+          (net n15_adj_299
+            (joined
+              (portRef O (instanceRef i6_4_lut_adj_8))
+              (portRef I0 (instanceRef i8_4_lut))
+            )
+          )
+          (net n794
+            (joined
+              (portRef O (instanceRef i739_3_lut))
+              (portRef I2 (instanceRef i8_4_lut))
+            )
+          )
+          (net VGA_VS_N_290
+            (joined
+              (portRef O (instanceRef i8_4_lut))
+              (portRef D (instanceRef VGA_VS_49))
+            )
+          )
+          (net n712
+            (joined
+              (portRef O (instanceRef i1_2_lut))
+              (portRef I3 (instanceRef i753_4_lut))
+              (portRef I3 (instanceRef i2_4_lut))
+            )
+          )
+          (net ADV_VSYNC_c
+            (joined
+              (portRef ADV_VSYNC_c)
+              (portRef Q (instanceRef VGA_VS_49))
+            )
+          )
+          (net n53
+            (joined
+              (portRef O (instanceRef VGA_X_73_74_add_4_9_lut))
+              (portRef D (instanceRef VGA_X_73_74__i8))
+            )
+          )
+          (net n635
+            (joined
+              (portRef CO (instanceRef VGA_X_73_74_add_4_8))
+              (portRef CI (instanceRef VGA_X_73_74_add_4_9))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_9_lut))
+            )
+          )
+          (net n742
+            (joined
+              (portRef O (instanceRef i687_2_lut))
+              (portRef I1 (instanceRef i1_4_lut))
+              (portRef I0 (instanceRef i6_4_lut_adj_8))
+            )
+          )
+          (net n22
+            (joined
+              (portRef O (instanceRef i1_2_lut_adj_12))
+              (portRef I1 (instanceRef i6_4_lut_adj_8))
+            )
+          )
+          (net n314
+            (joined
+              (portRef O (instanceRef i1_2_lut_adj_11))
+              (portRef I2 (instanceRef i6_4_lut_adj_8))
+              (portRef I2 (instanceRef i3_4_lut_adj_9))
+            )
+          )
+          (net n530
+            (joined
+              (portRef O (instanceRef i500_4_lut))
+              (portRef I2 (instanceRef i2_4_lut))
+            )
+          )
+          (net n10
+            (joined
+              (portRef O (instanceRef i140_4_lut))
+              (portRef I0 (instanceRef i3_4_lut_adj_9))
+            )
+          )
+          (net n54
+            (joined
+              (portRef O (instanceRef VGA_X_73_74_add_4_8_lut))
+              (portRef D (instanceRef VGA_X_73_74__i7))
+            )
+          )
+          (net n634
+            (joined
+              (portRef CO (instanceRef VGA_X_73_74_add_4_7))
+              (portRef CI (instanceRef VGA_X_73_74_add_4_8))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_8_lut))
+            )
+          )
+          (net VGA_VISIBLE_N_296
+            (joined
+              (portRef O (instanceRef i3_4_lut_adj_9))
+              (portRef I1 (instanceRef i2_4_lut_adj_10))
+            )
+          )
           (net ADV_R_c_4
             (joined
               (portRef ADV_R_c_4)
-              (portRef O (instanceRef i484_2_lut))
+              (portRef O (instanceRef i480_2_lut))
             )
           )
-          (net n1022
+          (net n52_adj_300
             (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_10))
-              (portRef CI (instanceRef VGA_Y_71_add_4_11))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_11_lut))
+              (portRef O (instanceRef VGA_Y_72_add_4_3_lut))
+              (portRef D (instanceRef VGA_Y_72__i1))
             )
           )
-          (net ADV_R_c_3
+          (net n6
             (joined
-              (portRef ADV_R_c_3)
-              (portRef O (instanceRef i485_2_lut))
+              (portRef O (instanceRef i1_4_lut))
+              (portRef I2 (instanceRef i4_4_lut))
             )
           )
-          (net ADV_R_c_2
+          (net n48
             (joined
-              (portRef ADV_R_c_2)
-              (portRef O (instanceRef i486_2_lut))
+              (portRef O (instanceRef VGA_Y_72_add_4_7_lut))
+              (portRef D (instanceRef VGA_Y_72__i5))
             )
           )
-          (net n1014
+          (net VGA_HS_N_287
             (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_2))
-              (portRef CI (instanceRef VGA_Y_71_add_4_3))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_3_lut))
+              (portRef D (instanceRef VGA_HS_48))
+              (portRef O (instanceRef i750_4_lut))
             )
           )
-          (net n1021
+          (net ADV_HSYNC_c
             (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_9))
-              (portRef CI (instanceRef VGA_Y_71_add_4_10))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_10_lut))
+              (portRef ADV_HSYNC_c)
+              (portRef Q (instanceRef VGA_HS_48))
             )
           )
-          (net n1020
+          (net n60
             (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_8))
-              (portRef CI (instanceRef VGA_Y_71_add_4_9))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_9_lut))
+              (portRef O (instanceRef VGA_X_73_74_add_4_2_lut))
+              (portRef D (instanceRef VGA_X_73_74__i1))
             )
           )
-          (net ADV_R_c_1
+          (net VGA_X_0
             (joined
-              (portRef ADV_R_c_1)
-              (portRef O (instanceRef i422_2_lut))
+              (portRef Q (instanceRef VGA_X_73_74__i1))
+              (portRef I0 (instanceRef i416_2_lut))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_2))
+              (portRef I0 (instanceRef i504_4_lut))
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_2_lut))
             )
           )
-          (net n1019
+          (net n774
             (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_7))
-              (portRef CI (instanceRef VGA_Y_71_add_4_8))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_8_lut))
+              (portRef O (instanceRef i2_4_lut))
+              (portRef I1 (instanceRef i4_4_lut))
             )
           )
-          (net ADV_R_c_0
+          (net VGA_X_3
             (joined
-              (portRef ADV_R_c_0)
-              (portRef O (instanceRef i427_2_lut))
-            )
-          )
-          (net ADV_G_c_7
-            (joined
-              (portRef ADV_G_c_7)
-              (portRef O (instanceRef i470_2_lut))
-            )
-          )
-          (net ADV_G_c_0
-            (joined
-              (portRef ADV_G_c_0)
-              (portRef O (instanceRef i405_2_lut))
-            )
-          )
-          (net ADV_G_c_6
-            (joined
-              (portRef ADV_G_c_6)
-              (portRef O (instanceRef i471_2_lut))
-            )
-          )
-          (net n1018
-            (joined
-              (portRef CO (instanceRef VGA_Y_71_add_4_6))
-              (portRef CI (instanceRef VGA_Y_71_add_4_7))
-              (portRef I3 (instanceRef VGA_Y_71_add_4_7_lut))
-            )
-          )
-          (net ADV_B_c_5
-            (joined
-              (portRef ADV_B_c_5)
-              (portRef O (instanceRef i465_2_lut))
-            )
-          )
-          (net ADV_G_c_5
-            (joined
-              (portRef ADV_G_c_5)
-              (portRef O (instanceRef i472_2_lut))
-            )
-          )
-          (net ADV_G_c_4
-            (joined
-              (portRef ADV_G_c_4)
-              (portRef O (instanceRef i473_2_lut))
-            )
-          )
-          (net ADV_B_c_4
-            (joined
-              (portRef ADV_B_c_4)
-              (portRef O (instanceRef i466_2_lut))
+              (portRef I0 (instanceRef i471_2_lut))
+              (portRef I1 (instanceRef i3_3_lut))
+              (portRef Q (instanceRef VGA_X_73_74__i4))
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_5_lut))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_5))
+              (portRef I0 (instanceRef i138_3_lut))
             )
           )
           (net ADV_G_c_3
             (joined
               (portRef ADV_G_c_3)
-              (portRef O (instanceRef i474_2_lut))
+              (portRef O (instanceRef i471_2_lut))
+            )
+          )
+          (net n51_adj_301
+            (joined
+              (portRef O (instanceRef VGA_Y_72_add_4_4_lut))
+              (portRef D (instanceRef VGA_Y_72__i2))
+            )
+          )
+          (net n7
+            (joined
+              (portRef O (instanceRef i2_4_lut_adj_10))
+              (portRef I0 (instanceRef i4_4_lut))
+            )
+          )
+          (net n47
+            (joined
+              (portRef O (instanceRef VGA_Y_72_add_4_8_lut))
+              (portRef D (instanceRef VGA_Y_72__i6))
+            )
+          )
+          (net n50_adj_302
+            (joined
+              (portRef O (instanceRef VGA_Y_72_add_4_5_lut))
+              (portRef D (instanceRef VGA_Y_72__i3))
+            )
+          )
+          (net n53_adj_303
+            (joined
+              (portRef O (instanceRef VGA_Y_72_add_4_2_lut))
+              (portRef D (instanceRef VGA_Y_72__i0))
+            )
+          )
+          (net n55
+            (joined
+              (portRef O (instanceRef VGA_X_73_74_add_4_7_lut))
+              (portRef D (instanceRef VGA_X_73_74__i6))
+            )
+          )
+          (net n633
+            (joined
+              (portRef CO (instanceRef VGA_X_73_74_add_4_6))
+              (portRef CI (instanceRef VGA_X_73_74_add_4_7))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_7_lut))
+            )
+          )
+          (net n49
+            (joined
+              (portRef O (instanceRef VGA_Y_72_add_4_6_lut))
+              (portRef D (instanceRef VGA_Y_72__i4))
+            )
+          )
+          (net n765
+            (joined
+              (portRef O (instanceRef i2_3_lut))
+              (portRef I0 (instanceRef i745_4_lut))
+            )
+          )
+          (net n618
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_2))
+              (portRef CI (instanceRef VGA_Y_72_add_4_3))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_3_lut))
+            )
+          )
+          (net n619
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_3))
+              (portRef CI (instanceRef VGA_Y_72_add_4_4))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_4_lut))
+            )
+          )
+          (net ADV_B_c_6
+            (joined
+              (portRef ADV_B_c_6)
+              (portRef O (instanceRef i460_2_lut))
+            )
+          )
+          (net n800
+            (joined
+              (portRef O (instanceRef i745_4_lut))
+              (portRef I1 (instanceRef i750_4_lut))
+            )
+          )
+          (net n814
+            (joined
+              (portRef O (instanceRef i1_2_lut_rep_6_3_lut))
+              (portRef I1 (instanceRef i504_4_lut))
+            )
+          )
+          (net ADV_R_c_3
+            (joined
+              (portRef ADV_R_c_3)
+              (portRef O (instanceRef i481_2_lut))
+            )
+          )
+          (net VGA_X_1
+            (joined
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_3_lut))
+              (portRef Q (instanceRef VGA_X_73_74__i2))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_3))
+              (portRef I0 (instanceRef i3_3_lut))
+              (portRef I0 (instanceRef i474_2_lut))
+            )
+          )
+          (net n8
+            (joined
+              (portRef O (instanceRef i3_3_lut))
+              (portRef I2 (instanceRef i504_4_lut))
+            )
+          )
+          (net n12
+            (joined
+              (portRef O (instanceRef i138_3_lut))
+              (portRef I0 (instanceRef i750_4_lut))
+            )
+          )
+          (net n816
+            (joined
+              (portRef O (instanceRef i218_2_lut_rep_8))
+              (portRef I3 (instanceRef i750_4_lut))
+            )
+          )
+          (net VGA_X_2
+            (joined
+              (portRef I2 (instanceRef VGA_X_73_74_add_4_4_lut))
+              (portRef Q (instanceRef VGA_X_73_74__i3))
+              (portRef I1 (instanceRef VGA_X_73_74_add_4_4))
+              (portRef I3 (instanceRef i504_4_lut))
+              (portRef I0 (instanceRef i472_2_lut))
             )
           )
           (net ADV_G_c_2
             (joined
               (portRef ADV_G_c_2)
-              (portRef O (instanceRef i475_2_lut))
+              (portRef O (instanceRef i472_2_lut))
             )
           )
           (net ADV_B_c_1
             (joined
               (portRef ADV_B_c_1)
-              (portRef O (instanceRef i469_2_lut))
+              (portRef O (instanceRef i465_2_lut))
             )
           )
           (net ADV_G_c_1
             (joined
               (portRef ADV_G_c_1)
-              (portRef O (instanceRef i476_2_lut))
+              (portRef O (instanceRef i474_2_lut))
+            )
+          )
+          (net n56
+            (joined
+              (portRef O (instanceRef VGA_X_73_74_add_4_6_lut))
+              (portRef D (instanceRef VGA_X_73_74__i5))
+            )
+          )
+          (net n632
+            (joined
+              (portRef CO (instanceRef VGA_X_73_74_add_4_5))
+              (portRef CI (instanceRef VGA_X_73_74_add_4_6))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_6_lut))
+            )
+          )
+          (net n57
+            (joined
+              (portRef O (instanceRef VGA_X_73_74_add_4_5_lut))
+              (portRef D (instanceRef VGA_X_73_74__i4))
+            )
+          )
+          (net n631
+            (joined
+              (portRef CO (instanceRef VGA_X_73_74_add_4_4))
+              (portRef CI (instanceRef VGA_X_73_74_add_4_5))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_5_lut))
+            )
+          )
+          (net ADV_G_c_0
+            (joined
+              (portRef ADV_G_c_0)
+              (portRef O (instanceRef i416_2_lut))
+            )
+          )
+          (net n58
+            (joined
+              (portRef O (instanceRef VGA_X_73_74_add_4_4_lut))
+              (portRef D (instanceRef VGA_X_73_74__i3))
             )
           )
           (net ADV_B_c_7
             (joined
               (portRef ADV_B_c_7)
-              (portRef O (instanceRef i463_2_lut))
+              (portRef O (instanceRef i459_2_lut))
+            )
+          )
+          (net n59
+            (joined
+              (portRef O (instanceRef VGA_X_73_74_add_4_3_lut))
+              (portRef D (instanceRef VGA_X_73_74__i2))
+            )
+          )
+          (net ADV_R_c_2
+            (joined
+              (portRef ADV_R_c_2)
+              (portRef O (instanceRef i482_2_lut))
+            )
+          )
+          (net n630
+            (joined
+              (portRef CO (instanceRef VGA_X_73_74_add_4_3))
+              (portRef CI (instanceRef VGA_X_73_74_add_4_4))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_4_lut))
+            )
+          )
+          (net VCC_net
+            (joined
+              (portRef VCC_net)
+              (portRef CI (instanceRef VGA_X_73_74_add_4_2))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_2_lut))
+              (portRef CI (instanceRef VGA_Y_72_add_4_2))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_2_lut))
+            )
+          )
+          (net n629
+            (joined
+              (portRef CO (instanceRef VGA_X_73_74_add_4_2))
+              (portRef CI (instanceRef VGA_X_73_74_add_4_3))
+              (portRef I3 (instanceRef VGA_X_73_74_add_4_3_lut))
+            )
+          )
+          (net n46
+            (joined
+              (portRef O (instanceRef VGA_Y_72_add_4_9_lut))
+              (portRef D (instanceRef VGA_Y_72__i7))
+            )
+          )
+          (net n628
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_12))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_13_lut))
+            )
+          )
+          (net n627
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_11))
+              (portRef CI (instanceRef VGA_Y_72_add_4_12))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_12_lut))
+            )
+          )
+          (net n626
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_10))
+              (portRef CI (instanceRef VGA_Y_72_add_4_11))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_11_lut))
+            )
+          )
+          (net n625
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_9))
+              (portRef CI (instanceRef VGA_Y_72_add_4_10))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_10_lut))
+            )
+          )
+          (net n534
+            (joined
+              (portRef O (instanceRef i504_4_lut))
+              (portRef I0 (instanceRef i524_4_lut))
+            )
+          )
+          (net ADV_R_c_1
+            (joined
+              (portRef ADV_R_c_1)
+              (portRef O (instanceRef i483_2_lut))
+            )
+          )
+          (net n624
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_8))
+              (portRef CI (instanceRef VGA_Y_72_add_4_9))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_9_lut))
+            )
+          )
+          (net n623
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_7))
+              (portRef CI (instanceRef VGA_Y_72_add_4_8))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_8_lut))
+            )
+          )
+          (net n622
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_6))
+              (portRef CI (instanceRef VGA_Y_72_add_4_7))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_7_lut))
+            )
+          )
+          (net n621
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_5))
+              (portRef CI (instanceRef VGA_Y_72_add_4_6))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_6_lut))
+            )
+          )
+          (net n620
+            (joined
+              (portRef CO (instanceRef VGA_Y_72_add_4_4))
+              (portRef CI (instanceRef VGA_Y_72_add_4_5))
+              (portRef I3 (instanceRef VGA_Y_72_add_4_5_lut))
+            )
+          )
+          (net ADV_R_c_0
+            (joined
+              (portRef ADV_R_c_0)
+              (portRef O (instanceRef i401_2_lut))
             )
           )
         )
@@ -2163,51 +2170,39 @@
       (view v1
         (viewType netlist)
         (interface
-          (port ADV_B_c_3 (direction OUTPUT))
-          (port GND_net (direction INPUT))
           (port ADV_CLK_c (direction INPUT))
-          (port ADV_B_c_6 (direction OUTPUT))
-          (port ADV_B_c_0 (direction OUTPUT))
-          (port VCC_net (direction INPUT))
-          (port VGA_HS_N_267 (direction OUTPUT))
-          (port ADV_VSYNC_c (direction OUTPUT))
-          (port ADV_B_c_2 (direction OUTPUT))
           (port ADV_R_c_7 (direction OUTPUT))
-          (port ADV_R_c_6 (direction OUTPUT))
-          (port ADV_R_c_5 (direction OUTPUT))
-          (port ADV_R_c_4 (direction OUTPUT))
-          (port ADV_R_c_3 (direction OUTPUT))
-          (port ADV_R_c_2 (direction OUTPUT))
-          (port ADV_R_c_1 (direction OUTPUT))
-          (port ADV_R_c_0 (direction OUTPUT))
+          (port GND_net (direction INPUT))
           (port ADV_G_c_7 (direction OUTPUT))
-          (port ADV_G_c_0 (direction OUTPUT))
           (port ADV_G_c_6 (direction OUTPUT))
+          (port ADV_B_c_3 (direction OUTPUT))
           (port ADV_B_c_5 (direction OUTPUT))
           (port ADV_G_c_5 (direction OUTPUT))
           (port ADV_G_c_4 (direction OUTPUT))
           (port ADV_B_c_4 (direction OUTPUT))
+          (port ADV_B_c_0 (direction OUTPUT))
+          (port ADV_R_c_6 (direction OUTPUT))
+          (port ADV_B_c_2 (direction OUTPUT))
+          (port ADV_R_c_5 (direction OUTPUT))
+          (port ADV_VSYNC_c (direction OUTPUT))
+          (port ADV_R_c_4 (direction OUTPUT))
+          (port ADV_HSYNC_c (direction OUTPUT))
           (port ADV_G_c_3 (direction OUTPUT))
+          (port ADV_B_c_6 (direction OUTPUT))
+          (port ADV_R_c_3 (direction OUTPUT))
           (port ADV_G_c_2 (direction OUTPUT))
           (port ADV_B_c_1 (direction OUTPUT))
           (port ADV_G_c_1 (direction OUTPUT))
+          (port ADV_G_c_0 (direction OUTPUT))
           (port ADV_B_c_7 (direction OUTPUT))
+          (port ADV_R_c_2 (direction OUTPUT))
+          (port VCC_net (direction INPUT))
+          (port ADV_R_c_1 (direction OUTPUT))
+          (port ADV_R_c_0 (direction OUTPUT))
         )
         (contents
           (instance video_signal_controller
             (viewRef v1 (cellRef VGA_CONTROL))
-          )
-          (net ADV_B_c_3
-            (joined
-              (portRef ADV_B_c_3)
-              (portRef ADV_B_c_3 (instanceRef video_signal_controller))
-            )
-          )
-          (net GND_net
-            (joined
-              (portRef GND_net)
-              (portRef GND_net (instanceRef video_signal_controller))
-            )
           )
           (net ADV_CLK_c
             (joined
@@ -2217,88 +2212,16 @@
             (property SET_AS_NETWORK (string "ADV_CLK_c"))
             (property is_clock (string "1"))
           )
-          (net ADV_B_c_6
-            (joined
-              (portRef ADV_B_c_6)
-              (portRef ADV_B_c_6 (instanceRef video_signal_controller))
-            )
-          )
-          (net ADV_B_c_0
-            (joined
-              (portRef ADV_B_c_0)
-              (portRef ADV_B_c_0 (instanceRef video_signal_controller))
-            )
-          )
-          (net VCC_net
-            (joined
-              (portRef VCC_net)
-              (portRef VCC_net (instanceRef video_signal_controller))
-            )
-          )
-          (net VGA_HS_N_267
-            (joined
-              (portRef VGA_HS_N_267)
-              (portRef VGA_HS_N_267 (instanceRef video_signal_controller))
-            )
-          )
-          (net ADV_VSYNC_c
-            (joined
-              (portRef ADV_VSYNC_c)
-              (portRef ADV_VSYNC_c (instanceRef video_signal_controller))
-            )
-          )
-          (net ADV_B_c_2
-            (joined
-              (portRef ADV_B_c_2)
-              (portRef ADV_B_c_2 (instanceRef video_signal_controller))
-            )
-          )
           (net ADV_R_c_7
             (joined
               (portRef ADV_R_c_7)
               (portRef ADV_R_c_7 (instanceRef video_signal_controller))
             )
           )
-          (net ADV_R_c_6
+          (net GND_net
             (joined
-              (portRef ADV_R_c_6)
-              (portRef ADV_R_c_6 (instanceRef video_signal_controller))
-            )
-          )
-          (net ADV_R_c_5
-            (joined
-              (portRef ADV_R_c_5)
-              (portRef ADV_R_c_5 (instanceRef video_signal_controller))
-            )
-          )
-          (net ADV_R_c_4
-            (joined
-              (portRef ADV_R_c_4)
-              (portRef ADV_R_c_4 (instanceRef video_signal_controller))
-            )
-          )
-          (net ADV_R_c_3
-            (joined
-              (portRef ADV_R_c_3)
-              (portRef ADV_R_c_3 (instanceRef video_signal_controller))
-            )
-          )
-          (net ADV_R_c_2
-            (joined
-              (portRef ADV_R_c_2)
-              (portRef ADV_R_c_2 (instanceRef video_signal_controller))
-            )
-          )
-          (net ADV_R_c_1
-            (joined
-              (portRef ADV_R_c_1)
-              (portRef ADV_R_c_1 (instanceRef video_signal_controller))
-            )
-          )
-          (net ADV_R_c_0
-            (joined
-              (portRef ADV_R_c_0)
-              (portRef ADV_R_c_0 (instanceRef video_signal_controller))
+              (portRef GND_net)
+              (portRef GND_net (instanceRef video_signal_controller))
             )
           )
           (net ADV_G_c_7
@@ -2307,16 +2230,16 @@
               (portRef ADV_G_c_7 (instanceRef video_signal_controller))
             )
           )
-          (net ADV_G_c_0
-            (joined
-              (portRef ADV_G_c_0)
-              (portRef ADV_G_c_0 (instanceRef video_signal_controller))
-            )
-          )
           (net ADV_G_c_6
             (joined
               (portRef ADV_G_c_6)
               (portRef ADV_G_c_6 (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_B_c_3
+            (joined
+              (portRef ADV_B_c_3)
+              (portRef ADV_B_c_3 (instanceRef video_signal_controller))
             )
           )
           (net ADV_B_c_5
@@ -2343,10 +2266,64 @@
               (portRef ADV_B_c_4 (instanceRef video_signal_controller))
             )
           )
+          (net ADV_B_c_0
+            (joined
+              (portRef ADV_B_c_0)
+              (portRef ADV_B_c_0 (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_R_c_6
+            (joined
+              (portRef ADV_R_c_6)
+              (portRef ADV_R_c_6 (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_B_c_2
+            (joined
+              (portRef ADV_B_c_2)
+              (portRef ADV_B_c_2 (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_R_c_5
+            (joined
+              (portRef ADV_R_c_5)
+              (portRef ADV_R_c_5 (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_VSYNC_c
+            (joined
+              (portRef ADV_VSYNC_c)
+              (portRef ADV_VSYNC_c (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_R_c_4
+            (joined
+              (portRef ADV_R_c_4)
+              (portRef ADV_R_c_4 (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_HSYNC_c
+            (joined
+              (portRef ADV_HSYNC_c)
+              (portRef ADV_HSYNC_c (instanceRef video_signal_controller))
+            )
+          )
           (net ADV_G_c_3
             (joined
               (portRef ADV_G_c_3)
               (portRef ADV_G_c_3 (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_B_c_6
+            (joined
+              (portRef ADV_B_c_6)
+              (portRef ADV_B_c_6 (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_R_c_3
+            (joined
+              (portRef ADV_R_c_3)
+              (portRef ADV_R_c_3 (instanceRef video_signal_controller))
             )
           )
           (net ADV_G_c_2
@@ -2367,10 +2344,40 @@
               (portRef ADV_G_c_1 (instanceRef video_signal_controller))
             )
           )
+          (net ADV_G_c_0
+            (joined
+              (portRef ADV_G_c_0)
+              (portRef ADV_G_c_0 (instanceRef video_signal_controller))
+            )
+          )
           (net ADV_B_c_7
             (joined
               (portRef ADV_B_c_7)
               (portRef ADV_B_c_7 (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_R_c_2
+            (joined
+              (portRef ADV_R_c_2)
+              (portRef ADV_R_c_2 (instanceRef video_signal_controller))
+            )
+          )
+          (net VCC_net
+            (joined
+              (portRef VCC_net)
+              (portRef VCC_net (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_R_c_1
+            (joined
+              (portRef ADV_R_c_1)
+              (portRef ADV_R_c_1 (instanceRef video_signal_controller))
+            )
+          )
+          (net ADV_R_c_0
+            (joined
+              (portRef ADV_R_c_0)
+              (portRef ADV_R_c_0 (instanceRef video_signal_controller))
             )
           )
         )
@@ -2464,16 +2471,9 @@
           (instance transmit_module
             (viewRef v1 (cellRef TX))
           )
-          (instance DEBUG_pad_1
+          (instance ADV_B_pad_6
             (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
-            (property PIN_TYPE (string "101001"))
-            (property PULLUP (string "0"))
-            (property NEG_TRIGGER (string "0"))
-            (property IO_STANDARD (string "SB_LVCMOS"))
-          )
-          (instance DEBUG_pad_2
-            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
-            (property PIN_TYPE (string "101001"))
+            (property PIN_TYPE (string "011001"))
             (property PULLUP (string "0"))
             (property NEG_TRIGGER (string "0"))
             (property IO_STANDARD (string "SB_LVCMOS"))
@@ -2506,6 +2506,27 @@
             (property NEG_TRIGGER (string "0"))
             (property IO_STANDARD (string "SB_LVCMOS"))
           )
+          (instance DEBUG_pad_2
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "101001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance DEBUG_pad_1
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "101001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance DEBUG_pad_4
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "101001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
           (instance DEBUG_pad_3
             (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
             (property PIN_TYPE (string "101001"))
@@ -2513,9 +2534,30 @@
             (property NEG_TRIGGER (string "0"))
             (property IO_STANDARD (string "SB_LVCMOS"))
           )
-          (instance ADV_B_pad_6
+          (instance ADV_SYNC_N_pad
             (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
             (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance ADV_CLK_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance TVP_VSYNC_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "000001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance TVP_CLK_pad
+            (viewRef INTERFACE_c (cellRef SB_GB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "000001"))
             (property PULLUP (string "0"))
             (property NEG_TRIGGER (string "0"))
             (property IO_STANDARD (string "SB_LVCMOS"))
@@ -2541,6 +2583,13 @@
             (property NEG_TRIGGER (string "0"))
             (property IO_STANDARD (string "SB_LVCMOS"))
           )
+          (instance DEBUG_pad_5
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "101001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
           (instance ADV_G_pad_1
             (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
             (property PIN_TYPE (string "011001"))
@@ -2551,20 +2600,6 @@
           (instance ADV_B_pad_1
             (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
             (property PIN_TYPE (string "011001"))
-            (property PULLUP (string "0"))
-            (property NEG_TRIGGER (string "0"))
-            (property IO_STANDARD (string "SB_LVCMOS"))
-          )
-          (instance DEBUG_pad_5
-            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
-            (property PIN_TYPE (string "101001"))
-            (property PULLUP (string "0"))
-            (property NEG_TRIGGER (string "0"))
-            (property IO_STANDARD (string "SB_LVCMOS"))
-          )
-          (instance DEBUG_pad_4
-            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
-            (property PIN_TYPE (string "101001"))
             (property PULLUP (string "0"))
             (property NEG_TRIGGER (string "0"))
             (property IO_STANDARD (string "SB_LVCMOS"))
@@ -2614,34 +2649,6 @@
           (instance DEBUG_pad_6
             (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
             (property PIN_TYPE (string "011001"))
-            (property PULLUP (string "0"))
-            (property NEG_TRIGGER (string "0"))
-            (property IO_STANDARD (string "SB_LVCMOS"))
-          )
-          (instance ADV_SYNC_N_pad
-            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
-            (property PIN_TYPE (string "011001"))
-            (property PULLUP (string "0"))
-            (property NEG_TRIGGER (string "0"))
-            (property IO_STANDARD (string "SB_LVCMOS"))
-          )
-          (instance ADV_CLK_pad
-            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
-            (property PIN_TYPE (string "011001"))
-            (property PULLUP (string "0"))
-            (property NEG_TRIGGER (string "0"))
-            (property IO_STANDARD (string "SB_LVCMOS"))
-          )
-          (instance TVP_VSYNC_pad
-            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
-            (property PIN_TYPE (string "000001"))
-            (property PULLUP (string "0"))
-            (property NEG_TRIGGER (string "0"))
-            (property IO_STANDARD (string "SB_LVCMOS"))
-          )
-          (instance TVP_CLK_pad
-            (viewRef INTERFACE_c (cellRef SB_GB_IO (libraryref PrimitivesExt)))
-            (property PIN_TYPE (string "000001"))
             (property PULLUP (string "0"))
             (property NEG_TRIGGER (string "0"))
             (property IO_STANDARD (string "SB_LVCMOS"))
@@ -2744,28 +2751,28 @@
             (property NEG_TRIGGER (string "0"))
             (property IO_STANDARD (string "SB_LVCMOS"))
           )
-          (instance i1
-            (viewRef INTERFACE_c (cellRef GND (libraryref PrimitivesExt)))
-          )
           (instance tx_pll
             (viewRef v1 (cellRef TX_PLL))
+          )
+          (instance i1
+            (viewRef INTERFACE_c (cellRef GND (libraryref PrimitivesExt)))
           )
           (net GND_net
             (joined
               (portRef Y (instanceRef i1))
               (portRef GND_net (instanceRef tx_pll))
-              (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_2))
-              (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_4))
-              (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_3))
               (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_1))
               (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_5))
-              (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_0))
-              (portRef D_OUT_0 (instanceRef DEBUG_pad_3))
-              (portRef D_OUT_0 (instanceRef DEBUG_pad_2))
-              (portRef D_OUT_0 (instanceRef DEBUG_pad_0))
-              (portRef D_OUT_0 (instanceRef DEBUG_pad_1))
-              (portRef D_OUT_0 (instanceRef DEBUG_pad_5))
+              (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_2))
+              (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_3))
               (portRef D_OUT_0 (instanceRef ADV_SYNC_N_pad))
+              (portRef D_OUT_0 (instanceRef DEBUG_pad_0))
+              (portRef D_OUT_0 (instanceRef DEBUG_pad_5))
+              (portRef D_OUT_0 (instanceRef DEBUG_pad_1))
+              (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_4))
+              (portRef D_OUT_0 (instanceRef DEBUG_pad_3))
+              (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_0))
+              (portRef D_OUT_0 (instanceRef DEBUG_pad_2))
               (portRef D_OUT_0 (instanceRef DEBUG_pad_4))
               (portRef GND_net (instanceRef receive_module))
               (portRef GND_net (instanceRef transmit_module))
@@ -2783,8 +2790,11 @@
               (portRef OUTPUT_ENABLE (instanceRef ADV_R_pad_5))
               (portRef OUTPUT_ENABLE (instanceRef ADV_R_pad_4))
               (portRef OUTPUT_ENABLE (instanceRef ADV_R_pad_3))
-              (portRef OUTPUT_ENABLE (instanceRef TVP_CLK_pad))
-              (portRef OUTPUT_ENABLE (instanceRef ADV_SYNC_N_pad))
+              (portRef OUTPUT_ENABLE (instanceRef ADV_R_pad_2))
+              (portRef OUTPUT_ENABLE (instanceRef ADV_R_pad_1))
+              (portRef OUTPUT_ENABLE (instanceRef ADV_R_pad_0))
+              (portRef OUTPUT_ENABLE (instanceRef ADV_G_pad_7))
+              (portRef OUTPUT_ENABLE (instanceRef ADV_G_pad_6))
               (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_6))
               (portRef OUTPUT_ENABLE (instanceRef ADV_B_pad_5))
               (portRef OUTPUT_ENABLE (instanceRef ADV_G_pad_5))
@@ -2794,24 +2804,21 @@
               (portRef OUTPUT_ENABLE (instanceRef ADV_G_pad_2))
               (portRef OUTPUT_ENABLE (instanceRef ADV_B_pad_1))
               (portRef OUTPUT_ENABLE (instanceRef ADV_G_pad_1))
-              (portRef OUTPUT_ENABLE (instanceRef ADV_B_pad_7))
               (portRef OUTPUT_ENABLE (instanceRef ADV_G_pad_0))
-              (portRef VCC_net (instanceRef receive_module))
+              (portRef OUTPUT_ENABLE (instanceRef ADV_B_pad_7))
+              (portRef OUTPUT_ENABLE (instanceRef ADV_B_pad_3))
+              (portRef OUTPUT_ENABLE (instanceRef TVP_CLK_pad))
+              (portRef OUTPUT_ENABLE (instanceRef ADV_CLK_pad))
+              (portRef OUTPUT_ENABLE (instanceRef TVP_VSYNC_pad))
+              (portRef OUTPUT_ENABLE (instanceRef ADV_SYNC_N_pad))
               (portRef D_OUT_0 (instanceRef ADV_BLANK_N_pad))
               (portRef OUTPUT_ENABLE (instanceRef ADV_B_pad_6))
               (portRef OUTPUT_ENABLE (instanceRef DEBUG_pad_7))
               (portRef OUTPUT_ENABLE (instanceRef ADV_B_pad_2))
               (portRef OUTPUT_ENABLE (instanceRef ADV_B_pad_0))
               (portRef OUTPUT_ENABLE (instanceRef ADV_BLANK_N_pad))
-              (portRef OUTPUT_ENABLE (instanceRef ADV_B_pad_3))
               (portRef VCC_net (instanceRef transmit_module))
-              (portRef OUTPUT_ENABLE (instanceRef ADV_R_pad_2))
-              (portRef OUTPUT_ENABLE (instanceRef ADV_R_pad_1))
-              (portRef OUTPUT_ENABLE (instanceRef ADV_R_pad_0))
-              (portRef OUTPUT_ENABLE (instanceRef ADV_G_pad_7))
-              (portRef OUTPUT_ENABLE (instanceRef ADV_G_pad_6))
-              (portRef OUTPUT_ENABLE (instanceRef TVP_VSYNC_pad))
-              (portRef OUTPUT_ENABLE (instanceRef ADV_CLK_pad))
+              (portRef VCC_net (instanceRef receive_module))
             )
           )
           (net DEBUG_c_7
@@ -2856,10 +2863,16 @@
               (portRef D_OUT_0 (instanceRef LED_pad))
             )
           )
+          (net ADV_HSYNC_c
+            (joined
+              (portRef D_OUT_0 (instanceRef ADV_HSYNC_pad))
+              (portRef ADV_HSYNC_c (instanceRef transmit_module))
+            )
+          )
           (net ADV_VSYNC_c
             (joined
-              (portRef ADV_VSYNC_c (instanceRef transmit_module))
               (portRef D_OUT_0 (instanceRef ADV_VSYNC_pad))
+              (portRef ADV_VSYNC_c (instanceRef transmit_module))
             )
           )
           (net ADV_R_c_7
@@ -3006,16 +3019,10 @@
               (portRef D_OUT_0 (instanceRef ADV_B_pad_0))
             )
           )
-          (net VGA_HS_N_267
+          (net (rename DEBUG_5_ "DEBUG[5]")
             (joined
-              (portRef D_OUT_0 (instanceRef ADV_HSYNC_pad))
-              (portRef VGA_HS_N_267 (instanceRef transmit_module))
-            )
-          )
-          (net ADV_HSYNC
-            (joined
-              (portRef ADV_HSYNC)
-              (portRef PACKAGE_PIN (instanceRef ADV_HSYNC_pad))
+              (portRef (member DEBUG 2))
+              (portRef PACKAGE_PIN (instanceRef DEBUG_pad_5))
             )
           )
           (net (rename DEBUG_4_ "DEBUG[4]")
@@ -3048,34 +3055,28 @@
               (portRef PACKAGE_PIN (instanceRef DEBUG_pad_0))
             )
           )
+          (net ADV_VSYNC
+            (joined
+              (portRef ADV_VSYNC)
+              (portRef PACKAGE_PIN (instanceRef ADV_VSYNC_pad))
+            )
+          )
+          (net ADV_HSYNC
+            (joined
+              (portRef ADV_HSYNC)
+              (portRef PACKAGE_PIN (instanceRef ADV_HSYNC_pad))
+            )
+          )
           (net LED
             (joined
               (portRef LED)
               (portRef PACKAGE_PIN (instanceRef LED_pad))
             )
           )
-          (net (rename ADV_R_5_ "ADV_R[5]")
+          (net (rename DEBUG_6_ "DEBUG[6]")
             (joined
-              (portRef (member ADV_R 2))
-              (portRef PACKAGE_PIN (instanceRef ADV_R_pad_5))
-            )
-          )
-          (net (rename ADV_R_6_ "ADV_R[6]")
-            (joined
-              (portRef (member ADV_R 1))
-              (portRef PACKAGE_PIN (instanceRef ADV_R_pad_6))
-            )
-          )
-          (net (rename ADV_R_7_ "ADV_R[7]")
-            (joined
-              (portRef (member ADV_R 0))
-              (portRef PACKAGE_PIN (instanceRef ADV_R_pad_7))
-            )
-          )
-          (net ADV_VSYNC
-            (joined
-              (portRef ADV_VSYNC)
-              (portRef PACKAGE_PIN (instanceRef ADV_VSYNC_pad))
+              (portRef (member DEBUG 1))
+              (portRef PACKAGE_PIN (instanceRef DEBUG_pad_6))
             )
           )
           (net TVP_VSYNC
@@ -3234,22 +3235,28 @@
               (portRef PACKAGE_PIN (instanceRef ADV_R_pad_3))
             )
           )
-          (net (rename DEBUG_5_ "DEBUG[5]")
-            (joined
-              (portRef (member DEBUG 2))
-              (portRef PACKAGE_PIN (instanceRef DEBUG_pad_5))
-            )
-          )
-          (net (rename DEBUG_6_ "DEBUG[6]")
-            (joined
-              (portRef (member DEBUG 1))
-              (portRef PACKAGE_PIN (instanceRef DEBUG_pad_6))
-            )
-          )
           (net (rename ADV_R_4_ "ADV_R[4]")
             (joined
               (portRef (member ADV_R 3))
               (portRef PACKAGE_PIN (instanceRef ADV_R_pad_4))
+            )
+          )
+          (net (rename ADV_R_5_ "ADV_R[5]")
+            (joined
+              (portRef (member ADV_R 2))
+              (portRef PACKAGE_PIN (instanceRef ADV_R_pad_5))
+            )
+          )
+          (net (rename ADV_R_6_ "ADV_R[6]")
+            (joined
+              (portRef (member ADV_R 1))
+              (portRef PACKAGE_PIN (instanceRef ADV_R_pad_6))
+            )
+          )
+          (net (rename ADV_R_7_ "ADV_R[7]")
+            (joined
+              (portRef (member ADV_R 0))
+              (portRef PACKAGE_PIN (instanceRef ADV_R_pad_7))
             )
           )
         )

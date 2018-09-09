@@ -36,6 +36,7 @@
 -ver "../RX.v"
 -ver "../O_COUNTER.v"
 -ver "../VGA_CONTROL.v"
+-ver "../TX_PLL2.v"
 -p "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/HP2VGA"
 
 #set result format/file last
