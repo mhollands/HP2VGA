@@ -1,13 +1,13 @@
-@P:  Worst Slack : -1.167
-@P:  TX_PLL|PLLOUTCORE_derived_clock - Estimated Frequency : 128.6 MHz
-@P:  TX_PLL|PLLOUTCORE_derived_clock - Requested Frequency : 151.3 MHz
-@P:  TX_PLL|PLLOUTCORE_derived_clock - Estimated Period : 7.777
-@P:  TX_PLL|PLLOUTCORE_derived_clock - Requested Period : 6.610
-@P:  TX_PLL|PLLOUTCORE_derived_clock - Slack : -1.167
+@P:  Worst Slack : -1.169
+@P:  TX_PLL|PLLOUTCORE_derived_clock - Estimated Frequency : 128.4 MHz
+@P:  TX_PLL|PLLOUTCORE_derived_clock - Requested Frequency : 151.0 MHz
+@P:  TX_PLL|PLLOUTCORE_derived_clock - Estimated Period : 7.790
+@P:  TX_PLL|PLLOUTCORE_derived_clock - Requested Period : 6.622
+@P:  TX_PLL|PLLOUTCORE_derived_clock - Slack : -1.169
 @P:  main|TVP_CLK - Estimated Frequency : NA
-@P:  main|TVP_CLK - Requested Frequency : 151.3 MHz
+@P:  main|TVP_CLK - Requested Frequency : 151.0 MHz
 @P:  main|TVP_CLK - Estimated Period : NA
-@P:  main|TVP_CLK - Requested Period : 6.610
+@P:  main|TVP_CLK - Requested Period : 6.622
 @P:  main|TVP_CLK - Slack : NA
 @P:  main|TVP_VSYNC - Estimated Frequency : 166.1 MHz
 @P:  main|TVP_VSYNC - Requested Frequency : 195.4 MHz

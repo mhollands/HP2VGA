@@ -5,9 +5,9 @@
 #CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\vlog\\umr_capim.v":1534812783
 #CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\vlog\\scemi_objects.v":1534812783
 #CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\vlog\\scemi_pipes.svh":1534812783
-#CUR:"E:\\Materials\\KDP\\Oscilloscope Mod\\HP2VGA\\Software\\HP2VGA_iCE40\\main.v":1536452258
+#CUR:"E:\\Materials\\KDP\\Oscilloscope Mod\\HP2VGA\\Software\\HP2VGA_iCE40\\main.v":1536454266
 #CUR:"E:\\Materials\\KDP\\Oscilloscope Mod\\HP2VGA\\Software\\HP2VGA_iCE40\\TX_PLL.v":1536086245
-#CUR:"E:\\Materials\\KDP\\Oscilloscope Mod\\HP2VGA\\Software\\HP2VGA_iCE40\\vga_control.v":1536453019
+#CUR:"E:\\Materials\\KDP\\Oscilloscope Mod\\HP2VGA\\Software\\HP2VGA_iCE40\\vga_control.v":1536454272
 #CUR:"E:\\Materials\\KDP\\Oscilloscope Mod\\HP2VGA\\Software\\HP2VGA_iCE40\\RAM.v":1536451789
 #numinternalfiles:5
 #defaultlanguage:verilog
@@ -16,7 +16,7 @@
 2			"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\vga_control.v" verilog
 3			"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v" verilog
 #Dependency Lists(Uses List)
-0 1 2 3
+0 1 3 2
 1 -1
 2 -1
 3 -1

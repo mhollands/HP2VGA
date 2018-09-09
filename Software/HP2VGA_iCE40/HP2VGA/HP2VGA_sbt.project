@@ -31,7 +31,7 @@ ProjectVersion=2.0
 Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Build Date: Sep 11 2017 17:40:01
 ProjectName=HP2VGA
 Vendor=SiliconBlue
-Synthesis=synplify
+Synthesis=lse
 ProjectVFiles=../main.v=work,../TX_PLL.v,../vga_control.v,../RAM.v
 ProjectCFiles=
 CurImplementation=HP2VGA_Implmnt
@@ -52,7 +52,7 @@ LoopLimit=1950
 MaximalFanout=10000
 MemoryInitialValueFileSearchPath=
 NumberOfCriticalPaths=3
-OptimizationGoal=Area
+OptimizationGoal=Timing
 PropagateConstants=True
 RAMStyle=Auto
 ROMStyle=Auto
@@ -84,5 +84,5 @@ BitmapSetSecurity=no
 BitmapSetNoUsedIONoPullup=no
 FloorPlannerShowFanInNets=yes
 FloorPlannerShowFanOutNets=yes
-HookTo3rdPartyTextEditor=
+HookTo3rdPartyTextEditor=no
 

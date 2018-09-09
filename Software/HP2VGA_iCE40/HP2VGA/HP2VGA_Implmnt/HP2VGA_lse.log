@@ -1,0 +1,207 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Sun Sep 09 01:26:35 2018
+
+
+Command Line:  C:\lscc\iCEcube2.2017.08\LSE\bin\nt\synthesis.exe -f HP2VGA_lse.prj 
+
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is BG121.
+The -d option is iCE40HX8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40HX8K
+
+### Package : BG121
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 206
+
+##########################################################
+
+                                                          
+
+Optimization goal = Timing
+The -top option is not used.
+Target frequency = 100.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = HP2VGA_Implmnt/HP2VGA.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/HP2VGA (searchpath added)
+Verilog design file = ../main.v
+Verilog design file = ../TX_PLL.v
+Verilog design file = ../vga_control.v
+Verilog design file = ../RAM.v
+-sdc option: SDC file input not used.
+WARNING - synthesis: Setting main as the top-level module. To specify the top-level module explicitly, use the -top option.
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file ../main.v. VERI-1482
+WARNING - synthesis: ../main.v(54): FRAME_COUNTER is already implicitly declared earlier. VERI-1362
+Analyzing Verilog file ../tx_pll.v. VERI-1482
+Analyzing Verilog file ../vga_control.v. VERI-1482
+Analyzing Verilog file ../ram.v. VERI-1482
+Analyzing Verilog file C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Top module name (Verilog): main
+INFO - synthesis: ../main.v(1): compiling module main. VERI-1018
+INFO - synthesis: ../tx_pll.v(1): compiling module TX_PLL. VERI-1018
+INFO - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(699): compiling module SB_PLL40_CORE(FDA_FEEDBACK=4'b0,FDA_RELATIVE=4'b0,DIVF=7'b0100110,DIVQ=3'b100,FILTER_RANGE=3'b010). VERI-1018
+WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on this instance. VDB-1013
+INFO - synthesis: ../ram.v(1): compiling module RAM. VERI-1018
+WARNING - synthesis: ../main.v(27): actual bit length 6 differs from formal bit length 8 for port din. VERI-1330
+WARNING - synthesis: ../main.v(27): actual bit length 32 differs from formal bit length 1 for port write_en. VERI-1330
+WARNING - synthesis: ../main.v(27): actual bit length 32 differs from formal bit length 1 for port wclk. VERI-1330
+WARNING - synthesis: ../main.v(27): actual bit length 6 differs from formal bit length 14 for port raddr. VERI-1330
+INFO - synthesis: ../vga_control.v(23): compiling module vga_control. VERI-1018
+WARNING - synthesis: ../vga_control.v(54): expression size 32 truncated to fit in target size 12. VERI-1209
+WARNING - synthesis: ../vga_control.v(55): expression size 32 truncated to fit in target size 12. VERI-1209
+WARNING - synthesis: ../vga_control.v(62): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: ../vga_control.v(63): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: ../vga_control.v(64): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: ../vga_control.v(73): expression size 32 truncated to fit in target size 12. VERI-1209
+WARNING - synthesis: ../vga_control.v(79): expression size 32 truncated to fit in target size 12. VERI-1209
+WARNING - synthesis: ../main.v(33): actual bit length 32 differs from formal bit length 1 for port ENABLE. VERI-1330
+WARNING - synthesis: ../main.v(34): actual bit length 32 differs from formal bit length 1 for port RESET. VERI-1330
+WARNING - synthesis: ../main.v(43): actual bit length 32 differs from formal bit length 1 for port SYNC. VERI-1330
+WARNING - synthesis: ../main.v(44): actual bit length 32 differs from formal bit length 1 for port SYNC_EN. VERI-1330
+WARNING - synthesis: ../main.v(63): expression size 32 truncated to fit in target size 6. VERI-1209
+Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
+Top-level module name = main.
+WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on this instance. VDB-1013
+######## Converting I/O port DEBUG[7] to input.
+######## Converting I/O port DEBUG[6] to output.
+######## Converting I/O port DEBUG[5] to output.
+######## Converting I/O port DEBUG[4] to output.
+######## Converting I/O port DEBUG[3] to output.
+######## Converting I/O port DEBUG[2] to output.
+######## Converting I/O port DEBUG[1] to output.
+######## Converting I/O port DEBUG[0] to output.
+
+
+
+Applying 1.000000 MHz constraint to all clocks
+
+Writing scf file : HP2VGA_Implmnt/HP2VGA.scf
+
+Writing scf file : HP2VGA_Implmnt/HP2VGA.scf
+
+Writing scf file : HP2VGA_Implmnt/HP2VGA.scf
+
+Writing scf file : HP2VGA_Implmnt/HP2VGA.scf
+
+Writing scf file : HP2VGA_Implmnt/HP2VGA.scf
+
+Results of NGD DRC are available in main_drc.log.
+
+################### Begin Area Report (main)######################
+Number of register bits => 30 of 7680 (0 % )
+SB_CARRY => 26
+SB_DFF => 1
+SB_DFFESR => 12
+SB_DFFSR => 17
+SB_GB_IO => 1
+SB_IO => 39
+SB_LUT4 => 80
+SB_PLL40_CORE => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : tx_pll/ADV_CLK_c, loads : 26
+  Net : TVP_VSYNC_c, loads : 7
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : video_signal_controller/VGA_VISIBLE, loads : 24
+  Net : video_signal_controller/n325, loads : 24
+  Net : video_signal_controller/n329, loads : 12
+  Net : n326, loads : 7
+  Net : video_signal_controller/VGA_Y_6, loads : 7
+  Net : video_signal_controller/VGA_Y_2, loads : 7
+  Net : video_signal_controller/VGA_Y_3, loads : 7
+  Net : video_signal_controller/VGA_Y_4, loads : 7
+  Net : video_signal_controller/VGA_Y_5, loads : 7
+  Net : video_signal_controller/VGA_Y_1, loads : 7
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk1 [get_nets TVP_VSYNC_c]             |  100.000 MHz|   91.249 MHz|     7 *
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk0 [get_nets ADV_CLK_c]               |            -|            -|     0  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 35.836  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.016  secs
+--------------------------------------------------------------

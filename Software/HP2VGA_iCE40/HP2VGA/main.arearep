@@ -1,0 +1,35 @@
+----------------------------------------------------------------------
+Report for cell main.TECH
+Register bits:  30 of 7680 (0.391%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        26          100.0
+                             SB_DFF         1          100.0
+                          SB_DFFESR        12          100.0
+                           SB_DFFSR        17          100.0
+                           SB_GB_IO         1          100.0
+                              SB_IO        39          100.0
+                            SB_LUT4        80          100.0
+                      SB_PLL40_CORE         1          100.0
+SUB MODULES
+                             TX_PLL         1
+                        vga_control         1
+                              TOTAL       179
+----------------------------------------------------------------------
+Report for cell vga_control.v1
+Instance Path : video_signal_controller
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        21           80.8
+                          SB_DFFESR        12          100.0
+                           SB_DFFSR        11           64.7
+                            SB_LUT4        69           86.3
+                              TOTAL       113
+----------------------------------------------------------------------
+Report for cell TX_PLL.v1
+Instance Path : tx_pll
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                      SB_PLL40_CORE         1          100.0
+                              TOTAL         1

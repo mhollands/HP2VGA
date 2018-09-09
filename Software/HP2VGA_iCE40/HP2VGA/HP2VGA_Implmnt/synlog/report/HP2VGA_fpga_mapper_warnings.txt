@@ -1,2 +1,2 @@
-@W: MT420 |Found inferred clock main|TVP_CLK with period 6.61ns. Please declare a user-defined clock on object "p:TVP_CLK"
+@W: MT420 |Found inferred clock main|TVP_CLK with period 6.62ns. Please declare a user-defined clock on object "p:TVP_CLK"
 @W: MT420 |Found inferred clock main|TVP_VSYNC with period 5.12ns. Please declare a user-defined clock on object "p:TVP_VSYNC"

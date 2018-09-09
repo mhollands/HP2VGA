@@ -1,0 +1,3031 @@
+<top name = "main"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "DEBUG[6]"  type = "net" />
+    <clockitem name = "TVP_VSYNC"  type = "port" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 2
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "main">
+
+    <!--
+        Top Level Pins: 41
+    -->
+
+    <pins>
+        <pitem  name = "DEBUG[7]"  direction = "inout"  />
+        <pitem  name = "DEBUG[6]"  direction = "inout"  />
+        <pitem  name = "DEBUG[5]"  direction = "inout"  />
+        <pitem  name = "DEBUG[4]"  direction = "inout"  />
+        <pitem  name = "DEBUG[3]"  direction = "inout"  />
+        <pitem  name = "DEBUG[2]"  direction = "inout"  />
+        <pitem  name = "DEBUG[1]"  direction = "inout"  />
+        <pitem  name = "DEBUG[0]"  direction = "inout"  />
+        <pitem  name = "TVP_CLK"  direction = "in"  />
+        <pitem  name = "TVP_HSYNC"  direction = "in"  />
+        <pitem  name = "TVP_VSYNC"  direction = "in"  />
+        <pitem  name = "LED"  direction = "out"  />
+        <pitem  name = "ADV_HSYNC"  direction = "out"  />
+        <pitem  name = "ADV_VSYNC"  direction = "out"  />
+        <pitem  name = "ADV_R[7]"  direction = "out"  />
+        <pitem  name = "ADV_R[6]"  direction = "out"  />
+        <pitem  name = "ADV_R[5]"  direction = "out"  />
+        <pitem  name = "ADV_R[4]"  direction = "out"  />
+        <pitem  name = "ADV_R[3]"  direction = "out"  />
+        <pitem  name = "ADV_R[2]"  direction = "out"  />
+        <pitem  name = "ADV_R[1]"  direction = "out"  />
+        <pitem  name = "ADV_R[0]"  direction = "out"  />
+        <pitem  name = "ADV_G[7]"  direction = "out"  />
+        <pitem  name = "ADV_G[6]"  direction = "out"  />
+        <pitem  name = "ADV_G[5]"  direction = "out"  />
+        <pitem  name = "ADV_G[4]"  direction = "out"  />
+        <pitem  name = "ADV_G[3]"  direction = "out"  />
+        <pitem  name = "ADV_G[2]"  direction = "out"  />
+        <pitem  name = "ADV_G[1]"  direction = "out"  />
+        <pitem  name = "ADV_G[0]"  direction = "out"  />
+        <pitem  name = "ADV_B[7]"  direction = "out"  />
+        <pitem  name = "ADV_B[6]"  direction = "out"  />
+        <pitem  name = "ADV_B[5]"  direction = "out"  />
+        <pitem  name = "ADV_B[4]"  direction = "out"  />
+        <pitem  name = "ADV_B[3]"  direction = "out"  />
+        <pitem  name = "ADV_B[2]"  direction = "out"  />
+        <pitem  name = "ADV_B[1]"  direction = "out"  />
+        <pitem  name = "ADV_B[0]"  direction = "out"  />
+        <pitem  name = "ADV_CLK"  direction = "out"  />
+        <pitem  name = "ADV_SYNC_N"  direction = "out"  />
+        <pitem  name = "ADV_BLANK_N"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 50
+    -->
+
+    <instance  name = "video_signal_controller/VGA_RED_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[31]"  direction = "in"  />
+        <pitem  name = "d0[30]"  direction = "in"  />
+        <pitem  name = "d0[29]"  direction = "in"  />
+        <pitem  name = "d0[28]"  direction = "in"  />
+        <pitem  name = "d0[27]"  direction = "in"  />
+        <pitem  name = "d0[26]"  direction = "in"  />
+        <pitem  name = "d0[25]"  direction = "in"  />
+        <pitem  name = "d0[24]"  direction = "in"  />
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        <pitem  name = "d1[31]"  direction = "in"  />
+        <pitem  name = "d1[30]"  direction = "in"  />
+        <pitem  name = "d1[29]"  direction = "in"  />
+        <pitem  name = "d1[28]"  direction = "in"  />
+        <pitem  name = "d1[27]"  direction = "in"  />
+        <pitem  name = "d1[26]"  direction = "in"  />
+        <pitem  name = "d1[25]"  direction = "in"  />
+        <pitem  name = "d1[24]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/VGA_VISIBLE"  />
+        <nitem  name = "ADV_R[7]"  />
+        <nitem  name = "ADV_R[6]"  />
+        <nitem  name = "ADV_R[5]"  />
+        <nitem  name = "ADV_R[4]"  />
+        <nitem  name = "ADV_R[3]"  />
+        <nitem  name = "ADV_R[2]"  />
+        <nitem  name = "ADV_R[1]"  />
+        <nitem  name = "ADV_R[0]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[8]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[7]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[6]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[5]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[4]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[3]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[2]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[1]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "PULSE_1HZ_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "PULSE_1HZ"  />
+        <nitem  name = "FRAME_COUNTER_5__N_13"  />
+        <nitem  name = "PULSE_1HZ_N_14"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_Y_O_11__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O[0]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[31]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[30]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[29]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[28]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[27]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[26]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[25]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[24]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[23]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[22]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[21]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[20]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[19]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[18]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[17]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[16]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[15]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[14]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[13]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[12]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "PULSE_1HZ_I_0_35"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "PULSE_1HZ"  />
+        <nitem  name = "DEBUG[7]"  />
+        <nitem  name = "LED"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FRAME_COUNTER_5__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n92"  />
+        <nitem  name = "FRAME_COUNTER[5]"  />
+        <nitem  name = "FRAME_COUNTER[4]"  />
+        <nitem  name = "FRAME_COUNTER[3]"  />
+        <nitem  name = "FRAME_COUNTER[2]"  />
+        <nitem  name = "FRAME_COUNTER[1]"  />
+        <nitem  name = "FRAME_COUNTER[0]"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "FRAME_COUNTER_5__N_13"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_Y_O_11__I_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[12]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[0]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[31]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[30]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[29]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[28]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[27]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[26]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[25]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[24]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[23]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[22]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[21]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[20]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[19]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[18]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[17]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[16]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[15]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[14]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[13]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[12]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_47[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "add_6"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n92"  />
+        <nitem  name = "FRAME_COUNTER[5]"  />
+        <nitem  name = "FRAME_COUNTER[4]"  />
+        <nitem  name = "FRAME_COUNTER[3]"  />
+        <nitem  name = "FRAME_COUNTER[2]"  />
+        <nitem  name = "FRAME_COUNTER[1]"  />
+        <nitem  name = "FRAME_COUNTER[0]"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[5]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[4]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[3]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[2]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[1]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FRAME_COUNTER_5__I_0_34"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "FRAME_COUNTER_5__N_7[5]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[4]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[3]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[2]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[1]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_7[0]"  />
+        <nitem  name = "n92"  />
+        <nitem  name = "FRAME_COUNTER_5__N_13"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[5]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[4]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[3]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[2]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[1]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_Y_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[8]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[7]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[6]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[5]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[4]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[3]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[2]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[1]"  />
+        <nitem  name = "video_signal_controller/VGA_RED_7__N_79[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "PULSE_1HZ_31"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "PULSE_1HZ_N_14"  />
+        <nitem  name = "TVP_VSYNC"  />
+        <nitem  name = "n92"  />
+        <nitem  name = "PULSE_1HZ"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_X_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_X[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X[0]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[8]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[7]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[6]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[5]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[4]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[3]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[2]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[1]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/sub_16"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_Y[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[12]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_O_11__N_134[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_X_11__I_0_46"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_X[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X[0]"  />
+        <nitem  name = "video_signal_controller/VGA_HS_N_172"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_X_O_11__I_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[12]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[0]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[31]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[30]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[29]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[28]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[27]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[26]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[25]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[24]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[23]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[22]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[21]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[20]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[19]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[18]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[17]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[16]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[15]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[14]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[13]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[12]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_X_O_11__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O[0]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[31]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[30]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[29]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[28]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[27]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[26]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[25]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[24]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[23]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[22]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[21]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[20]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[19]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[18]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[17]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[16]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[15]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[14]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[13]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[12]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_15[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_VISIBLE_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/VGA_VISIBLE"  />
+        <nitem  name = "video_signal_controller/VGA_VISIBLE_N_176"  />
+        <nitem  name = "video_signal_controller/VGA_VISIBLE_N_177"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_VS_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ADV_VSYNC"  />
+        <nitem  name = "video_signal_controller/VGA_VS_N_174"  />
+        <nitem  name = "video_signal_controller/VGA_VS_N_175"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/sub_13"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_X[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X[0]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[12]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X_O_11__N_121[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_Y_11__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_Y[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        <nitem  name = "video_signal_controller/VGA_VISIBLE_N_177"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_Y_11__I_0_48"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_Y[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        <nitem  name = "video_signal_controller/VGA_VS_N_174"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_Y_11__I_0_50"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_Y[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        <nitem  name = "video_signal_controller/VGA_VS_N_175"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_X_11__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_X[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X[0]"  />
+        <nitem  name = "video_signal_controller/VGA_VISIBLE_N_176"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_HS_I_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/VGA_HS_N_172"  />
+        <nitem  name = "video_signal_controller/VGA_HS_N_173"  />
+        <nitem  name = "video_signal_controller/VGA_HS_N_171"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_HS_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "i"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ADV_HSYNC"  />
+        <nitem  name = "video_signal_controller/VGA_HS_N_171"  />
+        </nets>
+    </instance>
+
+    <instance  name = "tri_32"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i[5]"  direction = "in"  />
+        <pitem  name = "i[4]"  direction = "in"  />
+        <pitem  name = "i[3]"  direction = "in"  />
+        <pitem  name = "i[2]"  direction = "in"  />
+        <pitem  name = "i[1]"  direction = "in"  />
+        <pitem  name = "i[0]"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n93"  />
+        <nitem  name = "n92"  />
+        <nitem  name = "DEBUG[5]"  />
+        <nitem  name = "DEBUG[4]"  />
+        <nitem  name = "DEBUG[3]"  />
+        <nitem  name = "DEBUG[2]"  />
+        <nitem  name = "DEBUG[1]"  />
+        <nitem  name = "DEBUG[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_X_11__I_0_49"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_X[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X[0]"  />
+        <nitem  name = "video_signal_controller/VGA_HS_N_173"  />
+        </nets>
+    </instance>
+
+    <instance  name = "tx_pll/TX_PLL_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "REFERENCECLK"  direction = "in"  />
+        <pitem  name = "RESETB"  direction = "in"  />
+        <pitem  name = "BYPASS"  direction = "in"  />
+        <pitem  name = "PLLOUTCORE"  direction = "out"  />
+        <pitem  name = "PLLOUTGLOBAL"  direction = "out"  />
+        <pitem  name = "LOCK"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "TVP_CLK"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "n92"  />
+        <nitem  name = "DEBUG[6]"  />
+        <nitem  name = "tx_pll/PLLOUTGLOBAL"  />
+        <nitem  name = "tx_pll/LOCK"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FRAME_COUNTER"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "FRAME_COUNTER_5__N_1[5]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[4]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[3]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[2]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[1]"  />
+        <nitem  name = "FRAME_COUNTER_5__N_1[0]"  />
+        <nitem  name = "n92"  />
+        <nitem  name = "TVP_VSYNC"  />
+        <nitem  name = "FRAME_COUNTER[5]"  />
+        <nitem  name = "FRAME_COUNTER[4]"  />
+        <nitem  name = "FRAME_COUNTER[3]"  />
+        <nitem  name = "FRAME_COUNTER[2]"  />
+        <nitem  name = "FRAME_COUNTER[1]"  />
+        <nitem  name = "FRAME_COUNTER[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_GREEN_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[31]"  direction = "in"  />
+        <pitem  name = "d0[30]"  direction = "in"  />
+        <pitem  name = "d0[29]"  direction = "in"  />
+        <pitem  name = "d0[28]"  direction = "in"  />
+        <pitem  name = "d0[27]"  direction = "in"  />
+        <pitem  name = "d0[26]"  direction = "in"  />
+        <pitem  name = "d0[25]"  direction = "in"  />
+        <pitem  name = "d0[24]"  direction = "in"  />
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        <pitem  name = "d1[31]"  direction = "in"  />
+        <pitem  name = "d1[30]"  direction = "in"  />
+        <pitem  name = "d1[29]"  direction = "in"  />
+        <pitem  name = "d1[28]"  direction = "in"  />
+        <pitem  name = "d1[27]"  direction = "in"  />
+        <pitem  name = "d1[26]"  direction = "in"  />
+        <pitem  name = "d1[25]"  direction = "in"  />
+        <pitem  name = "d1[24]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/VGA_VISIBLE"  />
+        <nitem  name = "ADV_G[7]"  />
+        <nitem  name = "ADV_G[6]"  />
+        <nitem  name = "ADV_G[5]"  />
+        <nitem  name = "ADV_G[4]"  />
+        <nitem  name = "ADV_G[3]"  />
+        <nitem  name = "ADV_G[2]"  />
+        <nitem  name = "ADV_G[1]"  />
+        <nitem  name = "ADV_G[0]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[8]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[7]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[6]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[5]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[4]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[3]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[2]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[1]"  />
+        <nitem  name = "video_signal_controller/VGA_GREEN_7__N_88[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_Y_7__I_0_44"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[31]"  direction = "in"  />
+        <pitem  name = "d0[30]"  direction = "in"  />
+        <pitem  name = "d0[29]"  direction = "in"  />
+        <pitem  name = "d0[28]"  direction = "in"  />
+        <pitem  name = "d0[27]"  direction = "in"  />
+        <pitem  name = "d0[26]"  direction = "in"  />
+        <pitem  name = "d0[25]"  direction = "in"  />
+        <pitem  name = "d0[24]"  direction = "in"  />
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[31]"  direction = "in"  />
+        <pitem  name = "d1[30]"  direction = "in"  />
+        <pitem  name = "d1[29]"  direction = "in"  />
+        <pitem  name = "d1[28]"  direction = "in"  />
+        <pitem  name = "d1[27]"  direction = "in"  />
+        <pitem  name = "d1[26]"  direction = "in"  />
+        <pitem  name = "d1[25]"  direction = "in"  />
+        <pitem  name = "d1[24]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/VGA_VISIBLE"  />
+        <nitem  name = "ADV_B[7]"  />
+        <nitem  name = "ADV_B[6]"  />
+        <nitem  name = "ADV_B[5]"  />
+        <nitem  name = "ADV_B[4]"  />
+        <nitem  name = "ADV_B[3]"  />
+        <nitem  name = "ADV_B[2]"  />
+        <nitem  name = "ADV_B[1]"  />
+        <nitem  name = "ADV_B[0]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/LessThan_24"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_X[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X[0]"  />
+        <nitem  name = "video_signal_controller/n291"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/add_25"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_X[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X[0]"  />
+        <nitem  name = "video_signal_controller/n314"  />
+        <nitem  name = "video_signal_controller/n315"  />
+        <nitem  name = "video_signal_controller/n316"  />
+        <nitem  name = "video_signal_controller/n317"  />
+        <nitem  name = "video_signal_controller/n318"  />
+        <nitem  name = "video_signal_controller/n319"  />
+        <nitem  name = "video_signal_controller/n320"  />
+        <nitem  name = "video_signal_controller/n321"  />
+        <nitem  name = "video_signal_controller/n322"  />
+        <nitem  name = "video_signal_controller/n323"  />
+        <nitem  name = "video_signal_controller/n324"  />
+        <nitem  name = "video_signal_controller/n325"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/i27"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n92"  />
+        <nitem  name = "video_signal_controller/n326"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/i28"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n92"  />
+        <nitem  name = "video_signal_controller/n327"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/equal_28"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_Y[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        <nitem  name = "video_signal_controller/n328"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/i30"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/n327"  />
+        <nitem  name = "video_signal_controller/n328"  />
+        <nitem  name = "video_signal_controller/n329"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/i31"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/n326"  />
+        <nitem  name = "video_signal_controller/n329"  />
+        <nitem  name = "video_signal_controller/n330"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/add_31"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/pwr"  />
+        <nitem  name = "video_signal_controller/VGA_Y[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        <nitem  name = "video_signal_controller/n353"  />
+        <nitem  name = "video_signal_controller/n354"  />
+        <nitem  name = "video_signal_controller/n355"  />
+        <nitem  name = "video_signal_controller/n356"  />
+        <nitem  name = "video_signal_controller/n357"  />
+        <nitem  name = "video_signal_controller/n358"  />
+        <nitem  name = "video_signal_controller/n359"  />
+        <nitem  name = "video_signal_controller/n360"  />
+        <nitem  name = "video_signal_controller/n361"  />
+        <nitem  name = "video_signal_controller/n362"  />
+        <nitem  name = "video_signal_controller/n363"  />
+        <nitem  name = "video_signal_controller/n364"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/mux_32"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/n330"  />
+        <nitem  name = "video_signal_controller/n353"  />
+        <nitem  name = "video_signal_controller/n354"  />
+        <nitem  name = "video_signal_controller/n355"  />
+        <nitem  name = "video_signal_controller/n356"  />
+        <nitem  name = "video_signal_controller/n357"  />
+        <nitem  name = "video_signal_controller/n358"  />
+        <nitem  name = "video_signal_controller/n359"  />
+        <nitem  name = "video_signal_controller/n360"  />
+        <nitem  name = "video_signal_controller/n361"  />
+        <nitem  name = "video_signal_controller/n362"  />
+        <nitem  name = "video_signal_controller/n363"  />
+        <nitem  name = "video_signal_controller/n364"  />
+        <nitem  name = "video_signal_controller/n366"  />
+        <nitem  name = "video_signal_controller/n367"  />
+        <nitem  name = "video_signal_controller/n368"  />
+        <nitem  name = "video_signal_controller/n369"  />
+        <nitem  name = "video_signal_controller/n370"  />
+        <nitem  name = "video_signal_controller/n371"  />
+        <nitem  name = "video_signal_controller/n372"  />
+        <nitem  name = "video_signal_controller/n373"  />
+        <nitem  name = "video_signal_controller/n374"  />
+        <nitem  name = "video_signal_controller/n375"  />
+        <nitem  name = "video_signal_controller/n376"  />
+        <nitem  name = "video_signal_controller/n377"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/mux_33"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "video_signal_controller/n291"  />
+        <nitem  name = "video_signal_controller/n314"  />
+        <nitem  name = "video_signal_controller/n315"  />
+        <nitem  name = "video_signal_controller/n316"  />
+        <nitem  name = "video_signal_controller/n317"  />
+        <nitem  name = "video_signal_controller/n318"  />
+        <nitem  name = "video_signal_controller/n319"  />
+        <nitem  name = "video_signal_controller/n320"  />
+        <nitem  name = "video_signal_controller/n321"  />
+        <nitem  name = "video_signal_controller/n322"  />
+        <nitem  name = "video_signal_controller/n323"  />
+        <nitem  name = "video_signal_controller/n324"  />
+        <nitem  name = "video_signal_controller/n325"  />
+        <nitem  name = "video_signal_controller/n379"  />
+        <nitem  name = "video_signal_controller/n380"  />
+        <nitem  name = "video_signal_controller/n381"  />
+        <nitem  name = "video_signal_controller/n382"  />
+        <nitem  name = "video_signal_controller/n383"  />
+        <nitem  name = "video_signal_controller/n384"  />
+        <nitem  name = "video_signal_controller/n385"  />
+        <nitem  name = "video_signal_controller/n386"  />
+        <nitem  name = "video_signal_controller/n387"  />
+        <nitem  name = "video_signal_controller/n388"  />
+        <nitem  name = "video_signal_controller/n389"  />
+        <nitem  name = "video_signal_controller/n390"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/mux_34"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/VGA_Y[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        <nitem  name = "video_signal_controller/n291"  />
+        <nitem  name = "video_signal_controller/n366"  />
+        <nitem  name = "video_signal_controller/n367"  />
+        <nitem  name = "video_signal_controller/n368"  />
+        <nitem  name = "video_signal_controller/n369"  />
+        <nitem  name = "video_signal_controller/n370"  />
+        <nitem  name = "video_signal_controller/n371"  />
+        <nitem  name = "video_signal_controller/n372"  />
+        <nitem  name = "video_signal_controller/n373"  />
+        <nitem  name = "video_signal_controller/n374"  />
+        <nitem  name = "video_signal_controller/n375"  />
+        <nitem  name = "video_signal_controller/n376"  />
+        <nitem  name = "video_signal_controller/n377"  />
+        <nitem  name = "video_signal_controller/n392"  />
+        <nitem  name = "video_signal_controller/n393"  />
+        <nitem  name = "video_signal_controller/n394"  />
+        <nitem  name = "video_signal_controller/n395"  />
+        <nitem  name = "video_signal_controller/n396"  />
+        <nitem  name = "video_signal_controller/n397"  />
+        <nitem  name = "video_signal_controller/n398"  />
+        <nitem  name = "video_signal_controller/n399"  />
+        <nitem  name = "video_signal_controller/n400"  />
+        <nitem  name = "video_signal_controller/n401"  />
+        <nitem  name = "video_signal_controller/n402"  />
+        <nitem  name = "video_signal_controller/n403"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/mux_35"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwr"  />
+        <nitem  name = "video_signal_controller/VGA_X[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X[0]"  />
+        <nitem  name = "video_signal_controller/n379"  />
+        <nitem  name = "video_signal_controller/n380"  />
+        <nitem  name = "video_signal_controller/n381"  />
+        <nitem  name = "video_signal_controller/n382"  />
+        <nitem  name = "video_signal_controller/n383"  />
+        <nitem  name = "video_signal_controller/n384"  />
+        <nitem  name = "video_signal_controller/n385"  />
+        <nitem  name = "video_signal_controller/n386"  />
+        <nitem  name = "video_signal_controller/n387"  />
+        <nitem  name = "video_signal_controller/n388"  />
+        <nitem  name = "video_signal_controller/n389"  />
+        <nitem  name = "video_signal_controller/n390"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/mux_36"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwr"  />
+        <nitem  name = "video_signal_controller/VGA_Y[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        <nitem  name = "video_signal_controller/n392"  />
+        <nitem  name = "video_signal_controller/n393"  />
+        <nitem  name = "video_signal_controller/n394"  />
+        <nitem  name = "video_signal_controller/n395"  />
+        <nitem  name = "video_signal_controller/n396"  />
+        <nitem  name = "video_signal_controller/n397"  />
+        <nitem  name = "video_signal_controller/n398"  />
+        <nitem  name = "video_signal_controller/n399"  />
+        <nitem  name = "video_signal_controller/n400"  />
+        <nitem  name = "video_signal_controller/n401"  />
+        <nitem  name = "video_signal_controller/n402"  />
+        <nitem  name = "video_signal_controller/n403"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_Y_11__I_0_47"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "n92"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_147[0]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_X_11__I_0_45"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "n92"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_159[0]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_Y"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[11]"  direction = "in"  />
+        <pitem  name = "reset[11]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[11]"  direction = "out"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[11]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "DEBUG[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y[0]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[11]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[10]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[9]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[8]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[7]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[6]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[5]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[4]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[3]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[2]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[1]"  />
+        <nitem  name = "video_signal_controller/VGA_Y_11__N_109[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "video_signal_controller/VGA_X"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[11]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[11]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[11]"  direction = "out"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[11]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "video_signal_controller/gnd"  />
+        <nitem  name = "DEBUG[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X[0]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[11]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[10]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[9]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[8]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[7]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[6]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[5]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[4]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[3]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[2]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[1]"  />
+        <nitem  name = "video_signal_controller/VGA_X_11__N_97[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "TX_PLL_inst"  />
+    <instance  name = "tx_pll"  />
+    <instance  name = "video_signal_controller"  />
+    <!--
+        REG instances in netlist: 4
+    -->
+
+    <regs>
+        <reg  name = "PULSE_1HZ_31"  />
+        <reg  name = "FRAME_COUNTER"  />
+        <reg  name = "video_signal_controller/VGA_Y"  />
+        <reg  name = "video_signal_controller/VGA_X"  />
+    </regs>
+
+    <!--
+        Views in design "main": 2
+    -->
+
+    <views>
+        <view  name = "TX_PLL"  />
+        <view  name = "vga_control"  />
+    </views>
+
+</unit>
+
+</library>
+
+</top>

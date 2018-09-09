@@ -19,6 +19,7 @@
 // 
 ///////////////////////////////////////////////////////////////////////////////////
  
+ //This module generates the video signals for the output VGA signal.
 module vga_control( input VIDEO_CLK, //CLK input at correct pixel frequency
                     input ENABLE, //enable module
                     input RESET, //resets device

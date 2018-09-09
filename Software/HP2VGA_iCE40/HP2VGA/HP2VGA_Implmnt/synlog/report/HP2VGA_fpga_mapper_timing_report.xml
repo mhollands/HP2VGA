@@ -16,13 +16,13 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 </row>
 <row>
 <data>TX_PLL|PLLOUTCORE_derived_clock</data>
-<data>151.3 MHz</data>
-<data>128.6 MHz</data>
-<data>-1.167</data>
+<data>151.0 MHz</data>
+<data>128.4 MHz</data>
+<data>-1.169</data>
 </row>
 <row>
 <data>main|TVP_CLK</data>
-<data>151.3 MHz</data>
+<data>151.0 MHz</data>
 <data>NA</data>
 <data>NA</data>
 </row>

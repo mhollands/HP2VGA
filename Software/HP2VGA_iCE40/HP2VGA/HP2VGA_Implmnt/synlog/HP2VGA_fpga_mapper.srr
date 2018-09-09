@@ -1,4 +1,4 @@
-# Sun Sep 09 00:54:31 2018
+# Sun Sep 09 01:22:49 2018
 
 Synopsys Lattice Technology Mapper, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -32,7 +32,7 @@ Available hyper_sources - for debug and ip models
 
 Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
 
-@N: MO231 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\vga_control.v":66:4:66:9|Found counter in view:work.vga_control(verilog) instance VGA_Y[11:0] 
+@N: MO231 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\vga_control.v":67:4:67:9|Found counter in view:work.vga_control(verilog) instance VGA_Y[11:0] 
 
 Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
 
@@ -64,7 +64,7 @@ Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
    1		0h:00m:00s		    -1.79ns		 103 /        30
    2		0h:00m:00s		    -1.79ns		 103 /        30
-@N: FX271 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\vga_control.v":71:15:71:34|Replicating instance II_2.VGA_X11lto10_0 (in view: work.main(verilog)) with 23 loads 1 time to improve timing.
+@N: FX271 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\vga_control.v":72:15:72:34|Replicating instance video_signal_controller.VGA_X11lto10_0 (in view: work.main(verilog)) with 23 loads 1 time to improve timing.
 Timing driven replication report
 Added 0 Registers via timing driven replication
 Added 1 LUTs via timing driven replication
@@ -73,13 +73,13 @@ Added 1 LUTs via timing driven replication
 
 
    4		0h:00m:00s		    -1.79ns		 104 /        30
-@N: FX1017 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\main.v":19:1:19:6|SB_GB inserted on the net ADV_CLK_c.
+@N: FX1017 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\main.v":19:8:19:13|SB_GB inserted on the net ADV_CLK_c.
 @N: FX1016 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\main.v":5:12:5:20|SB_GB_IO inserted on the port TVP_VSYNC.
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 134MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 134MB)
 
 
 
@@ -97,11 +97,11 @@ Clock Tree ID     Driving Element          Drive Element Type     Fanout     Sam
 --------------------------------------------------------------------------------------------
 @K:CKID0002       TVP_VSYNC_ibuf_gb_io     SB_GB_IO               7          PULSE_1HZ      
 ============================================================================================
-================================================================================================= Gated/Generated Clocks ==================================================================================================
-Clock Tree ID     Driving Element      Drive Element Type     Fanout     Sample Instance     Explanation                                                                                                                   
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       II_0.TX_PLL_inst     SB_PLL40_CORE          23         II_2.VGA_Y[11]      Gating structure creates improper gating logic. See the Gated Clocks description in the user guide for conversion requirements
-===========================================================================================================================================================================================================================
+=========================================================================================================== Gated/Generated Clocks ============================================================================================================
+Clock Tree ID     Driving Element        Drive Element Type     Fanout     Sample Instance                       Explanation                                                                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       tx_pll.TX_PLL_inst     SB_PLL40_CORE          23         video_signal_controller.VGA_Y[11]     Gating structure creates improper gating logic. See the Gated Clocks description in the user guide for conversion requirements
+===============================================================================================================================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
@@ -124,18 +124,18 @@ Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s
 
 Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 135MB)
 
-@W: MT420 |Found inferred clock main|TVP_CLK with period 6.61ns. Please declare a user-defined clock on object "p:TVP_CLK"
+@W: MT420 |Found inferred clock main|TVP_CLK with period 6.62ns. Please declare a user-defined clock on object "p:TVP_CLK"
 @W: MT420 |Found inferred clock main|TVP_VSYNC with period 5.12ns. Please declare a user-defined clock on object "p:TVP_VSYNC"
-@N: MT615 |Found clock TX_PLL|PLLOUTCORE_derived_clock with period 6.61ns 
+@N: MT615 |Found clock TX_PLL|PLLOUTCORE_derived_clock with period 6.62ns 
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Sun Sep 09 00:54:33 2018
+# Timing Report written on Sun Sep 09 01:22:51 2018
 #
 
 
 Top view:               main
-Requested Frequency:    151.3 MHz
+Requested Frequency:    151.0 MHz
 Wire load mode:         top
 Paths requested:        5
 Constraint File(s):    
@@ -149,13 +149,13 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -1.167
+Worst slack in design: -1.169
 
                                     Requested     Estimated     Requested     Estimated                 Clock                           Clock                
 Starting Clock                      Frequency     Frequency     Period        Period        Slack       Type                            Group                
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-TX_PLL|PLLOUTCORE_derived_clock     151.3 MHz     128.6 MHz     6.610         7.777         -1.167      derived (from main|TVP_CLK)     Autoconstr_clkgroup_1
-main|TVP_CLK                        151.3 MHz     NA            6.610         NA            DCM/PLL     inferred                        Autoconstr_clkgroup_1
+TX_PLL|PLLOUTCORE_derived_clock     151.0 MHz     128.4 MHz     6.622         7.790         -1.169      derived (from main|TVP_CLK)     Autoconstr_clkgroup_1
+main|TVP_CLK                        151.0 MHz     NA            6.622         NA            DCM/PLL     inferred                        Autoconstr_clkgroup_1
 main|TVP_VSYNC                      195.4 MHz     166.1 MHz     5.117         6.020         -0.903      inferred                        Autoconstr_clkgroup_0
 =============================================================================================================================================================
 @N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
@@ -172,7 +172,7 @@ Clocks                                                            |    rise  to 
 Starting                         Ending                           |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 main|TVP_VSYNC                   main|TVP_VSYNC                   |  5.117       -0.903  |  No paths    -      |  No paths    -      |  No paths    -    
-TX_PLL|PLLOUTCORE_derived_clock  TX_PLL|PLLOUTCORE_derived_clock  |  6.610       -1.167  |  No paths    -      |  No paths    -      |  No paths    -    
+TX_PLL|PLLOUTCORE_derived_clock  TX_PLL|PLLOUTCORE_derived_clock  |  6.622       -1.169  |  No paths    -      |  No paths    -      |  No paths    -    
 =========================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -195,41 +195,41 @@ Detailed Report for Clock: TX_PLL|PLLOUTCORE_derived_clock
 Starting Points with Worst Slack
 ********************************
 
-                   Starting                                                               Arrival           
-Instance           Reference                           Type         Pin     Net           Time        Slack 
-                   Clock                                                                                    
-------------------------------------------------------------------------------------------------------------
-II_2.VGA_Y[8]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[8]      0.540       -1.167
-II_2.VGA_Y[1]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[1]      0.540       -1.117
-II_2.VGA_Y[10]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[10]     0.540       -1.117
-II_2.VGA_Y[2]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[2]      0.540       -1.096
-II_2.VGA_X[5]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[5]      0.540       -1.089
-II_2.VGA_Y[11]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[11]     0.540       -1.089
-II_2.VGA_Y[3]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[3]      0.540       -1.061
-II_2.VGA_X[6]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[6]      0.540       -1.040
-II_2.VGA_X[0]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[0]      0.540       -1.033
-II_2.VGA_Y[0]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[0]      0.540       -1.033
-============================================================================================================
+                                      Starting                                                               Arrival           
+Instance                              Reference                           Type         Pin     Net           Time        Slack 
+                                      Clock                                                                                    
+-------------------------------------------------------------------------------------------------------------------------------
+video_signal_controller.VGA_X[0]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[0]      0.540       -1.169
+video_signal_controller.VGA_Y[8]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[8]      0.540       -1.155
+video_signal_controller.VGA_X[5]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[5]      0.540       -1.148
+video_signal_controller.VGA_X[1]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[1]      0.540       -1.119
+video_signal_controller.VGA_Y[1]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[1]      0.540       -1.105
+video_signal_controller.VGA_Y[10]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[10]     0.540       -1.105
+video_signal_controller.VGA_X[4]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[4]      0.540       -1.099
+video_signal_controller.VGA_X[6]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[6]      0.540       -1.099
+video_signal_controller.VGA_Y[2]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[2]      0.540       -1.085
+video_signal_controller.VGA_X[7]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[7]      0.540       -1.077
+===============================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                  Starting                                                                Required           
-Instance          Reference                           Type        Pin     Net             Time         Slack 
-                  Clock                                                                                      
--------------------------------------------------------------------------------------------------------------
-II_2.VGA_Y[0]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[0]     6.505        -1.167
-II_2.VGA_Y[1]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[1]     6.505        -1.167
-II_2.VGA_Y[2]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[2]     6.505        -1.167
-II_2.VGA_Y[3]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[3]     6.505        -1.167
-II_2.VGA_Y[4]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[4]     6.505        -1.167
-II_2.VGA_Y[5]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[5]     6.505        -1.167
-II_2.VGA_Y[6]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[6]     6.505        -1.167
-II_2.VGA_Y[7]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[7]     6.505        -1.167
-II_2.VGA_Y[8]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[8]     6.505        -1.167
-II_2.VGA_Y[9]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[9]     6.505        -1.167
-=============================================================================================================
+                                     Starting                                                                        Required           
+Instance                             Reference                           Type         Pin     Net                    Time         Slack 
+                                     Clock                                                                                              
+----------------------------------------------------------------------------------------------------------------------------------------
+video_signal_controller.VGA_X[0]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     R       VGA_X11lto10_0_iso     6.517        -1.169
+video_signal_controller.VGA_X[1]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     R       VGA_X11lto10_0_iso     6.517        -1.169
+video_signal_controller.VGA_X[2]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     R       VGA_X11lto10_0_iso     6.517        -1.169
+video_signal_controller.VGA_X[3]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     R       VGA_X11lto10_0_iso     6.517        -1.169
+video_signal_controller.VGA_X[4]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     R       VGA_X11lto10_0_iso     6.517        -1.169
+video_signal_controller.VGA_X[5]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     R       VGA_X11lto10_0_iso     6.517        -1.169
+video_signal_controller.VGA_X[6]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     R       VGA_X11lto10_0_iso     6.517        -1.169
+video_signal_controller.VGA_X[7]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     R       VGA_X11lto10_0_iso     6.517        -1.169
+video_signal_controller.VGA_X[8]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     R       VGA_X11lto10_0_iso     6.517        -1.169
+video_signal_controller.VGA_X[9]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     R       VGA_X11lto10_0_iso     6.517        -1.169
+========================================================================================================================================
 
 
 
@@ -238,182 +238,182 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      6.610
+      Requested Period:                      6.622
     - Setup time:                            0.105
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         6.505
+    = Required time:                         6.517
 
-    - Propagation time:                      7.671
+    - Propagation time:                      7.685
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.166
+    = Slack (critical) :                     -1.169
 
     Number of logic level(s):                3
-    Starting point:                          II_2.VGA_Y[8] / Q
-    Ending point:                            II_2.VGA_Y[0] / D
+    Starting point:                          video_signal_controller.VGA_X[0] / Q
+    Ending point:                            video_signal_controller.VGA_X[0] / R
     The start point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
     The end   point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
 
-Instance / Net                        Pin      Pin               Arrival     No. of    
-Name                      Type        Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------
-II_2.VGA_Y[8]             SB_DFFE     Q        Out     0.540     0.540       -         
-VGA_Y[8]                  Net         -        -       1.599     -           4         
-II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     I0       In      -         2.139       -         
-II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     O        Out     0.449     2.588       -         
-N_17_4                    Net         -        -       1.371     -           3         
-II_2.VGA_Y_RNI44GN[0]     SB_LUT4     I0       In      -         3.959       -         
-II_2.VGA_Y_RNI44GN[0]     SB_LUT4     O        Out     0.449     4.408       -         
-N_17                      Net         -        -       1.371     -           12        
-II_2.VGA_Y_RNO[0]         SB_LUT4     I0       In      -         5.779       -         
-II_2.VGA_Y_RNO[0]         SB_LUT4     O        Out     0.386     6.164       -         
-VGA_Y_lm[0]               Net         -        -       1.507     -           1         
-II_2.VGA_Y[0]             SB_DFFE     D        In      -         7.671       -         
-=======================================================================================
-Total path delay (propagation time + setup) of 7.776 is 1.928(24.8%) logic and 5.848(75.2%) route.
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+video_signal_controller.VGA_X[0]                SB_DFFSR     Q        Out     0.540     0.540       -         
+VGA_X[0]                                        Net          -        -       1.599     -           5         
+video_signal_controller.VGA_X_RNILL781[1]       SB_LUT4      I0       In      -         2.139       -         
+video_signal_controller.VGA_X_RNILL781[1]       SB_LUT4      O        Out     0.449     2.588       -         
+VGA_X11lto10_0_a4_1_4                           Net          -        -       1.371     -           1         
+video_signal_controller.VGA_X_RNIH1782[2]       SB_LUT4      I0       In      -         3.959       -         
+video_signal_controller.VGA_X_RNIH1782[2]       SB_LUT4      O        Out     0.449     4.408       -         
+N_17_0                                          Net          -        -       1.371     -           2         
+video_signal_controller.VGA_X_RNI4D8I4_0[9]     SB_LUT4      I1       In      -         5.779       -         
+video_signal_controller.VGA_X_RNI4D8I4_0[9]     SB_LUT4      O        Out     0.400     6.178       -         
+VGA_X11lto10_0_iso                              Net          -        -       1.507     -           11        
+video_signal_controller.VGA_X[0]                SB_DFFSR     R        In      -         7.685       -         
+==============================================================================================================
+Total path delay (propagation time + setup) of 7.790 is 1.942(24.9%) logic and 5.848(75.1%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 2: 
-      Requested Period:                      6.610
+      Requested Period:                      6.622
     - Setup time:                            0.105
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         6.505
+    = Required time:                         6.517
 
-    - Propagation time:                      7.671
+    - Propagation time:                      7.685
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.166
+    = Slack (critical) :                     -1.169
 
     Number of logic level(s):                3
-    Starting point:                          II_2.VGA_Y[8] / Q
-    Ending point:                            II_2.VGA_Y[10] / D
+    Starting point:                          video_signal_controller.VGA_X[0] / Q
+    Ending point:                            video_signal_controller.VGA_X[10] / R
     The start point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
     The end   point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
 
-Instance / Net                        Pin      Pin               Arrival     No. of    
-Name                      Type        Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------
-II_2.VGA_Y[8]             SB_DFFE     Q        Out     0.540     0.540       -         
-VGA_Y[8]                  Net         -        -       1.599     -           4         
-II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     I0       In      -         2.139       -         
-II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     O        Out     0.449     2.588       -         
-N_17_4                    Net         -        -       1.371     -           3         
-II_2.VGA_Y_RNI44GN[0]     SB_LUT4     I0       In      -         3.959       -         
-II_2.VGA_Y_RNI44GN[0]     SB_LUT4     O        Out     0.449     4.408       -         
-N_17                      Net         -        -       1.371     -           12        
-II_2.VGA_Y_RNO[10]        SB_LUT4     I0       In      -         5.779       -         
-II_2.VGA_Y_RNO[10]        SB_LUT4     O        Out     0.386     6.164       -         
-VGA_Y_lm[10]              Net         -        -       1.507     -           1         
-II_2.VGA_Y[10]            SB_DFFE     D        In      -         7.671       -         
-=======================================================================================
-Total path delay (propagation time + setup) of 7.776 is 1.928(24.8%) logic and 5.848(75.2%) route.
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+video_signal_controller.VGA_X[0]                SB_DFFSR     Q        Out     0.540     0.540       -         
+VGA_X[0]                                        Net          -        -       1.599     -           5         
+video_signal_controller.VGA_X_RNILL781[1]       SB_LUT4      I0       In      -         2.139       -         
+video_signal_controller.VGA_X_RNILL781[1]       SB_LUT4      O        Out     0.449     2.588       -         
+VGA_X11lto10_0_a4_1_4                           Net          -        -       1.371     -           1         
+video_signal_controller.VGA_X_RNIH1782[2]       SB_LUT4      I0       In      -         3.959       -         
+video_signal_controller.VGA_X_RNIH1782[2]       SB_LUT4      O        Out     0.449     4.408       -         
+N_17_0                                          Net          -        -       1.371     -           2         
+video_signal_controller.VGA_X_RNI4D8I4_0[9]     SB_LUT4      I1       In      -         5.779       -         
+video_signal_controller.VGA_X_RNI4D8I4_0[9]     SB_LUT4      O        Out     0.400     6.178       -         
+VGA_X11lto10_0_iso                              Net          -        -       1.507     -           11        
+video_signal_controller.VGA_X[10]               SB_DFFSR     R        In      -         7.685       -         
+==============================================================================================================
+Total path delay (propagation time + setup) of 7.790 is 1.942(24.9%) logic and 5.848(75.1%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 3: 
-      Requested Period:                      6.610
+      Requested Period:                      6.622
     - Setup time:                            0.105
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         6.505
+    = Required time:                         6.517
 
-    - Propagation time:                      7.671
+    - Propagation time:                      7.685
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.166
+    = Slack (critical) :                     -1.169
 
     Number of logic level(s):                3
-    Starting point:                          II_2.VGA_Y[8] / Q
-    Ending point:                            II_2.VGA_Y[9] / D
+    Starting point:                          video_signal_controller.VGA_X[0] / Q
+    Ending point:                            video_signal_controller.VGA_X[9] / R
     The start point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
     The end   point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
 
-Instance / Net                        Pin      Pin               Arrival     No. of    
-Name                      Type        Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------
-II_2.VGA_Y[8]             SB_DFFE     Q        Out     0.540     0.540       -         
-VGA_Y[8]                  Net         -        -       1.599     -           4         
-II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     I0       In      -         2.139       -         
-II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     O        Out     0.449     2.588       -         
-N_17_4                    Net         -        -       1.371     -           3         
-II_2.VGA_Y_RNI44GN[0]     SB_LUT4     I0       In      -         3.959       -         
-II_2.VGA_Y_RNI44GN[0]     SB_LUT4     O        Out     0.449     4.408       -         
-N_17                      Net         -        -       1.371     -           12        
-II_2.VGA_Y_RNO[9]         SB_LUT4     I0       In      -         5.779       -         
-II_2.VGA_Y_RNO[9]         SB_LUT4     O        Out     0.386     6.164       -         
-VGA_Y_lm[9]               Net         -        -       1.507     -           1         
-II_2.VGA_Y[9]             SB_DFFE     D        In      -         7.671       -         
-=======================================================================================
-Total path delay (propagation time + setup) of 7.776 is 1.928(24.8%) logic and 5.848(75.2%) route.
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+video_signal_controller.VGA_X[0]                SB_DFFSR     Q        Out     0.540     0.540       -         
+VGA_X[0]                                        Net          -        -       1.599     -           5         
+video_signal_controller.VGA_X_RNILL781[1]       SB_LUT4      I0       In      -         2.139       -         
+video_signal_controller.VGA_X_RNILL781[1]       SB_LUT4      O        Out     0.449     2.588       -         
+VGA_X11lto10_0_a4_1_4                           Net          -        -       1.371     -           1         
+video_signal_controller.VGA_X_RNIH1782[2]       SB_LUT4      I0       In      -         3.959       -         
+video_signal_controller.VGA_X_RNIH1782[2]       SB_LUT4      O        Out     0.449     4.408       -         
+N_17_0                                          Net          -        -       1.371     -           2         
+video_signal_controller.VGA_X_RNI4D8I4_0[9]     SB_LUT4      I1       In      -         5.779       -         
+video_signal_controller.VGA_X_RNI4D8I4_0[9]     SB_LUT4      O        Out     0.400     6.178       -         
+VGA_X11lto10_0_iso                              Net          -        -       1.507     -           11        
+video_signal_controller.VGA_X[9]                SB_DFFSR     R        In      -         7.685       -         
+==============================================================================================================
+Total path delay (propagation time + setup) of 7.790 is 1.942(24.9%) logic and 5.848(75.1%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 4: 
-      Requested Period:                      6.610
+      Requested Period:                      6.622
     - Setup time:                            0.105
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         6.505
+    = Required time:                         6.517
 
-    - Propagation time:                      7.671
+    - Propagation time:                      7.685
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.166
+    = Slack (critical) :                     -1.169
 
     Number of logic level(s):                3
-    Starting point:                          II_2.VGA_Y[8] / Q
-    Ending point:                            II_2.VGA_Y[8] / D
+    Starting point:                          video_signal_controller.VGA_X[0] / Q
+    Ending point:                            video_signal_controller.VGA_X[8] / R
     The start point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
     The end   point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
 
-Instance / Net                        Pin      Pin               Arrival     No. of    
-Name                      Type        Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------
-II_2.VGA_Y[8]             SB_DFFE     Q        Out     0.540     0.540       -         
-VGA_Y[8]                  Net         -        -       1.599     -           4         
-II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     I0       In      -         2.139       -         
-II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     O        Out     0.449     2.588       -         
-N_17_4                    Net         -        -       1.371     -           3         
-II_2.VGA_Y_RNI44GN[0]     SB_LUT4     I0       In      -         3.959       -         
-II_2.VGA_Y_RNI44GN[0]     SB_LUT4     O        Out     0.449     4.408       -         
-N_17                      Net         -        -       1.371     -           12        
-II_2.VGA_Y_RNO[8]         SB_LUT4     I0       In      -         5.779       -         
-II_2.VGA_Y_RNO[8]         SB_LUT4     O        Out     0.386     6.164       -         
-VGA_Y_lm[8]               Net         -        -       1.507     -           1         
-II_2.VGA_Y[8]             SB_DFFE     D        In      -         7.671       -         
-=======================================================================================
-Total path delay (propagation time + setup) of 7.776 is 1.928(24.8%) logic and 5.848(75.2%) route.
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+video_signal_controller.VGA_X[0]                SB_DFFSR     Q        Out     0.540     0.540       -         
+VGA_X[0]                                        Net          -        -       1.599     -           5         
+video_signal_controller.VGA_X_RNILL781[1]       SB_LUT4      I0       In      -         2.139       -         
+video_signal_controller.VGA_X_RNILL781[1]       SB_LUT4      O        Out     0.449     2.588       -         
+VGA_X11lto10_0_a4_1_4                           Net          -        -       1.371     -           1         
+video_signal_controller.VGA_X_RNIH1782[2]       SB_LUT4      I0       In      -         3.959       -         
+video_signal_controller.VGA_X_RNIH1782[2]       SB_LUT4      O        Out     0.449     4.408       -         
+N_17_0                                          Net          -        -       1.371     -           2         
+video_signal_controller.VGA_X_RNI4D8I4_0[9]     SB_LUT4      I1       In      -         5.779       -         
+video_signal_controller.VGA_X_RNI4D8I4_0[9]     SB_LUT4      O        Out     0.400     6.178       -         
+VGA_X11lto10_0_iso                              Net          -        -       1.507     -           11        
+video_signal_controller.VGA_X[8]                SB_DFFSR     R        In      -         7.685       -         
+==============================================================================================================
+Total path delay (propagation time + setup) of 7.790 is 1.942(24.9%) logic and 5.848(75.1%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 5: 
-      Requested Period:                      6.610
+      Requested Period:                      6.622
     - Setup time:                            0.105
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         6.505
+    = Required time:                         6.517
 
-    - Propagation time:                      7.671
+    - Propagation time:                      7.685
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.166
+    = Slack (critical) :                     -1.169
 
     Number of logic level(s):                3
-    Starting point:                          II_2.VGA_Y[8] / Q
-    Ending point:                            II_2.VGA_Y[7] / D
+    Starting point:                          video_signal_controller.VGA_X[0] / Q
+    Ending point:                            video_signal_controller.VGA_X[7] / R
     The start point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
     The end   point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
 
-Instance / Net                        Pin      Pin               Arrival     No. of    
-Name                      Type        Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------
-II_2.VGA_Y[8]             SB_DFFE     Q        Out     0.540     0.540       -         
-VGA_Y[8]                  Net         -        -       1.599     -           4         
-II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     I0       In      -         2.139       -         
-II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     O        Out     0.449     2.588       -         
-N_17_4                    Net         -        -       1.371     -           3         
-II_2.VGA_Y_RNI44GN[0]     SB_LUT4     I0       In      -         3.959       -         
-II_2.VGA_Y_RNI44GN[0]     SB_LUT4     O        Out     0.449     4.408       -         
-N_17                      Net         -        -       1.371     -           12        
-II_2.VGA_Y_RNO[7]         SB_LUT4     I0       In      -         5.779       -         
-II_2.VGA_Y_RNO[7]         SB_LUT4     O        Out     0.386     6.164       -         
-VGA_Y_lm[7]               Net         -        -       1.507     -           1         
-II_2.VGA_Y[7]             SB_DFFE     D        In      -         7.671       -         
-=======================================================================================
-Total path delay (propagation time + setup) of 7.776 is 1.928(24.8%) logic and 5.848(75.2%) route.
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+video_signal_controller.VGA_X[0]                SB_DFFSR     Q        Out     0.540     0.540       -         
+VGA_X[0]                                        Net          -        -       1.599     -           5         
+video_signal_controller.VGA_X_RNILL781[1]       SB_LUT4      I0       In      -         2.139       -         
+video_signal_controller.VGA_X_RNILL781[1]       SB_LUT4      O        Out     0.449     2.588       -         
+VGA_X11lto10_0_a4_1_4                           Net          -        -       1.371     -           1         
+video_signal_controller.VGA_X_RNIH1782[2]       SB_LUT4      I0       In      -         3.959       -         
+video_signal_controller.VGA_X_RNIH1782[2]       SB_LUT4      O        Out     0.449     4.408       -         
+N_17_0                                          Net          -        -       1.371     -           2         
+video_signal_controller.VGA_X_RNI4D8I4_0[9]     SB_LUT4      I1       In      -         5.779       -         
+video_signal_controller.VGA_X_RNI4D8I4_0[9]     SB_LUT4      O        Out     0.400     6.178       -         
+VGA_X11lto10_0_iso                              Net          -        -       1.507     -           11        
+video_signal_controller.VGA_X[7]                SB_DFFSR     R        In      -         7.685       -         
+==============================================================================================================
+Total path delay (propagation time + setup) of 7.790 is 1.942(24.9%) logic and 5.848(75.1%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -678,6 +678,6 @@ Mapper successful!
 At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 27MB peak: 135MB)
 
 Process took 0h:00m:02s realtime, 0h:00m:01s cputime
-# Sun Sep 09 00:54:33 2018
+# Sun Sep 09 01:22:51 2018
 
 ###########################################################]

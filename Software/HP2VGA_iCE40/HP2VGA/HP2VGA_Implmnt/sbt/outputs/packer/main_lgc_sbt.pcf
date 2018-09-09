@@ -1,151 +1,147 @@
-set_location IN_MUX_bfv_9_28_0_ 9 28 0 #ICE_CARRY_IN_MUX
-set_location IN_MUX_bfv_9_29_0_ 9 29 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_4_26_0_ 4 26 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_4_27_0_ 4 27 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_6_25_0_ 6 25 0 #ICE_CARRY_IN_MUX
 set_location IN_MUX_bfv_6_26_0_ 6 26 0 #ICE_CARRY_IN_MUX
-set_location IN_MUX_bfv_5_27_0_ 5 27 0 #ICE_CARRY_IN_MUX
-set_location IN_MUX_bfv_5_28_0_ 5 28 0 #ICE_CARRY_IN_MUX
-set_location CONSTANT_ONE_LUT4 6 1 7 #SB_LUT4
-set_location GB_BUFFER_ADV_CLK_c_g_THRU_LUT4_0 24 26 1 #SB_LUT4
-set_location II_2.un3_VGA_X_O_cry_5_THRU_LUT4_0 6 26 6 #SB_LUT4
-set_location II_2.VGA_X[4] 5 27 3 #SB_DFFSR
-set_location II_2.VGA_Y_cry_c[2] 9 28 2 #SB_CARRY
-set_location II_2.VGA_Y_RNO[2] 9 28 2 #SB_LUT4
-set_location II_2.VGA_Y_RNI0A7G[5] 10 30 4 #SB_LUT4
-set_location II_2.VGA_Y_cry_c[10] 9 29 2 #SB_CARRY
-set_location II_2.VGA_Y[4] 9 28 4 #SB_DFFE
-set_location II_2.VGA_X_RNIEOHU1[4] 5 26 3 #SB_LUT4
-set_location FRAME_COUNTER[5] 10 27 4 #SB_DFF
-set_location II_2.VGA_Y_RNI2C7G[7] 10 30 7 #SB_LUT4
-set_location FRAME_COUNTER_RNO_0[4] 10 26 6 #SB_LUT4
-set_location II_2.VGA_Y_cry_c[9] 9 29 1 #SB_CARRY
-set_location II_2.VGA_Y[1] 9 28 1 #SB_DFFE
-set_location II_2.VGA_X_RNO[1] 6 29 3 #SB_LUT4
-set_location FRAME_COUNTER[0] 10 26 0 #SB_DFF
-set_location II_2.un1_VGA_X_cry_4_c 5 27 3 #SB_CARRY
-set_location II_2.VGA_X_RNIL0TL1[6] 6 26 1 #SB_LUT4
-set_location II_2.VGA_X_RNO[4] 5 27 3 #SB_LUT4
-set_location II_2.VGA_X_RNIKVSL1[5] 6 26 0 #SB_LUT4
-set_location II_2.VGA_Y_RNILOOM[9] 9 30 1 #SB_LUT4
-set_location II_2.VGA_X_RNO[10] 5 28 1 #SB_LUT4
-set_location II_2.VGA_Y_RNIN4Q8[8] 9 30 2 #SB_LUT4
-set_location II_2.VGA_X_RNIGRSL1[1] 5 27 0 #SB_LUT4
-set_location II_2.VGA_X[7] 5 27 6 #SB_DFFSR
-set_location II_2.VGA_Y_cry_c[1] 9 28 1 #SB_CARRY
-set_location II_2.VGA_Y_RNO[7] 9 28 7 #SB_LUT4
-set_location FRAME_COUNTER_RNO[2] 10 27 5 #SB_LUT4
-set_location II_2.VGA_Y_RNI44GN[0] 10 29 2 #SB_LUT4
-set_location II_2.VGA_X[2] 5 27 1 #SB_DFFSR
-set_location II_2.VGA_Y_RNIPKSK1[4] 9 30 7 #SB_LUT4
-set_location II_2.VGA_Y_RNIK1071_0[4] 7 28 6 #SB_LUT4
-set_location II_2.VGA_Y_RNIJHSG[10] 9 30 4 #SB_LUT4
-set_location II_2.VGA_Y_RNIHUV61[1] 10 30 0 #SB_LUT4
-set_location II_2.VGA_Y_RNIHUV61_0[1] 9 27 0 #SB_LUT4
-set_location II_2.VGA_X_RNO[7] 5 27 6 #SB_LUT4
-set_location II_2.VGA_Y_cry_c[5] 9 28 5 #SB_CARRY
-set_location II_2.VGA_Y_RNIJ0071[3] 10 30 3 #SB_LUT4
-set_location II_2.VGA_Y[2] 9 28 2 #SB_DFFE
-set_location FRAME_COUNTER_RNILFCN[3] 10 27 6 #SB_LUT4
-set_location FRAME_COUNTER[3] 10 26 4 #SB_DFF
-set_location II_2.VGA_Y_RNO[9] 9 29 1 #SB_LUT4
-set_location II_2.VGA_Y_RNI1B7G[6] 10 30 5 #SB_LUT4
-set_location II_2.VGA_X_RNICQLN5[9] 6 28 1 #SB_LUT4
-set_location II_2.VGA_X[6] 5 27 5 #SB_DFFSR
-set_location II_2.VGA_X[10] 5 28 1 #SB_DFFSR
-set_location II_2.un1_VGA_X_cry_2_c 5 27 1 #SB_CARRY
-set_location II_2.VGA_Y_cry_c[0] 9 28 0 #SB_CARRY
-set_location II_2.VGA_Y_RNO[0] 10 28 6 #SB_LUT4
-set_location II_2.VGA_X_RNO[3] 5 27 2 #SB_LUT4
-set_location II_2.VGA_Y_RNIHUP8[11] 10 29 0 #SB_LUT4
-set_location II_2.VGA_Y_RNIGTV61_0[0] 4 28 5 #SB_LUT4
-set_location II_2.VGA_Y[6] 9 28 6 #SB_DFFE
-set_location FRAME_COUNTER_RNO[5] 10 27 4 #SB_LUT4
-set_location II_2.un1_VGA_X_cry_3_c 5 27 2 #SB_CARRY
-set_location II_2.VGA_X_RNICQLN5_0[9] 6 28 3 #SB_LUT4
-set_location II_2.VGA_X_RNI6U805[8] 5 26 4 #SB_LUT4
-set_location II_2.VGA_X[1] 6 29 3 #SB_DFFSR
-set_location II_2.VGA_Y[8] 9 29 0 #SB_DFFE
-set_location II_2.VGA_X_RNO[6] 5 27 5 #SB_LUT4
-set_location II_2.un1_VGA_X_cry_8_c 5 27 7 #SB_CARRY
-set_location II_2.VGA_Y_cry_c[4] 9 28 4 #SB_CARRY
-set_location II_2.VGA_Y_RNO[4] 9 28 4 #SB_LUT4
-set_location II_2.VGA_Y_RNO[11] 9 29 3 #SB_LUT4
-set_location II_2.VGA_Y_RNI6OT2[1] 9 30 0 #SB_LUT4
-set_location II_2.VGA_Y[3] 9 28 3 #SB_DFFE
-set_location FRAME_COUNTER[2] 10 27 5 #SB_DFF
-set_location II_2.VGA_Y_RNIL2071[5] 4 26 1 #SB_LUT4
-set_location FRAME_COUNTER_RNO[1] 10 26 2 #SB_LUT4
-set_location II_2.un3_VGA_X_O_cry_3_c 6 26 3 #SB_CARRY
-set_location II_2.un1_VGA_X_cry_1_c 5 27 0 #SB_CARRY
-set_location II_2.VGA_Y_RNIK1071[4] 10 30 2 #SB_LUT4
-set_location II_2.VGA_X[5] 5 27 4 #SB_DFFSR
-set_location II_2.VGA_Y_cry_c[3] 9 28 3 #SB_CARRY
-set_location II_2.VGA_Y_RNO[1] 9 28 1 #SB_LUT4
-set_location II_2.VGA_Y_RNIIVV61_0[2] 4 28 6 #SB_LUT4
-set_location II_2.VGA_X_RNO[2] 5 27 1 #SB_LUT4
-set_location II_2.VGA_X_RNIH9E22[8] 6 27 2 #SB_LUT4
-set_location II_2.VGA_X_RNIFQSL1[0] 4 30 5 #SB_LUT4
-set_location II_2.un3_VGA_X_O_cry_5_c 6 26 5 #SB_CARRY
-set_location II_2.un1_VGA_X_cry_9_c 5 28 0 #SB_CARRY
-set_location II_2.un1_VGA_X_cry_6_c 5 27 5 #SB_CARRY
-set_location II_2.VGA_Y_RNIJCVO[8] 9 30 6 #SB_LUT4
-set_location II_2.VGA_Y[7] 9 28 7 #SB_DFFE
-set_location FRAME_COUNTER_RNO[4] 10 26 7 #SB_LUT4
-set_location LED_obuf_RNO 10 20 6 #SB_LUT4
-set_location II_2.VGA_Y_RNIM3071[6] 5 30 0 #SB_LUT4
-set_location II_2.VGA_Y_RNIJMOM[5] 10 30 1 #SB_LUT4
-set_location II_2.VGA_X_RNIB3E22[3] 5 26 1 #SB_LUT4
-set_location II_2.VGA_X[0] 6 28 6 #SB_DFFSR
-set_location FRAME_COUNTER_RNO_0[3] 10 26 3 #SB_LUT4
-set_location II_2.un3_VGA_X_O_cry_2_c 6 26 2 #SB_CARRY
-set_location II_2.VGA_Y[9] 9 29 1 #SB_DFFE
-set_location II_2.VGA_X_RNO[9] 5 28 0 #SB_LUT4
-set_location II_2.VGA_X_RNIM1TL1[7] 7 29 7 #SB_LUT4
-set_location II_2.VGA_X[9] 5 28 0 #SB_DFFSR
-set_location II_2.VGA_Y_cry_c[7] 9 28 7 #SB_CARRY
-set_location II_2.VGA_Y_RNO[5] 9 28 5 #SB_LUT4
-set_location II_2.VGA_Y_RNO[10] 9 29 2 #SB_LUT4
-set_location II_2.VGA_Y[11] 9 29 3 #SB_DFFE
-set_location II_2.VGA_Y[0] 10 28 6 #SB_DFFE
-set_location FRAME_COUNTER[1] 10 26 2 #SB_DFF
-set_location II_2.un1_VGA_X_cry_7_c 5 27 6 #SB_CARRY
-set_location II_2.VGA_Y_RNIN4071[7] 7 30 6 #SB_LUT4
-set_location II_2.VGA_X_RNIROPI1[5] 6 27 1 #SB_LUT4
-set_location II_2.VGA_X_RNI9U8V[6] 6 26 2 #SB_LUT4
-set_location II_2.VGA_X_RNI6GHU1[2] 6 28 4 #SB_LUT4
-set_location FRAME_COUNTER_RNO[0] 10 26 0 #SB_LUT4
-set_location PULSE_1HZ_RNO 10 27 7 #SB_LUT4
-set_location II_2.un3_VGA_X_O_cry_0_c 6 26 0 #SB_CARRY
-set_location II_2.VGA_X_RNO[5] 5 27 4 #SB_LUT4
-set_location II_2.un1_VGA_X_cry_5_c 5 27 4 #SB_CARRY
-set_location II_2.VGA_X_RNIJUSL1[4] 5 30 4 #SB_LUT4
-set_location II_2.un3_VGA_X_O_cry_1_c 6 26 1 #SB_CARRY
-set_location II_2.VGA_X_RNO[8] 5 27 7 #SB_LUT4
-set_location II_2.VGA_X_RNI5IM13[1] 6 28 0 #SB_LUT4
-set_location II_2.VGA_X[8] 5 27 7 #SB_DFFSR
-set_location II_2.VGA_Y_cry_c[6] 9 28 6 #SB_CARRY
-set_location II_2.VGA_Y_RNO[6] 9 28 6 #SB_LUT4
-set_location II_2.VGA_Y_RNIS29A[6] 10 29 3 #SB_LUT4
-set_location II_2.VGA_Y[10] 9 29 2 #SB_DFFE
-set_location FRAME_COUNTER_RNO[3] 10 26 4 #SB_LUT4
-set_location II_2.VGA_Y_RNIJ0071_0[3] 7 27 0 #SB_LUT4
-set_location II_2.VGA_Y_RNIDVT2[0] 10 29 7 #SB_LUT4
-set_location II_2.VGA_Y_RNI079A[11] 9 30 5 #SB_LUT4
-set_location II_2.VGA_X[3] 5 27 2 #SB_DFFSR
+set_location IN_MUX_bfv_4_20_0_ 4 20 0 #ICE_CARRY_IN_MUX
+set_location CONSTANT_ONE_LUT4 17 10 5 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_9 4 26 7 #SB_CARRY
+set_location FRAME_COUNTER_63__i5 4 20 5 #SB_DFFSR
+set_location video_signal_controller.i416_4_lut 5 26 2 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_8_lut 6 25 6 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_8 6 25 6 #SB_CARRY
+set_location FRAME_COUNTER_63_add_4_2_lut 4 20 0 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_2 4 26 0 #SB_CARRY
+set_location FRAME_COUNTER_63_add_4_3_lut 4 20 1 #SB_LUT4
+set_location FRAME_COUNTER_63__i0 4 20 0 #SB_DFFSR
+set_location i605_2_lut 5 20 3 #SB_LUT4
+set_location video_signal_controller.i396_2_lut 2 26 2 #SB_LUT4
+set_location video_signal_controller.i380_2_lut 6 28 1 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_11_lut 6 26 1 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_5 6 25 3 #SB_CARRY
+set_location video_signal_controller.VGA_Y_64_add_4_6_lut 4 26 4 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64__i6 4 26 6 #SB_DFFESR
+set_location video_signal_controller.VGA_VISIBLE_I_0_4_lut 5 26 0 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_7_lut 4 26 5 #SB_LUT4
+set_location FRAME_COUNTER_63_add_4_5 4 20 3 #SB_CARRY
+set_location video_signal_controller.VGA_X_65_66__i6 6 25 5 #SB_DFFSR
+set_location video_signal_controller.i3_4_lut 5 27 5 #SB_LUT4
+set_location video_signal_controller.i392_2_lut 3 27 1 #SB_LUT4
+set_location video_signal_controller.i2_3_lut_adj_5 6 27 6 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64__i1 4 26 1 #SB_DFFESR
+set_location video_signal_controller.VGA_X_65_66_add_4_7_lut 6 25 5 #SB_LUT4
+set_location video_signal_controller.i388_2_lut 6 30 6 #SB_LUT4
+set_location video_signal_controller.i2_3_lut 5 25 7 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_11 4 27 1 #SB_CARRY
+set_location video_signal_controller.VGA_X_65_66__i3 6 25 2 #SB_DFFSR
+set_location video_signal_controller.i613_2_lut 3 27 0 #SB_LUT4
+set_location video_signal_controller.i384_2_lut 5 29 1 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_2_lut 4 26 0 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64__i10 4 27 2 #SB_DFFESR
+set_location video_signal_controller.VGA_X_65_66_add_4_4 6 25 2 #SB_CARRY
+set_location video_signal_controller.i383_2_lut 5 27 2 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_7 4 26 5 #SB_CARRY
+set_location video_signal_controller.VGA_Y_64_add_4_11_lut 4 27 1 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64__i5 4 26 5 #SB_DFFESR
+set_location video_signal_controller.VGA_X_65_66__i10 6 26 1 #SB_DFFSR
+set_location FRAME_COUNTER_63__i3 4 20 3 #SB_DFFSR
+set_location video_signal_controller.i214_2_lut_rep_4 5 26 5 #SB_LUT4
+set_location video_signal_controller.i1_2_lut_adj_6 3 26 3 #SB_LUT4
+set_location video_signal_controller.i1_2_lut 3 27 5 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_3_lut 4 26 1 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66__i8 6 25 7 #SB_DFFSR
+set_location FRAME_COUNTER_63_add_4_2 4 20 0 #SB_CARRY
+set_location video_signal_controller.i391_2_lut 4 30 0 #SB_LUT4
+set_location video_signal_controller.i390_2_lut 5 28 2 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_3 6 25 1 #SB_CARRY
+set_location video_signal_controller.VGA_X_65_66_add_4_12_lut 6 26 2 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66__i7 6 25 6 #SB_DFFSR
+set_location video_signal_controller.i627_4_lut 5 27 7 #SB_LUT4
+set_location video_signal_controller.i387_2_lut 6 29 6 #SB_LUT4
+set_location video_signal_controller.i378_2_lut 6 30 3 #SB_LUT4
+set_location video_signal_controller.i2_3_lut_adj_4 5 26 1 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_5_lut 4 26 3 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64__i0 4 26 0 #SB_DFFESR
+set_location video_signal_controller.i7_4_lut 3 27 6 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_10 4 27 0 #SB_CARRY
+set_location video_signal_controller.VGA_Y_64__i9 4 27 1 #SB_DFFESR
+set_location FRAME_COUNTER_63_add_4_7_lut 4 20 5 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_9_lut 4 26 7 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_10_lut 6 26 0 #SB_LUT4
 set_location GND -1 -1 -1 #GND
-set_location PULSE_1HZ 10 27 7 #SB_DFF
-set_location II_2.VGA_Y_RNO[3] 9 28 3 #SB_LUT4
-set_location II_2.VGA_Y_RNIIVV61[2] 10 30 6 #SB_LUT4
-set_location II_2.VGA_Y[5] 9 28 5 #SB_DFFE
-set_location FRAME_COUNTER[4] 10 26 7 #SB_DFF
-set_location II_2.VGA_X_RNIHSSL1[2] 4 30 2 #SB_LUT4
-set_location FRAME_COUNTER_RNO_0[5] 10 27 3 #SB_LUT4
-set_location II_2.un3_VGA_X_O_cry_4_c 6 26 4 #SB_CARRY
-set_location II_2.VGA_Y_cry_c[8] 9 29 0 #SB_CARRY
-set_location II_2.VGA_Y_RNO[8] 9 29 0 #SB_LUT4
-set_location II_2.VGA_Y_RNIGTV61[0] 9 28 0 #SB_LUT4
-set_location II_2.VGA_Y_RNIGJ0B[0] 10 29 4 #SB_LUT4
-set_location II_2.VGA_X_RNIITSL1[3] 4 30 4 #SB_LUT4
-set_location II_2.VGA_Y_RNIF1U2[9] 10 29 1 #SB_LUT4
-set_location II_2.VGA_X_RNO[0] 6 28 6 #SB_LUT4
+set_location FRAME_COUNTER_63_add_4_6 4 20 4 #SB_CARRY
+set_location video_signal_controller.i394_2_lut 3 30 2 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64__i11 4 27 3 #SB_DFFESR
+set_location video_signal_controller.VGA_X_65_66_add_4_7 6 25 5 #SB_CARRY
+set_location video_signal_controller.VGA_X_65_66_add_4_2_lut 6 25 0 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_10 6 26 0 #SB_CARRY
+set_location i603_2_lut 5 20 0 #SB_LUT4
+set_location video_signal_controller.i395_2_lut 2 30 1 #SB_LUT4
+set_location video_signal_controller.i379_2_lut 6 29 1 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_8_lut 4 26 6 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_4 4 26 2 #SB_CARRY
+set_location video_signal_controller.VGA_Y_64__i4 4 26 4 #SB_DFFESR
+set_location FRAME_COUNTER_63__i2 4 20 2 #SB_DFFSR
+set_location video_signal_controller.i385_2_lut 5 29 5 #SB_LUT4
+set_location video_signal_controller.i10_4_lut 3 27 7 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_12_lut 4 27 2 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_5_lut 6 25 3 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66__i9 6 26 0 #SB_DFFSR
+set_location i625_4_lut 5 20 1 #SB_LUT4
+set_location FRAME_COUNTER_63_add_4_3 4 20 1 #SB_CARRY
+set_location video_signal_controller.i4_4_lut 5 26 7 #SB_LUT4
+set_location video_signal_controller.i389_2_lut 5 30 2 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_2 6 25 0 #SB_CARRY
+set_location PULSE_1HZ_I_0_35_2_lut 6 20 7 #SB_LUT4
+set_location FRAME_COUNTER_63_add_4_6_lut 4 20 4 #SB_LUT4
+set_location FRAME_COUNTER_63_add_4_5_lut 4 20 3 #SB_LUT4
+set_location video_signal_controller.i1_3_lut 6 27 2 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_8 4 26 6 #SB_CARRY
+set_location video_signal_controller.VGA_Y_64__i8 4 27 0 #SB_DFFESR
+set_location video_signal_controller.i424_4_lut 5 26 3 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_9 6 25 7 #SB_CARRY
+set_location video_signal_controller.i398_2_lut 3 26 5 #SB_LUT4
+set_location video_signal_controller.i329_2_lut 2 27 3 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_6 6 25 4 #SB_CARRY
+set_location video_signal_controller.VGA_X_65_66_add_4_11 6 26 1 #SB_CARRY
+set_location video_signal_controller.VGA_X_65_66__i4 6 25 3 #SB_DFFSR
+set_location video_signal_controller.VGA_Y_64_add_4_5 4 26 3 #SB_CARRY
+set_location video_signal_controller.VGA_Y_64__i3 4 26 3 #SB_DFFESR
+set_location FRAME_COUNTER_63__i1 4 20 1 #SB_DFFSR
+set_location video_signal_controller.i615_4_lut 3 27 4 #SB_LUT4
+set_location video_signal_controller.i386_2_lut 6 30 4 #SB_LUT4
+set_location video_signal_controller.i377_2_lut 5 30 3 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_6_lut 6 25 4 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66__i1 6 25 0 #SB_DFFSR
+set_location video_signal_controller.i393_2_lut 3 30 3 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_9_lut 6 25 7 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_3_lut 6 25 1 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_10_lut 4 27 0 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64__i7 4 26 7 #SB_DFFESR
+set_location FRAME_COUNTER_63_add_4_4 4 20 2 #SB_CARRY
+set_location video_signal_controller.i327_2_lut 5 30 1 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66__i5 6 25 4 #SB_DFFSR
+set_location video_signal_controller.i619_4_lut 5 27 3 #SB_LUT4
+set_location video_signal_controller.i328_2_lut 5 27 4 #SB_LUT4
+set_location video_signal_controller.i127_4_lut 5 26 6 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64__i2 4 26 2 #SB_DFFESR
+set_location video_signal_controller.VGA_Y_64_add_4_12 4 27 2 #SB_CARRY
+set_location FRAME_COUNTER_63_add_4_4_lut 4 20 2 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66__i2 6 25 1 #SB_DFFSR
+set_location PULSE_1HZ_31 5 20 2 #SB_DFF
+set_location video_signal_controller.i622_3_lut_4_lut 5 26 4 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_6 4 26 4 #SB_CARRY
+set_location video_signal_controller.VGA_X_65_66__i11 6 26 2 #SB_DFFSR
+set_location FRAME_COUNTER_63__i4 4 20 4 #SB_DFFSR
+set_location video_signal_controller.i6_4_lut 5 27 6 #SB_LUT4
+set_location video_signal_controller.i397_2_lut 2 26 6 #SB_LUT4
+set_location video_signal_controller.i33_4_lut 6 27 7 #SB_LUT4
+set_location i1_2_lut 5 20 2 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_3 4 26 1 #SB_CARRY
+set_location video_signal_controller.VGA_Y_64_add_4_4_lut 4 26 2 #SB_LUT4
+set_location video_signal_controller.VGA_Y_64_add_4_13_lut 4 27 3 #SB_LUT4
+set_location video_signal_controller.VGA_X_65_66_add_4_4_lut 6 25 2 #SB_LUT4
+set_location video_signal_controller.i401_2_lut 2 26 0 #SB_LUT4
+set_io DEBUG[1] K1
 set_io ADV_R[0] C4
 set_io ADV_B[7] A11
 set_io ADV_G[5] A4
@@ -157,18 +153,22 @@ set_io ADV_R[7] B2
 set_io ADV_G[3] A3
 set_io ADV_CLK C9
 set_io ADV_B[2] A8
+set_io DEBUG[5] D5
 set_io ADV_R[4] C1
 set_io ADV_G[2] B3
 set_io ADV_B[3] B8
+set_io DEBUG[4] F1
 set_io ADV_R[5] C2
 set_io ADV_G[1] A2
 set_io ADV_B[0] A6
+set_io DEBUG[3] G2
 set_io ADV_R[2] D1
 set_io ADV_HSYNC D3
 set_io ADV_G[0] A1
 set_io ADV_B[1] A7
 set_io TVP_VSYNC J5
 set_io TVP_CLK K6
+set_io DEBUG[2] H2
 set_io ADV_R[3] D2
 set_io ADV_G[7] A5
 set_io ADV_B[6] A10
@@ -176,6 +176,7 @@ set_io ADV_VSYNC E1
 set_io ADV_G[6] B5
 set_io ADV_BLANK_N C7
 set_io LED J8
+set_io DEBUG[0] J2
 set_io ADV_R[1] C3
 set_io ADV_B[4] A9
 set_io ADV_SYNC_N C8

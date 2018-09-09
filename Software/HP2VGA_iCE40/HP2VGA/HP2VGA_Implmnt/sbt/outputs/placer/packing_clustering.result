@@ -1,102 +1,93 @@
-ble_pack II_2.VGA_X_RNIGRSL1[1]_LC_19 {II_2.un1_VGA_X_cry_1_c, II_2.VGA_X_RNIGRSL1[1]}
-ble_pack II_2.VGA_X[2]_LC_31 {II_2.VGA_X[2], II_2.un1_VGA_X_cry_2_c, II_2.VGA_X_RNO[2]}
-ble_pack II_2.VGA_X[3]_LC_32 {II_2.VGA_X[3], II_2.un1_VGA_X_cry_3_c, II_2.VGA_X_RNO[3]}
-ble_pack II_2.VGA_X[4]_LC_33 {II_2.VGA_X[4], II_2.un1_VGA_X_cry_4_c, II_2.VGA_X_RNO[4]}
-ble_pack II_2.VGA_X[5]_LC_34 {II_2.VGA_X[5], II_2.un1_VGA_X_cry_5_c, II_2.VGA_X_RNO[5]}
-ble_pack II_2.VGA_X[6]_LC_35 {II_2.VGA_X[6], II_2.un1_VGA_X_cry_6_c, II_2.VGA_X_RNO[6]}
-ble_pack II_2.VGA_X[7]_LC_36 {II_2.VGA_X[7], II_2.un1_VGA_X_cry_7_c, II_2.VGA_X_RNO[7]}
-ble_pack II_2.VGA_X[8]_LC_37 {II_2.VGA_X[8], II_2.un1_VGA_X_cry_8_c, II_2.VGA_X_RNO[8]}
-clb_pack PLB_0 {II_2.VGA_X_RNIGRSL1[1]_LC_19, II_2.VGA_X[2]_LC_31, II_2.VGA_X[3]_LC_32, II_2.VGA_X[4]_LC_33, II_2.VGA_X[5]_LC_34, II_2.VGA_X[6]_LC_35, II_2.VGA_X[7]_LC_36, II_2.VGA_X[8]_LC_37}
-ble_pack II_2.VGA_X[9]_LC_38 {II_2.VGA_X[9], II_2.un1_VGA_X_cry_9_c, II_2.VGA_X_RNO[9]}
-ble_pack II_2.VGA_X[10]_LC_30 {II_2.VGA_X[10], II_2.VGA_X_RNO[10]}
-clb_pack PLB_1 {II_2.VGA_X[9]_LC_38, II_2.VGA_X[10]_LC_30}
-ble_pack II_2.VGA_X_RNIKVSL1[5]_LC_24 {II_2.un3_VGA_X_O_cry_0_c, II_2.VGA_X_RNIKVSL1[5]}
-ble_pack II_2.VGA_X_RNIL0TL1[6]_LC_25 {II_2.un3_VGA_X_O_cry_1_c, II_2.VGA_X_RNIL0TL1[6]}
-ble_pack II_2.VGA_X_RNI9U8V[6]_LC_13 {II_2.un3_VGA_X_O_cry_2_c, II_2.VGA_X_RNI9U8V[6]}
-ble_pack II_2.un3_VGA_X_O_cry_3_c_LC_85 {II_2.un3_VGA_X_O_cry_3_c}
-ble_pack II_2.un3_VGA_X_O_cry_4_c_LC_86 {II_2.un3_VGA_X_O_cry_4_c}
-ble_pack II_2.un3_VGA_X_O_cry_5_c_LC_87 {II_2.un3_VGA_X_O_cry_5_c}
-ble_pack II_2.un3_VGA_X_O_cry_5_THRU_LUT4_0_LC_83 {II_2.un3_VGA_X_O_cry_5_THRU_LUT4_0}
-clb_pack PLB_2 {II_2.VGA_X_RNIKVSL1[5]_LC_24, II_2.VGA_X_RNIL0TL1[6]_LC_25, II_2.VGA_X_RNI9U8V[6]_LC_13, II_2.un3_VGA_X_O_cry_3_c_LC_85, II_2.un3_VGA_X_O_cry_4_c_LC_86, II_2.un3_VGA_X_O_cry_5_c_LC_87, II_2.un3_VGA_X_O_cry_5_THRU_LUT4_0_LC_83}
-ble_pack II_2.VGA_Y_RNIGTV61[0]_LC_48 {II_2.VGA_Y_cry_c[0], II_2.VGA_Y_RNIGTV61[0]}
-ble_pack II_2.VGA_Y[1]_LC_70 {II_2.VGA_Y[1], II_2.VGA_Y_cry_c[1], II_2.VGA_Y_RNO[1]}
-ble_pack II_2.VGA_Y[2]_LC_73 {II_2.VGA_Y[2], II_2.VGA_Y_cry_c[2], II_2.VGA_Y_RNO[2]}
-ble_pack II_2.VGA_Y[3]_LC_74 {II_2.VGA_Y[3], II_2.VGA_Y_cry_c[3], II_2.VGA_Y_RNO[3]}
-ble_pack II_2.VGA_Y[4]_LC_75 {II_2.VGA_Y[4], II_2.VGA_Y_cry_c[4], II_2.VGA_Y_RNO[4]}
-ble_pack II_2.VGA_Y[5]_LC_76 {II_2.VGA_Y[5], II_2.VGA_Y_cry_c[5], II_2.VGA_Y_RNO[5]}
-ble_pack II_2.VGA_Y[6]_LC_77 {II_2.VGA_Y[6], II_2.VGA_Y_cry_c[6], II_2.VGA_Y_RNO[6]}
-ble_pack II_2.VGA_Y[7]_LC_78 {II_2.VGA_Y[7], II_2.VGA_Y_cry_c[7], II_2.VGA_Y_RNO[7]}
-clb_pack PLB_3 {II_2.VGA_Y_RNIGTV61[0]_LC_48, II_2.VGA_Y[1]_LC_70, II_2.VGA_Y[2]_LC_73, II_2.VGA_Y[3]_LC_74, II_2.VGA_Y[4]_LC_75, II_2.VGA_Y[5]_LC_76, II_2.VGA_Y[6]_LC_77, II_2.VGA_Y[7]_LC_78}
-ble_pack II_2.VGA_Y[8]_LC_79 {II_2.VGA_Y[8], II_2.VGA_Y_cry_c[8], II_2.VGA_Y_RNO[8]}
-ble_pack II_2.VGA_Y[9]_LC_80 {II_2.VGA_Y[9], II_2.VGA_Y_cry_c[9], II_2.VGA_Y_RNO[9]}
-ble_pack II_2.VGA_Y[10]_LC_71 {II_2.VGA_Y[10], II_2.VGA_Y_cry_c[10], II_2.VGA_Y_RNO[10]}
-ble_pack II_2.VGA_Y[11]_LC_72 {II_2.VGA_Y[11], II_2.VGA_Y_RNO[11]}
-clb_pack PLB_4 {II_2.VGA_Y[8]_LC_79, II_2.VGA_Y[9]_LC_80, II_2.VGA_Y[10]_LC_71, II_2.VGA_Y[11]_LC_72}
-ble_pack FRAME_COUNTER_RNILFCN[3]_LC_0 {FRAME_COUNTER_RNILFCN[3]}
-ble_pack FRAME_COUNTER[2]_LC_6 {FRAME_COUNTER[2], FRAME_COUNTER_RNO[2]}
-ble_pack PULSE_1HZ_LC_82 {PULSE_1HZ, PULSE_1HZ_RNO}
-ble_pack FRAME_COUNTER[1]_LC_5 {FRAME_COUNTER[1], FRAME_COUNTER_RNO[1]}
-ble_pack FRAME_COUNTER[3]_LC_7 {FRAME_COUNTER[3], FRAME_COUNTER_RNO[3]}
-ble_pack FRAME_COUNTER_RNO_0[3]_LC_2 {FRAME_COUNTER_RNO_0[3]}
-ble_pack FRAME_COUNTER[4]_LC_8 {FRAME_COUNTER[4], FRAME_COUNTER_RNO[4]}
-ble_pack FRAME_COUNTER[5]_LC_9 {FRAME_COUNTER[5], FRAME_COUNTER_RNO[5]}
-clb_pack PLB_5 {FRAME_COUNTER_RNILFCN[3]_LC_0, FRAME_COUNTER[2]_LC_6, PULSE_1HZ_LC_82, FRAME_COUNTER[1]_LC_5, FRAME_COUNTER[3]_LC_7, FRAME_COUNTER_RNO_0[3]_LC_2, FRAME_COUNTER[4]_LC_8, FRAME_COUNTER[5]_LC_9}
-ble_pack II_2.VGA_X_RNI5IM13[1]_LC_10 {II_2.VGA_X_RNI5IM13[1]}
-ble_pack II_2.VGA_X_RNICQLN5_0[9]_LC_15 {II_2.VGA_X_RNICQLN5_0[9]}
-ble_pack II_2.VGA_X_RNICQLN5[9]_LC_16 {II_2.VGA_X_RNICQLN5[9]}
-ble_pack II_2.VGA_X_RNIH9E22[8]_LC_20 {II_2.VGA_X_RNIH9E22[8]}
-ble_pack II_2.VGA_X_RNI6GHU1[2]_LC_11 {II_2.VGA_X_RNI6GHU1[2]}
-ble_pack II_2.VGA_X_RNIROPI1[5]_LC_27 {II_2.VGA_X_RNIROPI1[5]}
-ble_pack II_2.VGA_X[0]_LC_28 {II_2.VGA_X[0], II_2.VGA_X_RNO[0]}
-ble_pack II_2.VGA_X[1]_LC_29 {II_2.VGA_X[1], II_2.VGA_X_RNO[1]}
-clb_pack PLB_6 {II_2.VGA_X_RNI5IM13[1]_LC_10, II_2.VGA_X_RNICQLN5_0[9]_LC_15, II_2.VGA_X_RNICQLN5[9]_LC_16, II_2.VGA_X_RNIH9E22[8]_LC_20, II_2.VGA_X_RNI6GHU1[2]_LC_11, II_2.VGA_X_RNIROPI1[5]_LC_27, II_2.VGA_X[0]_LC_28, II_2.VGA_X[1]_LC_29}
-ble_pack II_2.VGA_X_RNI6U805[8]_LC_12 {II_2.VGA_X_RNI6U805[8]}
-ble_pack II_2.VGA_X_RNIEOHU1[4]_LC_17 {II_2.VGA_X_RNIEOHU1[4]}
-ble_pack II_2.VGA_X_RNIB3E22[3]_LC_14 {II_2.VGA_X_RNIB3E22[3]}
-ble_pack II_2.VGA_X_RNIJUSL1[4]_LC_23 {II_2.VGA_X_RNIJUSL1[4]}
-ble_pack II_2.VGA_X_RNIM1TL1[7]_LC_26 {II_2.VGA_X_RNIM1TL1[7]}
-ble_pack II_2.VGA_X_RNIITSL1[3]_LC_22 {II_2.VGA_X_RNIITSL1[3]}
-ble_pack II_2.VGA_X_RNIFQSL1[0]_LC_18 {II_2.VGA_X_RNIFQSL1[0]}
-ble_pack II_2.VGA_X_RNIHSSL1[2]_LC_21 {II_2.VGA_X_RNIHSSL1[2]}
-clb_pack PLB_7 {II_2.VGA_X_RNI6U805[8]_LC_12, II_2.VGA_X_RNIEOHU1[4]_LC_17, II_2.VGA_X_RNIB3E22[3]_LC_14, II_2.VGA_X_RNIJUSL1[4]_LC_23, II_2.VGA_X_RNIM1TL1[7]_LC_26, II_2.VGA_X_RNIITSL1[3]_LC_22, II_2.VGA_X_RNIFQSL1[0]_LC_18, II_2.VGA_X_RNIHSSL1[2]_LC_21}
-ble_pack II_2.VGA_Y_RNI079A[11]_LC_39 {II_2.VGA_Y_RNI079A[11]}
-ble_pack II_2.VGA_Y_RNIS29A[6]_LC_68 {II_2.VGA_Y_RNIS29A[6]}
-ble_pack II_2.VGA_Y_RNIJMOM[5]_LC_59 {II_2.VGA_Y_RNIJMOM[5]}
-ble_pack II_2.VGA_Y_RNIDVT2[0]_LC_45 {II_2.VGA_Y_RNIDVT2[0]}
-ble_pack II_2.VGA_Y_RNI44GN[0]_LC_43 {II_2.VGA_Y_RNI44GN[0]}
-ble_pack II_2.VGA_Y_RNIHUP8[11]_LC_50 {II_2.VGA_Y_RNIHUP8[11]}
-ble_pack II_2.VGA_Y[0]_LC_69 {II_2.VGA_Y[0], II_2.VGA_Y_RNO[0]}
-ble_pack II_2.VGA_Y_RNIF1U2[9]_LC_46 {II_2.VGA_Y_RNIF1U2[9]}
-clb_pack PLB_8 {II_2.VGA_Y_RNI079A[11]_LC_39, II_2.VGA_Y_RNIS29A[6]_LC_68, II_2.VGA_Y_RNIJMOM[5]_LC_59, II_2.VGA_Y_RNIDVT2[0]_LC_45, II_2.VGA_Y_RNI44GN[0]_LC_43, II_2.VGA_Y_RNIHUP8[11]_LC_50, II_2.VGA_Y[0]_LC_69, II_2.VGA_Y_RNIF1U2[9]_LC_46}
-ble_pack II_2.VGA_Y_RNI6OT2[1]_LC_44 {II_2.VGA_Y_RNI6OT2[1]}
-ble_pack II_2.VGA_Y_RNILOOM[9]_LC_63 {II_2.VGA_Y_RNILOOM[9]}
-ble_pack II_2.VGA_Y_RNIGJ0B[0]_LC_47 {II_2.VGA_Y_RNIGJ0B[0]}
-ble_pack II_2.VGA_Y_RNIHUV61_0[1]_LC_51 {II_2.VGA_Y_RNIHUV61_0[1]}
-ble_pack II_2.VGA_Y_RNIHUV61[1]_LC_52 {II_2.VGA_Y_RNIHUV61[1]}
-ble_pack II_2.VGA_Y_RNIIVV61_0[2]_LC_53 {II_2.VGA_Y_RNIIVV61_0[2]}
-ble_pack II_2.VGA_Y_RNIIVV61[2]_LC_54 {II_2.VGA_Y_RNIIVV61[2]}
-ble_pack II_2.VGA_Y_RNIJ0071_0[3]_LC_55 {II_2.VGA_Y_RNIJ0071_0[3]}
-clb_pack PLB_9 {II_2.VGA_Y_RNI6OT2[1]_LC_44, II_2.VGA_Y_RNILOOM[9]_LC_63, II_2.VGA_Y_RNIGJ0B[0]_LC_47, II_2.VGA_Y_RNIHUV61_0[1]_LC_51, II_2.VGA_Y_RNIHUV61[1]_LC_52, II_2.VGA_Y_RNIIVV61_0[2]_LC_53, II_2.VGA_Y_RNIIVV61[2]_LC_54, II_2.VGA_Y_RNIJ0071_0[3]_LC_55}
-ble_pack II_2.VGA_Y_RNIJCVO[8]_LC_57 {II_2.VGA_Y_RNIJCVO[8]}
-ble_pack II_2.VGA_Y_RNIPKSK1[4]_LC_67 {II_2.VGA_Y_RNIPKSK1[4]}
-ble_pack II_2.VGA_Y_RNIJHSG[10]_LC_58 {II_2.VGA_Y_RNIJHSG[10]}
-ble_pack II_2.VGA_Y_RNIN4Q8[8]_LC_66 {II_2.VGA_Y_RNIN4Q8[8]}
-ble_pack II_2.VGA_Y_RNIK1071_0[4]_LC_60 {II_2.VGA_Y_RNIK1071_0[4]}
-ble_pack II_2.VGA_Y_RNIK1071[4]_LC_61 {II_2.VGA_Y_RNIK1071[4]}
-ble_pack II_2.VGA_Y_RNIJ0071[3]_LC_56 {II_2.VGA_Y_RNIJ0071[3]}
-ble_pack II_2.VGA_Y_RNIGTV61_0[0]_LC_49 {II_2.VGA_Y_RNIGTV61_0[0]}
-clb_pack PLB_10 {II_2.VGA_Y_RNIJCVO[8]_LC_57, II_2.VGA_Y_RNIPKSK1[4]_LC_67, II_2.VGA_Y_RNIJHSG[10]_LC_58, II_2.VGA_Y_RNIN4Q8[8]_LC_66, II_2.VGA_Y_RNIK1071_0[4]_LC_60, II_2.VGA_Y_RNIK1071[4]_LC_61, II_2.VGA_Y_RNIJ0071[3]_LC_56, II_2.VGA_Y_RNIGTV61_0[0]_LC_49}
-ble_pack FRAME_COUNTER_RNO_0[4]_LC_3 {FRAME_COUNTER_RNO_0[4]}
-ble_pack FRAME_COUNTER[0]_LC_1 {FRAME_COUNTER[0], FRAME_COUNTER_RNO[0]}
-ble_pack FRAME_COUNTER_RNO_0[5]_LC_4 {FRAME_COUNTER_RNO_0[5]}
-ble_pack II_2.VGA_Y_RNIL2071[5]_LC_62 {II_2.VGA_Y_RNIL2071[5]}
-ble_pack II_2.VGA_Y_RNI0A7G[5]_LC_40 {II_2.VGA_Y_RNI0A7G[5]}
-ble_pack II_2.VGA_Y_RNIM3071[6]_LC_64 {II_2.VGA_Y_RNIM3071[6]}
-ble_pack II_2.VGA_Y_RNI1B7G[6]_LC_41 {II_2.VGA_Y_RNI1B7G[6]}
-ble_pack II_2.VGA_Y_RNIN4071[7]_LC_65 {II_2.VGA_Y_RNIN4071[7]}
-clb_pack PLB_11 {FRAME_COUNTER_RNO_0[4]_LC_3, FRAME_COUNTER[0]_LC_1, FRAME_COUNTER_RNO_0[5]_LC_4, II_2.VGA_Y_RNIL2071[5]_LC_62, II_2.VGA_Y_RNI0A7G[5]_LC_40, II_2.VGA_Y_RNIM3071[6]_LC_64, II_2.VGA_Y_RNI1B7G[6]_LC_41, II_2.VGA_Y_RNIN4071[7]_LC_65}
-ble_pack II_2.VGA_Y_RNI2C7G[7]_LC_42 {II_2.VGA_Y_RNI2C7G[7]}
-ble_pack LED_obuf_RNO_LC_81 {LED_obuf_RNO}
-ble_pack GB_BUFFER_ADV_CLK_c_g_THRU_LUT4_0_LC_84 {GB_BUFFER_ADV_CLK_c_g_THRU_LUT4_0}
-ble_pack LC_88 {CONSTANT_ONE_LUT4}
-clb_pack PLB_12 {II_2.VGA_Y_RNI2C7G[7]_LC_42, LED_obuf_RNO_LC_81, GB_BUFFER_ADV_CLK_c_g_THRU_LUT4_0_LC_84, LC_88}
+ble_pack FRAME_COUNTER_63__i0_LC_0 {FRAME_COUNTER_63__i0, FRAME_COUNTER_63_add_4_2, FRAME_COUNTER_63_add_4_2_lut}
+ble_pack FRAME_COUNTER_63__i1_LC_1 {FRAME_COUNTER_63__i1, FRAME_COUNTER_63_add_4_3, FRAME_COUNTER_63_add_4_3_lut}
+ble_pack FRAME_COUNTER_63__i2_LC_2 {FRAME_COUNTER_63__i2, FRAME_COUNTER_63_add_4_4, FRAME_COUNTER_63_add_4_4_lut}
+ble_pack FRAME_COUNTER_63__i3_LC_3 {FRAME_COUNTER_63__i3, FRAME_COUNTER_63_add_4_5, FRAME_COUNTER_63_add_4_5_lut}
+ble_pack FRAME_COUNTER_63__i4_LC_4 {FRAME_COUNTER_63__i4, FRAME_COUNTER_63_add_4_6, FRAME_COUNTER_63_add_4_6_lut}
+ble_pack FRAME_COUNTER_63__i5_LC_5 {FRAME_COUNTER_63__i5, FRAME_COUNTER_63_add_4_7_lut}
+clb_pack PLB_0 {FRAME_COUNTER_63__i0_LC_0, FRAME_COUNTER_63__i1_LC_1, FRAME_COUNTER_63__i2_LC_2, FRAME_COUNTER_63__i3_LC_3, FRAME_COUNTER_63__i4_LC_4, FRAME_COUNTER_63__i5_LC_5}
+ble_pack video_signal_controller.VGA_X_65_66__i1_LC_15 {video_signal_controller.VGA_X_65_66__i1, video_signal_controller.VGA_X_65_66_add_4_2, video_signal_controller.VGA_X_65_66_add_4_2_lut}
+ble_pack video_signal_controller.VGA_X_65_66__i2_LC_16 {video_signal_controller.VGA_X_65_66__i2, video_signal_controller.VGA_X_65_66_add_4_3, video_signal_controller.VGA_X_65_66_add_4_3_lut}
+ble_pack video_signal_controller.VGA_X_65_66__i3_LC_17 {video_signal_controller.VGA_X_65_66__i3, video_signal_controller.VGA_X_65_66_add_4_4, video_signal_controller.VGA_X_65_66_add_4_4_lut}
+ble_pack video_signal_controller.VGA_X_65_66__i4_LC_18 {video_signal_controller.VGA_X_65_66__i4, video_signal_controller.VGA_X_65_66_add_4_5, video_signal_controller.VGA_X_65_66_add_4_5_lut}
+ble_pack video_signal_controller.VGA_X_65_66__i5_LC_19 {video_signal_controller.VGA_X_65_66__i5, video_signal_controller.VGA_X_65_66_add_4_6, video_signal_controller.VGA_X_65_66_add_4_6_lut}
+ble_pack video_signal_controller.VGA_X_65_66__i6_LC_20 {video_signal_controller.VGA_X_65_66__i6, video_signal_controller.VGA_X_65_66_add_4_7, video_signal_controller.VGA_X_65_66_add_4_7_lut}
+ble_pack video_signal_controller.VGA_X_65_66__i7_LC_21 {video_signal_controller.VGA_X_65_66__i7, video_signal_controller.VGA_X_65_66_add_4_8, video_signal_controller.VGA_X_65_66_add_4_8_lut}
+ble_pack video_signal_controller.VGA_X_65_66__i8_LC_22 {video_signal_controller.VGA_X_65_66__i8, video_signal_controller.VGA_X_65_66_add_4_9, video_signal_controller.VGA_X_65_66_add_4_9_lut}
+clb_pack PLB_1 {video_signal_controller.VGA_X_65_66__i1_LC_15, video_signal_controller.VGA_X_65_66__i2_LC_16, video_signal_controller.VGA_X_65_66__i3_LC_17, video_signal_controller.VGA_X_65_66__i4_LC_18, video_signal_controller.VGA_X_65_66__i5_LC_19, video_signal_controller.VGA_X_65_66__i6_LC_20, video_signal_controller.VGA_X_65_66__i7_LC_21, video_signal_controller.VGA_X_65_66__i8_LC_22}
+ble_pack video_signal_controller.VGA_X_65_66__i9_LC_12 {video_signal_controller.VGA_X_65_66__i9, video_signal_controller.VGA_X_65_66_add_4_10, video_signal_controller.VGA_X_65_66_add_4_10_lut}
+ble_pack video_signal_controller.VGA_X_65_66__i10_LC_13 {video_signal_controller.VGA_X_65_66__i10, video_signal_controller.VGA_X_65_66_add_4_11, video_signal_controller.VGA_X_65_66_add_4_11_lut}
+ble_pack video_signal_controller.VGA_X_65_66__i11_LC_14 {video_signal_controller.VGA_X_65_66__i11, video_signal_controller.VGA_X_65_66_add_4_12_lut}
+clb_pack PLB_2 {video_signal_controller.VGA_X_65_66__i9_LC_12, video_signal_controller.VGA_X_65_66__i10_LC_13, video_signal_controller.VGA_X_65_66__i11_LC_14}
+ble_pack video_signal_controller.VGA_Y_64__i0_LC_27 {video_signal_controller.VGA_Y_64__i0, video_signal_controller.VGA_Y_64_add_4_2, video_signal_controller.VGA_Y_64_add_4_2_lut}
+ble_pack video_signal_controller.VGA_Y_64__i1_LC_28 {video_signal_controller.VGA_Y_64__i1, video_signal_controller.VGA_Y_64_add_4_3, video_signal_controller.VGA_Y_64_add_4_3_lut}
+ble_pack video_signal_controller.VGA_Y_64__i2_LC_29 {video_signal_controller.VGA_Y_64__i2, video_signal_controller.VGA_Y_64_add_4_4, video_signal_controller.VGA_Y_64_add_4_4_lut}
+ble_pack video_signal_controller.VGA_Y_64__i3_LC_30 {video_signal_controller.VGA_Y_64__i3, video_signal_controller.VGA_Y_64_add_4_5, video_signal_controller.VGA_Y_64_add_4_5_lut}
+ble_pack video_signal_controller.VGA_Y_64__i4_LC_31 {video_signal_controller.VGA_Y_64__i4, video_signal_controller.VGA_Y_64_add_4_6, video_signal_controller.VGA_Y_64_add_4_6_lut}
+ble_pack video_signal_controller.VGA_Y_64__i5_LC_32 {video_signal_controller.VGA_Y_64__i5, video_signal_controller.VGA_Y_64_add_4_7, video_signal_controller.VGA_Y_64_add_4_7_lut}
+ble_pack video_signal_controller.VGA_Y_64__i6_LC_33 {video_signal_controller.VGA_Y_64__i6, video_signal_controller.VGA_Y_64_add_4_8, video_signal_controller.VGA_Y_64_add_4_8_lut}
+ble_pack video_signal_controller.VGA_Y_64__i7_LC_34 {video_signal_controller.VGA_Y_64__i7, video_signal_controller.VGA_Y_64_add_4_9, video_signal_controller.VGA_Y_64_add_4_9_lut}
+clb_pack PLB_3 {video_signal_controller.VGA_Y_64__i0_LC_27, video_signal_controller.VGA_Y_64__i1_LC_28, video_signal_controller.VGA_Y_64__i2_LC_29, video_signal_controller.VGA_Y_64__i3_LC_30, video_signal_controller.VGA_Y_64__i4_LC_31, video_signal_controller.VGA_Y_64__i5_LC_32, video_signal_controller.VGA_Y_64__i6_LC_33, video_signal_controller.VGA_Y_64__i7_LC_34}
+ble_pack video_signal_controller.VGA_Y_64__i8_LC_23 {video_signal_controller.VGA_Y_64__i8, video_signal_controller.VGA_Y_64_add_4_10, video_signal_controller.VGA_Y_64_add_4_10_lut}
+ble_pack video_signal_controller.VGA_Y_64__i9_LC_24 {video_signal_controller.VGA_Y_64__i9, video_signal_controller.VGA_Y_64_add_4_11, video_signal_controller.VGA_Y_64_add_4_11_lut}
+ble_pack video_signal_controller.VGA_Y_64__i10_LC_25 {video_signal_controller.VGA_Y_64__i10, video_signal_controller.VGA_Y_64_add_4_12, video_signal_controller.VGA_Y_64_add_4_12_lut}
+ble_pack video_signal_controller.VGA_Y_64__i11_LC_26 {video_signal_controller.VGA_Y_64__i11, video_signal_controller.VGA_Y_64_add_4_13_lut}
+clb_pack PLB_4 {video_signal_controller.VGA_Y_64__i8_LC_23, video_signal_controller.VGA_Y_64__i9_LC_24, video_signal_controller.VGA_Y_64__i10_LC_25, video_signal_controller.VGA_Y_64__i11_LC_26}
+ble_pack i625_4_lut_LC_10 {i625_4_lut}
+ble_pack i603_2_lut_LC_8 {i603_2_lut}
+ble_pack PULSE_1HZ_31_LC_7 {PULSE_1HZ_31, i1_2_lut}
+ble_pack i605_2_lut_LC_9 {i605_2_lut}
+ble_pack PULSE_1HZ_I_0_35_2_lut_LC_6 {PULSE_1HZ_I_0_35_2_lut}
+ble_pack video_signal_controller.VGA_VISIBLE_I_0_4_lut_LC_11 {video_signal_controller.VGA_VISIBLE_I_0_4_lut}
+ble_pack video_signal_controller.i214_2_lut_rep_4_LC_40 {video_signal_controller.i214_2_lut_rep_4}
+ble_pack video_signal_controller.i622_3_lut_4_lut_LC_76 {video_signal_controller.i622_3_lut_4_lut}
+clb_pack PLB_5 {i625_4_lut_LC_10, i603_2_lut_LC_8, PULSE_1HZ_31_LC_7, i605_2_lut_LC_9, PULSE_1HZ_I_0_35_2_lut_LC_6, video_signal_controller.VGA_VISIBLE_I_0_4_lut_LC_11, video_signal_controller.i214_2_lut_rep_4_LC_40, video_signal_controller.i622_3_lut_4_lut_LC_76}
+ble_pack video_signal_controller.i10_4_lut_LC_35 {video_signal_controller.i10_4_lut}
+ble_pack video_signal_controller.i613_2_lut_LC_73 {video_signal_controller.i613_2_lut}
+ble_pack video_signal_controller.i615_4_lut_LC_74 {video_signal_controller.i615_4_lut}
+ble_pack video_signal_controller.i3_4_lut_LC_68 {video_signal_controller.i3_4_lut}
+ble_pack video_signal_controller.i6_4_lut_LC_78 {video_signal_controller.i6_4_lut}
+ble_pack video_signal_controller.i627_4_lut_LC_77 {video_signal_controller.i627_4_lut}
+ble_pack video_signal_controller.i424_4_lut_LC_71 {video_signal_controller.i424_4_lut}
+clb_pack PLB_6 {video_signal_controller.i10_4_lut_LC_35, video_signal_controller.i613_2_lut_LC_73, video_signal_controller.i615_4_lut_LC_74, video_signal_controller.i3_4_lut_LC_68, video_signal_controller.i6_4_lut_LC_78, video_signal_controller.i627_4_lut_LC_77, video_signal_controller.i424_4_lut_LC_71}
+ble_pack video_signal_controller.i127_4_lut_LC_36 {video_signal_controller.i127_4_lut}
+ble_pack video_signal_controller.i4_4_lut_LC_72 {video_signal_controller.i4_4_lut}
+ble_pack video_signal_controller.i1_2_lut_adj_6_LC_38 {video_signal_controller.i1_2_lut_adj_6}
+ble_pack video_signal_controller.i619_4_lut_LC_75 {video_signal_controller.i619_4_lut}
+ble_pack video_signal_controller.i1_2_lut_LC_37 {video_signal_controller.i1_2_lut}
+ble_pack video_signal_controller.i7_4_lut_LC_79 {video_signal_controller.i7_4_lut}
+ble_pack video_signal_controller.i329_2_lut_LC_46 {video_signal_controller.i329_2_lut}
+ble_pack video_signal_controller.i385_2_lut_LC_54 {video_signal_controller.i385_2_lut}
+clb_pack PLB_7 {video_signal_controller.i127_4_lut_LC_36, video_signal_controller.i4_4_lut_LC_72, video_signal_controller.i1_2_lut_adj_6_LC_38, video_signal_controller.i619_4_lut_LC_75, video_signal_controller.i1_2_lut_LC_37, video_signal_controller.i7_4_lut_LC_79, video_signal_controller.i329_2_lut_LC_46, video_signal_controller.i385_2_lut_LC_54}
+ble_pack video_signal_controller.i33_4_lut_LC_47 {video_signal_controller.i33_4_lut}
+ble_pack video_signal_controller.i2_3_lut_adj_5_LC_43 {video_signal_controller.i2_3_lut_adj_5}
+ble_pack video_signal_controller.i1_3_lut_LC_39 {video_signal_controller.i1_3_lut}
+ble_pack video_signal_controller.i2_3_lut_adj_4_LC_42 {video_signal_controller.i2_3_lut_adj_4}
+ble_pack video_signal_controller.i416_4_lut_LC_70 {video_signal_controller.i416_4_lut}
+ble_pack video_signal_controller.i2_3_lut_LC_41 {video_signal_controller.i2_3_lut}
+ble_pack video_signal_controller.i387_2_lut_LC_56 {video_signal_controller.i387_2_lut}
+ble_pack video_signal_controller.i386_2_lut_LC_55 {video_signal_controller.i386_2_lut}
+clb_pack PLB_8 {video_signal_controller.i33_4_lut_LC_47, video_signal_controller.i2_3_lut_adj_5_LC_43, video_signal_controller.i1_3_lut_LC_39, video_signal_controller.i2_3_lut_adj_4_LC_42, video_signal_controller.i416_4_lut_LC_70, video_signal_controller.i2_3_lut_LC_41, video_signal_controller.i387_2_lut_LC_56, video_signal_controller.i386_2_lut_LC_55}
+ble_pack video_signal_controller.i327_2_lut_LC_44 {video_signal_controller.i327_2_lut}
+ble_pack video_signal_controller.i328_2_lut_LC_45 {video_signal_controller.i328_2_lut}
+ble_pack video_signal_controller.i392_2_lut_LC_61 {video_signal_controller.i392_2_lut}
+ble_pack video_signal_controller.i377_2_lut_LC_48 {video_signal_controller.i377_2_lut}
+ble_pack video_signal_controller.i394_2_lut_LC_63 {video_signal_controller.i394_2_lut}
+ble_pack video_signal_controller.i378_2_lut_LC_49 {video_signal_controller.i378_2_lut}
+ble_pack video_signal_controller.i395_2_lut_LC_64 {video_signal_controller.i395_2_lut}
+ble_pack video_signal_controller.i379_2_lut_LC_50 {video_signal_controller.i379_2_lut}
+clb_pack PLB_9 {video_signal_controller.i327_2_lut_LC_44, video_signal_controller.i328_2_lut_LC_45, video_signal_controller.i392_2_lut_LC_61, video_signal_controller.i377_2_lut_LC_48, video_signal_controller.i394_2_lut_LC_63, video_signal_controller.i378_2_lut_LC_49, video_signal_controller.i395_2_lut_LC_64, video_signal_controller.i379_2_lut_LC_50}
+ble_pack video_signal_controller.i380_2_lut_LC_51 {video_signal_controller.i380_2_lut}
+ble_pack video_signal_controller.i397_2_lut_LC_66 {video_signal_controller.i397_2_lut}
+ble_pack video_signal_controller.i383_2_lut_LC_52 {video_signal_controller.i383_2_lut}
+ble_pack video_signal_controller.i398_2_lut_LC_67 {video_signal_controller.i398_2_lut}
+ble_pack video_signal_controller.i384_2_lut_LC_53 {video_signal_controller.i384_2_lut}
+ble_pack video_signal_controller.i401_2_lut_LC_69 {video_signal_controller.i401_2_lut}
+ble_pack video_signal_controller.i388_2_lut_LC_57 {video_signal_controller.i388_2_lut}
+ble_pack video_signal_controller.i389_2_lut_LC_58 {video_signal_controller.i389_2_lut}
+clb_pack PLB_10 {video_signal_controller.i380_2_lut_LC_51, video_signal_controller.i397_2_lut_LC_66, video_signal_controller.i383_2_lut_LC_52, video_signal_controller.i398_2_lut_LC_67, video_signal_controller.i384_2_lut_LC_53, video_signal_controller.i401_2_lut_LC_69, video_signal_controller.i388_2_lut_LC_57, video_signal_controller.i389_2_lut_LC_58}
+ble_pack video_signal_controller.i390_2_lut_LC_59 {video_signal_controller.i390_2_lut}
+ble_pack video_signal_controller.i391_2_lut_LC_60 {video_signal_controller.i391_2_lut}
+ble_pack video_signal_controller.i393_2_lut_LC_62 {video_signal_controller.i393_2_lut}
+ble_pack video_signal_controller.i396_2_lut_LC_65 {video_signal_controller.i396_2_lut}
+ble_pack LC_80 {CONSTANT_ONE_LUT4}
+clb_pack PLB_11 {video_signal_controller.i390_2_lut_LC_59, video_signal_controller.i391_2_lut_LC_60, video_signal_controller.i393_2_lut_LC_62, video_signal_controller.i396_2_lut_LC_65, LC_80}

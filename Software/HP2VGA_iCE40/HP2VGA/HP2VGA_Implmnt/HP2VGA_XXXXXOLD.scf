@@ -1,8 +1,9 @@
-# Written by Synplify Pro version maplat, Build 1612R. Synopsys Run ID: sid1536086533 
+# Written by Synplify Pro version maplat, Build 1612R. Synopsys Run ID: sid1536452569 
 # Top Level Design Parameters 
 
 # Clocks 
 create_clock -period 5.117 -waveform {0.000 2.558} -name {main|TVP_VSYNC} [get_ports {TVP_VSYNC}] 
+create_clock -period 6.622 -waveform {0.000 3.311} -name {main|TVP_CLK} [get_ports {TVP_CLK}] 
 
 # Virtual Clocks 
 
@@ -33,6 +34,8 @@ create_clock -period 5.117 -waveform {0.000 2.558} -name {main|TVP_VSYNC} [get_p
 # set_case Attributes 
 
 # Clock Delay Constraints 
+set_false_path -from [get_clocks {main|TVP_VSYNC}] -to [get_clocks {main|TVP_CLK}]
+set_false_path -from [get_clocks {main|TVP_CLK}] -to [get_clocks {main|TVP_VSYNC}]
 
 # syn_mode Attributes 
 
