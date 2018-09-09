@@ -1,4 +1,4 @@
-INOUT DEBUG[1] 	 location (0, 6, 0) 	 K1 	 SB_LVCMOS
+INOUT DEBUG[1] 	 location (0, 6, 1) 	 J1 	 SB_LVCMOS
 OUTPUT ADV_R[0] 	 location (0, 27, 1) 	 C4 	 SB_LVCMOS
 OUTPUT ADV_B[7] 	 location (31, 33, 1) 	 A11 	 SB_LVCMOS
 OUTPUT ADV_G[5] 	 location (9, 33, 0) 	 A4 	 SB_LVCMOS

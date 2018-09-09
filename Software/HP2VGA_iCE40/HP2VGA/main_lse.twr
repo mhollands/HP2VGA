@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Sun Sep 09 06:15:19 2018
+Sun Sep 09 06:22:53 2018
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -18,122 +18,122 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 20.000000 -name clk1 [get_nets TVP_CLK_c]
+Constraint: create_clock -period 20.000000 -name clk1 [get_nets ADV_CLK_c]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 20.000000 -name clk0 [get_nets TVP_CLK_c]
             77 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 8.983ns
+Passed:  The following path meets requirements by 9.041ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFESR  C              \receive_module/FRAME_COUNTER_62__i0  (from TVP_CLK_c +)
-   Destination:    SB_DFFESR  D              \receive_module/FRAME_COUNTER_62__i5  (to TVP_CLK_c +)
+   Source:         SB_DFFESR  C              \receive_module/rx_counter/FRAME_COUNTER_74__i0  (from TVP_CLK_c +)
+   Destination:    SB_DFFESR  D              \receive_module/rx_counter/FRAME_COUNTER_74__i5  (to TVP_CLK_c +)
 
-   Delay:                  10.884ns  (25.9% logic, 74.1% route), 7 logic levels.
+   Delay:                  10.826ns  (26.0% logic, 74.0% route), 7 logic levels.
 
  Constraint Details:
 
-     10.884ns data_path \receive_module/FRAME_COUNTER_62__i0 to \receive_module/FRAME_COUNTER_62__i5 meets
+     10.826ns data_path \receive_module/rx_counter/FRAME_COUNTER_74__i0 to \receive_module/rx_counter/FRAME_COUNTER_74__i5 meets
      20.000ns delay constraint less
-      0.133ns L_S requirement (totaling 19.867ns) by 8.983ns
+      0.133ns L_S requirement (totaling 19.867ns) by 9.041ns
 
- Path Details: \receive_module/FRAME_COUNTER_62__i0 to \receive_module/FRAME_COUNTER_62__i5
+ Path Details: \receive_module/rx_counter/FRAME_COUNTER_74__i0 to \receive_module/rx_counter/FRAME_COUNTER_74__i5
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \receive_module/FRAME_COUNTER_62__i0 (from TVP_CLK_c)
-Route         4   e 1.397                                  \receive_module/FRAME_COUNTER[0]
-LUT4        ---     0.408             I1 to CO             \receive_module/FRAME_COUNTER_62_add_4_2
-Route         2   e 1.158                                  \receive_module/n536
-LUT4        ---     0.408             CI to CO             \receive_module/FRAME_COUNTER_62_add_4_3
-Route         2   e 1.158                                  \receive_module/n537
-LUT4        ---     0.408             CI to CO             \receive_module/FRAME_COUNTER_62_add_4_4
-Route         2   e 1.158                                  \receive_module/n538
-LUT4        ---     0.408             CI to CO             \receive_module/FRAME_COUNTER_62_add_4_5
-Route         2   e 1.158                                  \receive_module/n539
-LUT4        ---     0.408             CI to CO             \receive_module/FRAME_COUNTER_62_add_4_6
-Route         1   e 1.020                                  \receive_module/n540
-LUT4        ---     0.408             I3 to O              \receive_module/FRAME_COUNTER_62_add_4_7_lut
-Route         1   e 1.020                                  \receive_module/n30
+L_CO        ---     0.367              C to Q              \receive_module/rx_counter/FRAME_COUNTER_74__i0 (from TVP_CLK_c)
+Route         3   e 1.339                                  \receive_module/rx_counter/FRAME_COUNTER[0]
+LUT4        ---     0.408             I1 to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_2
+Route         2   e 1.158                                  \receive_module/rx_counter/n859
+LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_3
+Route         2   e 1.158                                  \receive_module/rx_counter/n860
+LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_4
+Route         2   e 1.158                                  \receive_module/rx_counter/n861
+LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_5
+Route         2   e 1.158                                  \receive_module/rx_counter/n862
+LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_6
+Route         1   e 1.020                                  \receive_module/rx_counter/n863
+LUT4        ---     0.408             I3 to O              \receive_module/rx_counter/FRAME_COUNTER_74_add_4_7_lut
+Route         1   e 1.020                                  \receive_module/rx_counter/n30
                   --------
-                   10.884  (25.9% logic, 74.1% route), 7 logic levels.
+                   10.826  (26.0% logic, 74.0% route), 7 logic levels.
 
 
-Passed:  The following path meets requirements by 10.411ns
+Passed:  The following path meets requirements by 10.469ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFESR  C              \receive_module/FRAME_COUNTER_62__i0  (from TVP_CLK_c +)
-   Destination:    SB_DFFESR  D              \receive_module/FRAME_COUNTER_62__i4  (to TVP_CLK_c +)
+   Source:         SB_DFFESR  C              \receive_module/rx_counter/FRAME_COUNTER_74__i0  (from TVP_CLK_c +)
+   Destination:    SB_DFFESR  D              \receive_module/rx_counter/FRAME_COUNTER_74__i4  (to TVP_CLK_c +)
 
-   Delay:                   9.456ns  (25.5% logic, 74.5% route), 6 logic levels.
+   Delay:                   9.398ns  (25.6% logic, 74.4% route), 6 logic levels.
 
  Constraint Details:
 
-      9.456ns data_path \receive_module/FRAME_COUNTER_62__i0 to \receive_module/FRAME_COUNTER_62__i4 meets
+      9.398ns data_path \receive_module/rx_counter/FRAME_COUNTER_74__i0 to \receive_module/rx_counter/FRAME_COUNTER_74__i4 meets
      20.000ns delay constraint less
-      0.133ns L_S requirement (totaling 19.867ns) by 10.411ns
+      0.133ns L_S requirement (totaling 19.867ns) by 10.469ns
 
- Path Details: \receive_module/FRAME_COUNTER_62__i0 to \receive_module/FRAME_COUNTER_62__i4
+ Path Details: \receive_module/rx_counter/FRAME_COUNTER_74__i0 to \receive_module/rx_counter/FRAME_COUNTER_74__i4
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \receive_module/FRAME_COUNTER_62__i0 (from TVP_CLK_c)
-Route         4   e 1.397                                  \receive_module/FRAME_COUNTER[0]
-LUT4        ---     0.408             I1 to CO             \receive_module/FRAME_COUNTER_62_add_4_2
-Route         2   e 1.158                                  \receive_module/n536
-LUT4        ---     0.408             CI to CO             \receive_module/FRAME_COUNTER_62_add_4_3
-Route         2   e 1.158                                  \receive_module/n537
-LUT4        ---     0.408             CI to CO             \receive_module/FRAME_COUNTER_62_add_4_4
-Route         2   e 1.158                                  \receive_module/n538
-LUT4        ---     0.408             CI to CO             \receive_module/FRAME_COUNTER_62_add_4_5
-Route         2   e 1.158                                  \receive_module/n539
-LUT4        ---     0.408             I3 to O              \receive_module/FRAME_COUNTER_62_add_4_6_lut
-Route         1   e 1.020                                  \receive_module/n31
+L_CO        ---     0.367              C to Q              \receive_module/rx_counter/FRAME_COUNTER_74__i0 (from TVP_CLK_c)
+Route         3   e 1.339                                  \receive_module/rx_counter/FRAME_COUNTER[0]
+LUT4        ---     0.408             I1 to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_2
+Route         2   e 1.158                                  \receive_module/rx_counter/n859
+LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_3
+Route         2   e 1.158                                  \receive_module/rx_counter/n860
+LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_4
+Route         2   e 1.158                                  \receive_module/rx_counter/n861
+LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_5
+Route         2   e 1.158                                  \receive_module/rx_counter/n862
+LUT4        ---     0.408             I3 to O              \receive_module/rx_counter/FRAME_COUNTER_74_add_4_6_lut
+Route         1   e 1.020                                  \receive_module/rx_counter/n31
                   --------
-                    9.456  (25.5% logic, 74.5% route), 6 logic levels.
+                    9.398  (25.6% logic, 74.4% route), 6 logic levels.
 
 
 Passed:  The following path meets requirements by 10.607ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFESR  C              \receive_module/FRAME_COUNTER_62__i1  (from TVP_CLK_c +)
-   Destination:    SB_DFFESR  D              \receive_module/FRAME_COUNTER_62__i5  (to TVP_CLK_c +)
+   Source:         SB_DFFESR  C              \receive_module/rx_counter/FRAME_COUNTER_74__i1  (from TVP_CLK_c +)
+   Destination:    SB_DFFESR  D              \receive_module/rx_counter/FRAME_COUNTER_74__i5  (to TVP_CLK_c +)
 
    Delay:                   9.260ns  (26.0% logic, 74.0% route), 6 logic levels.
 
  Constraint Details:
 
-      9.260ns data_path \receive_module/FRAME_COUNTER_62__i1 to \receive_module/FRAME_COUNTER_62__i5 meets
+      9.260ns data_path \receive_module/rx_counter/FRAME_COUNTER_74__i1 to \receive_module/rx_counter/FRAME_COUNTER_74__i5 meets
      20.000ns delay constraint less
       0.133ns L_S requirement (totaling 19.867ns) by 10.607ns
 
- Path Details: \receive_module/FRAME_COUNTER_62__i1 to \receive_module/FRAME_COUNTER_62__i5
+ Path Details: \receive_module/rx_counter/FRAME_COUNTER_74__i1 to \receive_module/rx_counter/FRAME_COUNTER_74__i5
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \receive_module/FRAME_COUNTER_62__i1 (from TVP_CLK_c)
-Route         3   e 1.339                                  \receive_module/FRAME_COUNTER[1]
-LUT4        ---     0.408             I1 to CO             \receive_module/FRAME_COUNTER_62_add_4_3
-Route         2   e 1.158                                  \receive_module/n537
-LUT4        ---     0.408             CI to CO             \receive_module/FRAME_COUNTER_62_add_4_4
-Route         2   e 1.158                                  \receive_module/n538
-LUT4        ---     0.408             CI to CO             \receive_module/FRAME_COUNTER_62_add_4_5
-Route         2   e 1.158                                  \receive_module/n539
-LUT4        ---     0.408             CI to CO             \receive_module/FRAME_COUNTER_62_add_4_6
-Route         1   e 1.020                                  \receive_module/n540
-LUT4        ---     0.408             I3 to O              \receive_module/FRAME_COUNTER_62_add_4_7_lut
-Route         1   e 1.020                                  \receive_module/n30
+L_CO        ---     0.367              C to Q              \receive_module/rx_counter/FRAME_COUNTER_74__i1 (from TVP_CLK_c)
+Route         3   e 1.339                                  \receive_module/rx_counter/FRAME_COUNTER[1]
+LUT4        ---     0.408             I1 to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_3
+Route         2   e 1.158                                  \receive_module/rx_counter/n860
+LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_4
+Route         2   e 1.158                                  \receive_module/rx_counter/n861
+LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_5
+Route         2   e 1.158                                  \receive_module/rx_counter/n862
+LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_74_add_4_6
+Route         1   e 1.020                                  \receive_module/rx_counter/n863
+LUT4        ---     0.408             I3 to O              \receive_module/rx_counter/FRAME_COUNTER_74_add_4_7_lut
+Route         1   e 1.020                                  \receive_module/rx_counter/n30
                   --------
                     9.260  (26.0% logic, 74.0% route), 6 logic levels.
 
-Report: 11.017 ns is the maximum delay for this constraint.
+Report: 10.959 ns is the maximum delay for this constraint.
 
-
-
-================================================================================
-Constraint: create_clock -period 20.000000 -name clk0 [get_nets ADV_CLK_c]
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
 
 Timing Report Summary
 --------------
@@ -142,10 +142,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
-clk1 [get_nets TVP_CLK_c]               |    20.000 ns|    11.017 ns|     7  
+clk1 [get_nets ADV_CLK_c]               |            -|            -|     0  
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
-clk0 [get_nets ADV_CLK_c]               |            -|            -|     0  
+clk0 [get_nets TVP_CLK_c]               |    20.000 ns|    10.959 ns|     7  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -159,8 +159,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  77 paths, 25 nets, and 62 connections (17.2% coverage)
+Constraints cover  77 paths, 26 nets, and 61 connections (16.9% coverage)
 
 
-Peak memory: 40427520 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 40914944 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

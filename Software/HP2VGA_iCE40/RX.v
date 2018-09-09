@@ -29,27 +29,26 @@ module RX(
     input wire O_HS,
     input wire O_VS,
     input wire [9:0] VIDEO,
-    output reg PULSE_1HZ,
+    output wire PULSE_1HZ,
     output wire SYNC
     );
     
-    //wire [9:0] O_X;
-    //wire [8:0] O_Y;
-    //wire O_VISIBLE;
-    /*
-    o_counter rx_counter(.ENABLE(ENABLE),
-                         .O_CLK(O_CLK),
-                         .O_X(O_X),
-                         .O_Y(O_Y),
-                         .O_HS(O_HS),
-                         .O_VS(O_VS),
-                         .O_VISIBLE(O_VISIBLE),
-                         .pulse_1Hz(pulse_1Hz),
-                         .SYNC(SYNC));
-    */
+    wire [9:0] O_X;
+    wire [8:0] O_Y;
+    wire O_VISIBLE;
+    
+    O_COUNTER rx_counter(   .O_CLK(O_CLK),
+                            .ENABLE(ENABLE),
+                            .O_X(O_X),
+                            .O_Y(O_Y),
+                            .O_HS(O_HS),
+                            .O_VS(O_VS),
+                            .O_VISIBLE(O_VISIBLE),
+                            .PULSE_1HZ(PULSE_1HZ),
+                            .SYNC(SYNC));
 
     // Generate 1HZ pulse
-    
+    /*
     reg [5:0] FRAME_COUNTER;
     reg O_VS_DELAY;
     always @(posedge O_CLK) begin
@@ -64,7 +63,7 @@ module RX(
         end 
         O_VS_DELAY <= O_VS;
     end
-    
+    */
     //assign BRAM_ADDR = O_X + O_Y * 576;
     //assign BRAM_DIN = VIDEO[9:2];
     //assign BRAM_WE = O_VISIBLE;

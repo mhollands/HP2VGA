@@ -8,6 +8,7 @@ add_file -verilog -lib work "../vga_control.v"
 add_file -verilog -lib work "../RAM.v" 
 add_file -verilog -lib work "../TX.v" 
 add_file -verilog -lib work "../RX.v" 
+add_file -verilog -lib work "../O_COUNTER.v" 
 #implementation: "HP2VGA_Implmnt"
 impl -add HP2VGA_Implmnt -type fpga
 

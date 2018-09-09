@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Sep 9 2018 06:15:49
+* File Generated:     Sep 9 2018 06:23:30
 
 * Purpose:            General info of design implementation
 
@@ -28,7 +28,7 @@ Device Info:
 Design statistics:
 ------------------
     FFs:                  31
-    LUTs:                 84
+    LUTs:                 87
     RAMs:                 0
     IOBs:                 40
     GBs:                  1
@@ -37,10 +37,10 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 84/7680
-        Combinational Logic Cells: 53       out of   7680      0.690104%
+    Total Logic Cells: 87/7680
+        Combinational Logic Cells: 56       out of   7680      0.729167%
         Sequential Logic Cells:    31       out of   7680      0.403646%
-        Logic Tiles:               33       out of   960       3.4375%
+        Logic Tiles:               28       out of   960       2.91667%
     Registers: 
         Logic Registers:           31       out of   7680      0.403646%
         IO Registers:              0        out of   1280      0
@@ -106,9 +106,9 @@ Detailed I/O Info:
     F2          Output     SB_LVCMOS    Yes      3        Simple Output                 DEBUG[6]     
     G2          Output     SB_LVCMOS    No       3        Output Tristatable by Enable  DEBUG[3]     
     H2          Output     SB_LVCMOS    No       3        Output Tristatable by Enable  DEBUG[2]     
+    J1          Output     SB_LVCMOS    No       3        Output Tristatable by Enable  DEBUG[1]     
     J2          Output     SB_LVCMOS    No       3        Output Tristatable by Enable  DEBUG[0]     
     J8          Output     SB_LVCMOS    No       2        Simple Output                 LED          
-    K1          Output     SB_LVCMOS    No       3        Output Tristatable by Enable  DEBUG[1]     
 
 Detailed Global Buffer Info:
 ----------------------------

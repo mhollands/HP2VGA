@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Sep 09 06:15:18 2018
+Sun Sep 09 06:22:51 2018
 
 
 Command Line:  C:\lscc\iCEcube2.2017.08\LSE\bin\nt\synthesis.exe -f HP2VGA_lse.prj 
@@ -73,6 +73,7 @@ Verilog design file = ../vga_control.v
 Verilog design file = ../RAM.v
 Verilog design file = ../TX.v
 Verilog design file = ../RX.v
+Verilog design file = ../O_COUNTER.v
 -sdc option: SDC file input not used.
 Technology check ok...
 
@@ -87,6 +88,14 @@ Analyzing Verilog file ../ram.v. VERI-1482
 Analyzing Verilog file ../tx.v. VERI-1482
 WARNING - synthesis: ../tx.v(39): keyword 'unsigned' is not allowed here in this mode of verilog. VERI-1411
 Analyzing Verilog file ../rx.v. VERI-1482
+Analyzing Verilog file ../o_counter.v. VERI-1482
+WARNING - synthesis: ../o_counter.v(46): identifier X is used before its declaration. VERI-1875
+WARNING - synthesis: ../o_counter.v(46): identifier X is used before its declaration. VERI-1875
+WARNING - synthesis: ../o_counter.v(46): identifier Y is used before its declaration. VERI-1875
+WARNING - synthesis: ../o_counter.v(46): identifier Y is used before its declaration. VERI-1875
+WARNING - synthesis: ../o_counter.v(47): identifier X is used before its declaration. VERI-1875
+WARNING - synthesis: ../o_counter.v(48): identifier Y is used before its declaration. VERI-1875
+WARNING - synthesis: ../o_counter.v(50): identifier Y is used before its declaration. VERI-1875
 Analyzing Verilog file C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
 WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
 WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
@@ -105,6 +114,12 @@ INFO - synthesis: ../tx_pll.v(1): compiling module TX_PLL. VERI-1018
 INFO - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(699): compiling module SB_PLL40_CORE(FDA_FEEDBACK=4'b0,FDA_RELATIVE=4'b0,DIVF=7'b0100110,DIVQ=3'b100,FILTER_RANGE=3'b010). VERI-1018
 WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on this instance. VDB-1013
 INFO - synthesis: ../rx.v(23): compiling module RX. VERI-1018
+INFO - synthesis: ../o_counter.v(23): compiling module O_COUNTER. VERI-1018
+WARNING - synthesis: ../o_counter.v(47): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: ../o_counter.v(48): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: ../o_counter.v(65): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: ../o_counter.v(68): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: ../o_counter.v(78): expression size 32 truncated to fit in target size 6. VERI-1209
 WARNING - synthesis: ../main.v(35): actual bit length 1 differs from formal bit length 8 for port BRAM_DIN. VERI-1330
 INFO - synthesis: ../tx.v(23): compiling module TX. VERI-1018
 INFO - synthesis: ../vga_control.v(26): compiling module vga_control. VERI-1018
@@ -134,8 +149,6 @@ WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on
 ######## Converting I/O port DEBUG[2] to output.
 ######## Converting I/O port DEBUG[1] to output.
 ######## Converting I/O port DEBUG[0] to output.
-WARNING - synthesis: ../main.v(26): net RX_TX_SYNC does not have a driver. VDB-1002
-######## Missing driver on net RX_TX_SYNC. Patching with GND.
 
 
 
@@ -162,7 +175,7 @@ SB_DFFESR => 18
 SB_DFFSR => 11
 SB_GB_IO => 1
 SB_IO => 39
-SB_LUT4 => 81
+SB_LUT4 => 84
 SB_PLL40_CORE => 1
 ################### End Area Report ##################
 
@@ -176,16 +189,16 @@ Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : transmit_module/video_signal_controller/n313, loads : 24
   Net : transmit_module/video_signal_controller/VGA_VISIBLE, loads : 24
-  Net : transmit_module/video_signal_controller/n320, loads : 12
-  Net : receive_module/FRAME_COUNTER_5__N_13, loads : 7
-  Net : transmit_module/video_signal_controller/VGA_Y_4, loads : 7
-  Net : transmit_module/video_signal_controller/VGA_Y_2, loads : 7
+  Net : transmit_module/video_signal_controller/n310, loads : 23
+  Net : transmit_module/video_signal_controller/n761, loads : 12
+  Net : receive_module/rx_counter/n1017, loads : 7
   Net : transmit_module/video_signal_controller/VGA_Y_6, loads : 7
+  Net : transmit_module/video_signal_controller/VGA_Y_1, loads : 7
+  Net : transmit_module/video_signal_controller/VGA_Y_2, loads : 7
+  Net : transmit_module/video_signal_controller/VGA_Y_4, loads : 7
   Net : transmit_module/video_signal_controller/VGA_Y_5, loads : 7
   Net : transmit_module/video_signal_controller/VGA_Y_3, loads : 7
-  Net : transmit_module/video_signal_controller/VGA_Y_1, loads : 7
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -195,10 +208,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
-clk1 [get_nets TVP_CLK_c]               |   50.000 MHz|   90.769 MHz|     7  
+clk1 [get_nets ADV_CLK_c]               |            -|            -|     0  
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
-clk0 [get_nets ADV_CLK_c]               |            -|            -|     0  
+clk0 [get_nets TVP_CLK_c]               |   50.000 MHz|   91.249 MHz|     7  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -206,8 +219,8 @@ clk0 [get_nets ADV_CLK_c]               |            -|            -|     0
 All constraints were met.
 
 
-Peak Memory Usage: 38.555  MB
+Peak Memory Usage: 39.020  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.156  secs
+Elapsed CPU time for LSE flow : 1.344  secs
 --------------------------------------------------------------

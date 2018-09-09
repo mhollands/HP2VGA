@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:12:22
 
-* File Generated:     Sep 9 2018 06:15:23
+* File Generated:     Sep 9 2018 06:22:56
 
 * Purpose:            
 
@@ -35,7 +35,7 @@ I2053: Starting placement of the design
 =============================================================
 
 Input Design Statistics
-    Number of LUTs      	:	81
+    Number of LUTs      	:	84
     Number of DFFs      	:	31
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	26
@@ -77,10 +77,10 @@ SDC-Info-1101: Duty cycle not specified for clock. Assuming 50 percent dutycycle
 SDC-Info-1101: Duty cycle not specified for clock. Assuming 50 percent dutycycle.
 Info-1404: Inferred PLL generated clock at tx_pll.TX_PLL_inst/PLLOUTCORE
 Info-1404: Inferred PLL generated clock at tx_pll.TX_PLL_inst/PLLOUTGLOBAL
-Warning-1034: Found non-unate timing arc, from pin "in3" to pin "lcout" of instance "GB_BUFFER_TVP_CLK_c_THRU_LUT4_0_LC_82", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "in3" to pin "lcout" of instance "GB_BUFFER_TVP_CLK_c_THRU_LUT4_0_LC_85", in the clock network. Converting the timing arc to positive-unate
 
 Design Statistics after Packing
-    Number of LUTs      	:	84
+    Number of LUTs      	:	87
     Number of DFFs      	:	31
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	26
@@ -90,11 +90,11 @@ Device Utilization Summary after Packing
         LUT and DFF      	:	5
         LUT, DFF and CARRY	:	26
     Combinational LogicCells
-        Only LUT         	:	53
+        Only LUT         	:	56
         CARRY Only       	:	0
         LUT with CARRY   	:	0
-    LogicCells                  :	84/7680
-    PLBs                        :	12/960
+    LogicCells                  :	87/7680
+    PLBs                        :	13/960
     BRAMs                       :	0/32
     IOs and GBIOs               :	40/93
     PLLs                        :	1/2
@@ -103,16 +103,16 @@ Device Utilization Summary after Packing
 I2088: Phase 3, elapsed time : 0.5 (sec)
 
 Phase 4
-I2088: Phase 4, elapsed time : 0.5 (sec)
+I2088: Phase 4, elapsed time : 0.4 (sec)
 
 Phase 5
 I2088: Phase 5, elapsed time : 0.1 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 18.9 (sec)
+I2088: Phase 6, elapsed time : 21.9 (sec)
 
 Final Design Statistics
-    Number of LUTs      	:	84
+    Number of LUTs      	:	87
     Number of DFFs      	:	31
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	26
@@ -125,8 +125,8 @@ Final Design Statistics
     Number of PLLs      	:	1
 
 Device Utilization Summary
-    LogicCells                  :	84/7680
-    PLBs                        :	33/960
+    LogicCells                  :	87/7680
+    PLBs                        :	28/960
     BRAMs                       :	0/32
     IOs and GBIOs               :	40/93
     PLLs                        :	1/2
@@ -145,10 +145,10 @@ analysis after routing.
                      Clock Summary 
 =====================================================================
 Number of clocks: 5
-Clock: TVP_CLK | Frequency: 275.61 MHz | Target: 20.00 MHz
+Clock: TVP_CLK | Frequency: 223.05 MHz | Target: 20.00 MHz
 Clock: TVP_VSYNC | Frequency: N/A | Target: 0.00 MHz
 Clock: main|TVP_CLK | Frequency: N/A | Target: 50.00 MHz
-Clock: tx_pll.TX_PLL_inst/PLLOUTCORE | Frequency: 163.76 MHz | Target: 48.75 MHz
+Clock: tx_pll.TX_PLL_inst/PLLOUTCORE | Frequency: 175.53 MHz | Target: 48.75 MHz
 Clock: tx_pll.TX_PLL_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 48.75 MHz
 
 =====================================================================
@@ -157,5 +157,5 @@ Clock: tx_pll.TX_PLL_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 48.75 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 21.3 sec.
+I2076: Placer run-time: 29.8 sec.
 

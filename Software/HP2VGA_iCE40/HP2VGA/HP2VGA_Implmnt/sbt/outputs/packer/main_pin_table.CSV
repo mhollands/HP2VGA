@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Sep 9 2018 06:15:48
+* File Generated:     Sep 9 2018 06:23:30
 
 * Purpose:            Detailed IO and package pin info
 
@@ -107,7 +107,7 @@ H8, VCC, not used, , , , , , UnknownBank
 H9, PIO, not used, , , , , , bottomBank
 H10, PIO, not used, , , , , , rightBank
 H11, PIO, not used, , , , , , rightBank
-J1, PIO, not used, , , , , , leftBank
+J1, PIO, DEBUG[1], Output, , SB_LVCMOS, No Pull Up, Output Tristatable by Enable, leftBank
 J2, PIO, DEBUG[0], Output, , SB_LVCMOS, No Pull Up, Output Tristatable by Enable, leftBank
 J3, PIO, not used, , , , , , bottomBank
 J4, PIO, not used, , , , , , bottomBank
@@ -118,7 +118,7 @@ J8, PIO, LED, Output, , SB_LVCMOS, No Pull Up, Simple Output, bottomBank
 J9, SPI_SI, not used, , , , , , bottomBank
 J10, PIO, not used, , , , , , rightBank
 J11, PIO, not used, , , , , , rightBank
-K1, PIO, DEBUG[1], Output, , SB_LVCMOS, No Pull Up, Output Tristatable by Enable, leftBank
+K1, PIO, not used, , , , , , leftBank
 K2, PIO, not used, , , , , , leftBank
 K3, PIO, not used, , , , , , bottomBank
 K4, PIO, not used, , , , , , bottomBank
