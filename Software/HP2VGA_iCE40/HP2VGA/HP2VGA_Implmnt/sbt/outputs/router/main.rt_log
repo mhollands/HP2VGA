@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:03:42
 
-* File Generated:     Sep 9 2018 19:07:57
+* File Generated:     Sep 9 2018 21:38:08
 
 * Purpose:            Router runtime info
 
@@ -22,10 +22,9 @@ SDC-Info-1101: Duty cycle not specified for clock. Assuming 50 percent dutycycle
 Info-1404: Inferred PLL generated clock at tx_pll.TX_PLL_inst/PLLOUTCORE
 Info-1404: Inferred PLL generated clock at tx_pll.TX_PLL_inst/PLLOUTGLOBAL
 I1209: Started routing
-I1223: Total Nets : 127 
-I1212: Iteration  1 :    26 unrouted : 1 seconds
-I1212: Iteration  2 :     2 unrouted : 1 seconds
-I1212: Iteration  3 :     0 unrouted : 0 seconds
+I1223: Total Nets : 126 
+I1212: Iteration  1 :    24 unrouted : 1 seconds
+I1212: Iteration  2 :     0 unrouted : 1 seconds
 I1215: Routing is successful
 I1206: Completed routing
 I1204: Writing Design main

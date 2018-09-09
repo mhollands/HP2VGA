@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Sep 09 19:07:20 2018
+Sun Sep 09 21:37:30 2018
 
 
 Command Line:  C:\lscc\iCEcube2.2017.08\LSE\bin\nt\synthesis.exe -f HP2VGA_lse.prj 
@@ -88,13 +88,6 @@ Analyzing Verilog file ../tx.v. VERI-1482
 WARNING - synthesis: ../tx.v(39): keyword 'unsigned' is not allowed here in this mode of verilog. VERI-1411
 Analyzing Verilog file ../rx.v. VERI-1482
 Analyzing Verilog file ../o_counter.v. VERI-1482
-WARNING - synthesis: ../o_counter.v(46): identifier X is used before its declaration. VERI-1875
-WARNING - synthesis: ../o_counter.v(46): identifier X is used before its declaration. VERI-1875
-WARNING - synthesis: ../o_counter.v(46): identifier Y is used before its declaration. VERI-1875
-WARNING - synthesis: ../o_counter.v(46): identifier Y is used before its declaration. VERI-1875
-WARNING - synthesis: ../o_counter.v(47): identifier X is used before its declaration. VERI-1875
-WARNING - synthesis: ../o_counter.v(48): identifier Y is used before its declaration. VERI-1875
-WARNING - synthesis: ../o_counter.v(50): identifier Y is used before its declaration. VERI-1875
 Analyzing Verilog file ../vga_control.v. VERI-1482
 Analyzing Verilog file C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
 WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
@@ -115,11 +108,11 @@ INFO - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_
 WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on this instance. VDB-1013
 INFO - synthesis: ../rx.v(23): compiling module RX. VERI-1018
 INFO - synthesis: ../o_counter.v(23): compiling module O_COUNTER. VERI-1018
-WARNING - synthesis: ../o_counter.v(47): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: ../o_counter.v(48): expression size 32 truncated to fit in target size 9. VERI-1209
-WARNING - synthesis: ../o_counter.v(65): expression size 32 truncated to fit in target size 9. VERI-1209
-WARNING - synthesis: ../o_counter.v(68): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: ../o_counter.v(78): expression size 32 truncated to fit in target size 6. VERI-1209
+WARNING - synthesis: ../o_counter.v(58): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: ../o_counter.v(61): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: ../o_counter.v(71): expression size 32 truncated to fit in target size 6. VERI-1209
+WARNING - synthesis: ../o_counter.v(82): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: ../o_counter.v(83): expression size 32 truncated to fit in target size 9. VERI-1209
 WARNING - synthesis: ../main.v(35): actual bit length 1 differs from formal bit length 8 for port BRAM_DIN. VERI-1330
 INFO - synthesis: ../tx.v(23): compiling module TX. VERI-1018
 INFO - synthesis: ../vga_control.v(26): compiling module VGA_CONTROL. VERI-1018
@@ -219,8 +212,8 @@ clk0 [get_nets ADV_CLK_c]               |            -|            -|     0
 All constraints were met.
 
 
-Peak Memory Usage: 38.707  MB
+Peak Memory Usage: 38.828  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.547  secs
+Elapsed CPU time for LSE flow : 1.281  secs
 --------------------------------------------------------------

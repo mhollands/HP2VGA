@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Diamond Version 0.0.0
-// Netlist written on Sun Sep 09 19:07:22 2018
+// Netlist written on Sun Sep 09 21:37:31 2018
 //
 // Verilog Description of module main
 //
@@ -170,6 +170,12 @@ module main (DEBUG, TVP_CLK, TVP_HSYNC, TVP_VSYNC, LED, ADV_HSYNC,
     defparam ADV_B_pad_5.PULLUP = 1'b0;
     defparam ADV_B_pad_5.NEG_TRIGGER = 1'b0;
     defparam ADV_B_pad_5.IO_STANDARD = "SB_LVCMOS";
+    SB_IO DEBUG_pad_6 (.PACKAGE_PIN(DEBUG[6]), .OUTPUT_ENABLE(VCC_net), 
+          .D_OUT_0(ADV_CLK_c));   // C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    defparam DEBUG_pad_6.PIN_TYPE = 6'b011001;
+    defparam DEBUG_pad_6.PULLUP = 1'b0;
+    defparam DEBUG_pad_6.NEG_TRIGGER = 1'b0;
+    defparam DEBUG_pad_6.IO_STANDARD = "SB_LVCMOS";
     SB_IO ADV_SYNC_N_pad (.PACKAGE_PIN(ADV_SYNC_N), .OUTPUT_ENABLE(VCC_net), 
           .D_OUT_0(GND_net));   // C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam ADV_SYNC_N_pad.PIN_TYPE = 6'b011001;
@@ -193,12 +199,6 @@ module main (DEBUG, TVP_CLK, TVP_HSYNC, TVP_VSYNC, LED, ADV_HSYNC,
     defparam TVP_CLK_pad.PULLUP = 1'b0;
     defparam TVP_CLK_pad.NEG_TRIGGER = 1'b0;
     defparam TVP_CLK_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO DEBUG_pad_6 (.PACKAGE_PIN(DEBUG[6]), .OUTPUT_ENABLE(VCC_net), 
-          .D_OUT_0(ADV_CLK_c));   // C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
-    defparam DEBUG_pad_6.PIN_TYPE = 6'b011001;
-    defparam DEBUG_pad_6.PULLUP = 1'b0;
-    defparam DEBUG_pad_6.NEG_TRIGGER = 1'b0;
-    defparam DEBUG_pad_6.IO_STANDARD = "SB_LVCMOS";
     SB_IO ADV_G_pad_6 (.PACKAGE_PIN(ADV_G[6]), .OUTPUT_ENABLE(VCC_net), 
           .D_OUT_0(ADV_G_c_6));   // C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam ADV_G_pad_6.PIN_TYPE = 6'b011001;
@@ -320,7 +320,7 @@ module O_COUNTER (GND_net, TVP_CLK_c, TVP_VSYNC_c, VCC_net, DEBUG_c_7,
     
     wire TVP_CLK_c /* synthesis SET_AS_NETWORK=TVP_CLK_c, is_clock=1 */ ;   // ../main.v(3[13:20])
     wire [5:0]n29;
-    wire [5:0]FRAME_COUNTER;   // ../o_counter.v(52[19:32])
+    wire [5:0]FRAME_COUNTER;   // ../o_counter.v(46[19:32])
     
     wire n1010, n1197, n401, n1011, n1009, old_VS, n7, PULSE_1HZ_N_61, 
         PULSE_1HZ, n1013, n1012, n982, n4;
@@ -329,32 +329,32 @@ module O_COUNTER (GND_net, TVP_CLK_c, TVP_VSYNC_c, VCC_net, DEBUG_c_7,
             .I3(n1010), .O(n29[2])) /* synthesis syn_instantiated=1 */ ;
     defparam FRAME_COUNTER_74_add_4_4_lut.LUT_INIT = 16'hC33C;
     SB_DFFESR FRAME_COUNTER_74__i0 (.Q(FRAME_COUNTER[0]), .C(TVP_CLK_c), 
-            .E(n1197), .D(n29[0]), .R(n401));   // ../o_counter.v(78[46:63])
+            .E(n1197), .D(n29[0]), .R(n401));   // ../o_counter.v(71[46:63])
     SB_DFFESR FRAME_COUNTER_74__i1 (.Q(FRAME_COUNTER[1]), .C(TVP_CLK_c), 
-            .E(n1197), .D(n29[1]), .R(n401));   // ../o_counter.v(78[46:63])
+            .E(n1197), .D(n29[1]), .R(n401));   // ../o_counter.v(71[46:63])
     SB_CARRY FRAME_COUNTER_74_add_4_4 (.CI(n1010), .I0(GND_net), .I1(FRAME_COUNTER[2]), 
             .CO(n1011));
     SB_LUT4 FRAME_COUNTER_74_add_4_3_lut (.I0(GND_net), .I1(GND_net), .I2(FRAME_COUNTER[1]), 
             .I3(n1009), .O(n29[1])) /* synthesis syn_instantiated=1 */ ;
     defparam FRAME_COUNTER_74_add_4_3_lut.LUT_INIT = 16'hC33C;
     SB_LUT4 i2_2_lut_3_lut (.I0(old_VS), .I1(TVP_VSYNC_c), .I2(FRAME_COUNTER[5]), 
-            .I3(GND_net), .O(n7));   // ../o_counter.v(71[16] 81[19])
+            .I3(GND_net), .O(n7));   // ../o_counter.v(64[16] 74[19])
     defparam i2_2_lut_3_lut.LUT_INIT = 16'h2020;
-    SB_DFFESR FRAME_COUNTER_74__i2 (.Q(FRAME_COUNTER[2]), .C(TVP_CLK_c), 
-            .E(n1197), .D(n29[2]), .R(n401));   // ../o_counter.v(78[46:63])
     SB_CARRY FRAME_COUNTER_74_add_4_3 (.CI(n1009), .I0(GND_net), .I1(FRAME_COUNTER[1]), 
             .CO(n1010));
     SB_LUT4 i210_2_lut_rep_8 (.I0(old_VS), .I1(TVP_VSYNC_c), .I2(GND_net), 
-            .I3(GND_net), .O(n1197));   // ../o_counter.v(71[16] 81[19])
+            .I3(GND_net), .O(n1197));   // ../o_counter.v(64[16] 74[19])
     defparam i210_2_lut_rep_8.LUT_INIT = 16'h2222;
+    SB_DFFE PULSE_1HZ_46 (.Q(PULSE_1HZ), .C(TVP_CLK_c), .E(n1197), .D(PULSE_1HZ_N_61));   // ../o_counter.v(51[16] 79[12])
+    SB_DFFESR FRAME_COUNTER_74__i2 (.Q(FRAME_COUNTER[2]), .C(TVP_CLK_c), 
+            .E(n1197), .D(n29[2]), .R(n401));   // ../o_counter.v(71[46:63])
     SB_DFFESR FRAME_COUNTER_74__i3 (.Q(FRAME_COUNTER[3]), .C(TVP_CLK_c), 
-            .E(n1197), .D(n29[3]), .R(n401));   // ../o_counter.v(78[46:63])
+            .E(n1197), .D(n29[3]), .R(n401));   // ../o_counter.v(71[46:63])
+    SB_DFF old_VS_49 (.Q(old_VS), .C(TVP_CLK_c), .D(TVP_VSYNC_c));   // ../o_counter.v(51[16] 79[12])
     SB_DFFESR FRAME_COUNTER_74__i4 (.Q(FRAME_COUNTER[4]), .C(TVP_CLK_c), 
-            .E(n1197), .D(n29[4]), .R(n401));   // ../o_counter.v(78[46:63])
-    SB_DFFE PULSE_1HZ_46 (.Q(PULSE_1HZ), .C(TVP_CLK_c), .E(n1197), .D(PULSE_1HZ_N_61));   // ../o_counter.v(58[16] 86[12])
+            .E(n1197), .D(n29[4]), .R(n401));   // ../o_counter.v(71[46:63])
     SB_DFFESR FRAME_COUNTER_74__i5 (.Q(FRAME_COUNTER[5]), .C(TVP_CLK_c), 
-            .E(n1197), .D(n29[5]), .R(n401));   // ../o_counter.v(78[46:63])
-    SB_DFF old_VS_49 (.Q(old_VS), .C(TVP_CLK_c), .D(TVP_VSYNC_c));   // ../o_counter.v(58[16] 86[12])
+            .E(n1197), .D(n29[5]), .R(n401));   // ../o_counter.v(71[46:63])
     SB_LUT4 FRAME_COUNTER_74_add_4_7_lut (.I0(GND_net), .I1(GND_net), .I2(FRAME_COUNTER[5]), 
             .I3(n1013), .O(n29[5])) /* synthesis syn_instantiated=1 */ ;
     defparam FRAME_COUNTER_74_add_4_7_lut.LUT_INIT = 16'hC33C;
@@ -372,7 +372,7 @@ module O_COUNTER (GND_net, TVP_CLK_c, TVP_VSYNC_c, VCC_net, DEBUG_c_7,
             .I3(n1011), .O(n29[3])) /* synthesis syn_instantiated=1 */ ;
     defparam FRAME_COUNTER_74_add_4_5_lut.LUT_INIT = 16'hC33C;
     SB_LUT4 i2_3_lut (.I0(FRAME_COUNTER[3]), .I1(FRAME_COUNTER[0]), .I2(FRAME_COUNTER[4]), 
-            .I3(GND_net), .O(n982));   // ../o_counter.v(78[46:63])
+            .I3(GND_net), .O(n982));   // ../o_counter.v(71[46:63])
     defparam i2_3_lut.LUT_INIT = 16'h8080;
     SB_LUT4 i1_2_lut (.I0(FRAME_COUNTER[2]), .I1(FRAME_COUNTER[1]), .I2(GND_net), 
             .I3(GND_net), .O(n4));
@@ -381,12 +381,12 @@ module O_COUNTER (GND_net, TVP_CLK_c, TVP_VSYNC_c, VCC_net, DEBUG_c_7,
             .I3(n4), .O(PULSE_1HZ_N_61));
     defparam i1059_4_lut.LUT_INIT = 16'hcc6c;
     SB_LUT4 i1_2_lut_adj_13 (.I0(PULSE_1HZ), .I1(DEBUG_c_7), .I2(GND_net), 
-            .I3(GND_net), .O(LED_c));   // ../o_counter.v(58[16] 86[12])
+            .I3(GND_net), .O(LED_c));   // ../o_counter.v(51[16] 79[12])
     defparam i1_2_lut_adj_13.LUT_INIT = 16'h8888;
     SB_CARRY FRAME_COUNTER_74_add_4_5 (.CI(n1011), .I0(GND_net), .I1(FRAME_COUNTER[3]), 
             .CO(n1012));
     SB_LUT4 i4_4_lut (.I0(n7), .I1(n982), .I2(FRAME_COUNTER[1]), .I3(FRAME_COUNTER[2]), 
-            .O(n401));   // ../o_counter.v(71[16] 81[19])
+            .O(n401));   // ../o_counter.v(64[16] 74[19])
     defparam i4_4_lut.LUT_INIT = 16'h0080;
     
 endmodule
@@ -498,19 +498,18 @@ module VGA_CONTROL (ADV_B_c_3, GND_net, ADV_CLK_c, ADV_B_c_6, ADV_B_c_0,
     
     wire n1099, n1195, n8, n547, n12, n1119, n1007, n1005, n1004, 
         n1002, n1003, n318, n999, n1000, n1008, n1006, n1001, 
-        n1105, n1016, n1024, n1017, n1015, n534, n1196, n10, 
-        n22, VGA_VISIBLE_N_275, n1023, n18, n6, n1175, n1125, 
-        n15, n7, n14, n15_adj_282, n1022, n1014, n1021, n1020, 
-        n1019, n1018;
+        n1105, n1016, n1024, n1017, n1015, n532, n10, VGA_VISIBLE_N_275, 
+        n1196, n18, n6, n22, n1125, n1175, n1023, n7, n15, 
+        n14, n15_adj_282, n1022, n1014, n1021, n1020, n1019, n1018;
     
-    SB_LUT4 i469_2_lut (.I0(VGA_Y[3]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    SB_LUT4 i467_2_lut (.I0(VGA_Y[3]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_B_c_3));   // ../vga_control.v(64[23:51])
-    defparam i469_2_lut.LUT_INIT = 16'h8888;
+    defparam i467_2_lut.LUT_INIT = 16'h8888;
     SB_DFFESR VGA_Y_71__i2 (.Q(VGA_Y[2]), .C(ADV_CLK_c), .E(n336), .D(n41[2]), 
             .R(n346));   // ../vga_control.v(79[30:39])
-    SB_LUT4 i466_2_lut (.I0(VGA_Y[6]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    SB_LUT4 i464_2_lut (.I0(VGA_Y[6]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_B_c_6));   // ../vga_control.v(64[23:51])
-    defparam i466_2_lut.LUT_INIT = 16'h8888;
+    defparam i464_2_lut.LUT_INIT = 16'h8888;
     SB_LUT4 i1126_4_lut (.I0(n1144), .I1(VGA_X[9]), .I2(VGA_X[7]), .I3(VGA_X[10]), 
             .O(n1181));
     defparam i1126_4_lut.LUT_INIT = 16'hffec;
@@ -602,6 +601,8 @@ module VGA_CONTROL (ADV_B_c_3, GND_net, ADV_CLK_c, ADV_B_c_6, ADV_B_c_0,
             .R(n336));   // ../vga_control.v(73[26:35])
     SB_CARRY VGA_Y_71_add_4_5 (.CI(n1016), .I0(GND_net), .I1(VGA_Y[3]), 
             .CO(n1017));
+    SB_DFFESR VGA_Y_71__i3 (.Q(VGA_Y[3]), .C(ADV_CLK_c), .E(n336), .D(n41[3]), 
+            .R(n346));   // ../vga_control.v(79[30:39])
     SB_LUT4 VGA_X_72_73_add_4_8_lut (.I0(GND_net), .I1(GND_net), .I2(VGA_X[6]), 
             .I3(n1004), .O(n1[6])) /* synthesis syn_instantiated=1 */ ;
     defparam VGA_X_72_73_add_4_8_lut.LUT_INIT = 16'hC33C;
@@ -616,45 +617,48 @@ module VGA_CONTROL (ADV_B_c_3, GND_net, ADV_CLK_c, ADV_B_c_6, ADV_B_c_0,
     SB_LUT4 VGA_X_72_73_add_4_3_lut (.I0(GND_net), .I1(GND_net), .I2(VGA_X[1]), 
             .I3(n999), .O(n1[1])) /* synthesis syn_instantiated=1 */ ;
     defparam VGA_X_72_73_add_4_3_lut.LUT_INIT = 16'hC33C;
-    SB_CARRY VGA_X_72_73_add_4_10 (.CI(n1006), .I0(GND_net), .I1(VGA_X[8]), 
-            .CO(n1007));
-    SB_LUT4 i504_4_lut (.I0(VGA_Y[2]), .I1(VGA_Y[4]), .I2(VGA_Y[3]), .I3(VGA_Y[1]), 
-            .O(n534));
-    defparam i504_4_lut.LUT_INIT = 16'heccc;
-    SB_DFFESR VGA_Y_71__i3 (.Q(VGA_Y[3]), .C(ADV_CLK_c), .E(n336), .D(n41[3]), 
-            .R(n346));   // ../vga_control.v(79[30:39])
-    SB_LUT4 i1131_4_lut (.I0(n12), .I1(n1181), .I2(VGA_X[8]), .I3(n1196), 
-            .O(VGA_HS_N_267));   // ../vga_control.v(55[21:90])
-    defparam i1131_4_lut.LUT_INIT = 16'hfcfd;
-    SB_LUT4 i140_4_lut (.I0(VGA_Y[1]), .I1(VGA_Y[4]), .I2(VGA_Y[3]), .I3(VGA_Y[2]), 
-            .O(n10));
-    defparam i140_4_lut.LUT_INIT = 16'hc8c0;
+    SB_LUT4 i502_4_lut (.I0(VGA_Y[2]), .I1(VGA_Y[4]), .I2(VGA_Y[3]), .I3(VGA_Y[1]), 
+            .O(n532));
+    defparam i502_4_lut.LUT_INIT = 16'heccc;
     SB_DFFESR VGA_Y_71__i4 (.Q(VGA_Y[4]), .C(ADV_CLK_c), .E(n336), .D(n41[4]), 
             .R(n346));   // ../vga_control.v(79[30:39])
     SB_DFFESR VGA_Y_71__i7 (.Q(VGA_Y[7]), .C(ADV_CLK_c), .E(n336), .D(n41[7]), 
             .R(n346));   // ../vga_control.v(79[30:39])
-    SB_LUT4 i1_2_lut_adj_9 (.I0(VGA_Y[0]), .I1(VGA_Y[1]), .I2(GND_net), 
-            .I3(GND_net), .O(n22));
-    defparam i1_2_lut_adj_9.LUT_INIT = 16'heeee;
-    SB_LUT4 i3_4_lut_adj_10 (.I0(n10), .I1(n1105), .I2(n318), .I3(VGA_Y[9]), 
+    SB_CARRY VGA_X_72_73_add_4_10 (.CI(n1006), .I0(GND_net), .I1(VGA_X[8]), 
+            .CO(n1007));
+    SB_LUT4 i140_4_lut (.I0(VGA_Y[1]), .I1(VGA_Y[4]), .I2(VGA_Y[3]), .I3(VGA_Y[2]), 
+            .O(n10));
+    defparam i140_4_lut.LUT_INIT = 16'hc8c0;
+    SB_LUT4 i3_4_lut_adj_9 (.I0(n10), .I1(n1105), .I2(n318), .I3(VGA_Y[9]), 
             .O(VGA_VISIBLE_N_275));
-    defparam i3_4_lut_adj_10.LUT_INIT = 16'hfffe;
-    SB_LUT4 VGA_Y_71_add_4_12_lut (.I0(GND_net), .I1(GND_net), .I2(VGA_Y[10]), 
-            .I3(n1023), .O(n41[10])) /* synthesis syn_instantiated=1 */ ;
-    defparam VGA_Y_71_add_4_12_lut.LUT_INIT = 16'hC33C;
+    defparam i3_4_lut_adj_9.LUT_INIT = 16'hfffe;
+    SB_LUT4 i1131_4_lut (.I0(n12), .I1(n1181), .I2(VGA_X[8]), .I3(n1196), 
+            .O(VGA_HS_N_267));   // ../vga_control.v(55[21:90])
+    defparam i1131_4_lut.LUT_INIT = 16'hfcfd;
     SB_LUT4 i1_4_lut (.I0(n18), .I1(n1119), .I2(VGA_X[9]), .I3(VGA_X[10]), 
             .O(n6));
     defparam i1_4_lut.LUT_INIT = 16'h3332;
     SB_DFFESR VGA_Y_71__i8 (.Q(VGA_Y[8]), .C(ADV_CLK_c), .E(n336), .D(n41[8]), 
             .R(n346));   // ../vga_control.v(79[30:39])
+    SB_LUT4 i1_2_lut_adj_10 (.I0(VGA_Y[0]), .I1(VGA_Y[1]), .I2(GND_net), 
+            .I3(GND_net), .O(n22));
+    defparam i1_2_lut_adj_10.LUT_INIT = 16'heeee;
+    SB_LUT4 i2_4_lut (.I0(VGA_Y[7]), .I1(VGA_Y[8]), .I2(n532), .I3(n1099), 
+            .O(n1125));
+    defparam i2_4_lut.LUT_INIT = 16'hfeee;
     SB_DFFESR VGA_Y_71__i5 (.Q(VGA_Y[5]), .C(ADV_CLK_c), .E(n336), .D(n41[5]), 
             .R(n346));   // ../vga_control.v(79[30:39])
     SB_LUT4 i1120_3_lut (.I0(VGA_Y[9]), .I1(VGA_Y[8]), .I2(VGA_Y[7]), 
             .I3(GND_net), .O(n1175));
     defparam i1120_3_lut.LUT_INIT = 16'hfefe;
-    SB_LUT4 i2_4_lut (.I0(VGA_Y[7]), .I1(VGA_Y[8]), .I2(n534), .I3(n1099), 
-            .O(n1125));
-    defparam i2_4_lut.LUT_INIT = 16'hfeee;
+    SB_LUT4 VGA_Y_71_add_4_12_lut (.I0(GND_net), .I1(GND_net), .I2(VGA_Y[10]), 
+            .I3(n1023), .O(n41[10])) /* synthesis syn_instantiated=1 */ ;
+    defparam VGA_Y_71_add_4_12_lut.LUT_INIT = 16'hC33C;
+    SB_LUT4 i2_4_lut_adj_11 (.I0(n18), .I1(VGA_VISIBLE_N_275), .I2(VGA_X[10]), 
+            .I3(VGA_X[9]), .O(n7));
+    defparam i2_4_lut_adj_11.LUT_INIT = 16'h0c4c;
+    SB_LUT4 i4_4_lut (.I0(n7), .I1(n1125), .I2(n6), .I3(VGA_Y[9]), .O(VGA_VISIBLE));
+    defparam i4_4_lut.LUT_INIT = 16'h20a0;
     SB_DFFESR VGA_Y_71__i9 (.Q(VGA_Y[9]), .C(ADV_CLK_c), .E(n336), .D(n41[9]), 
             .R(n346));   // ../vga_control.v(79[30:39])
     SB_DFFSR VGA_X_72_73__i1 (.Q(VGA_X[0]), .C(ADV_CLK_c), .D(n1[0]), 
@@ -662,54 +666,49 @@ module VGA_CONTROL (ADV_B_c_3, GND_net, ADV_CLK_c, ADV_B_c_6, ADV_B_c_0,
     SB_LUT4 i6_4_lut (.I0(n1119), .I1(n22), .I2(n318), .I3(VGA_Y[2]), 
             .O(n15));
     defparam i6_4_lut.LUT_INIT = 16'h0004;
-    SB_LUT4 i2_4_lut_adj_11 (.I0(n18), .I1(VGA_VISIBLE_N_275), .I2(VGA_X[10]), 
-            .I3(VGA_X[9]), .O(n7));
-    defparam i2_4_lut_adj_11.LUT_INIT = 16'h0c4c;
-    SB_LUT4 i4_4_lut (.I0(n7), .I1(n1125), .I2(n6), .I3(VGA_Y[9]), .O(VGA_VISIBLE));
-    defparam i4_4_lut.LUT_INIT = 16'h20a0;
     SB_LUT4 i8_4_lut (.I0(n15), .I1(VGA_Y[3]), .I2(n1175), .I3(VGA_Y[4]), 
             .O(ADV_VSYNC_c));
     defparam i8_4_lut.LUT_INIT = 16'h0002;
+    SB_LUT4 i468_2_lut (.I0(VGA_Y[2]), .I1(VGA_VISIBLE), .I2(GND_net), 
+            .I3(GND_net), .O(ADV_B_c_2));   // ../vga_control.v(64[23:51])
+    defparam i468_2_lut.LUT_INIT = 16'h8888;
     SB_DFFESR VGA_Y_71__i6 (.Q(VGA_Y[6]), .C(ADV_CLK_c), .E(n336), .D(n41[6]), 
             .R(n346));   // ../vga_control.v(79[30:39])
+    SB_LUT4 i3_3_lut (.I0(VGA_X[2]), .I1(VGA_X[3]), .I2(VGA_X[4]), .I3(GND_net), 
+            .O(n8));
+    defparam i3_3_lut.LUT_INIT = 16'h8080;
     SB_DFFESR VGA_Y_71__i10 (.Q(VGA_Y[10]), .C(ADV_CLK_c), .E(n336), .D(n41[10]), 
             .R(n346));   // ../vga_control.v(79[30:39])
     SB_CARRY VGA_Y_71_add_4_12 (.CI(n1023), .I0(GND_net), .I1(VGA_Y[10]), 
             .CO(n1024));
     SB_DFFESR VGA_Y_71__i0 (.Q(VGA_Y[0]), .C(ADV_CLK_c), .E(n336), .D(n41[0]), 
             .R(n346));   // ../vga_control.v(79[30:39])
-    SB_LUT4 i3_3_lut (.I0(VGA_X[2]), .I1(VGA_X[3]), .I2(VGA_X[4]), .I3(GND_net), 
-            .O(n8));
-    defparam i3_3_lut.LUT_INIT = 16'h8080;
-    SB_LUT4 i470_2_lut (.I0(VGA_Y[2]), .I1(VGA_VISIBLE), .I2(GND_net), 
-            .I3(GND_net), .O(ADV_B_c_2));   // ../vga_control.v(64[23:51])
-    defparam i470_2_lut.LUT_INIT = 16'h8888;
-    SB_LUT4 i479_2_lut (.I0(VGA_Y[7]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    SB_LUT4 i477_2_lut (.I0(VGA_Y[7]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_R_c_7));   // ../vga_control.v(62[22:54])
-    defparam i479_2_lut.LUT_INIT = 16'h4444;
-    SB_DFFESR VGA_Y_71__i11 (.Q(VGA_Y[11]), .C(ADV_CLK_c), .E(n336), .D(n41[11]), 
-            .R(n346));   // ../vga_control.v(79[30:39])
+    defparam i477_2_lut.LUT_INIT = 16'h4444;
     SB_LUT4 i5_3_lut (.I0(VGA_Y[2]), .I1(n336), .I2(VGA_Y[4]), .I3(GND_net), 
             .O(n14));
     defparam i5_3_lut.LUT_INIT = 16'hf7f7;
+    SB_DFFESR VGA_Y_71__i11 (.Q(VGA_Y[11]), .C(ADV_CLK_c), .E(n336), .D(n41[11]), 
+            .R(n346));   // ../vga_control.v(79[30:39])
     SB_LUT4 i6_4_lut_adj_12 (.I0(n1105), .I1(VGA_Y[0]), .I2(VGA_Y[3]), 
             .I3(VGA_Y[1]), .O(n15_adj_282));
     defparam i6_4_lut_adj_12.LUT_INIT = 16'hffbf;
     SB_LUT4 i1134_4_lut (.I0(n15_adj_282), .I1(VGA_Y[9]), .I2(n14), .I3(n1099), 
             .O(n346));
     defparam i1134_4_lut.LUT_INIT = 16'h0400;
-    SB_LUT4 i480_2_lut (.I0(VGA_Y[6]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    SB_LUT4 i478_2_lut (.I0(VGA_Y[6]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_R_c_6));   // ../vga_control.v(62[22:54])
-    defparam i480_2_lut.LUT_INIT = 16'h4444;
+    defparam i478_2_lut.LUT_INIT = 16'h4444;
     SB_LUT4 i529_4_lut (.I0(n547), .I1(VGA_X[10]), .I2(VGA_X[9]), .I3(VGA_X[8]), 
             .O(n336));
     defparam i529_4_lut.LUT_INIT = 16'hc8c0;
     SB_LUT4 i105_2_lut_3_lut_4_lut (.I0(VGA_X[6]), .I1(VGA_X[7]), .I2(VGA_X[8]), 
             .I3(VGA_X[5]), .O(n18));   // ../vga_control.v(72[16:35])
     defparam i105_2_lut_3_lut_4_lut.LUT_INIT = 16'hf0e0;
-    SB_LUT4 i481_2_lut (.I0(VGA_Y[5]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    SB_LUT4 i479_2_lut (.I0(VGA_Y[5]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_R_c_5));   // ../vga_control.v(62[22:54])
-    defparam i481_2_lut.LUT_INIT = 16'h4444;
+    defparam i479_2_lut.LUT_INIT = 16'h4444;
     SB_LUT4 i484_2_lut (.I0(VGA_Y[4]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_R_c_4));   // ../vga_control.v(62[22:54])
     defparam i484_2_lut.LUT_INIT = 16'h4444;
@@ -758,41 +757,41 @@ module VGA_CONTROL (ADV_B_c_3, GND_net, ADV_CLK_c, ADV_B_c_6, ADV_B_c_0,
     SB_LUT4 VGA_Y_71_add_4_8_lut (.I0(GND_net), .I1(GND_net), .I2(VGA_Y[6]), 
             .I3(n1019), .O(n41[6])) /* synthesis syn_instantiated=1 */ ;
     defparam VGA_Y_71_add_4_8_lut.LUT_INIT = 16'hC33C;
-    SB_LUT4 i429_2_lut (.I0(VGA_Y[0]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    SB_LUT4 i427_2_lut (.I0(VGA_Y[0]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_R_c_0));   // ../vga_control.v(62[22:54])
-    defparam i429_2_lut.LUT_INIT = 16'h4444;
-    SB_LUT4 i472_2_lut (.I0(VGA_X[7]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    defparam i427_2_lut.LUT_INIT = 16'h4444;
+    SB_LUT4 i470_2_lut (.I0(VGA_X[7]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_G_c_7));   // ../vga_control.v(63[24:56])
-    defparam i472_2_lut.LUT_INIT = 16'h4444;
+    defparam i470_2_lut.LUT_INIT = 16'h4444;
     SB_LUT4 i405_2_lut (.I0(VGA_X[0]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_G_c_0));   // ../vga_control.v(63[24:56])
     defparam i405_2_lut.LUT_INIT = 16'h4444;
     SB_CARRY VGA_Y_71_add_4_8 (.CI(n1019), .I0(GND_net), .I1(VGA_Y[6]), 
             .CO(n1020));
-    SB_LUT4 i473_2_lut (.I0(VGA_X[6]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    SB_LUT4 i471_2_lut (.I0(VGA_X[6]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_G_c_6));   // ../vga_control.v(63[24:56])
-    defparam i473_2_lut.LUT_INIT = 16'h4444;
+    defparam i471_2_lut.LUT_INIT = 16'h4444;
     SB_LUT4 VGA_Y_71_add_4_7_lut (.I0(GND_net), .I1(GND_net), .I2(VGA_Y[5]), 
             .I3(n1018), .O(n41[5])) /* synthesis syn_instantiated=1 */ ;
     defparam VGA_Y_71_add_4_7_lut.LUT_INIT = 16'hC33C;
-    SB_LUT4 i467_2_lut (.I0(VGA_Y[5]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    SB_LUT4 i465_2_lut (.I0(VGA_Y[5]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_B_c_5));   // ../vga_control.v(64[23:51])
-    defparam i467_2_lut.LUT_INIT = 16'h8888;
-    SB_LUT4 i474_2_lut (.I0(VGA_X[5]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    defparam i465_2_lut.LUT_INIT = 16'h8888;
+    SB_LUT4 i472_2_lut (.I0(VGA_X[5]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_G_c_5));   // ../vga_control.v(63[24:56])
-    defparam i474_2_lut.LUT_INIT = 16'h4444;
-    SB_LUT4 i475_2_lut (.I0(VGA_X[4]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    defparam i472_2_lut.LUT_INIT = 16'h4444;
+    SB_LUT4 i473_2_lut (.I0(VGA_X[4]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_G_c_4));   // ../vga_control.v(63[24:56])
-    defparam i475_2_lut.LUT_INIT = 16'h4444;
-    SB_LUT4 i468_2_lut (.I0(VGA_Y[4]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    defparam i473_2_lut.LUT_INIT = 16'h4444;
+    SB_LUT4 i466_2_lut (.I0(VGA_Y[4]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_B_c_4));   // ../vga_control.v(64[23:51])
-    defparam i468_2_lut.LUT_INIT = 16'h8888;
-    SB_LUT4 i476_2_lut (.I0(VGA_X[3]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    defparam i466_2_lut.LUT_INIT = 16'h8888;
+    SB_LUT4 i474_2_lut (.I0(VGA_X[3]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_G_c_3));   // ../vga_control.v(63[24:56])
-    defparam i476_2_lut.LUT_INIT = 16'h4444;
-    SB_LUT4 i477_2_lut (.I0(VGA_X[2]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    defparam i474_2_lut.LUT_INIT = 16'h4444;
+    SB_LUT4 i475_2_lut (.I0(VGA_X[2]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_G_c_2));   // ../vga_control.v(63[24:56])
-    defparam i477_2_lut.LUT_INIT = 16'h4444;
+    defparam i475_2_lut.LUT_INIT = 16'h4444;
     SB_LUT4 i2_3_lut (.I0(VGA_X[5]), .I1(VGA_X[6]), .I2(VGA_X[4]), .I3(GND_net), 
             .O(n1144));
     defparam i2_3_lut.LUT_INIT = 16'hfefe;
@@ -806,15 +805,15 @@ module VGA_CONTROL (ADV_B_c_3, GND_net, ADV_CLK_c, ADV_B_c_6, ADV_B_c_0,
     defparam VGA_Y_71_add_4_6_lut.LUT_INIT = 16'hC33C;
     SB_CARRY VGA_Y_71_add_4_6 (.CI(n1017), .I0(GND_net), .I1(VGA_Y[4]), 
             .CO(n1018));
-    SB_LUT4 i471_2_lut (.I0(VGA_Y[1]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    SB_LUT4 i469_2_lut (.I0(VGA_Y[1]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_B_c_1));   // ../vga_control.v(64[23:51])
-    defparam i471_2_lut.LUT_INIT = 16'h8888;
-    SB_LUT4 i478_2_lut (.I0(VGA_X[1]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    defparam i469_2_lut.LUT_INIT = 16'h8888;
+    SB_LUT4 i476_2_lut (.I0(VGA_X[1]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_G_c_1));   // ../vga_control.v(63[24:56])
-    defparam i478_2_lut.LUT_INIT = 16'h4444;
-    SB_LUT4 i465_2_lut (.I0(VGA_Y[7]), .I1(VGA_VISIBLE), .I2(GND_net), 
+    defparam i476_2_lut.LUT_INIT = 16'h4444;
+    SB_LUT4 i463_2_lut (.I0(VGA_Y[7]), .I1(VGA_VISIBLE), .I2(GND_net), 
             .I3(GND_net), .O(ADV_B_c_7));   // ../vga_control.v(64[23:51])
-    defparam i465_2_lut.LUT_INIT = 16'h8888;
+    defparam i463_2_lut.LUT_INIT = 16'h8888;
     
 endmodule
 //

@@ -1,13 +1,13 @@
 [VIC]
 receive_module.rx_counter.n7_cascade_=ltout:in0
-transmit_module.video_signal_controller.VGA_VISIBLE_cascade_=ltout:in1
 transmit_module.video_signal_controller.n10_cascade_=ltout:in0
 transmit_module.video_signal_controller.n1105_cascade_=ltout:in0
 transmit_module.video_signal_controller.n1144_cascade_=ltout:in0
 transmit_module.video_signal_controller.n1195_cascade_=ltout:in1
-transmit_module.video_signal_controller.n12_cascade_=ltout:in0
+transmit_module.video_signal_controller.n1196_cascade_=ltout:in3
 transmit_module.video_signal_controller.n14_cascade_=ltout:in2
-transmit_module.video_signal_controller.n15_cascade_=ltout:in0
 transmit_module.video_signal_controller.n18_cascade_=ltout:in0
-transmit_module.video_signal_controller.n534_cascade_=ltout:in2
+transmit_module.video_signal_controller.n22_cascade_=ltout:in1
+transmit_module.video_signal_controller.n532_cascade_=ltout:in2
 transmit_module.video_signal_controller.n547_cascade_=ltout:in0
+transmit_module.video_signal_controller.n7_cascade_=ltout:in0

@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Sep 9 2018 19:07:56
+* File Generated:     Sep 9 2018 21:38:08
 
 * Purpose:            General info of design implementation
 
@@ -40,7 +40,7 @@ Logic Resource Utilization:
     Total Logic Cells: 91/7680
         Combinational Logic Cells: 60       out of   7680      0.78125%
         Sequential Logic Cells:    31       out of   7680      0.403646%
-        Logic Tiles:               30       out of   960       3.125%
+        Logic Tiles:               32       out of   960       3.33333%
     Registers: 
         Logic Registers:           31       out of   7680      0.403646%
         IO Registers:              0        out of   1280      0
@@ -124,9 +124,9 @@ Router Summary:
 
 Routing Resource Utilization:
 -----------------------------
-              Local line of tile      607 out of 146184      0.41523%
-                          Span 4      145 out of  29696      0.488281%
-                         Span 12       54 out of   5632      0.958807%
+              Local line of tile      605 out of 146184      0.413862%
+                          Span 4      132 out of  29696      0.444504%
+                         Span 12       52 out of   5632      0.923295%
                   Global network        1 out of      8      12.5%
       Vertical Inter-LUT Connect       12 out of   6720      0.178571%
 
