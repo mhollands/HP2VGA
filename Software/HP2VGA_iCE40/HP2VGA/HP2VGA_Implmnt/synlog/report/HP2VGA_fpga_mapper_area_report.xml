@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+The file contains the area information from mapper to be displayed as part of the summary report.
+*******************************************************************************************-->
+<report_table display_priority="1" name="Area Summary">
+<report_link name="Detailed report">
+<data>E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synlog\report\HP2VGA_fpga_mapper_resourceusage.rpt</data>
+<title>Resource Usage</title>
+</report_link>
+<parameter tooltip="Total PADS used" name="PADS">
+<data>41</data>
+</parameter>
+<parameter tooltip="Total FLOPS used" name="FLOPS">
+<data>30</data>
+</parameter>
+<parameter tcl_name="v_ram" tooltip="Total RAMS used" name="RAMS">
+<data>0</data>
+</parameter>
+<parameter tooltip="Total CARRYS used" name="CARRYS">
+<data>26</data>
+</parameter>
+<parameter tcl_name="total_luts" tooltip="Total LUTS used" name="LUTS">
+<data>83</data>
+</parameter>
+</report_table>

@@ -1,0 +1,6 @@
+create_clock -period 5.12 -name {main|TVP_VSYNC} -waveform [list 0.00 2.56] [get_ports TVP_VSYNC]
+create_clock -period 6.61 -name {main|TVP_CLK} -waveform [list 0.00 3.31] [get_ports TVP_CLK]
+create_clock -period 50.00 -name {TVP_CLK} [get_ports TVP_CLK]
+create_clock -period 16666666.67 -name {TVP_VSYNC} [get_ports TVP_VSYNC]
+set_false_path -from [get_clocks main|TVP_VSYNC] -to [get_clocks main|TVP_CLK]
+set_false_path -from [get_clocks main|TVP_CLK] -to [get_clocks main|TVP_VSYNC]

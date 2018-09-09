@@ -1,0 +1,855 @@
+#Build: Synplify Pro L-2016.09L+ice40, Build 077R, Dec  2 2016
+#install: C:\lscc\iCEcube2.2017.08\synpbase
+#OS: Windows 8 6.2
+#Hostname: DESKTOP-6I79T4A
+
+# Sun Sep 09 00:54:27 2018
+
+#Implementation: HP2VGA_Implmnt
+
+Synopsys HDL Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Synopsys Verilog Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v" (library work)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\vga_control.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v" (library work)
+Verilog syntax check successful!
+File E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\vga_control.v changed - recompiling
+Selecting top level module main
+@N: CG364 :"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v":698:7:698:19|Synthesizing module SB_PLL40_CORE in library work.
+
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":1:7:1:12|Synthesizing module TX_PLL in library work.
+
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":18:38:18:38|Input EXTFEEDBACK on instance TX_PLL_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":19:39:19:39|Input DYNAMICDELAY on instance TX_PLL_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":22:42:22:42|Input LATCHINPUTVALUE on instance TX_PLL_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":24:30:24:30|Input SDI on instance TX_PLL_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":26:31:26:31|Input SCLK on instance TX_PLL_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":1:7:1:9|Synthesizing module RAM in library work.
+
+@N: CL134 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":10:1:10:6|Found RAM mem, depth=16384, width=8
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\vga_control.v":22:7:22:17|Synthesizing module vga_control in library work.
+
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":1:7:1:10|Synthesizing module main in library work.
+
+@W: CS263 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":27:6:27:18|Port-width mismatch for port din. The port definition is 8 bits, but the actual port connection bit width is 6. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":27:21:27:21|Port-width mismatch for port write_en. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":27:62:27:62|Port-width mismatch for port wclk. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":27:65:27:77|Port-width mismatch for port raddr. The port definition is 14 bits, but the actual port connection bit width is 6. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":33:28:33:28|Port-width mismatch for port ENABLE. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":34:27:34:27|Port-width mismatch for port RESET. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":43:26:43:26|Port-width mismatch for port SYNC. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":44:29:44:29|Port-width mismatch for port SYNC_EN. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CL168 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":27:1:27:3|Removing instance II_1 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@N: CL159 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":4:12:4:20|Input TVP_HSYNC is unused.
+@N: CL189 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\vga_control.v":66:4:66:9|Register bit VGA_X[11] is always 0.
+@W: CL260 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\vga_control.v":66:4:66:9|Pruning register bit 11 of VGA_X[11:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 79MB peak: 94MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 09 00:54:28 2018
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":1:7:1:10|Selected library: work cell: main view verilog as top level
+@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":1:7:1:10|Selected library: work cell: main view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 09 00:54:28 2018
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 09 00:54:28 2018
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+File E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_comp.srs changed - recompiling
+@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":1:7:1:10|Selected library: work cell: main view verilog as top level
+@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":1:7:1:10|Selected library: work cell: main view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Sep 09 00:54:29 2018
+
+###########################################################]
+Pre-mapping Report
+
+# Sun Sep 09 00:54:30 2018
+
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09L+ice40
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@A: MF827 |No constraint file specified.
+@L: E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA_scck.rpt 
+Printing clock  summary report in "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+
+ICG Latch Removal Summary:
+Number of ICG latches removed:	0
+Number of ICG latches not removed:	0
+syn_allowed_resources : blockrams=32  set on top level netlist main
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+
+
+Clock Summary
+*****************
+
+Start                               Requested     Requested     Clock                           Clock                     Clock
+Clock                               Frequency     Period        Type                            Group                     Load 
+-------------------------------------------------------------------------------------------------------------------------------
+TX_PLL|PLLOUTCORE_derived_clock     170.7 MHz     5.857         derived (from main|TVP_CLK)     Autoconstr_clkgroup_1     23   
+main|TVP_CLK                        70.0 MHz      14.278        inferred                        Autoconstr_clkgroup_1     0    
+main|TVP_VSYNC                      261.7 MHz     3.821         inferred                        Autoconstr_clkgroup_0     7    
+===============================================================================================================================
+
+@W: MT529 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\main.v":57:1:57:6|Found inferred clock main|TVP_VSYNC which controls 7 sequential elements including FRAME_COUNTER[5:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 47MB peak: 133MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun Sep 09 00:54:31 2018
+
+###########################################################]
+Map & Optimize Report
+
+# Sun Sep 09 00:54:31 2018
+
+Synopsys Lattice Technology Mapper, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09L+ice40
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: MT206 |Auto Constrain mode is enabled
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+@N: MO231 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\vga_control.v":66:4:66:9|Found counter in view:work.vga_control(verilog) instance VGA_Y[11:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -1.79ns		 103 /        30
+   2		0h:00m:00s		    -1.79ns		 103 /        30
+@N: FX271 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\vga_control.v":71:15:71:34|Replicating instance II_2.VGA_X11lto10_0 (in view: work.main(verilog)) with 23 loads 1 time to improve timing.
+Timing driven replication report
+Added 0 Registers via timing driven replication
+Added 1 LUTs via timing driven replication
+
+   3		0h:00m:00s		    -1.79ns		 105 /        30
+
+
+   4		0h:00m:00s		    -1.79ns		 104 /        30
+@N: FX1017 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\main.v":19:1:19:6|SB_GB inserted on the net ADV_CLK_c.
+@N: FX1016 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\main.v":5:12:5:20|SB_GB_IO inserted on the port TVP_VSYNC.
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 7 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 23 clock pin(s) of sequential element(s)
+0 instances converted, 23 sequential instances remain driven by gated/generated clocks
+
+============================== Non-Gated/Non-Generated Clocks ==============================
+Clock Tree ID     Driving Element          Drive Element Type     Fanout     Sample Instance
+--------------------------------------------------------------------------------------------
+@K:CKID0002       TVP_VSYNC_ibuf_gb_io     SB_GB_IO               7          PULSE_1HZ      
+============================================================================================
+================================================================================================= Gated/Generated Clocks ==================================================================================================
+Clock Tree ID     Driving Element      Drive Element Type     Fanout     Sample Instance     Explanation                                                                                                                   
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       II_0.TX_PLL_inst     SB_PLL40_CORE          23         II_2.VGA_Y[11]      Gating structure creates improper gating logic. See the Gated Clocks description in the user guide for conversion requirements
+===========================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 134MB)
+
+Writing Analyst data base E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 132MB peak: 134MB)
+
+Writing EDIF Netlist and constraint files
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@N: FX1056 |Writing EDF file: E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.edf
+L-2016.09L+ice40
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 135MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 135MB)
+
+@W: MT420 |Found inferred clock main|TVP_CLK with period 6.61ns. Please declare a user-defined clock on object "p:TVP_CLK"
+@W: MT420 |Found inferred clock main|TVP_VSYNC with period 5.12ns. Please declare a user-defined clock on object "p:TVP_VSYNC"
+@N: MT615 |Found clock TX_PLL|PLLOUTCORE_derived_clock with period 6.61ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Sun Sep 09 00:54:33 2018
+#
+
+
+Top view:               main
+Requested Frequency:    151.3 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -1.167
+
+                                    Requested     Estimated     Requested     Estimated                 Clock                           Clock                
+Starting Clock                      Frequency     Frequency     Period        Period        Slack       Type                            Group                
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+TX_PLL|PLLOUTCORE_derived_clock     151.3 MHz     128.6 MHz     6.610         7.777         -1.167      derived (from main|TVP_CLK)     Autoconstr_clkgroup_1
+main|TVP_CLK                        151.3 MHz     NA            6.610         NA            DCM/PLL     inferred                        Autoconstr_clkgroup_1
+main|TVP_VSYNC                      195.4 MHz     166.1 MHz     5.117         6.020         -0.903      inferred                        Autoconstr_clkgroup_0
+=============================================================================================================================================================
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                            |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                         Ending                           |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+main|TVP_VSYNC                   main|TVP_VSYNC                   |  5.117       -0.903  |  No paths    -      |  No paths    -      |  No paths    -    
+TX_PLL|PLLOUTCORE_derived_clock  TX_PLL|PLLOUTCORE_derived_clock  |  6.610       -1.167  |  No paths    -      |  No paths    -      |  No paths    -    
+=========================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: TX_PLL|PLLOUTCORE_derived_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                   Starting                                                               Arrival           
+Instance           Reference                           Type         Pin     Net           Time        Slack 
+                   Clock                                                                                    
+------------------------------------------------------------------------------------------------------------
+II_2.VGA_Y[8]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[8]      0.540       -1.167
+II_2.VGA_Y[1]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[1]      0.540       -1.117
+II_2.VGA_Y[10]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[10]     0.540       -1.117
+II_2.VGA_Y[2]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[2]      0.540       -1.096
+II_2.VGA_X[5]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[5]      0.540       -1.089
+II_2.VGA_Y[11]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[11]     0.540       -1.089
+II_2.VGA_Y[3]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[3]      0.540       -1.061
+II_2.VGA_X[6]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[6]      0.540       -1.040
+II_2.VGA_X[0]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFSR     Q       VGA_X[0]      0.540       -1.033
+II_2.VGA_Y[0]      TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE      Q       VGA_Y[0]      0.540       -1.033
+============================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                  Starting                                                                Required           
+Instance          Reference                           Type        Pin     Net             Time         Slack 
+                  Clock                                                                                      
+-------------------------------------------------------------------------------------------------------------
+II_2.VGA_Y[0]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[0]     6.505        -1.167
+II_2.VGA_Y[1]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[1]     6.505        -1.167
+II_2.VGA_Y[2]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[2]     6.505        -1.167
+II_2.VGA_Y[3]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[3]     6.505        -1.167
+II_2.VGA_Y[4]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[4]     6.505        -1.167
+II_2.VGA_Y[5]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[5]     6.505        -1.167
+II_2.VGA_Y[6]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[6]     6.505        -1.167
+II_2.VGA_Y[7]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[7]     6.505        -1.167
+II_2.VGA_Y[8]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[8]     6.505        -1.167
+II_2.VGA_Y[9]     TX_PLL|PLLOUTCORE_derived_clock     SB_DFFE     D       VGA_Y_lm[9]     6.505        -1.167
+=============================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      6.610
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         6.505
+
+    - Propagation time:                      7.671
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.166
+
+    Number of logic level(s):                3
+    Starting point:                          II_2.VGA_Y[8] / Q
+    Ending point:                            II_2.VGA_Y[0] / D
+    The start point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
+    The end   point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                      Type        Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+II_2.VGA_Y[8]             SB_DFFE     Q        Out     0.540     0.540       -         
+VGA_Y[8]                  Net         -        -       1.599     -           4         
+II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     I0       In      -         2.139       -         
+II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     O        Out     0.449     2.588       -         
+N_17_4                    Net         -        -       1.371     -           3         
+II_2.VGA_Y_RNI44GN[0]     SB_LUT4     I0       In      -         3.959       -         
+II_2.VGA_Y_RNI44GN[0]     SB_LUT4     O        Out     0.449     4.408       -         
+N_17                      Net         -        -       1.371     -           12        
+II_2.VGA_Y_RNO[0]         SB_LUT4     I0       In      -         5.779       -         
+II_2.VGA_Y_RNO[0]         SB_LUT4     O        Out     0.386     6.164       -         
+VGA_Y_lm[0]               Net         -        -       1.507     -           1         
+II_2.VGA_Y[0]             SB_DFFE     D        In      -         7.671       -         
+=======================================================================================
+Total path delay (propagation time + setup) of 7.776 is 1.928(24.8%) logic and 5.848(75.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      6.610
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         6.505
+
+    - Propagation time:                      7.671
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.166
+
+    Number of logic level(s):                3
+    Starting point:                          II_2.VGA_Y[8] / Q
+    Ending point:                            II_2.VGA_Y[10] / D
+    The start point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
+    The end   point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                      Type        Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+II_2.VGA_Y[8]             SB_DFFE     Q        Out     0.540     0.540       -         
+VGA_Y[8]                  Net         -        -       1.599     -           4         
+II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     I0       In      -         2.139       -         
+II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     O        Out     0.449     2.588       -         
+N_17_4                    Net         -        -       1.371     -           3         
+II_2.VGA_Y_RNI44GN[0]     SB_LUT4     I0       In      -         3.959       -         
+II_2.VGA_Y_RNI44GN[0]     SB_LUT4     O        Out     0.449     4.408       -         
+N_17                      Net         -        -       1.371     -           12        
+II_2.VGA_Y_RNO[10]        SB_LUT4     I0       In      -         5.779       -         
+II_2.VGA_Y_RNO[10]        SB_LUT4     O        Out     0.386     6.164       -         
+VGA_Y_lm[10]              Net         -        -       1.507     -           1         
+II_2.VGA_Y[10]            SB_DFFE     D        In      -         7.671       -         
+=======================================================================================
+Total path delay (propagation time + setup) of 7.776 is 1.928(24.8%) logic and 5.848(75.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      6.610
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         6.505
+
+    - Propagation time:                      7.671
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.166
+
+    Number of logic level(s):                3
+    Starting point:                          II_2.VGA_Y[8] / Q
+    Ending point:                            II_2.VGA_Y[9] / D
+    The start point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
+    The end   point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                      Type        Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+II_2.VGA_Y[8]             SB_DFFE     Q        Out     0.540     0.540       -         
+VGA_Y[8]                  Net         -        -       1.599     -           4         
+II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     I0       In      -         2.139       -         
+II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     O        Out     0.449     2.588       -         
+N_17_4                    Net         -        -       1.371     -           3         
+II_2.VGA_Y_RNI44GN[0]     SB_LUT4     I0       In      -         3.959       -         
+II_2.VGA_Y_RNI44GN[0]     SB_LUT4     O        Out     0.449     4.408       -         
+N_17                      Net         -        -       1.371     -           12        
+II_2.VGA_Y_RNO[9]         SB_LUT4     I0       In      -         5.779       -         
+II_2.VGA_Y_RNO[9]         SB_LUT4     O        Out     0.386     6.164       -         
+VGA_Y_lm[9]               Net         -        -       1.507     -           1         
+II_2.VGA_Y[9]             SB_DFFE     D        In      -         7.671       -         
+=======================================================================================
+Total path delay (propagation time + setup) of 7.776 is 1.928(24.8%) logic and 5.848(75.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      6.610
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         6.505
+
+    - Propagation time:                      7.671
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.166
+
+    Number of logic level(s):                3
+    Starting point:                          II_2.VGA_Y[8] / Q
+    Ending point:                            II_2.VGA_Y[8] / D
+    The start point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
+    The end   point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                      Type        Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+II_2.VGA_Y[8]             SB_DFFE     Q        Out     0.540     0.540       -         
+VGA_Y[8]                  Net         -        -       1.599     -           4         
+II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     I0       In      -         2.139       -         
+II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     O        Out     0.449     2.588       -         
+N_17_4                    Net         -        -       1.371     -           3         
+II_2.VGA_Y_RNI44GN[0]     SB_LUT4     I0       In      -         3.959       -         
+II_2.VGA_Y_RNI44GN[0]     SB_LUT4     O        Out     0.449     4.408       -         
+N_17                      Net         -        -       1.371     -           12        
+II_2.VGA_Y_RNO[8]         SB_LUT4     I0       In      -         5.779       -         
+II_2.VGA_Y_RNO[8]         SB_LUT4     O        Out     0.386     6.164       -         
+VGA_Y_lm[8]               Net         -        -       1.507     -           1         
+II_2.VGA_Y[8]             SB_DFFE     D        In      -         7.671       -         
+=======================================================================================
+Total path delay (propagation time + setup) of 7.776 is 1.928(24.8%) logic and 5.848(75.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      6.610
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         6.505
+
+    - Propagation time:                      7.671
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.166
+
+    Number of logic level(s):                3
+    Starting point:                          II_2.VGA_Y[8] / Q
+    Ending point:                            II_2.VGA_Y[7] / D
+    The start point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
+    The end   point is clocked by            TX_PLL|PLLOUTCORE_derived_clock [rising] on pin C
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                      Type        Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+II_2.VGA_Y[8]             SB_DFFE     Q        Out     0.540     0.540       -         
+VGA_Y[8]                  Net         -        -       1.599     -           4         
+II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     I0       In      -         2.139       -         
+II_2.VGA_Y_RNIN4Q8[8]     SB_LUT4     O        Out     0.449     2.588       -         
+N_17_4                    Net         -        -       1.371     -           3         
+II_2.VGA_Y_RNI44GN[0]     SB_LUT4     I0       In      -         3.959       -         
+II_2.VGA_Y_RNI44GN[0]     SB_LUT4     O        Out     0.449     4.408       -         
+N_17                      Net         -        -       1.371     -           12        
+II_2.VGA_Y_RNO[7]         SB_LUT4     I0       In      -         5.779       -         
+II_2.VGA_Y_RNO[7]         SB_LUT4     O        Out     0.386     6.164       -         
+VGA_Y_lm[7]               Net         -        -       1.507     -           1         
+II_2.VGA_Y[7]             SB_DFFE     D        In      -         7.671       -         
+=======================================================================================
+Total path delay (propagation time + setup) of 7.776 is 1.928(24.8%) logic and 5.848(75.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: main|TVP_VSYNC
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                     Starting                                                   Arrival           
+Instance             Reference          Type       Pin     Net                  Time        Slack 
+                     Clock                                                                        
+--------------------------------------------------------------------------------------------------
+FRAME_COUNTER[1]     main|TVP_VSYNC     SB_DFF     Q       FRAME_COUNTER[1]     0.540       -0.903
+FRAME_COUNTER[3]     main|TVP_VSYNC     SB_DFF     Q       FRAME_COUNTER[3]     0.540       -0.854
+FRAME_COUNTER[4]     main|TVP_VSYNC     SB_DFF     Q       FRAME_COUNTER[4]     0.540       -0.833
+FRAME_COUNTER[0]     main|TVP_VSYNC     SB_DFF     Q       FRAME_COUNTER[0]     0.540       -0.770
+FRAME_COUNTER[5]     main|TVP_VSYNC     SB_DFF     Q       FRAME_COUNTER[5]     0.540       -0.770
+FRAME_COUNTER[2]     main|TVP_VSYNC     SB_DFF     Q       FRAME_COUNTER[2]     0.540       -0.700
+PULSE_1HZ            main|TVP_VSYNC     SB_DFF     Q       PULSE_1HZ            0.540       1.050 
+==================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                     Starting                                                       Required           
+Instance             Reference          Type       Pin     Net                      Time         Slack 
+                     Clock                                                                             
+-------------------------------------------------------------------------------------------------------
+PULSE_1HZ            main|TVP_VSYNC     SB_DFF     D       PULSE_1HZ_0              5.011        -0.903
+FRAME_COUNTER[2]     main|TVP_VSYNC     SB_DFF     D       FRAME_COUNTER_3[2]       5.011        -0.840
+FRAME_COUNTER[3]     main|TVP_VSYNC     SB_DFF     D       FRAME_COUNTER_3[3]       5.011        -0.770
+FRAME_COUNTER[4]     main|TVP_VSYNC     SB_DFF     D       FRAME_COUNTER_3[4]       5.011        -0.770
+FRAME_COUNTER[5]     main|TVP_VSYNC     SB_DFF     D       FRAME_COUNTER_3[5]       5.011        -0.770
+FRAME_COUNTER[0]     main|TVP_VSYNC     SB_DFF     D       FRAME_COUNTER_i[0]       5.011        0.917 
+FRAME_COUNTER[1]     main|TVP_VSYNC     SB_DFF     D       FRAME_COUNTER_RNO[1]     5.011        0.917 
+=======================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.117
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.011
+
+    - Propagation time:                      5.915
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.903
+
+    Number of logic level(s):                2
+    Starting point:                          FRAME_COUNTER[1] / Q
+    Ending point:                            PULSE_1HZ / D
+    The start point is clocked by            main|TVP_VSYNC [rising] on pin C
+    The end   point is clocked by            main|TVP_VSYNC [rising] on pin C
+
+Instance / Net                           Pin      Pin               Arrival     No. of    
+Name                         Type        Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------
+FRAME_COUNTER[1]             SB_DFF      Q        Out     0.540     0.540       -         
+FRAME_COUNTER[1]             Net         -        -       1.599     -           6         
+FRAME_COUNTER_RNILFCN[3]     SB_LUT4     I0       In      -         2.139       -         
+FRAME_COUNTER_RNILFCN[3]     SB_LUT4     O        Out     0.449     2.588       -         
+FRAME_COUNTER11_3            Net         -        -       1.371     -           2         
+PULSE_1HZ_RNO                SB_LUT4     I0       In      -         3.959       -         
+PULSE_1HZ_RNO                SB_LUT4     O        Out     0.449     4.408       -         
+PULSE_1HZ_0                  Net         -        -       1.507     -           1         
+PULSE_1HZ                    SB_DFF      D        In      -         5.915       -         
+==========================================================================================
+Total path delay (propagation time + setup) of 6.020 is 1.543(25.6%) logic and 4.477(74.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      5.117
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.011
+
+    - Propagation time:                      5.865
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.854
+
+    Number of logic level(s):                2
+    Starting point:                          FRAME_COUNTER[3] / Q
+    Ending point:                            PULSE_1HZ / D
+    The start point is clocked by            main|TVP_VSYNC [rising] on pin C
+    The end   point is clocked by            main|TVP_VSYNC [rising] on pin C
+
+Instance / Net                           Pin      Pin               Arrival     No. of    
+Name                         Type        Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------
+FRAME_COUNTER[3]             SB_DFF      Q        Out     0.540     0.540       -         
+FRAME_COUNTER[3]             Net         -        -       1.599     -           4         
+FRAME_COUNTER_RNILFCN[3]     SB_LUT4     I1       In      -         2.139       -         
+FRAME_COUNTER_RNILFCN[3]     SB_LUT4     O        Out     0.400     2.539       -         
+FRAME_COUNTER11_3            Net         -        -       1.371     -           2         
+PULSE_1HZ_RNO                SB_LUT4     I0       In      -         3.910       -         
+PULSE_1HZ_RNO                SB_LUT4     O        Out     0.449     4.359       -         
+PULSE_1HZ_0                  Net         -        -       1.507     -           1         
+PULSE_1HZ                    SB_DFF      D        In      -         5.865       -         
+==========================================================================================
+Total path delay (propagation time + setup) of 5.971 is 1.494(25.0%) logic and 4.477(75.0%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      5.117
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.011
+
+    - Propagation time:                      5.851
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.840
+
+    Number of logic level(s):                2
+    Starting point:                          FRAME_COUNTER[1] / Q
+    Ending point:                            FRAME_COUNTER[2] / D
+    The start point is clocked by            main|TVP_VSYNC [rising] on pin C
+    The end   point is clocked by            main|TVP_VSYNC [rising] on pin C
+
+Instance / Net                           Pin      Pin               Arrival     No. of    
+Name                         Type        Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------
+FRAME_COUNTER[1]             SB_DFF      Q        Out     0.540     0.540       -         
+FRAME_COUNTER[1]             Net         -        -       1.599     -           6         
+FRAME_COUNTER_RNILFCN[3]     SB_LUT4     I0       In      -         2.139       -         
+FRAME_COUNTER_RNILFCN[3]     SB_LUT4     O        Out     0.449     2.588       -         
+FRAME_COUNTER11_3            Net         -        -       1.371     -           2         
+FRAME_COUNTER_RNO[2]         SB_LUT4     I0       In      -         3.959       -         
+FRAME_COUNTER_RNO[2]         SB_LUT4     O        Out     0.386     4.345       -         
+FRAME_COUNTER_3[2]           Net         -        -       1.507     -           1         
+FRAME_COUNTER[2]             SB_DFF      D        In      -         5.851       -         
+==========================================================================================
+Total path delay (propagation time + setup) of 5.957 is 1.480(24.8%) logic and 4.477(75.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      5.117
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.011
+
+    - Propagation time:                      5.845
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.833
+
+    Number of logic level(s):                2
+    Starting point:                          FRAME_COUNTER[4] / Q
+    Ending point:                            PULSE_1HZ / D
+    The start point is clocked by            main|TVP_VSYNC [rising] on pin C
+    The end   point is clocked by            main|TVP_VSYNC [rising] on pin C
+
+Instance / Net                           Pin      Pin               Arrival     No. of    
+Name                         Type        Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------
+FRAME_COUNTER[4]             SB_DFF      Q        Out     0.540     0.540       -         
+FRAME_COUNTER[4]             Net         -        -       1.599     -           4         
+FRAME_COUNTER_RNILFCN[3]     SB_LUT4     I2       In      -         2.139       -         
+FRAME_COUNTER_RNILFCN[3]     SB_LUT4     O        Out     0.379     2.518       -         
+FRAME_COUNTER11_3            Net         -        -       1.371     -           2         
+PULSE_1HZ_RNO                SB_LUT4     I0       In      -         3.889       -         
+PULSE_1HZ_RNO                SB_LUT4     O        Out     0.449     4.338       -         
+PULSE_1HZ_0                  Net         -        -       1.507     -           1         
+PULSE_1HZ                    SB_DFF      D        In      -         5.845       -         
+==========================================================================================
+Total path delay (propagation time + setup) of 5.950 is 1.473(24.8%) logic and 4.477(75.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      5.117
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.011
+
+    - Propagation time:                      5.802
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.791
+
+    Number of logic level(s):                2
+    Starting point:                          FRAME_COUNTER[3] / Q
+    Ending point:                            FRAME_COUNTER[2] / D
+    The start point is clocked by            main|TVP_VSYNC [rising] on pin C
+    The end   point is clocked by            main|TVP_VSYNC [rising] on pin C
+
+Instance / Net                           Pin      Pin               Arrival     No. of    
+Name                         Type        Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------
+FRAME_COUNTER[3]             SB_DFF      Q        Out     0.540     0.540       -         
+FRAME_COUNTER[3]             Net         -        -       1.599     -           4         
+FRAME_COUNTER_RNILFCN[3]     SB_LUT4     I1       In      -         2.139       -         
+FRAME_COUNTER_RNILFCN[3]     SB_LUT4     O        Out     0.400     2.539       -         
+FRAME_COUNTER11_3            Net         -        -       1.371     -           2         
+FRAME_COUNTER_RNO[2]         SB_LUT4     I0       In      -         3.910       -         
+FRAME_COUNTER_RNO[2]         SB_LUT4     O        Out     0.386     4.295       -         
+FRAME_COUNTER_3[2]           Net         -        -       1.507     -           1         
+FRAME_COUNTER[2]             SB_DFF      D        In      -         5.802       -         
+==========================================================================================
+Total path delay (propagation time + setup) of 5.908 is 1.431(24.2%) logic and 4.477(75.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 135MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 135MB)
+
+---------------------------------------
+Resource Usage Report for main 
+
+Mapping to part: ice40hx8kct256
+Cell usage:
+GND             2 uses
+SB_CARRY        26 uses
+SB_DFF          7 uses
+SB_DFFE         12 uses
+SB_DFFSR        11 uses
+SB_GB           1 use
+SB_PLL40_CORE   1 use
+VCC             2 uses
+SB_LUT4         83 uses
+
+I/O ports: 41
+I/O primitives: 34
+SB_GB_IO       1 use
+SB_IO          33 uses
+
+I/O Register bits:                  0
+Register bits not including I/Os:   30 (0%)
+Total load per clock:
+   main|TVP_VSYNC: 1
+   main|TVP_CLK: 1
+   TX_PLL|PLLOUTCORE_derived_clock: 25
+
+@S |Mapping Summary:
+Total  LUTs: 83 (1%)
+
+Distribution of All Consumed LUTs = LUT4 
+Distribution of All Consumed Luts 83 = 83 
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 27MB peak: 135MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:01s cputime
+# Sun Sep 09 00:54:33 2018
+
+###########################################################]

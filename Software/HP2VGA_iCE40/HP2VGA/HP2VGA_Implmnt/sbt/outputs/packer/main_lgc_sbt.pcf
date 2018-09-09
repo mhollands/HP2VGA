@@ -1,0 +1,182 @@
+set_location IN_MUX_bfv_9_28_0_ 9 28 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_9_29_0_ 9 29 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_6_26_0_ 6 26 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_5_27_0_ 5 27 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_5_28_0_ 5 28 0 #ICE_CARRY_IN_MUX
+set_location CONSTANT_ONE_LUT4 6 1 7 #SB_LUT4
+set_location GB_BUFFER_ADV_CLK_c_g_THRU_LUT4_0 24 26 1 #SB_LUT4
+set_location II_2.un3_VGA_X_O_cry_5_THRU_LUT4_0 6 26 6 #SB_LUT4
+set_location II_2.VGA_X[4] 5 27 3 #SB_DFFSR
+set_location II_2.VGA_Y_cry_c[2] 9 28 2 #SB_CARRY
+set_location II_2.VGA_Y_RNO[2] 9 28 2 #SB_LUT4
+set_location II_2.VGA_Y_RNI0A7G[5] 10 30 4 #SB_LUT4
+set_location II_2.VGA_Y_cry_c[10] 9 29 2 #SB_CARRY
+set_location II_2.VGA_Y[4] 9 28 4 #SB_DFFE
+set_location II_2.VGA_X_RNIEOHU1[4] 5 26 3 #SB_LUT4
+set_location FRAME_COUNTER[5] 10 27 4 #SB_DFF
+set_location II_2.VGA_Y_RNI2C7G[7] 10 30 7 #SB_LUT4
+set_location FRAME_COUNTER_RNO_0[4] 10 26 6 #SB_LUT4
+set_location II_2.VGA_Y_cry_c[9] 9 29 1 #SB_CARRY
+set_location II_2.VGA_Y[1] 9 28 1 #SB_DFFE
+set_location II_2.VGA_X_RNO[1] 6 29 3 #SB_LUT4
+set_location FRAME_COUNTER[0] 10 26 0 #SB_DFF
+set_location II_2.un1_VGA_X_cry_4_c 5 27 3 #SB_CARRY
+set_location II_2.VGA_X_RNIL0TL1[6] 6 26 1 #SB_LUT4
+set_location II_2.VGA_X_RNO[4] 5 27 3 #SB_LUT4
+set_location II_2.VGA_X_RNIKVSL1[5] 6 26 0 #SB_LUT4
+set_location II_2.VGA_Y_RNILOOM[9] 9 30 1 #SB_LUT4
+set_location II_2.VGA_X_RNO[10] 5 28 1 #SB_LUT4
+set_location II_2.VGA_Y_RNIN4Q8[8] 9 30 2 #SB_LUT4
+set_location II_2.VGA_X_RNIGRSL1[1] 5 27 0 #SB_LUT4
+set_location II_2.VGA_X[7] 5 27 6 #SB_DFFSR
+set_location II_2.VGA_Y_cry_c[1] 9 28 1 #SB_CARRY
+set_location II_2.VGA_Y_RNO[7] 9 28 7 #SB_LUT4
+set_location FRAME_COUNTER_RNO[2] 10 27 5 #SB_LUT4
+set_location II_2.VGA_Y_RNI44GN[0] 10 29 2 #SB_LUT4
+set_location II_2.VGA_X[2] 5 27 1 #SB_DFFSR
+set_location II_2.VGA_Y_RNIPKSK1[4] 9 30 7 #SB_LUT4
+set_location II_2.VGA_Y_RNIK1071_0[4] 7 28 6 #SB_LUT4
+set_location II_2.VGA_Y_RNIJHSG[10] 9 30 4 #SB_LUT4
+set_location II_2.VGA_Y_RNIHUV61[1] 10 30 0 #SB_LUT4
+set_location II_2.VGA_Y_RNIHUV61_0[1] 9 27 0 #SB_LUT4
+set_location II_2.VGA_X_RNO[7] 5 27 6 #SB_LUT4
+set_location II_2.VGA_Y_cry_c[5] 9 28 5 #SB_CARRY
+set_location II_2.VGA_Y_RNIJ0071[3] 10 30 3 #SB_LUT4
+set_location II_2.VGA_Y[2] 9 28 2 #SB_DFFE
+set_location FRAME_COUNTER_RNILFCN[3] 10 27 6 #SB_LUT4
+set_location FRAME_COUNTER[3] 10 26 4 #SB_DFF
+set_location II_2.VGA_Y_RNO[9] 9 29 1 #SB_LUT4
+set_location II_2.VGA_Y_RNI1B7G[6] 10 30 5 #SB_LUT4
+set_location II_2.VGA_X_RNICQLN5[9] 6 28 1 #SB_LUT4
+set_location II_2.VGA_X[6] 5 27 5 #SB_DFFSR
+set_location II_2.VGA_X[10] 5 28 1 #SB_DFFSR
+set_location II_2.un1_VGA_X_cry_2_c 5 27 1 #SB_CARRY
+set_location II_2.VGA_Y_cry_c[0] 9 28 0 #SB_CARRY
+set_location II_2.VGA_Y_RNO[0] 10 28 6 #SB_LUT4
+set_location II_2.VGA_X_RNO[3] 5 27 2 #SB_LUT4
+set_location II_2.VGA_Y_RNIHUP8[11] 10 29 0 #SB_LUT4
+set_location II_2.VGA_Y_RNIGTV61_0[0] 4 28 5 #SB_LUT4
+set_location II_2.VGA_Y[6] 9 28 6 #SB_DFFE
+set_location FRAME_COUNTER_RNO[5] 10 27 4 #SB_LUT4
+set_location II_2.un1_VGA_X_cry_3_c 5 27 2 #SB_CARRY
+set_location II_2.VGA_X_RNICQLN5_0[9] 6 28 3 #SB_LUT4
+set_location II_2.VGA_X_RNI6U805[8] 5 26 4 #SB_LUT4
+set_location II_2.VGA_X[1] 6 29 3 #SB_DFFSR
+set_location II_2.VGA_Y[8] 9 29 0 #SB_DFFE
+set_location II_2.VGA_X_RNO[6] 5 27 5 #SB_LUT4
+set_location II_2.un1_VGA_X_cry_8_c 5 27 7 #SB_CARRY
+set_location II_2.VGA_Y_cry_c[4] 9 28 4 #SB_CARRY
+set_location II_2.VGA_Y_RNO[4] 9 28 4 #SB_LUT4
+set_location II_2.VGA_Y_RNO[11] 9 29 3 #SB_LUT4
+set_location II_2.VGA_Y_RNI6OT2[1] 9 30 0 #SB_LUT4
+set_location II_2.VGA_Y[3] 9 28 3 #SB_DFFE
+set_location FRAME_COUNTER[2] 10 27 5 #SB_DFF
+set_location II_2.VGA_Y_RNIL2071[5] 4 26 1 #SB_LUT4
+set_location FRAME_COUNTER_RNO[1] 10 26 2 #SB_LUT4
+set_location II_2.un3_VGA_X_O_cry_3_c 6 26 3 #SB_CARRY
+set_location II_2.un1_VGA_X_cry_1_c 5 27 0 #SB_CARRY
+set_location II_2.VGA_Y_RNIK1071[4] 10 30 2 #SB_LUT4
+set_location II_2.VGA_X[5] 5 27 4 #SB_DFFSR
+set_location II_2.VGA_Y_cry_c[3] 9 28 3 #SB_CARRY
+set_location II_2.VGA_Y_RNO[1] 9 28 1 #SB_LUT4
+set_location II_2.VGA_Y_RNIIVV61_0[2] 4 28 6 #SB_LUT4
+set_location II_2.VGA_X_RNO[2] 5 27 1 #SB_LUT4
+set_location II_2.VGA_X_RNIH9E22[8] 6 27 2 #SB_LUT4
+set_location II_2.VGA_X_RNIFQSL1[0] 4 30 5 #SB_LUT4
+set_location II_2.un3_VGA_X_O_cry_5_c 6 26 5 #SB_CARRY
+set_location II_2.un1_VGA_X_cry_9_c 5 28 0 #SB_CARRY
+set_location II_2.un1_VGA_X_cry_6_c 5 27 5 #SB_CARRY
+set_location II_2.VGA_Y_RNIJCVO[8] 9 30 6 #SB_LUT4
+set_location II_2.VGA_Y[7] 9 28 7 #SB_DFFE
+set_location FRAME_COUNTER_RNO[4] 10 26 7 #SB_LUT4
+set_location LED_obuf_RNO 10 20 6 #SB_LUT4
+set_location II_2.VGA_Y_RNIM3071[6] 5 30 0 #SB_LUT4
+set_location II_2.VGA_Y_RNIJMOM[5] 10 30 1 #SB_LUT4
+set_location II_2.VGA_X_RNIB3E22[3] 5 26 1 #SB_LUT4
+set_location II_2.VGA_X[0] 6 28 6 #SB_DFFSR
+set_location FRAME_COUNTER_RNO_0[3] 10 26 3 #SB_LUT4
+set_location II_2.un3_VGA_X_O_cry_2_c 6 26 2 #SB_CARRY
+set_location II_2.VGA_Y[9] 9 29 1 #SB_DFFE
+set_location II_2.VGA_X_RNO[9] 5 28 0 #SB_LUT4
+set_location II_2.VGA_X_RNIM1TL1[7] 7 29 7 #SB_LUT4
+set_location II_2.VGA_X[9] 5 28 0 #SB_DFFSR
+set_location II_2.VGA_Y_cry_c[7] 9 28 7 #SB_CARRY
+set_location II_2.VGA_Y_RNO[5] 9 28 5 #SB_LUT4
+set_location II_2.VGA_Y_RNO[10] 9 29 2 #SB_LUT4
+set_location II_2.VGA_Y[11] 9 29 3 #SB_DFFE
+set_location II_2.VGA_Y[0] 10 28 6 #SB_DFFE
+set_location FRAME_COUNTER[1] 10 26 2 #SB_DFF
+set_location II_2.un1_VGA_X_cry_7_c 5 27 6 #SB_CARRY
+set_location II_2.VGA_Y_RNIN4071[7] 7 30 6 #SB_LUT4
+set_location II_2.VGA_X_RNIROPI1[5] 6 27 1 #SB_LUT4
+set_location II_2.VGA_X_RNI9U8V[6] 6 26 2 #SB_LUT4
+set_location II_2.VGA_X_RNI6GHU1[2] 6 28 4 #SB_LUT4
+set_location FRAME_COUNTER_RNO[0] 10 26 0 #SB_LUT4
+set_location PULSE_1HZ_RNO 10 27 7 #SB_LUT4
+set_location II_2.un3_VGA_X_O_cry_0_c 6 26 0 #SB_CARRY
+set_location II_2.VGA_X_RNO[5] 5 27 4 #SB_LUT4
+set_location II_2.un1_VGA_X_cry_5_c 5 27 4 #SB_CARRY
+set_location II_2.VGA_X_RNIJUSL1[4] 5 30 4 #SB_LUT4
+set_location II_2.un3_VGA_X_O_cry_1_c 6 26 1 #SB_CARRY
+set_location II_2.VGA_X_RNO[8] 5 27 7 #SB_LUT4
+set_location II_2.VGA_X_RNI5IM13[1] 6 28 0 #SB_LUT4
+set_location II_2.VGA_X[8] 5 27 7 #SB_DFFSR
+set_location II_2.VGA_Y_cry_c[6] 9 28 6 #SB_CARRY
+set_location II_2.VGA_Y_RNO[6] 9 28 6 #SB_LUT4
+set_location II_2.VGA_Y_RNIS29A[6] 10 29 3 #SB_LUT4
+set_location II_2.VGA_Y[10] 9 29 2 #SB_DFFE
+set_location FRAME_COUNTER_RNO[3] 10 26 4 #SB_LUT4
+set_location II_2.VGA_Y_RNIJ0071_0[3] 7 27 0 #SB_LUT4
+set_location II_2.VGA_Y_RNIDVT2[0] 10 29 7 #SB_LUT4
+set_location II_2.VGA_Y_RNI079A[11] 9 30 5 #SB_LUT4
+set_location II_2.VGA_X[3] 5 27 2 #SB_DFFSR
+set_location GND -1 -1 -1 #GND
+set_location PULSE_1HZ 10 27 7 #SB_DFF
+set_location II_2.VGA_Y_RNO[3] 9 28 3 #SB_LUT4
+set_location II_2.VGA_Y_RNIIVV61[2] 10 30 6 #SB_LUT4
+set_location II_2.VGA_Y[5] 9 28 5 #SB_DFFE
+set_location FRAME_COUNTER[4] 10 26 7 #SB_DFF
+set_location II_2.VGA_X_RNIHSSL1[2] 4 30 2 #SB_LUT4
+set_location FRAME_COUNTER_RNO_0[5] 10 27 3 #SB_LUT4
+set_location II_2.un3_VGA_X_O_cry_4_c 6 26 4 #SB_CARRY
+set_location II_2.VGA_Y_cry_c[8] 9 29 0 #SB_CARRY
+set_location II_2.VGA_Y_RNO[8] 9 29 0 #SB_LUT4
+set_location II_2.VGA_Y_RNIGTV61[0] 9 28 0 #SB_LUT4
+set_location II_2.VGA_Y_RNIGJ0B[0] 10 29 4 #SB_LUT4
+set_location II_2.VGA_X_RNIITSL1[3] 4 30 4 #SB_LUT4
+set_location II_2.VGA_Y_RNIF1U2[9] 10 29 1 #SB_LUT4
+set_location II_2.VGA_X_RNO[0] 6 28 6 #SB_LUT4
+set_io ADV_R[0] C4
+set_io ADV_B[7] A11
+set_io ADV_G[5] A4
+set_io DEBUG[7] E2
+set_io ADV_R[6] B1
+set_io ADV_B[5] B9
+set_io DEBUG[6] F2
+set_io ADV_R[7] B2
+set_io ADV_G[3] A3
+set_io ADV_CLK C9
+set_io ADV_B[2] A8
+set_io ADV_R[4] C1
+set_io ADV_G[2] B3
+set_io ADV_B[3] B8
+set_io ADV_R[5] C2
+set_io ADV_G[1] A2
+set_io ADV_B[0] A6
+set_io ADV_R[2] D1
+set_io ADV_HSYNC D3
+set_io ADV_G[0] A1
+set_io ADV_B[1] A7
+set_io TVP_VSYNC J5
+set_io TVP_CLK K6
+set_io ADV_R[3] D2
+set_io ADV_G[7] A5
+set_io ADV_B[6] A10
+set_io ADV_VSYNC E1
+set_io ADV_G[6] B5
+set_io ADV_BLANK_N C7
+set_io LED J8
+set_io ADV_R[1] C3
+set_io ADV_B[4] A9
+set_io ADV_SYNC_N C8
+set_io ADV_G[4] B4

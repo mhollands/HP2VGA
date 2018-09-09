@@ -1,0 +1,7 @@
+C:\lscc\iCEcube2.2017.08\synpbase\bin64\syn_nfilter.exe  -link  -multisrs  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_comp.srs"  -osyn  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_mult.srs"  -log  "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synlog\HP2VGA_multi_srs_gen.srr" 
+rc:0 success:1 runtime:1
+file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_comp.srs|io:i|time:1536453030|size:8924|exec:0
+file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_mult.srs|io:o|time:1536453032|size:3932|exec:0
+file:E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synlog\HP2VGA_multi_srs_gen.srr|io:o|time:1536453032|size:852|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin\syn_nfilter.exe|io:i|time:1534812757|size:3128320|exec:1
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin64\syn_nfilter.exe|io:i|time:1534812763|size:3947520|exec:1

@@ -1,0 +1,2 @@
+@E: CG389 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":27:1:27:3|Reference to undefined module RAM
+

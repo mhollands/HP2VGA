@@ -1,0 +1,2 @@
+CKID0001:@|S:II_0.TX_PLL_inst@|E:II_2.VGA_Y[11]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:TVP_VSYNC_ibuf_gb_io@|E:PULSE_1HZ@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002 

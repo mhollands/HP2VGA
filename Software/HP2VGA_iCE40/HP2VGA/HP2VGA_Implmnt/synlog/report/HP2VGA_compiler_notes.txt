@@ -1,0 +1,14 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v":698:7:698:19|Synthesizing module SB_PLL40_CORE in library work.
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":1:7:1:12|Synthesizing module TX_PLL in library work.
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":1:7:1:9|Synthesizing module RAM in library work.
+@N: CL134 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":10:1:10:6|Found RAM mem, depth=16384, width=8
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\vga_control.v":22:7:22:17|Synthesizing module vga_control in library work.
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":1:7:1:10|Synthesizing module main in library work.
+@N: CL159 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":4:12:4:20|Input TVP_HSYNC is unused.
+@N: CL189 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\vga_control.v":66:4:66:9|Register bit VGA_X[11] is always 0.
+@N|Running in 64-bit mode
+@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":1:7:1:10|Selected library: work cell: main view verilog as top level
+@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":1:7:1:10|Selected library: work cell: main view verilog as top level
+

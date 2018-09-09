@@ -1,0 +1,50 @@
+# ##############################################################################
+
+# iCEcube PCF
+
+# Version:            2017.08.27940
+
+# File Generated:     Sep 4 2018 20:44:35
+
+# Family & Device:    iCE40HX8K
+
+# Package:            BG121
+
+# ##############################################################################
+
+###IOSet List 34
+set_io ADV_G[4] B4 -pullup no
+set_io ADV_SYNC_N C8 -pullup yes
+set_io ADV_B[4] A9 -pullup no
+set_io ADV_G[5] A4 -pullup no
+set_io ADV_R[1] C3 -pullup no
+set_io LED J8 -pullup no
+set_io ADV_BLANK_N C7 -pullup yes
+set_io ADV_B[7] A11 -pullup no
+set_io ADV_G[6] B5 -pullup no
+set_io ADV_R[0] C4 -pullup no
+set_io ADV_VSYNC E1 -pullup no
+set_io ADV_B[6] A10 -pullup no
+set_io ADV_G[7] A5 -pullup no
+set_io ADV_R[3] D2 -pullup no
+set_io TVP_CLK K6 -pullup yes
+set_io TVP_VSYNC J5 -pullup yes
+set_io ADV_B[1] A7 -pullup no
+set_io ADV_G[0] A1 -pullup no
+set_io ADV_HSYNC D3 -pullup no
+set_io ADV_R[2] D1 -pullup no
+set_io ADV_B[0] A6 -pullup no
+set_io ADV_G[1] A2 -pullup no
+set_io ADV_R[5] C2 -pullup no
+set_io ADV_B[3] B8 -pullup no
+set_io ADV_G[2] B3 -pullup no
+set_io ADV_R[4] C1 -pullup no
+set_io ADV_B[2] A8 -pullup no
+set_io ADV_CLK C9 -pullup no
+set_io ADV_G[3] A3 -pullup no
+set_io ADV_R[7] B2 -pullup no
+set_io DEBUG[6] F2 -pullup yes
+set_io ADV_B[5] B9 -pullup no
+set_io ADV_R[6] B1 -pullup no
+set_io DEBUG[7] E2 -pullup yes
+
