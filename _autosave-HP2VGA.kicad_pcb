@@ -5209,7 +5209,7 @@
   )
 
   (module TO_SOT_Packages_SMD:SOT-23-6_Handsoldering (layer F.Cu) (tedit 5B40BEC3) (tstamp 5B0F355E)
-    (at 149.733 78.486 180)
+    (at 149.432 78.806 180)
     (descr "6-pin SOT-23 package, Handsoldering")
     (tags "SOT-23-6 Handsoldering")
     (path /5B01E305/59BFE865)

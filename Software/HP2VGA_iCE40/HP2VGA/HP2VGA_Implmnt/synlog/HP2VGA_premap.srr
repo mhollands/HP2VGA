@@ -1,4 +1,4 @@
-# Sun Sep 09 04:43:25 2018
+# Mon Sep 10 03:07:14 2018
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -12,13 +12,13 @@ Printing clock  summary report in "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Soft
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 102MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 102MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
 
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
@@ -26,7 +26,7 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 ICG Latch Removal Summary:
 Number of ICG latches removed:	0
 Number of ICG latches not removed:	0
-syn_allowed_resources : blockrams=32  set on top level netlist RAM
+syn_allowed_resources : blockrams=32  set on top level netlist PLL_SLOW
 
 Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
 
@@ -35,15 +35,10 @@ Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 Clock Summary
 *****************
 
-Start        Requested     Requested     Clock        Clock                     Clock
-Clock        Frequency     Period        Type         Group                     Load 
--------------------------------------------------------------------------------------
-RAM|rclk     1.0 MHz       1000.000      inferred     Autoconstr_clkgroup_1     8    
-RAM|wclk     1.0 MHz       1000.000      inferred     Autoconstr_clkgroup_0     8    
-=====================================================================================
-
-@W: MT529 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v":10:1:10:6|Found inferred clock RAM|wclk which controls 8 sequential elements including mem[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
-@W: MT529 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v":14:1:14:6|Found inferred clock RAM|rclk which controls 8 sequential elements including dout[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+Start     Requested     Requested     Clock     Clock     Clock
+Clock     Frequency     Period        Type      Group     Load 
+---------------------------------------------------------------
+===============================================================
 
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.sap.
@@ -60,6 +55,6 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 47MB peak: 133MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sun Sep 09 04:43:25 2018
+# Mon Sep 10 03:07:15 2018
 
 ###########################################################]

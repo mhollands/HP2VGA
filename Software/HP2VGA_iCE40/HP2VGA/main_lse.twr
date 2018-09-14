@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Sun Sep 09 23:24:17 2018
+Fri Sep 14 01:22:08 2018
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -25,114 +25,162 @@ Constraint: create_clock -period 20.000000 -name clk1 [get_nets ADV_CLK_c]
 
 ================================================================================
 Constraint: create_clock -period 20.000000 -name clk0 [get_nets TVP_CLK_c]
-            77 items scored, 0 timing errors detected.
+            1778 items scored, 7 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 9.041ns
+Error:  The following path violates requirements by 3.979ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFESR  C              \receive_module/rx_counter/FRAME_COUNTER_71__i0  (from TVP_CLK_c +)
-   Destination:    SB_DFFESR  D              \receive_module/rx_counter/FRAME_COUNTER_71__i5  (to TVP_CLK_c +)
+   Source:         SB_DFFSR   C              \receive_module/BRAM_ADDR__i0  (from TVP_CLK_c +)
+   Destination:    SB_DFFESR  D              \receive_module/BRAM_ADDR__i13  (to TVP_CLK_c +)
 
-   Delay:                  10.826ns  (26.0% logic, 74.0% route), 7 logic levels.
+   Delay:                  23.846ns  (25.5% logic, 74.5% route), 15 logic levels.
 
  Constraint Details:
 
-     10.826ns data_path \receive_module/rx_counter/FRAME_COUNTER_71__i0 to \receive_module/rx_counter/FRAME_COUNTER_71__i5 meets
+     23.846ns data_path \receive_module/BRAM_ADDR__i0 to \receive_module/BRAM_ADDR__i13 violates
      20.000ns delay constraint less
-      0.133ns L_S requirement (totaling 19.867ns) by 9.041ns
+      0.133ns L_S requirement (totaling 19.867ns) by 3.979ns
 
- Path Details: \receive_module/rx_counter/FRAME_COUNTER_71__i0 to \receive_module/rx_counter/FRAME_COUNTER_71__i5
+ Path Details: \receive_module/BRAM_ADDR__i0 to \receive_module/BRAM_ADDR__i13
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \receive_module/rx_counter/FRAME_COUNTER_71__i0 (from TVP_CLK_c)
-Route         3   e 1.339                                  \receive_module/rx_counter/FRAME_COUNTER[0]
-LUT4        ---     0.408             I1 to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_2
-Route         2   e 1.158                                  \receive_module/rx_counter/n613
-LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_3
-Route         2   e 1.158                                  \receive_module/rx_counter/n614
-LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_4
-Route         2   e 1.158                                  \receive_module/rx_counter/n615
-LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_5
-Route         2   e 1.158                                  \receive_module/rx_counter/n616
-LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_6
-Route         1   e 1.020                                  \receive_module/rx_counter/n617
-LUT4        ---     0.408             I3 to O              \receive_module/rx_counter/FRAME_COUNTER_71_add_4_7_lut
-Route         1   e 1.020                                  \receive_module/rx_counter/n30
+L_CO        ---     0.367              C to Q              \receive_module/BRAM_ADDR__i0 (from TVP_CLK_c)
+Route         3   e 1.831                                  RX_ADDR[0]
+LUT4        ---     0.408             I0 to CO             \receive_module/add_12_2
+Route         2   e 1.158                                  \receive_module/n2727
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_3
+Route         2   e 1.158                                  \receive_module/n2728
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_4
+Route         2   e 1.158                                  \receive_module/n2729
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_5
+Route         2   e 1.158                                  \receive_module/n2730
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_6
+Route         2   e 1.158                                  \receive_module/n2731
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_7
+Route         2   e 1.158                                  \receive_module/n2732
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_8
+Route         2   e 1.158                                  \receive_module/n2733
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_9
+Route         2   e 1.158                                  \receive_module/n2734
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_10
+Route         2   e 1.158                                  \receive_module/n2735
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_11
+Route         2   e 1.158                                  \receive_module/n2736
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_12
+Route         2   e 1.158                                  \receive_module/n2737
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_13
+Route         2   e 1.158                                  \receive_module/n2738
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_14
+Route         1   e 1.020                                  \receive_module/n2739
+LUT4        ---     0.408             I3 to O              \receive_module/add_12_15_lut
+Route         1   e 1.020                                  \receive_module/n123
                   --------
-                   10.826  (26.0% logic, 74.0% route), 7 logic levels.
+                   23.846  (25.5% logic, 74.5% route), 15 logic levels.
 
 
-Passed:  The following path meets requirements by 10.469ns
+Error:  The following path violates requirements by 2.551ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFESR  C              \receive_module/rx_counter/FRAME_COUNTER_71__i0  (from TVP_CLK_c +)
-   Destination:    SB_DFFESR  D              \receive_module/rx_counter/FRAME_COUNTER_71__i4  (to TVP_CLK_c +)
+   Source:         SB_DFFSR   C              \receive_module/BRAM_ADDR__i0  (from TVP_CLK_c +)
+   Destination:    SB_DFFESR  D              \receive_module/BRAM_ADDR__i12  (to TVP_CLK_c +)
 
-   Delay:                   9.398ns  (25.6% logic, 74.4% route), 6 logic levels.
+   Delay:                  22.418ns  (25.3% logic, 74.7% route), 14 logic levels.
 
  Constraint Details:
 
-      9.398ns data_path \receive_module/rx_counter/FRAME_COUNTER_71__i0 to \receive_module/rx_counter/FRAME_COUNTER_71__i4 meets
+     22.418ns data_path \receive_module/BRAM_ADDR__i0 to \receive_module/BRAM_ADDR__i12 violates
      20.000ns delay constraint less
-      0.133ns L_S requirement (totaling 19.867ns) by 10.469ns
+      0.133ns L_S requirement (totaling 19.867ns) by 2.551ns
 
- Path Details: \receive_module/rx_counter/FRAME_COUNTER_71__i0 to \receive_module/rx_counter/FRAME_COUNTER_71__i4
+ Path Details: \receive_module/BRAM_ADDR__i0 to \receive_module/BRAM_ADDR__i12
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \receive_module/rx_counter/FRAME_COUNTER_71__i0 (from TVP_CLK_c)
-Route         3   e 1.339                                  \receive_module/rx_counter/FRAME_COUNTER[0]
-LUT4        ---     0.408             I1 to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_2
-Route         2   e 1.158                                  \receive_module/rx_counter/n613
-LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_3
-Route         2   e 1.158                                  \receive_module/rx_counter/n614
-LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_4
-Route         2   e 1.158                                  \receive_module/rx_counter/n615
-LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_5
-Route         2   e 1.158                                  \receive_module/rx_counter/n616
-LUT4        ---     0.408             I3 to O              \receive_module/rx_counter/FRAME_COUNTER_71_add_4_6_lut
-Route         1   e 1.020                                  \receive_module/rx_counter/n31
+L_CO        ---     0.367              C to Q              \receive_module/BRAM_ADDR__i0 (from TVP_CLK_c)
+Route         3   e 1.831                                  RX_ADDR[0]
+LUT4        ---     0.408             I0 to CO             \receive_module/add_12_2
+Route         2   e 1.158                                  \receive_module/n2727
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_3
+Route         2   e 1.158                                  \receive_module/n2728
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_4
+Route         2   e 1.158                                  \receive_module/n2729
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_5
+Route         2   e 1.158                                  \receive_module/n2730
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_6
+Route         2   e 1.158                                  \receive_module/n2731
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_7
+Route         2   e 1.158                                  \receive_module/n2732
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_8
+Route         2   e 1.158                                  \receive_module/n2733
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_9
+Route         2   e 1.158                                  \receive_module/n2734
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_10
+Route         2   e 1.158                                  \receive_module/n2735
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_11
+Route         2   e 1.158                                  \receive_module/n2736
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_12
+Route         2   e 1.158                                  \receive_module/n2737
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_13
+Route         2   e 1.158                                  \receive_module/n2738
+LUT4        ---     0.408             I3 to O              \receive_module/add_12_14_lut
+Route         1   e 1.020                                  \receive_module/n124
                   --------
-                    9.398  (25.6% logic, 74.4% route), 6 logic levels.
+                   22.418  (25.3% logic, 74.7% route), 14 logic levels.
 
 
-Passed:  The following path meets requirements by 10.607ns
+Error:  The following path violates requirements by 2.413ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFESR  C              \receive_module/rx_counter/FRAME_COUNTER_71__i1  (from TVP_CLK_c +)
-   Destination:    SB_DFFESR  D              \receive_module/rx_counter/FRAME_COUNTER_71__i5  (to TVP_CLK_c +)
+   Source:         SB_DFFSR   C              \receive_module/BRAM_ADDR__i1  (from TVP_CLK_c +)
+   Destination:    SB_DFFESR  D              \receive_module/BRAM_ADDR__i13  (to TVP_CLK_c +)
 
-   Delay:                   9.260ns  (26.0% logic, 74.0% route), 6 logic levels.
+   Delay:                  22.280ns  (25.5% logic, 74.5% route), 14 logic levels.
 
  Constraint Details:
 
-      9.260ns data_path \receive_module/rx_counter/FRAME_COUNTER_71__i1 to \receive_module/rx_counter/FRAME_COUNTER_71__i5 meets
+     22.280ns data_path \receive_module/BRAM_ADDR__i1 to \receive_module/BRAM_ADDR__i13 violates
      20.000ns delay constraint less
-      0.133ns L_S requirement (totaling 19.867ns) by 10.607ns
+      0.133ns L_S requirement (totaling 19.867ns) by 2.413ns
 
- Path Details: \receive_module/rx_counter/FRAME_COUNTER_71__i1 to \receive_module/rx_counter/FRAME_COUNTER_71__i5
+ Path Details: \receive_module/BRAM_ADDR__i1 to \receive_module/BRAM_ADDR__i13
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \receive_module/rx_counter/FRAME_COUNTER_71__i1 (from TVP_CLK_c)
-Route         3   e 1.339                                  \receive_module/rx_counter/FRAME_COUNTER[1]
-LUT4        ---     0.408             I1 to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_3
-Route         2   e 1.158                                  \receive_module/rx_counter/n614
-LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_4
-Route         2   e 1.158                                  \receive_module/rx_counter/n615
-LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_5
-Route         2   e 1.158                                  \receive_module/rx_counter/n616
-LUT4        ---     0.408             CI to CO             \receive_module/rx_counter/FRAME_COUNTER_71_add_4_6
-Route         1   e 1.020                                  \receive_module/rx_counter/n617
-LUT4        ---     0.408             I3 to O              \receive_module/rx_counter/FRAME_COUNTER_71_add_4_7_lut
-Route         1   e 1.020                                  \receive_module/rx_counter/n30
+L_CO        ---     0.367              C to Q              \receive_module/BRAM_ADDR__i1 (from TVP_CLK_c)
+Route         3   e 1.831                                  RX_ADDR[1]
+LUT4        ---     0.408             I0 to CO             \receive_module/add_12_3
+Route         2   e 1.158                                  \receive_module/n2728
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_4
+Route         2   e 1.158                                  \receive_module/n2729
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_5
+Route         2   e 1.158                                  \receive_module/n2730
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_6
+Route         2   e 1.158                                  \receive_module/n2731
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_7
+Route         2   e 1.158                                  \receive_module/n2732
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_8
+Route         2   e 1.158                                  \receive_module/n2733
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_9
+Route         2   e 1.158                                  \receive_module/n2734
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_10
+Route         2   e 1.158                                  \receive_module/n2735
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_11
+Route         2   e 1.158                                  \receive_module/n2736
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_12
+Route         2   e 1.158                                  \receive_module/n2737
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_13
+Route         2   e 1.158                                  \receive_module/n2738
+LUT4        ---     0.408             CI to CO             \receive_module/add_12_14
+Route         1   e 1.020                                  \receive_module/n2739
+LUT4        ---     0.408             I3 to O              \receive_module/add_12_15_lut
+Route         1   e 1.020                                  \receive_module/n123
                   --------
-                    9.260  (26.0% logic, 74.0% route), 6 logic levels.
+                   22.280  (25.5% logic, 74.5% route), 14 logic levels.
 
-Report: 10.959 ns is the maximum delay for this constraint.
+Warning: 23.979 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -145,22 +193,68 @@ create_clock -period 20.000000 -name    |             |             |
 clk1 [get_nets ADV_CLK_c]               |            -|            -|     0  
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
-clk0 [get_nets TVP_CLK_c]               |    20.000 ns|    10.959 ns|     7  
+clk0 [get_nets TVP_CLK_c]               |    20.000 ns|    23.979 ns|    15 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraints not met.
 
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\receive_module/n2729                   |       2|       7|     99.00%
+                                        |        |        |
+\receive_module/n2730                   |       2|       7|     99.00%
+                                        |        |        |
+\receive_module/n2731                   |       2|       7|     99.00%
+                                        |        |        |
+\receive_module/n2732                   |       2|       7|     99.00%
+                                        |        |        |
+\receive_module/n2733                   |       2|       7|     99.00%
+                                        |        |        |
+\receive_module/n2734                   |       2|       7|     99.00%
+                                        |        |        |
+\receive_module/n2735                   |       2|       7|     99.00%
+                                        |        |        |
+\receive_module/n2736                   |       2|       7|     99.00%
+                                        |        |        |
+\receive_module/n2728                   |       2|       6|     85.71%
+                                        |        |        |
+\receive_module/n2737                   |       2|       6|     85.71%
+                                        |        |        |
+\receive_module/n2738                   |       2|       5|     71.43%
+                                        |        |        |
+RX_ADDR[0]                              |       3|       4|     57.14%
+                                        |        |        |
+\receive_module/n2727                   |       2|       4|     57.14%
+                                        |        |        |
+\receive_module/n123                    |       1|       3|     42.86%
+                                        |        |        |
+\receive_module/n2739                   |       1|       3|     42.86%
+                                        |        |        |
+RX_ADDR[1]                              |       3|       2|     28.57%
+                                        |        |        |
+\receive_module/n124                    |       1|       2|     28.57%
+                                        |        |        |
+RX_ADDR[2]                              |       3|       1|     14.29%
+                                        |        |        |
+\receive_module/n125                    |       1|       1|     14.29%
+                                        |        |        |
+\receive_module/n126                    |       1|       1|     14.29%
+                                        |        |        |
+\receive_module/n2321                   |       1|       1|     14.29%
+                                        |        |        |
+--------------------------------------------------------------------------------
 
 
 Timing summary:
 ---------------
 
-Timing errors: 0  Score: 0
+Timing errors: 7  Score: 12607
 
-Constraints cover  77 paths, 25 nets, and 61 connections (16.0% coverage)
+Constraints cover  1778 paths, 154 nets, and 430 connections (44.1% coverage)
 
 
-Peak memory: 41242624 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 40026112 bytes, TRCE: 770048 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

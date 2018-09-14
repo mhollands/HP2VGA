@@ -1,14 +1,8 @@
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 @N: MT206 |Auto Constrain mode is enabled
-@N: MF794 |RAM mem[7:0] required 3 registers during mapping 
-@N: MF794 |RAM mem[7:0] required 3 registers during mapping 
-@N: MF794 |RAM mem[7:0] required 3 registers during mapping 
-@N: FX1016 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v":6:23:6:26|SB_GB_IO inserted on the port rclk.
-@N: FX1016 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v":6:17:6:20|SB_GB_IO inserted on the port wclk.
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
 @N: FX1056 |Writing EDF file: E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.edf
 @N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
 @N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
-@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack

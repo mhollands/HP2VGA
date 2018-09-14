@@ -13,44 +13,56 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v" (library work)
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v" (library work)
-@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\vga_control.v" (library work)
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v" (library work)
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RX.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\O_COUNTER.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\VGA_CONTROL.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL2.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v" (library work)
 Verilog syntax check successful!
-Options changed - recompiling
-Selecting top level module RAM
-@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":1:7:1:9|Synthesizing module RAM in library work.
 
-@N: CL134 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":10:1:10:6|Found RAM mem, depth=16384, width=8
+Compiler output is up to date.  No re-compile necessary
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 78MB peak: 92MB)
+Selecting top level module PLL_SLOW
+@N: CG364 :"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v":698:7:698:19|Synthesizing module SB_PLL40_CORE in library work.
+
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":1:7:1:14|Synthesizing module PLL_SLOW in library work.
+
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":18:40:18:40|Input EXTFEEDBACK on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":19:41:19:41|Input DYNAMICDELAY on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":22:44:22:44|Input LATCHINPUTVALUE on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":24:32:24:32|Input SDI on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":26:33:26:33|Input SCLK on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Sep 09 04:43:23 2018
+# Mon Sep 10 03:07:12 2018
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
 @N|Running in 64-bit mode
-@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":1:7:1:9|Selected library: work cell: RAM view verilog as top level
-@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":1:7:1:9|Selected library: work cell: RAM view verilog as top level
+@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":1:7:1:14|Selected library: work cell: PLL_SLOW view verilog as top level
+@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":1:7:1:14|Selected library: work cell: PLL_SLOW view verilog as top level
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Sep 09 04:43:23 2018
+# Mon Sep 10 03:07:12 2018
 
 ###########################################################]
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Sep 09 04:43:23 2018
+# Mon Sep 10 03:07:12 2018
 
 ###########################################################]

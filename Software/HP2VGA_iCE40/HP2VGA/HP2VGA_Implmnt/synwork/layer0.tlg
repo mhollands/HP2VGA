@@ -1,4 +1,10 @@
-Selecting top level module RAM
-@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":1:7:1:9|Synthesizing module RAM in library work.
+Selecting top level module PLL_SLOW
+@N: CG364 :"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v":698:7:698:19|Synthesizing module SB_PLL40_CORE in library work.
 
-@N: CL134 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":10:1:10:6|Found RAM mem, depth=16384, width=8
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":1:7:1:14|Synthesizing module PLL_SLOW in library work.
+
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":18:40:18:40|Input EXTFEEDBACK on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":19:41:19:41|Input DYNAMICDELAY on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":22:44:22:44|Input LATCHINPUTVALUE on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":24:32:24:32|Input SDI on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":26:33:26:33|Input SCLK on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 

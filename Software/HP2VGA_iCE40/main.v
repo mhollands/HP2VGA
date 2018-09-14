@@ -3,13 +3,13 @@ module main(
 	input wire TVP_CLK, 
 	input wire TVP_HSYNC,
 	input wire TVP_VSYNC,
-	//input wire [9:0] TVP_VIDEO,
+	input wire [9:0] TVP_VIDEO,
 	output wire LED, 
 	output wire ADV_HSYNC,
 	output wire ADV_VSYNC,
-	output wire [7:0] ADV_R,
-	output wire [7:0] ADV_G, 
-	output wire [7:0] ADV_B, 
+	output reg [7:0] ADV_R,
+	output reg [7:0] ADV_G, 
+	output reg [7:0] ADV_B, 
 	output wire ADV_CLK, 
 	output wire ADV_SYNC_N, 
 	output wire ADV_BLANK_N);
@@ -37,37 +37,49 @@ module main(
 		    .BRAM_WE(RX_WE),
 		    .O_HS(TVP_HSYNC),
 		    .O_VS(TVP_VSYNC),
-		    .VIDEO(8'h00),
+		    .VIDEO(TVP_VIDEO),
 		    .PULSE_1HZ(PULSE_1HZ),
 		    .SYNC(RX_TX_SYNC));
 	
 	// Instantiate TX Module
 	wire [13:0] TX_ADDR;
 	wire [7:0] TX_DATA;
+	wire [7:0] R_T, G_T, B_T;
 	TX transmit_module(
 			    .CLK(TX_CLK),
 			    .ENABLE(1),
 			    .BRAM_ADDR(TX_ADDR),
-			    .BRAM_DOUT(8'h00),
-			    .VGA_R(ADV_R),
-			    .VGA_G(ADV_G),
-			    .VGA_B(ADV_B),
+			    .BRAM_DOUT(TX_DATA),
+			    .VGA_R(R_T),
+			    .VGA_G(G_T),
+			    .VGA_B(B_T),
 			    .VGA_HS(ADV_HSYNC),
 			    .VGA_VS(ADV_VSYNC),
 			    .VGA_SYNC(RX_TX_SYNC),
-			    .VGA_SYNC_EN(0));
+			    .VGA_SYNC_EN(1'b1));
+
+	always @(negedge TX_CLK) begin
+		ADV_R <= R_T;
+		ADV_G <= G_T;
+		ADV_B <= B_T;
+	end
 
 	//Instantiate the line buffer
-	//RAM line_buffer(RX_DATA, RX_WE, RX_ADDR , TVP_CLK, TX_ADDR, TX_CLK, TX_DATA);
+	RAM line_buffer(.din(RX_DATA),
+					.write_en(RX_WE),
+					.waddr(RX_ADDR),
+					.wclk(TVP_CLK),
+					.raddr(TX_ADDR),
+					.rclk(TX_CLK),
+					.dout(TX_DATA));
 
 	// Output all of the remaining ADV signals
 	assign ADV_CLK = TX_CLK;
 	assign ADV_SYNC_N = 0;
 	assign ADV_BLANK_N = 1;
 
-	assign LED = PULSE_1HZ & DEBUG[7];
+	assign LED = PULSE_1HZ;
 
-	assign DEBUG[5:0] = 6'bzzzzzz;
-	assign DEBUG[6] = TX_CLK;
+	assign DEBUG[7:0] = TX_ADDR[7:0];
 
 endmodule

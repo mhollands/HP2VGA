@@ -1,15 +1,19 @@
 #--  Synopsys, Inc.
 #--  Version L-2016.09L+ice40
 #--  Project file E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\run_options.txt
-#--  Written on Sun Sep 09 04:43:22 2018
+#--  Written on Mon Sep 10 03:07:11 2018
 
 
 #project files
 add_file -verilog "../main.v"
 add_file -verilog "../TX_PLL.v"
-add_file -verilog "../vga_control.v"
 add_file -verilog "../RAM.v"
 add_file -verilog "../TX.v"
+add_file -verilog "../RX.v"
+add_file -verilog "../O_COUNTER.v"
+add_file -verilog "../VGA_CONTROL.v"
+add_file -verilog "../TX_PLL2.v"
+add_file -verilog "../PLL_SLOW.v"
 
 
 

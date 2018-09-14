@@ -1,27 +1,18 @@
 ---------------------------------------
-Resource Usage Report for RAM 
+Resource Usage Report for PLL_SLOW 
 
 Mapping to part: ice40hx8kct256
 Cell usage:
-SB_DFF          3 uses
-SB_RAM2048x2    32 uses
-SB_LUT4         64 uses
+SB_PLL40_CORE   1 use
+SB_LUT4         0 uses
 
-I/O ports: 47
-I/O primitives: 47
-SB_GB_IO       2 uses
-SB_IO          45 uses
+I/O ports: 6
+I/O primitives: 6
+SB_IO          6 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   3 (0%)
-
-RAM/ROM usage summary
-Block Rams : 32 of 32 (100%)
-
+Register bits not including I/Os:   0 (0%)
 
 @S |Mapping Summary:
-Total  LUTs: 64 (0%)
-
-Distribution of All Consumed LUTs = LUT4 
-Distribution of All Consumed Luts 64 = 64 
+Total  LUTs: 0 (0%)
 

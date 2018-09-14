@@ -1,18 +1,7 @@
 @P:  Worst Slack : NA
-@P:  RAM|rclk - Estimated Frequency : NA
-@P:  RAM|rclk - Requested Frequency : 1.0 MHz
-@P:  RAM|rclk - Estimated Period : NA
-@P:  RAM|rclk - Requested Period : 1000.000
-@P:  RAM|rclk - Slack : NA
-@P:  RAM|wclk - Estimated Frequency : NA
-@P:  RAM|wclk - Requested Frequency : 1.0 MHz
-@P:  RAM|wclk - Estimated Period : NA
-@P:  RAM|wclk - Requested Period : 1000.000
-@P:  RAM|wclk - Slack : NA
-@P: RAM Part : ice40hx8kct256
-@P: RAM I/O primitives : 47
-@P: RAM I/O Register bits : 0
-@P: RAM Register bits (Non I/O) : 3 (0%)
-@P: RAM Block Rams : 32 of 32 (100%)
-@P: RAM Total Luts : 64 (0%)
+@P: PLL_SLOW Part : ice40hx8kct256
+@P: PLL_SLOW I/O primitives : 6
+@P: PLL_SLOW I/O Register bits : 0
+@P: PLL_SLOW Register bits (Non I/O) : 0 (0%)
+@P: PLL_SLOW Total Luts : 0 (0%)
 @P:  CPU Time : 0h:00m:01s

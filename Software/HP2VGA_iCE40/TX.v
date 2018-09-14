@@ -52,32 +52,39 @@ module TX(
                                             .SYNC(VGA_SYNC),
                                             .SYNC_EN(VGA_SYNC_EN));
     
-    assign VGA_R = VGA_VISIBLE ? DEBUG_VIDEO_R : 0;
-    assign VGA_G = VGA_VISIBLE ? DEBUG_VIDEO_G : 0;
-    assign VGA_B = VGA_VISIBLE ? DEBUG_VIDEO_B : 0;
+    assign VGA_R = VGA_VISIBLE ? BRAM_DOUT : 0;
+    assign VGA_G = VGA_VISIBLE ? BRAM_DOUT : 0;
+    assign VGA_B = VGA_VISIBLE ? BRAM_DOUT : 0;
+    
+    reg [15:0] X_DELTA_PATTERN;
+    reg [99:0] Y_DELTA_PATTERN;
+    reg [13:0] ADDR_Y_COMPONENT;
 
-    /*
-    wire VGA_HS_DELAY, VGA_VS_DELAY, DISP_VISIBLE_DELAY;
-    VGA_DELAY delay(.VGA_CLK(VGA_CLK),
-                    .HS(VGA_HS),
-                    .VS(VGA_VS), 
-                    .VISIBLE(DISP_VISIBLE),
-                    .HS_DELAY(VGA_HS_DELAY),
-                    .VS_DELAY(VGA_VS_DELAY),
-                    .VISIBLE_DELAY(DISP_VISIBLE_DELAY));
-    
-    assign VGA_HS_O = VGA_HS_DELAY;
-    assign VGA_VS_O = VGA_VS_DELAY;
-    */
-    //reg VGA_SYNC_BUFFER, VGA_SYNC_BUFFER2;
-    
-    always @(posedge CLK)
-    begin
-        //VGA_SYNC_BUFFER <= VGA_SYNC;
-        //VGA_SYNC_BUFFER2 <= VGA_SYNC_BUFFER;
-        //VGA_VIDEO <= DISP_VISIBLE_DELAY ? BRAM_DOUT : 0; //clock in new data
+    reg VIDEO_STARTED;
+    reg old_VGA_HS;
+    always @(posedge CLK) begin
+        if(VGA_VS == 1) begin
+            ADDR_Y_COMPONENT <= 0;
+            BRAM_ADDR <= 0;
+            X_DELTA_PATTERN <= 16'b1010101011010101;
+            Y_DELTA_PATTERN <= 100'hB5B5B5B6B6B6D6D6D6DADADAD;
+            VIDEO_STARTED <= 0;
+        end else begin
+            if(VGA_HS == 0 && old_VGA_HS == 1 && VIDEO_STARTED) begin
+                X_DELTA_PATTERN <= 16'b1010101011010101;
+                ADDR_Y_COMPONENT <= (Y_DELTA_PATTERN[0] ? BRAM_ADDR + 1 : ADDR_Y_COMPONENT);
+                BRAM_ADDR <= (Y_DELTA_PATTERN[0] ? BRAM_ADDR + 1 : ADDR_Y_COMPONENT);
+                Y_DELTA_PATTERN <= {Y_DELTA_PATTERN[0],Y_DELTA_PATTERN[99:1]};    
+            end else begin
+                if(VGA_VISIBLE) begin
+                    VIDEO_STARTED <= 0;
+                    BRAM_ADDR <= BRAM_ADDR + X_DELTA_PATTERN[0];
+                    X_DELTA_PATTERN <= {X_DELTA_PATTERN[0], X_DELTA_PATTERN[15:1]};
+                end       
+            end     
+        end
         
-        BRAM_ADDR <= VGA_VISIBLE ? ((VGA_X*576)>>10) + ((VGA_Y*378)/600)*576 : 0; //set up address for next pixel 
+        old_VGA_HS <= VGA_HS;
     end
     
 endmodule

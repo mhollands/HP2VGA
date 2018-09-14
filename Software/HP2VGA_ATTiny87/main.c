@@ -54,7 +54,7 @@ uint8_t msg_r_chiprev[4] = {TVP_W,TVP_CHIP_REV,TVP_R, 0xFF};
 int main(void)
 {
 	sei();
-	DDRB |= 0x08; //Set FPGA_FB1 as output (PB3)
+	//DDRB |= 0x08; //Set FPGA_FB1 as output (PB3)
 	DDRB |= 0x20; //Set TVP_RESET as output (PB5)
 	DDRB |= 0x40; //Set TVP_PWDN as output (PB6)
 	PORTB |= 0x05; //Set SDA and SCL as outputs (PB0/PB2)
@@ -76,9 +76,9 @@ int main(void)
     while (1) 
     {
 		//_delay_us(0.25);
-		PORTB &= ~0x08; //FPGA_FB1 low
-		_delay_us(0.130);
-		PORTB |= 0x08; //FPGA_FB1 high
+		//PORTB &= ~0x08; //FPGA_FB1 low
+		//_delay_us(0.130);
+		//PORTB |= 0x08; //FPGA_FB1 high
     }
 }
 

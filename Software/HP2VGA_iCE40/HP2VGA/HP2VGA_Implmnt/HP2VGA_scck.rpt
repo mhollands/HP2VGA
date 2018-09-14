@@ -1,12 +1,12 @@
 # Synopsys Constraint Checker(syntax only), version maplat, Build 1612R, built Dec  5 2016
 # Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 
-# Written on Sun Sep 09 04:43:25 2018
+# Written on Mon Sep 10 03:07:14 2018
 
 
 ##### DESIGN INFO #######################################################
 
-Top View:                "RAM"
+Top View:                "PLL_SLOW"
 Constraint File(s):      (none)
 
 #Run constraint checker to find more issues with constraints.
@@ -21,9 +21,7 @@ No issues found in constraint syntax.
 Clock Summary
 *************
 
-Start        Requested     Requested     Clock        Clock                     Clock
-Clock        Frequency     Period        Type         Group                     Load 
--------------------------------------------------------------------------------------
-RAM|rclk     1.0 MHz       1000.000      inferred     Autoconstr_clkgroup_1     8    
-RAM|wclk     1.0 MHz       1000.000      inferred     Autoconstr_clkgroup_0     8    
-=====================================================================================
+Start     Requested     Requested     Clock     Clock     Clock
+Clock     Frequency     Period        Type      Group     Load 
+---------------------------------------------------------------
+===============================================================

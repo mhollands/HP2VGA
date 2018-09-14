@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Sep 9 2018 23:25:00
+* File Generated:     Sep 14 2018 01:23:53
 
 * Purpose:            Detailed IO and package pin info
 
@@ -56,7 +56,7 @@ D1, PIO, ADV_R[2], Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
 D2, PIO, ADV_R[3], Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
 D3, PIO, ADV_HSYNC, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
 D4, VCC, not used, , , , , , UnknownBank
-D5, PIO, DEBUG[5], Output, , SB_LVCMOS, No Pull Up, Output Tristatable by Enable, topBank
+D5, PIO, not used, , , , , , topBank
 D6, VCCIO_0, not used, , , , , , topBank
 D7, PIO, not used, , , , , , topBank
 D8, VCC, not used, , , , , , UnknownBank
@@ -64,7 +64,7 @@ D9, PIO, not used, , , , , , rightBank
 D10, PIO, not used, , , , , , rightBank
 D11, PIO, not used, , , , , , rightBank
 E1, PIO, ADV_VSYNC, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-E2, PIO, DEBUG[7], Input, , SB_LVCMOS, Pull Up, Simple Input, leftBank
+E2, PIO, DEBUG[7], Output, , SB_LVCMOS, Pull Up, Simple Output, leftBank
 E3, PIO, not used, , , , , , leftBank
 E4, VCCIO_3, not used, , , , , , leftBank
 E5, GND, not used, , , , , , UnknownBank
@@ -74,7 +74,7 @@ E8, PIO, not used, , , , , , rightBank
 E9, PIO, not used, , , , , , rightBank
 E10, PIO_GBIN, not used, , , , , , rightBank
 E11, PIO, not used, , , , , , rightBank
-F1, PIO, DEBUG[4], Output, , SB_LVCMOS, No Pull Up, Output Tristatable by Enable, leftBank
+F1, PIO, DEBUG[5], Output, , SB_LVCMOS, Pull Up, Simple Output, leftBank
 F2, PIO, DEBUG[6], Output, , SB_LVCMOS, Pull Up, Simple Output, leftBank
 F3, PIO_GBIN, not used, , , , , , leftBank
 F4, PIO, not used, , , , , , leftBank
@@ -86,7 +86,7 @@ F9, PIO, not used, , , , , , rightBank
 F10, PIO, not used, , , , , , rightBank
 F11, PIO_GBIN, not used, , , , , , rightBank
 G1, PIO_GBIN, not used, , , , , , leftBank
-G2, PIO, DEBUG[3], Output, , SB_LVCMOS, No Pull Up, Output Tristatable by Enable, leftBank
+G2, PIO, DEBUG[4], Output, , SB_LVCMOS, Pull Up, Simple Output, leftBank
 G3, PIO, not used, , , , , , leftBank
 G4, VCCIO_3, not used, , , , , , leftBank
 G5, GND, not used, , , , , , UnknownBank
@@ -96,8 +96,8 @@ G8, PIO, not used, , , , , , rightBank
 G9, PIO, not used, , , , , , rightBank
 G10, PIO, not used, , , , , , rightBank
 G11, PIO, not used, , , , , , rightBank
-H1, PIO, not used, , , , , , leftBank
-H2, PIO, DEBUG[2], Output, , SB_LVCMOS, No Pull Up, Output Tristatable by Enable, leftBank
+H1, PIO, DEBUG[3], Output, , SB_LVCMOS, Pull Up, Simple Output, leftBank
+H2, PIO, DEBUG[2], Output, , SB_LVCMOS, Pull Up, Simple Output, leftBank
 H3, PIO, not used, , , , , , leftBank
 H4, VCC, not used, , , , , , UnknownBank
 H5, GND, not used, , , , , , UnknownBank
@@ -107,22 +107,22 @@ H8, VCC, not used, , , , , , UnknownBank
 H9, PIO, not used, , , , , , bottomBank
 H10, PIO, not used, , , , , , rightBank
 H11, PIO, not used, , , , , , rightBank
-J1, PIO, DEBUG[1], Output, , SB_LVCMOS, No Pull Up, Output Tristatable by Enable, leftBank
-J2, PIO, DEBUG[0], Output, , SB_LVCMOS, No Pull Up, Output Tristatable by Enable, leftBank
+J1, PIO, DEBUG[1], Output, , SB_LVCMOS, Pull Up, Simple Output, leftBank
+J2, PIO, not used, , , , , , leftBank
 J3, PIO, not used, , , , , , bottomBank
 J4, PIO, not used, , , , , , bottomBank
 J5, PIO, TVP_VSYNC, Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
 J6, AVDD_BOT, not used, , , , , , UnknownBank
-J7, PIO, not used, , , , , , bottomBank
+J7, PIO, TVP_HSYNC, Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
 J8, PIO, LED, Output, , SB_LVCMOS, No Pull Up, Simple Output, bottomBank
 J9, SPI_SI, not used, , , , , , bottomBank
 J10, PIO, not used, , , , , , rightBank
 J11, PIO, not used, , , , , , rightBank
-K1, PIO, not used, , , , , , leftBank
+K1, PIO, DEBUG[0], Output, , SB_LVCMOS, Pull Up, Simple Output, leftBank
 K2, PIO, not used, , , , , , leftBank
-K3, PIO, not used, , , , , , bottomBank
-K4, PIO, not used, , , , , , bottomBank
-K5, PIO, not used, , , , , , bottomBank
+K3, PIO, TVP_VIDEO[3], Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
+K4, PIO, TVP_VIDEO[5], Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
+K5, PIO, TVP_VIDEO[7], Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
 K6, PIO_GBIN, TVP_CLK, Input, glb Buff, SB_LVCMOS, Pull Up, Simple Input, bottomBank
 K7, PIO, not used, , , , , , bottomBank
 K8, CDONE, not used, , , , , , bottomBank
@@ -130,14 +130,14 @@ K9, SPI_SO, not used, , , , , , bottomBank
 K10, SPI_SS_B, not used, , , , , , bottomBank
 K11, PIO, not used, , , , , , rightBank
 L1, PIO, not used, , , , , , bottomBank
-L2, PIO, not used, , , , , , bottomBank
-L3, PIO, not used, , , , , , bottomBank
-L4, PIO, not used, , , , , , bottomBank
-L5, PIO_GBIN, not used, , , , , , bottomBank
+L2, PIO, TVP_VIDEO[2], Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
+L3, PIO, TVP_VIDEO[4], Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
+L4, PIO, TVP_VIDEO[6], Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
+L5, PIO_GBIN, TVP_VIDEO[8], Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
 L6, AGND_BOT, not used, , , , , , UnknownBank
-L7, PIO, not used, , , , , , bottomBank
+L7, PIO, TVP_VIDEO[9], Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
 L8, PIO, not used, , , , , , bottomBank
 L9, CRESET_B, not used, , , , , , bottomBank
 L10, SPI_SCK, not used, , , , , , bottomBank
 L11, VDDIO_SPI, not used, , , , , , bottomBank
-Total Number of Used Pins, 40
+Total Number of Used Pins, 49

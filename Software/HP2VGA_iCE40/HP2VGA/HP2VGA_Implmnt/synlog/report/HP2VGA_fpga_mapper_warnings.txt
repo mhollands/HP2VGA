@@ -1,3 +1,0 @@
-@W: FX107 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v":10:1:10:6|RAM mem[7:0] (in view: work.RAM(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
-@W: MT420 |Found inferred clock RAM|wclk with period 1000.00ns. Please declare a user-defined clock on object "p:wclk"
-@W: MT420 |Found inferred clock RAM|rclk with period 1000.00ns. Please declare a user-defined clock on object "p:rclk"

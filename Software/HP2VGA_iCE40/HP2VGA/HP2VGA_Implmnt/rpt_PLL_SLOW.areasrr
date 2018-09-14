@@ -1,0 +1,18 @@
+#### START OF AREA REPORT #####[
+
+Part:			ICE40HX8KCT256 (Lattice)
+
+------------------------------------------------------------------------
+########   Utilization report for  Top level view:   PLL_SLOW   ########
+========================================================================
+
+IO PADS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     6                  100 %                
+=================================================
+Total IO PADS in the block PLL_SLOW:	6 (66.67 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

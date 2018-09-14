@@ -1,12 +1,12 @@
 # Synopsys Constraint Checker, version maplat, Build 1612R, built Dec  5 2016
 # Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 
-# Written on Sun Sep 09 04:43:25 2018
+# Written on Mon Sep 10 03:07:15 2018
 
 
 ##### DESIGN INFO #######################################################
 
-Top View:                "RAM"
+Top View:                "PLL_SLOW"
 Constraint File(s):      (none)
 
 
@@ -24,10 +24,9 @@ Found 0 issues in 0 out of 0 constraints
 Clock Relationships
 *******************
 
-Starting     Ending       |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
--------------------------------------------------------------------------------------------------------------------------------------
-RAM|wclk     RAM|rclk     |     Diff grp         |     No paths         |     No paths         |     No paths                         
-=====================================================================================================================================
+Starting     Ending     |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-----------------------------------------------------------------------------------------------------------------------------------
+===================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -35,51 +34,12 @@ RAM|wclk     RAM|rclk     |     Diff grp         |     No paths         |     No
 Unconstrained Start/End Points
 ******************************
 
-p:din[0]
-p:din[1]
-p:din[2]
-p:din[3]
-p:din[4]
-p:din[5]
-p:din[6]
-p:din[7]
-p:dout[0]
-p:dout[1]
-p:dout[2]
-p:dout[3]
-p:dout[4]
-p:dout[5]
-p:dout[6]
-p:dout[7]
-p:raddr[0]
-p:raddr[1]
-p:raddr[2]
-p:raddr[3]
-p:raddr[4]
-p:raddr[5]
-p:raddr[6]
-p:raddr[7]
-p:raddr[8]
-p:raddr[9]
-p:raddr[10]
-p:raddr[11]
-p:raddr[12]
-p:raddr[13]
-p:waddr[0]
-p:waddr[1]
-p:waddr[2]
-p:waddr[3]
-p:waddr[4]
-p:waddr[5]
-p:waddr[6]
-p:waddr[7]
-p:waddr[8]
-p:waddr[9]
-p:waddr[10]
-p:waddr[11]
-p:waddr[12]
-p:waddr[13]
-p:write_en
+p:BYPASS
+p:LOCK
+p:PLLOUTCORE
+p:PLLOUTGLOBAL
+p:REFERENCECLK
+p:RESET
 
 
 Inapplicable constraints

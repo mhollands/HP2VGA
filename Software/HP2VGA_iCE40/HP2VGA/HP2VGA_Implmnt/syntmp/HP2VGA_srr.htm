@@ -1,20 +1,20 @@
 <html><body><samp><pre>
-<!@TC:1536495197>
+<!@TC:1536701444>
 #Build: Synplify Pro L-2016.09L+ice40, Build 077R, Dec  2 2016
 #install: C:\lscc\iCEcube2.2017.08\synpbase
 #OS: Windows 8 6.2
 #Hostname: DESKTOP-6I79T4A
 
-# Sun Sep 09 04:43:22 2018
+# Mon Sep 10 03:07:11 2018
 
 #Implementation: HP2VGA_Implmnt
 
 <a name=compilerReport1></a>Synopsys HDL Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016</a>
-@N: : <!@TM:1536495198> | Running in 64-bit mode 
+@N: : <!@TM:1536701445> | Running in 64-bit mode 
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 
 <a name=compilerReport2></a>Synopsys Verilog Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016</a>
-@N: : <!@TM:1536495198> | Running in 64-bit mode 
+@N: : <!@TM:1536701445> | Running in 64-bit mode 
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 
 @I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v" (library work)
@@ -24,64 +24,76 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v" (library work)
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v" (library work)
-@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\vga_control.v" (library work)
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v" (library work)
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RX.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\O_COUNTER.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\VGA_CONTROL.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL2.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v" (library work)
 Verilog syntax check successful!
-Options changed - recompiling
-Selecting top level module RAM
-@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v:1:7:1:10:@N:CG364:@XP_MSG">RAM.v(1)</a><!@TM:1536495198> | Synthesizing module RAM in library work.
 
-@N:<a href="@N:CL134:@XP_HELP">CL134</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v:10:1:10:7:@N:CL134:@XP_MSG">RAM.v(10)</a><!@TM:1536495198> | Found RAM mem, depth=16384, width=8
+Compiler output is up to date.  No re-compile necessary
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 78MB peak: 92MB)
+Selecting top level module PLL_SLOW
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v:698:7:698:20:@N:CG364:@XP_MSG">sb_ice40.v(698)</a><!@TM:1536701445> | Synthesizing module SB_PLL40_CORE in library work.
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v:1:7:1:15:@N:CG364:@XP_MSG">PLL_SLOW.v(1)</a><!@TM:1536701445> | Synthesizing module PLL_SLOW in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v:18:40:18:41:@W:CG781:@XP_MSG">PLL_SLOW.v(18)</a><!@TM:1536701445> | Input EXTFEEDBACK on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v:19:41:19:42:@W:CG781:@XP_MSG">PLL_SLOW.v(19)</a><!@TM:1536701445> | Input DYNAMICDELAY on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v:22:44:22:45:@W:CG781:@XP_MSG">PLL_SLOW.v(22)</a><!@TM:1536701445> | Input LATCHINPUTVALUE on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v:24:32:24:33:@W:CG781:@XP_MSG">PLL_SLOW.v(24)</a><!@TM:1536701445> | Input SDI on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v:26:33:26:34:@W:CG781:@XP_MSG">PLL_SLOW.v(26)</a><!@TM:1536701445> | Input SCLK on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Sep 09 04:43:23 2018
+# Mon Sep 10 03:07:12 2018
 
 ###########################################################]
 <a name=compilerReport3></a>Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016</a>
-@N: : <!@TM:1536495198> | Running in 64-bit mode 
-@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v:1:7:1:10:@N:NF107:@XP_MSG">RAM.v(1)</a><!@TM:1536495198> | Selected library: work cell: RAM view verilog as top level
-@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v:1:7:1:10:@N:NF107:@XP_MSG">RAM.v(1)</a><!@TM:1536495198> | Selected library: work cell: RAM view verilog as top level
+@N: : <!@TM:1536701445> | Running in 64-bit mode 
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v:1:7:1:15:@N:NF107:@XP_MSG">PLL_SLOW.v(1)</a><!@TM:1536701445> | Selected library: work cell: PLL_SLOW view verilog as top level
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v:1:7:1:15:@N:NF107:@XP_MSG">PLL_SLOW.v(1)</a><!@TM:1536701445> | Selected library: work cell: PLL_SLOW view verilog as top level
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Sep 09 04:43:23 2018
+# Mon Sep 10 03:07:12 2018
 
 ###########################################################]
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Sep 09 04:43:23 2018
+# Mon Sep 10 03:07:12 2018
 
 ###########################################################]
 <a name=compilerReport4></a>Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016</a>
-@N: : <!@TM:1536495200> | Running in 64-bit mode 
+@N: : <!@TM:1536701446> | Running in 64-bit mode 
 File E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_comp.srs changed - recompiling
-@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v:1:7:1:10:@N:NF107:@XP_MSG">RAM.v(1)</a><!@TM:1536495200> | Selected library: work cell: RAM view verilog as top level
-@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v:1:7:1:10:@N:NF107:@XP_MSG">RAM.v(1)</a><!@TM:1536495200> | Selected library: work cell: RAM view verilog as top level
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v:1:7:1:15:@N:NF107:@XP_MSG">PLL_SLOW.v(1)</a><!@TM:1536701446> | Selected library: work cell: PLL_SLOW view verilog as top level
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v:1:7:1:15:@N:NF107:@XP_MSG">PLL_SLOW.v(1)</a><!@TM:1536701446> | Selected library: work cell: PLL_SLOW view verilog as top level
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Sep 09 04:43:24 2018
+# Mon Sep 10 03:07:14 2018
 
 ###########################################################]
 Pre-mapping Report
 
-# Sun Sep 09 04:43:25 2018
+# Mon Sep 10 03:07:14 2018
 
 <a name=mapperReport5></a>Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39</a>
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -89,19 +101,19 @@ Product Version L-2016.09L+ice40
 
 Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
 
-@A:<a href="@A:MF827:@XP_HELP">MF827</a> : <!@TM:1536495201> | No constraint file specified. 
+@A:<a href="@A:MF827:@XP_HELP">MF827</a> : <!@TM:1536701447> | No constraint file specified. 
 @L: E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA_scck.rpt 
 Printing clock  summary report in "E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA_scck.rpt" file 
-@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1536495201> | Running in 64-bit mode. 
-@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1536495201> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1536701447> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1536701447> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 102MB)
-
-
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 102MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
 
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
@@ -109,7 +121,7 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 ICG Latch Removal Summary:
 Number of ICG latches removed:	0
 Number of ICG latches not removed:	0
-syn_allowed_resources : blockrams=32  set on top level netlist RAM
+syn_allowed_resources : blockrams=32  set on top level netlist PLL_SLOW
 
 Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
 
@@ -118,18 +130,13 @@ Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 <a name=mapperReport6></a>Clock Summary</a>
 *****************
 
-Start        Requested     Requested     Clock        Clock                     Clock
-Clock        Frequency     Period        Type         Group                     Load 
--------------------------------------------------------------------------------------
-RAM|rclk     1.0 MHz       1000.000      inferred     Autoconstr_clkgroup_1     8    
-RAM|wclk     1.0 MHz       1000.000      inferred     Autoconstr_clkgroup_0     8    
-=====================================================================================
-
-<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v:10:1:10:7:@W:MT529:@XP_MSG">ram.v(10)</a><!@TM:1536495201> | Found inferred clock RAM|wclk which controls 8 sequential elements including mem[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
-<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v:14:1:14:7:@W:MT529:@XP_MSG">ram.v(14)</a><!@TM:1536495201> | Found inferred clock RAM|rclk which controls 8 sequential elements including dout[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
+Start     Requested     Requested     Clock     Clock     Clock
+Clock     Frequency     Period        Type      Group     Load 
+---------------------------------------------------------------
+===============================================================
 
 Finished Pre Mapping Phase.
-@N:<a href="@N:BN225:@XP_HELP">BN225</a> : <!@TM:1536495201> | Writing default property annotation file E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.sap. 
+@N:<a href="@N:BN225:@XP_HELP">BN225</a> : <!@TM:1536701447> | Writing default property annotation file E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.sap. 
 
 Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
 
@@ -143,12 +150,12 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 47MB peak: 133MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sun Sep 09 04:43:25 2018
+# Mon Sep 10 03:07:15 2018
 
 ###########################################################]
 Map & Optimize Report
 
-# Sun Sep 09 04:43:26 2018
+# Mon Sep 10 03:07:15 2018
 
 <a name=mapperReport7></a>Synopsys Lattice Technology Mapper, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39</a>
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -156,8 +163,8 @@ Product Version L-2016.09L+ice40
 
 Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
 
-@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1536495204> | Running in 64-bit mode. 
-@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1536495204> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1536701450> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1536701450> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
 
 Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
 
@@ -178,52 +185,44 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapse
 Available hyper_sources - for debug and ip models
 	None Found
 
-@N:<a href="@N:MT206:@XP_HELP">MT206</a> : <!@TM:1536495204> | Auto Constrain mode is enabled 
+@N:<a href="@N:MT206:@XP_HELP">MT206</a> : <!@TM:1536701450> | Auto Constrain mode is enabled 
 
 Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
 
-<font color=#A52A2A>@W:<a href="@W:FX107:@XP_HELP">FX107</a> : <a href="e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v:10:1:10:7:@W:FX107:@XP_MSG">ram.v(10)</a><!@TM:1536495204> | RAM mem[7:0] (in view: work.RAM(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.</font>
-@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v:14:1:14:7:@A:BN291:@XP_MSG">ram.v(14)</a><!@TM:1536495204> | Boundary register dout[7:0] (in view: work.RAM(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
-@N:<a href="@N:MF794:@XP_HELP">MF794</a> : <!@TM:1536495204> | RAM mem[7:0] required 3 registers during mapping  
-@N:<a href="@N:MF794:@XP_HELP">MF794</a> : <!@TM:1536495204> | RAM mem[7:0] required 3 registers during mapping  
 
-Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
 
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
-
-@N:<a href="@N:MF794:@XP_HELP">MF794</a> : <!@TM:1536495204> | RAM mem[7:0] required 3 registers during mapping  
-
-Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:00s		100000.00ns		  64 /         3
-@N:<a href="@N:FX1016:@XP_HELP">FX1016</a> : <a href="e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v:6:23:6:27:@N:FX1016:@XP_MSG">ram.v(6)</a><!@TM:1536495204> | SB_GB_IO inserted on the port rclk.
-@N:<a href="@N:FX1016:@XP_HELP">FX1016</a> : <a href="e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v:6:17:6:21:@N:FX1016:@XP_MSG">ram.v(6)</a><!@TM:1536495204> | SB_GB_IO inserted on the port wclk.
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 136MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
 
 
 
@@ -232,55 +231,47 @@ Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:
 
 <a name=clockReport8></a>#### START OF CLOCK OPTIMIZATION REPORT #####[</a>
 
-2 non-gated/non-generated clock tree(s) driving 67 clock pin(s) of sequential element(s)
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
 0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
 0 instances converted, 0 sequential instances remain driven by gated/generated clocks
 
-=========================== Non-Gated/Non-Generated Clocks ============================
-Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
----------------------------------------------------------------------------------------
-<a href="@|S:rclk_ibuf_gb_io@|E:mem_radreg[11]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001  @XP_NAMES_BY_PROP">ClockId0001 </a>       rclk_ibuf_gb_io     SB_GB_IO               35         mem_radreg[11] 
-<a href="@|S:wclk_ibuf_gb_io@|E:mem_mem_0_0@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002  @XP_NAMES_BY_PROP">ClockId0002 </a>       wclk_ibuf_gb_io     SB_GB_IO               32         mem_mem_0_0    
-=======================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 136MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 134MB)
 
 Writing Analyst data base E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synwork\HP2VGA_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 131MB peak: 136MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
 
 Writing EDIF Netlist and constraint files
-@N:<a href="@N:BW103:@XP_HELP">BW103</a> : <!@TM:1536495204> | The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns. 
-@N:<a href="@N:BW107:@XP_HELP">BW107</a> : <!@TM:1536495204> | Synopsys Constraint File capacitance units using default value of 1pF  
-@N:<a href="@N:FX1056:@XP_HELP">FX1056</a> : <!@TM:1536495204> | Writing EDF file: E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.edf 
+@N:<a href="@N:BW103:@XP_HELP">BW103</a> : <!@TM:1536701450> | The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns. 
+@N:<a href="@N:BW107:@XP_HELP">BW107</a> : <!@TM:1536701450> | Synopsys Constraint File capacitance units using default value of 1pF  
+@N:<a href="@N:FX1056:@XP_HELP">FX1056</a> : <!@TM:1536701450> | Writing EDF file: E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.edf 
 L-2016.09L+ice40
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 136MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 132MB peak: 134MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 136MB)
+Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 132MB peak: 134MB)
 
-<font color=#A52A2A>@W:<a href="@W:MT420:@XP_HELP">MT420</a> : <!@TM:1536495204> | Found inferred clock RAM|wclk with period 1000.00ns. Please declare a user-defined clock on object "p:wclk"</font> 
-<font color=#A52A2A>@W:<a href="@W:MT420:@XP_HELP">MT420</a> : <!@TM:1536495204> | Found inferred clock RAM|rclk with period 1000.00ns. Please declare a user-defined clock on object "p:rclk"</font> 
 
 
 <a name=timingReport9></a>##### START OF TIMING REPORT #####[</a>
-# Timing Report written on Sun Sep 09 04:43:28 2018
+# Timing Report written on Mon Sep 10 03:07:17 2018
 #
 
 
-Top view:               RAM
+Top view:               PLL_SLOW
 Requested Frequency:    1.0 MHz
 Wire load mode:         top
 Paths requested:        5
 Constraint File(s):    
-@N:<a href="@N:MT320:@XP_HELP">MT320</a> : <!@TM:1536495204> | This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report. 
+@N:<a href="@N:MT320:@XP_HELP">MT320</a> : <!@TM:1536701450> | This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report. 
 
-@N:<a href="@N:MT322:@XP_HELP">MT322</a> : <!@TM:1536495204> | Clock constraints include only register-to-register paths associated with each individual clock. 
+@N:<a href="@N:MT322:@XP_HELP">MT322</a> : <!@TM:1536701450> | Clock constraints include only register-to-register paths associated with each individual clock. 
 
 
 
@@ -290,13 +281,6 @@ Constraint File(s):
 
 Worst slack in design: NA
 
-                   Requested     Estimated     Requested     Estimated               Clock        Clock                
-Starting Clock     Frequency     Frequency     Period        Period        Slack     Type         Group                
------------------------------------------------------------------------------------------------------------------------
-RAM|rclk           1.0 MHz       NA            1000.000      NA            NA        inferred     Autoconstr_clkgroup_1
-RAM|wclk           1.0 MHz       NA            1000.000      NA            NA        inferred     Autoconstr_clkgroup_0
-=======================================================================================================================
-@N:<a href="@N:MT582:@XP_HELP">MT582</a> : <!@TM:1536495204> | Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack 
 
 
 
@@ -326,47 +310,36 @@ No IO constraint found
 Timing exceptions that could not be applied
 None
 
-Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 136MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 132MB peak: 134MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 136MB)
+Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 132MB peak: 134MB)
 
 ---------------------------------------
-<a name=resourceUsage13></a>Resource Usage Report for RAM </a>
+<a name=resourceUsage13></a>Resource Usage Report for PLL_SLOW </a>
 
 Mapping to part: ice40hx8kct256
 Cell usage:
-SB_DFF          3 uses
-SB_RAM2048x2    32 uses
-SB_LUT4         64 uses
+SB_PLL40_CORE   1 use
+SB_LUT4         0 uses
 
-I/O ports: 47
-I/O primitives: 47
-SB_GB_IO       2 uses
-SB_IO          45 uses
+I/O ports: 6
+I/O primitives: 6
+SB_IO          6 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   3 (0%)
-
-RAM/ROM usage summary
-Block Rams : 32 of 32 (100%)
-
+Register bits not including I/Os:   0 (0%)
 Total load per clock:
-   RAM|wclk: 1
-   RAM|rclk: 1
 
 @S |Mapping Summary:
-Total  LUTs: 64 (0%)
-
-Distribution of All Consumed LUTs = LUT4 
-Distribution of All Consumed Luts 64 = 64 
+Total  LUTs: 0 (0%)
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 28MB peak: 136MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 26MB peak: 134MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:01s cputime
-# Sun Sep 09 04:43:28 2018
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Sep 10 03:07:17 2018
 
 ###########################################################]
 
