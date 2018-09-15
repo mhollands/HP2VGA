@@ -18,10 +18,10 @@ module main(
 	wire TX_PLL_LOCKED;
 	wire TX_CLK;
 	TX_PLL tx_pll(	.REFERENCECLK(TVP_CLK), // 20MHz in
-	    	.PLLOUTCORE(TX_CLK), // 48.75MHz out
-            .RESET(1'b1), // Active low
-		    .BYPASS(1'b0), //1: Passthrough Reference Clock, 0: PLL output
-			.LOCK(TX_PLL_LOCKED)); //High once locked
+			    	.PLLOUTCORE(TX_CLK), // 48.75MHz out
+		            .RESET(1'b1), // Active low
+				    .BYPASS(1'b0), //1: Passthrough Reference Clock, 0: PLL output
+					.LOCK(TX_PLL_LOCKED)); //High once locked
 
 	//Instantiate TX Module
 	wire RX_TX_SYNC;
@@ -29,6 +29,7 @@ module main(
 	wire RX_WE;
 	wire PULSE_1HZ;
 	wire [7:0] RX_DATA;
+	wire O_VISIBLE;
 	RX receive_module(
 			.O_CLK(TVP_CLK),
 		    .ENABLE(1'b1),
@@ -39,12 +40,14 @@ module main(
 		    .O_VS(TVP_VSYNC),
 		    .VIDEO(TVP_VIDEO),
 		    .PULSE_1HZ(PULSE_1HZ),
-		    .SYNC(RX_TX_SYNC));
+		    .SYNC(RX_TX_SYNC),
+		    .O_VISIBLE(O_VISIBLE));
 	
 	// Instantiate TX Module
 	wire [13:0] TX_ADDR;
 	wire [7:0] TX_DATA;
 	wire [7:0] R_T, G_T, B_T;
+	wire VGA_VISIBLE;
 	TX transmit_module(
 			    .CLK(TX_CLK),
 			    .ENABLE(1),
@@ -56,7 +59,8 @@ module main(
 			    .VGA_HS(ADV_HSYNC),
 			    .VGA_VS(ADV_VSYNC),
 			    .VGA_SYNC(RX_TX_SYNC),
-			    .VGA_SYNC_EN(1'b1));
+			    .VGA_SYNC_EN(1'b1),
+			    .VGA_VISIBLE(VGA_VISIBLE));
 
 	always @(negedge TX_CLK) begin
 		ADV_R <= R_T;
@@ -80,6 +84,6 @@ module main(
 
 	assign LED = PULSE_1HZ;
 
-	assign DEBUG[7:0] = TX_ADDR[7:0];
+	assign DEBUG[7:0] = {RX_TX_SYNC, O_VISIBLE, VGA_VISIBLE, RX_ADDR[13], TX_ADDR[13], 2'b000};
 
 endmodule

@@ -29,8 +29,9 @@ module RX(
     input wire O_HS,
     input wire O_VS,
     input wire [9:0] VIDEO,
-    output wire PULSE_1HZ,
-    output wire SYNC
+    output wire PULSE_1HZ, 
+    output wire SYNC,
+    output wire O_VISIBLE
     );
     
     wire [9:0] O_X;

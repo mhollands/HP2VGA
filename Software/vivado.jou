@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Fri Sep 14 01:35:04 2018
+# Process ID: 5343
+# Current directory: /home/matt/Documents/Google Drive/Materials/KDP/Oscilloscope Mod/HP2VGA/Software
+# Command line: vivado
+# Log file: /home/matt/Documents/Google Drive/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/vivado.log
+# Journal file: /home/matt/Documents/Google Drive/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {/home/matt/Documents/Google Drive/Materials/KDP/Oscilloscope Mod/FPGA/Final_Code/Format_Convert/Format_Convert.xpr}
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/matt/Documents/Google Drive/Materials/KDP/Oscilloscope Mod/FPGA/Final_Code/Format_Convert/Format_Convert.runs/impl_1/main.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+current_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {/home/matt/Documents/Google Drive/Materials/KDP/Oscilloscope Mod/FPGA/Final_Code/Format_Convert/Format_Convert.runs/impl_1/main.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

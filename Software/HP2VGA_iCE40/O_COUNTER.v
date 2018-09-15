@@ -28,7 +28,7 @@ module O_COUNTER( input wire ENABLE, //enable module
                   input wire O_VS, //vertical sync
                   output wire O_VISIBLE,
                   output reg PULSE_1HZ,
-                  output wire SYNC);
+                  output reg SYNC);
         
         parameter H_VISIBLE = 576;
         parameter H_FRONT_PORCH = 136;
@@ -50,6 +50,7 @@ module O_COUNTER( input wire ENABLE, //enable module
         reg old_VS;
         always @(posedge O_CLK)
         begin
+            SYNC <= (Y == 12);
             //if enabled
             if(ENABLE) begin
                if(O_HS == HS_POL) begin
@@ -81,8 +82,5 @@ module O_COUNTER( input wire ENABLE, //enable module
         assign O_VISIBLE = ENABLE && (X >= H_FRONT_PORCH && X < H_FRONT_PORCH + H_VISIBLE) && (Y >= V_FRONT_PORCH && Y < V_FRONT_PORCH + V_VISIBLE);
         assign O_X = X - H_FRONT_PORCH;
         assign O_Y = Y - V_FRONT_PORCH;
-        
-        assign SYNC = (Y == 12);
-
     endmodule
 

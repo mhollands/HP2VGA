@@ -31,6 +31,8 @@ module VGA_CONTROL( input VIDEO_CLK, //CLK input at correct pixel frequency
                     output reg VGA_HS, //horizontal sync
                     output reg VGA_VS, //vertical sync
                     output VGA_VISIBLE, //high if we are in active video region
+                    output VGA_VISIBLE_X, //high if we are in the visible region of the X scan
+                    output VGA_VISIBLE_Y, //high if we are in the visible region of the Y scan
                     output wire [7:0] VGA_RED, //red debug signal
                     output wire [7:0] VGA_BLUE, //blue debug signal
                     output wire [7:0] VGA_GREEN, //green debug signal
@@ -51,7 +53,9 @@ module VGA_CONTROL( input VIDEO_CLK, //CLK input at correct pixel frequency
 
     reg [11:0] VGA_X, VGA_Y;
     
-    assign VGA_VISIBLE = (VGA_X >= H_BACK_PORCH + H_SYNC_PULSE + H_FRONT_PORCH) && (VGA_Y >= V_BACK_PORCH + V_SYNC_PULSE + V_FRONT_PORCH) && (VGA_Y < V_TOTAL) && (VGA_X < H_TOTAL);
+    assign VGA_VISIBLE_X = (VGA_X >= H_BACK_PORCH + H_SYNC_PULSE + H_FRONT_PORCH);
+    assign VGA_VISIBLE_Y = (VGA_Y >= V_BACK_PORCH + V_SYNC_PULSE + V_FRONT_PORCH) && (VGA_Y < V_TOTAL) && (VGA_X < H_TOTAL);
+    assign VGA_VISIBLE = VGA_VISIBLE_X && VGA_VISIBLE_Y;
     //assign VGA_HS = ~((VGA_X >= H_FRONT_PORCH) && (VGA_X < H_FRONT_PORCH + H_SYNC_PULSE));
     //assign VGA_VS = ((VGA_Y >= V_FRONT_PORCH) && (VGA_Y < V_FRONT_PORCH + V_SYNC_PULSE));  
 
@@ -62,10 +66,16 @@ module VGA_CONTROL( input VIDEO_CLK, //CLK input at correct pixel frequency
     assign VGA_RED = VGA_VISIBLE ? 255-VGA_Y[7:0] : 0;
     assign VGA_GREEN = VGA_VISIBLE ? 255-VGA_X[7:0] : 0;
     assign VGA_BLUE = VGA_VISIBLE ? VGA_Y[7:0] : 0;
-        
+     
+    reg SYNC_BUFF1, SYNC_BUFF2, SYNC_BUFF3;
+
     //at every clock edge
     always @(posedge VIDEO_CLK)
     begin
+        SYNC_BUFF1 <= SYNC;
+        SYNC_BUFF2 <= SYNC_BUFF1;
+        SYNC_BUFF3 <= SYNC_BUFF2;
+
         VGA_HS <= ~((VGA_X >= H_FRONT_PORCH) && (VGA_X < H_FRONT_PORCH + H_SYNC_PULSE));
         VGA_VS <= ((VGA_Y >= V_FRONT_PORCH) && (VGA_Y < V_FRONT_PORCH + V_SYNC_PULSE));  
         //if enabled
@@ -75,7 +85,7 @@ module VGA_CONTROL( input VIDEO_CLK, //CLK input at correct pixel frequency
                 VGA_X <= VGA_X + 1;
             end else begin
                 VGA_X <= 0;
-                if((SYNC_EN && SYNC) | (!SYNC_EN && VGA_Y == V_TOTAL - 1)) begin
+                if((SYNC_EN & SYNC_BUFF2) || (!SYNC_EN && (VGA_Y == V_TOTAL - 1))) begin
                     VGA_Y <= 0;
                 end else begin
                     VGA_Y <= VGA_Y + 1;

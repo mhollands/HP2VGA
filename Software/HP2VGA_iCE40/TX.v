@@ -31,11 +31,12 @@ module TX(
     output wire VGA_HS,
     output wire VGA_VS,
     input wire VGA_SYNC,
-    input wire VGA_SYNC_EN
+    input wire VGA_SYNC_EN,
+    output wire VGA_VISIBLE
     );
     
     //define VGA controller
-    wire VGA_VISIBLE;
+    wire VGA_VISIBLE, VGA_VISIBLE_X, VGA_VISIBLE_Y;
     wire unsigned [11:0] VGA_X, VGA_Y;
     wire [7:0] DEBUG_VIDEO_R, DEBUG_VIDEO_G, DEBUG_VIDEO_B;
     VGA_CONTROL video_signal_controller(    .VIDEO_CLK(CLK), //CLK input at correct pixel frequency
@@ -46,6 +47,8 @@ module TX(
                                             .VGA_HS(VGA_HS), //horizontal sync
                                             .VGA_VS(VGA_VS), //vertical sync
                                             .VGA_VISIBLE(VGA_VISIBLE),
+                                            .VGA_VISIBLE_X(VGA_VISIBLE_X),
+                                            .VGA_VISIBLE_Y(VGA_VISIBLE_Y),
                                             .VGA_RED(DEBUG_VIDEO_R),
                                             .VGA_GREEN(DEBUG_VIDEO_G),
                                             .VGA_BLUE(DEBUG_VIDEO_B),
@@ -70,10 +73,10 @@ module TX(
             Y_DELTA_PATTERN <= 100'hB5B5B5B6B6B6D6D6D6DADADAD;
             VIDEO_STARTED <= 0;
         end else begin
-            if(VGA_HS == 0 && old_VGA_HS == 1 && VIDEO_STARTED) begin
+            if(VGA_HS == 0 && old_VGA_HS == 1 && VGA_VISIBLE_Y) begin
                 X_DELTA_PATTERN <= 16'b1010101011010101;
-                ADDR_Y_COMPONENT <= (Y_DELTA_PATTERN[0] ? BRAM_ADDR + 1 : ADDR_Y_COMPONENT);
-                BRAM_ADDR <= (Y_DELTA_PATTERN[0] ? BRAM_ADDR + 1 : ADDR_Y_COMPONENT);
+                ADDR_Y_COMPONENT <= (Y_DELTA_PATTERN[0] ? BRAM_ADDR : ADDR_Y_COMPONENT);
+                BRAM_ADDR <= (Y_DELTA_PATTERN[0] ? BRAM_ADDR : ADDR_Y_COMPONENT);
                 Y_DELTA_PATTERN <= {Y_DELTA_PATTERN[0],Y_DELTA_PATTERN[99:1]};    
             end else begin
                 if(VGA_VISIBLE) begin
