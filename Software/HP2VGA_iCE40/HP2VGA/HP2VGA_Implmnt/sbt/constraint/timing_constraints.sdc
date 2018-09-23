@@ -8,9 +8,14 @@
 
 # ##############################################################################
 
-####---- CreateClock list ----1
-##TODO need to create TX_PLL clock
+####---- Create Clock list ---
 create_clock  -period 50.00 -name {TVP_CLK} [get_ports {TVP_CLK}] 
-create_clock  -period 16666666.67 -name {TVP_VSYNC} [get_ports {TVP_VSYNC}] 
+create_clock -period 20.5128 -name {TX_CLK} [get_ports {ADV_CLK}]
 
-create_generated_clock -source [get_ports TVP_CLK] -multiply_by 2 [get_registers main|TX_CLK]
+####---- Create Output Delays list ---
+set_output_delay -max 17 -clock TX_CLK [get_ports {ADV_*}]
+set_output_delay -min 3 -clock TX_CLK [get_ports {ADV_*}]
+
+####---- Create Input Delays list ---
+set_input_delay -max 1.5 -clock TVP_CLK [get_ports {TVP_*}]
+set_input_delay -min 0 -clock TVP_CLK [get_ports {TVP_*}]

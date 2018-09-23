@@ -1,8 +1,20 @@
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 @N: MT206 |Auto Constrain mode is enabled
+@N: MF794 |RAM line_buffer.mem[7:0] required 3 registers during mapping 
+@N: MO231 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\o_counter.v":51:8:51:13|Found counter in view:work.O_COUNTER(verilog) instance X[9:0] 
+@N: MO231 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\vga_control.v":73:4:73:9|Found counter in view:work.TX(verilog) instance video_signal_controller.VGA_Y[11:0] 
+@N: MF794 |RAM line_buffer.mem[7:0] required 3 registers during mapping 
+@N: MF794 |RAM line_buffer.mem[7:0] required 3 registers during mapping 
+@N: FX271 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\ram.v":10:1:10:6|Replicating instance line_buffer.mem_radreg[13] (in view: work.main(verilog)) with 32 loads 2 times to improve timing.
+@N: FX1017 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\main.v":20:8:20:13|SB_GB inserted on the net ADV_CLK_c.
+@N: FX1016 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\main.v":3:12:3:18|SB_GB_IO inserted on the port TVP_CLK.
+@N: FX1017 :"e:\materials\kdp\oscilloscope mod\hp2vga\software\hp2vga_ice40\vga_control.v":73:4:73:9|SB_GB inserted on the net ADV_VSYNC_c.
+@N: FX1017 :|SB_GB inserted on the net transmit_module.video_signal_controller.VGA_X12.
+@N: FX1017 :|SB_GB inserted on the net TVP_VSYNC_c_i.
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
 @N: FX1056 |Writing EDF file: E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\HP2VGA.edf
+@N: MT615 |Found clock TX_PLL|PLLOUTCORE_derived_clock with period 12.42ns 
 @N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
 @N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

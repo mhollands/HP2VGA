@@ -1,0 +1,9 @@
+.\..\..\..\main.v
+.\..\..\..\TX_PLL.v
+.\..\..\..\RAM.v
+.\..\..\..\TX.v
+.\..\..\..\RX.v
+.\..\..\..\O_COUNTER.v
+.\..\..\..\VGA_CONTROL.v
+.\..\..\..\TX_PLL_FAST.v
+.\src\TestBench\main_TB.v

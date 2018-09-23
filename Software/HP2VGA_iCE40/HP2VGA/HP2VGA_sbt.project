@@ -32,7 +32,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Bui
 ProjectName=HP2VGA
 Vendor=SiliconBlue
 Synthesis=lse
-ProjectVFiles=../main.v=work,../TX_PLL.v,../RAM.v,../TX.v,../RX.v,../O_COUNTER.v,../VGA_CONTROL.v,../TX_PLL2.v,../PLL_SLOW.v,../PLL_FAST.v
+ProjectVFiles=../main.v=work,../TX_PLL.v=work,../RAM.v=work,../TX.v=work,../RX.v=work,../O_COUNTER.v=work,../VGA_CONTROL.v=work,../TX_PLL_FAST.v=work,../PLL_20_TO_100MHz.v,../PLL_100_TO_48MHz96.v
 ProjectCFiles=
 CurImplementation=HP2VGA_Implmnt
 Implementations=HP2VGA_Implmnt
@@ -84,5 +84,5 @@ BitmapSetSecurity=no
 BitmapSetNoUsedIONoPullup=no
 FloorPlannerShowFanInNets=yes
 FloorPlannerShowFanOutNets=yes
-HookTo3rdPartyTextEditor=no
+HookTo3rdPartyTextEditor=yes
 

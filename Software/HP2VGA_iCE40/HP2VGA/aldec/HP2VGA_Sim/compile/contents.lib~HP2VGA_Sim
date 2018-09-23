@@ -1,0 +1,21 @@
+47
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 1 "./../../../../O_COUNTER.v" 23 O_COUNTER
+~A 1 "./../../../../O_COUNTER.v" 23 O_COUNTER
+~M 1 "./../../../../RAM.v" 1 RAM
+~A 1 "./../../../../RAM.v" 1 RAM
+~M 3 "./../../../../RX.v" 23 RX
+~A 1 "./../../../../RX.v" 23 RX
+~M 1 "./../../../../TX.v" 23 TX
+~A 1 "./../../../../TX.v" 23 TX
+~M 1 "./../../../../TX_PLL.v" 1 TX_PLL
+~A 1 "./../../../../TX_PLL.v" 1 TX_PLL
+~M 3 "./../../../../TX_PLL_FAST.v" 1 TX_PLL_FAST
+~A 1 "./../../../../TX_PLL_FAST.v" 1 TX_PLL_FAST
+~M 1 "./../../../../VGA_CONTROL.v" 26 VGA_CONTROL
+~A 1 "./../../../../VGA_CONTROL.v" 26 VGA_CONTROL
+~M 1 "./../../../../main.v" 1 main
+~A 1 "./../../../../main.v" 1 main
+~M 3 "./../src/TestBench/main_TB.v" 22 main_tb
+~A 1 "./../src/TestBench/main_TB.v" 22 main_tb

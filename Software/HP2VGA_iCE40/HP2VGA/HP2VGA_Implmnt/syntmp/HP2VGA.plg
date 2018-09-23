@@ -1,7 +1,18 @@
-@P:  Worst Slack : NA
-@P: PLL_SLOW Part : ice40hx8kct256
-@P: PLL_SLOW I/O primitives : 6
-@P: PLL_SLOW I/O Register bits : 0
-@P: PLL_SLOW Register bits (Non I/O) : 0 (0%)
-@P: PLL_SLOW Total Luts : 0 (0%)
-@P:  CPU Time : 0h:00m:01s
+@P:  Worst Slack : -3.280
+@P:  TX_PLL|PLLOUTCORE_derived_clock - Estimated Frequency : 52.7 MHz
+@P:  TX_PLL|PLLOUTCORE_derived_clock - Requested Frequency : 80.5 MHz
+@P:  TX_PLL|PLLOUTCORE_derived_clock - Estimated Period : 18.982
+@P:  TX_PLL|PLLOUTCORE_derived_clock - Requested Period : 12.422
+@P:  TX_PLL|PLLOUTCORE_derived_clock - Slack : -3.280
+@P:  main|TVP_CLK - Estimated Frequency : 68.6 MHz
+@P:  main|TVP_CLK - Requested Frequency : 80.5 MHz
+@P:  main|TVP_CLK - Estimated Period : 14.582
+@P:  main|TVP_CLK - Requested Period : 12.422
+@P:  main|TVP_CLK - Slack : -2.160
+@P: main Part : ice40hx8kct256
+@P: main I/O primitives : 48
+@P: main I/O Register bits : 0
+@P: main Register bits (Non I/O) : 228 (2%)
+@P: main Block Rams : 32 of 32 (100%)
+@P: main Total Luts : 342 (4%)
+@P:  CPU Time : 0h:00m:05s

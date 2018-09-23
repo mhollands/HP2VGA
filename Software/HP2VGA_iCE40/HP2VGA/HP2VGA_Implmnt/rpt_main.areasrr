@@ -9,26 +9,162 @@ Part:			ICE40HX8KCT256 (Lattice)
 SEQUENTIAL ELEMENTS
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-FLOPS     30                 100 %                
+FLOPS     228                100 %                
 ==================================================
-Total SEQUENTIAL ELEMENTS in the block main:	30 (16.48 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block main:	228 (30.89 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-LUTS       83                 100 %                
-CARRYS     26                 100 %                
+LUTS       342                100 %                
+CARRYS     68                 100 %                
 ===================================================
-Total COMBINATIONAL LOGIC in the block main:	109 (59.89 % Utilization)
+Total COMBINATIONAL LOGIC in the block main:	410 (55.56 % Utilization)
+
+
+MEMORY ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+RAMS     32                 100 %                
+=================================================
+Total MEMORY ELEMENTS in the block main:	32 (4.34 % Utilization)
 
 
 IO PADS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-PADS     35                 100 %                
+PADS     52                 100 %                
 =================================================
-Total IO PADS in the block main:	35 (19.23 % Utilization)
+Total IO PADS in the block main:	52 (7.05 % Utilization)
+
+---------------------------------------------------------
+########   Utilization report for  cell:   RAM   ########
+Instance path:   main.RAM                                
+=========================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     5                  2.19 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block main.RAM:	5 (0.68 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+LUTS     56                 16.4 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block main.RAM:	56 (7.59 % Utilization)
+
+
+MEMORY ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+RAMS     32                 100 %                
+=================================================
+Total MEMORY ELEMENTS in the block main.RAM:	32 (4.34 % Utilization)
+
+--------------------------------------------------------
+########   Utilization report for  cell:   RX   ########
+Instance path:   main.RX                                
+========================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     43                 18.9 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block main.RX:	43 (5.83 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       62                 18.1 %               
+CARRYS     35                 51.5 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block main.RX:	97 (13.14 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   O_COUNTER   ########
+Instance path:   RX.O_COUNTER                                  
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     29                 12.7 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block RX.O_COUNTER:	29 (3.93 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       48                 14 %                 
+CARRYS     22                 32.4 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block RX.O_COUNTER:	70 (9.49 % Utilization)
+
+--------------------------------------------------------
+########   Utilization report for  cell:   TX   ########
+Instance path:   main.TX                                
+========================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     172                75.4 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block main.TX:	172 (23.31 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       222                64.9 %               
+CARRYS     33                 48.5 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block main.TX:	255 (34.55 % Utilization)
+
+
+IO PADS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     2                  3.85 %               
+=================================================
+Total IO PADS in the block main.TX:	2 (0.27 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   VGA_CONTROL   ########
+Instance path:   TX.VGA_CONTROL                                  
+=================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     27                 11.8 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block TX.VGA_CONTROL:	27 (3.66 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       58                 17 %                 
+CARRYS     20                 29.4 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block TX.VGA_CONTROL:	78 (10.57 % Utilization)
+
+
+IO PADS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     2                  3.85 %               
+=================================================
+Total IO PADS in the block TX.VGA_CONTROL:	2 (0.27 % Utilization)
 
 ------------------------------------------------------------
 ########   Utilization report for  cell:   TX_PLL   ########
@@ -38,30 +174,143 @@ Instance path:   main.TX_PLL
 IO PADS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-PADS     1                  2.86 %               
+PADS     1                  1.92 %               
 =================================================
-Total IO PADS in the block main.TX_PLL:	1 (0.55 % Utilization)
+Total IO PADS in the block main.TX_PLL:	1 (0.14 % Utilization)
 
------------------------------------------------------------------
-########   Utilization report for  cell:   vga_control   ########
-Instance path:   main.vga_control                                
-=================================================================
+#### START OF Block RAM DETAILED REPORT ####
 
-SEQUENTIAL ELEMENTS
-Name      Total elements     Utilization     Notes
---------------------------------------------------
-FLOPS     23                 76.7 %               
-==================================================
-Total SEQUENTIAL ELEMENTS in the block main.vga_control:	23 (12.64 % Utilization)
+Total Block RAMs: 32
 
+line_buffer.mem_mem_7_3
+----------------------------
+----------------------------
 
-COMBINATIONAL LOGIC
-Name       Total elements     Utilization     Notes
----------------------------------------------------
-LUTS       71                 85.5 %               
-CARRYS     26                 100 %                
-===================================================
-Total COMBINATIONAL LOGIC in the block main.vga_control:	97 (53.30 % Utilization)
+line_buffer.mem_mem_7_2
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_7_1
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_7_0
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_6_3
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_6_2
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_6_1
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_6_0
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_5_3
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_5_2
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_5_1
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_5_0
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_4_3
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_4_2
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_4_1
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_4_0
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_3_3
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_3_2
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_3_1
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_3_0
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_2_3
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_2_2
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_2_1
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_2_0
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_1_3
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_1_2
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_1_1
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_1_0
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_0_3
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_0_2
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_0_1
+----------------------------
+----------------------------
+
+line_buffer.mem_mem_0_0
+----------------------------
+----------------------------
+
+#### END OF  Block RAM DETAILED REPORT ####
 
 
 ##### END OF AREA REPORT #####]

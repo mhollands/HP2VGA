@@ -10,8 +10,7 @@ add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE4
 add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/RX.v"
 add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/O_COUNTER.v"
 add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/VGA_CONTROL.v"
-add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/TX_PLL2.v"
-add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/PLL_SLOW.v"
+add_file -verilog "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/TX_PLL_FAST.v"
 
 
 
@@ -33,6 +32,7 @@ set_option -speed_grade ""
 set_option -part_companion ""
 
 #compilation/mapping options
+set_option -top_module "main"
 
 # hdl_compiler_options
 set_option -distributed_compile 0

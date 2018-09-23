@@ -15,13 +15,31 @@ module main(
 	output wire ADV_BLANK_N);
 
 	// Generate the 48.925MHz clock for the TX video signal
+	/*
 	wire TX_PLL_LOCKED;
 	wire TX_CLK;
-	TX_PLL tx_pll(	.REFERENCECLK(TVP_CLK), // 20MHz in
+	TX_PLL_FAST tx_pll(	.REFERENCECLK(TVP_CLK), // 20MHz in
 			    	.PLLOUTCORE(TX_CLK), // 48.75MHz out
 		            .RESET(1'b1), // Active low
 				    .BYPASS(1'b0), //1: Passthrough Reference Clock, 0: PLL output
 					.LOCK(TX_PLL_LOCKED)); //High once locked
+	
+*/
+	wire TX_PLL_LOCKED1, TX_PLL_LOCKED2;
+
+	wire TX_CLK;
+	wire CLK_100MHz;
+	PLL_20_TO_100MHz pll1(	.REFERENCECLK(TVP_CLK), // 20MHz in
+			    	.PLLOUTCORE(CLK_100MHz), // 48.75MHz out
+		            .RESET(1'b1), // Active low
+				    .BYPASS(1'b0), //1: Passthrough Reference Clock, 0: PLL output
+					.LOCK(TX_PLL_LOCKED1)); //High once locked
+
+	PLL_100_TO_48MHz96 pll2(	.REFERENCECLK(CLK_100MHz), // 20MHz in
+			    	.PLLOUTCORE(TX_CLK), // 48.75MHz out
+		            .RESET(1'b1), // Active low
+				    .BYPASS(1'b0), //1: Passthrough Reference Clock, 0: PLL output
+					.LOCK(TX_PLL_LOCKED2)); //High once locked
 
 	//Instantiate TX Module
 	wire RX_TX_SYNC;
@@ -48,6 +66,8 @@ module main(
 	wire [7:0] TX_DATA;
 	wire [7:0] R_T, G_T, B_T;
 	wire VGA_VISIBLE;
+	wire SYNC_ENABLE;
+	wire VGA_DEBUG_MODE;
 	TX transmit_module(
 			    .CLK(TX_CLK),
 			    .ENABLE(1),
@@ -59,8 +79,12 @@ module main(
 			    .VGA_HS(ADV_HSYNC),
 			    .VGA_VS(ADV_VSYNC),
 			    .VGA_SYNC(RX_TX_SYNC),
-			    .VGA_SYNC_EN(1'b1),
-			    .VGA_VISIBLE(VGA_VISIBLE));
+			    .VGA_SYNC_EN(SYNC_ENABLE),
+			    .VGA_VISIBLE(VGA_VISIBLE),
+			    .DEBUG_MODE(VGA_DEBUG_MODE));
+
+	assign VGA_DEBUG_MODE = ~DEBUG[6];
+	assign SYNC_ENABLE = DEBUG[7];
 
 	always @(negedge TX_CLK) begin
 		ADV_R <= R_T;
@@ -69,14 +93,14 @@ module main(
 	end
 
 	//Instantiate the line buffer
-	RAM line_buffer(.din(RX_DATA),
+	/*RAM line_buffer(.din(RX_DATA),
 					.write_en(RX_WE),
 					.waddr(RX_ADDR),
 					.wclk(TVP_CLK),
 					.raddr(TX_ADDR),
 					.rclk(TX_CLK),
 					.dout(TX_DATA));
-
+*/
 	// Output all of the remaining ADV signals
 	assign ADV_CLK = TX_CLK;
 	assign ADV_SYNC_N = 0;
@@ -84,6 +108,6 @@ module main(
 
 	assign LED = PULSE_1HZ;
 
-	assign DEBUG[7:0] = {RX_TX_SYNC, O_VISIBLE, VGA_VISIBLE, RX_ADDR[13], TX_ADDR[13], 2'b000};
+	assign DEBUG[5:0] = {RX_TX_SYNC, O_VISIBLE, VGA_VISIBLE, RX_ADDR[13], TX_ADDR[13], 1'b0};
 
 endmodule

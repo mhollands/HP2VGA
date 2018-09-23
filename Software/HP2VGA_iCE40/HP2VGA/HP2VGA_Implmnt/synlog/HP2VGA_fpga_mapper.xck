@@ -1,2 +1,2 @@
-CKID0001:@|S:rclk_ibuf_gb_io@|E:mem_radreg[11]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
-CKID0002:@|S:wclk_ibuf_gb_io@|E:mem_mem_0_0@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002 
+CKID0001:@|S:tx_pll.TX_PLL_inst@|E:ADV_B[0]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:TVP_CLK_ibuf_gb_io@|E:receive_module.BRAM_ADDR[13]@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002 

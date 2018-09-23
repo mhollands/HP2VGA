@@ -1,0 +1,61 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+[Configurations]
+compile=HP2VGA_Sim
+[Library]
+HP2VGA_Sim=.\HP2VGA_Sim\HP2VGA_Sim.lib
+[Settings]
+AccessRead=1
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+LibNames=ovi_ice;ice
+[LocalVhdlSets]
+CompileWithDebug=0
+[$LibMap$]
+HP2VGA_Sim=.
+[Files]
+/..\..\..\..\main.v=-1
+/..\..\..\..\TX_PLL.v=-1
+/..\..\..\..\RAM.v=-1
+/..\..\..\..\TX.v=-1
+/..\..\..\..\RX.v=-1
+/..\..\..\..\O_COUNTER.v=-1
+/..\..\..\..\VGA_CONTROL.v=-1
+/..\..\..\..\TX_PLL_FAST.v=-1
+TestBench/main_TB.v=-1
+TestBench/main_TB_runtest.do=-1
+[Files.Data]
+.\..\..\..\main.v=Verilog Source Code
+.\..\..\..\TX_PLL.v=Verilog Source Code
+.\..\..\..\RAM.v=Verilog Source Code
+.\..\..\..\TX.v=Verilog Source Code
+.\..\..\..\RX.v=Verilog Source Code
+.\..\..\..\O_COUNTER.v=Verilog Source Code
+.\..\..\..\VGA_CONTROL.v=Verilog Source Code
+.\..\..\..\TX_PLL_FAST.v=Verilog Source Code
+.\src\TestBench\main_TB.v=Verilog Test Bench
+.\src\TestBench\main_TB_runtest.do=Macro
+[ORDER]
+Synchronize=1
+[Groups]
+TestBench=1
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

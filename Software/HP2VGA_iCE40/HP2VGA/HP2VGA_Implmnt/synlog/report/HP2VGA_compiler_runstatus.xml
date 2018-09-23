@@ -14,11 +14,11 @@ The file contains the job information from compiler to be displayed as part of t
   </job_status>
 <job_info> 
 			<info name="Notes">
-  <data>7</data>
+  <data>16</data>
   <report_link name="more"><data>E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synlog\report\HP2VGA_compiler_notes.txt</data></report_link>
   </info>
 			<info name="Warnings">
-  <data>5</data>
+  <data>14</data>
   <report_link name="more"><data>E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\synlog\report\HP2VGA_compiler_warnings.txt</data></report_link>
   </info>
 			<info name="Errors">
@@ -35,7 +35,7 @@ The file contains the job information from compiler to be displayed as part of t
   <data>-</data>
   </info>
 			<info name="Date &amp;Time">
-  <data type="timestamp">1536701445</data>
+  <data type="timestamp">1537310282</data>
   </info>
 			</job_info>
 </job_run_status>

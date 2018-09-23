@@ -33,11 +33,11 @@ module RX(
     output wire SYNC,
     output wire O_VISIBLE
     );
-    
+    	
     wire [9:0] O_X;
     wire [8:0] O_Y;
-    wire O_VISIBLE;
-    
+    //wire O_VISIBLE;
+      	
     O_COUNTER rx_counter(   .O_CLK(O_CLK),
                             .ENABLE(ENABLE),
                             .O_X(O_X),
@@ -47,7 +47,7 @@ module RX(
                             .O_VISIBLE(O_VISIBLE),
                             .PULSE_1HZ(PULSE_1HZ),
                             .SYNC(SYNC));
-
+	  
     always @(posedge O_CLK) begin
         if(O_VS == 0) begin
            BRAM_ADDR <= 0; 
@@ -58,9 +58,13 @@ module RX(
             end
         end
     end
-
+		
     //assign BRAM_ADDR = O_X + O_Y * 576;
     assign BRAM_DIN = VIDEO[9:2];
     assign BRAM_WE = O_VISIBLE;
-    
+	
+	initial begin
+		BRAM_ADDR = 0;	
+	end	
+	
 endmodule

@@ -1,12 +1,12 @@
 # Synopsys Constraint Checker(syntax only), version maplat, Build 1612R, built Dec  5 2016
 # Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 
-# Written on Mon Sep 10 03:07:14 2018
+# Written on Tue Sep 18 23:38:05 2018
 
 
 ##### DESIGN INFO #######################################################
 
-Top View:                "PLL_SLOW"
+Top View:                "main"
 Constraint File(s):      (none)
 
 #Run constraint checker to find more issues with constraints.
@@ -21,7 +21,9 @@ No issues found in constraint syntax.
 Clock Summary
 *************
 
-Start     Requested     Requested     Clock     Clock     Clock
-Clock     Frequency     Period        Type      Group     Load 
----------------------------------------------------------------
-===============================================================
+Start                               Requested     Requested     Clock                           Clock                     Clock
+Clock                               Frequency     Period        Type                            Group                     Load 
+-------------------------------------------------------------------------------------------------------------------------------
+TX_PLL|PLLOUTCORE_derived_clock     5.1 MHz       196.778       derived (from main|TVP_CLK)     Autoconstr_clkgroup_0     204  
+main|TVP_CLK                        2.1 MHz       479.712       inferred                        Autoconstr_clkgroup_0     51   
+===============================================================================================================================

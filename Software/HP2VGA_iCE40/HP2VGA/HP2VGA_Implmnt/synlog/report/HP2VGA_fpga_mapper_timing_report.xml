@@ -14,4 +14,16 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <data tcl_name="est_freq">Est Freq</data>
 <data tcl_name="slack">Slack</data>
 </row>
+<row>
+<data>TX_PLL|PLLOUTCORE_derived_clock</data>
+<data>80.5 MHz</data>
+<data>52.7 MHz</data>
+<data>-3.280</data>
+</row>
+<row>
+<data>main|TVP_CLK</data>
+<data>80.5 MHz</data>
+<data>68.6 MHz</data>
+<data>-2.160</data>
+</row>
 </report_table>

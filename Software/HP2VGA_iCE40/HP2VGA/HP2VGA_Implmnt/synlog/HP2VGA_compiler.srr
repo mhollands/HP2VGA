@@ -18,51 +18,75 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RX.v" (library work)
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\O_COUNTER.v" (library work)
 @I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\VGA_CONTROL.v" (library work)
-@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL2.v" (library work)
-@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v" (library work)
+@I::"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL_FAST.v" (library work)
 Verilog syntax check successful!
 
 Compiler output is up to date.  No re-compile necessary
 
-Selecting top level module PLL_SLOW
+Selecting top level module main
 @N: CG364 :"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v":698:7:698:19|Synthesizing module SB_PLL40_CORE in library work.
 
-@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":1:7:1:14|Synthesizing module PLL_SLOW in library work.
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":1:7:1:12|Synthesizing module TX_PLL in library work.
 
-@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":18:40:18:40|Input EXTFEEDBACK on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":19:41:19:41|Input DYNAMICDELAY on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":22:44:22:44|Input LATCHINPUTVALUE on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":24:32:24:32|Input SDI on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":26:33:26:33|Input SCLK on instance PLL_SLOW_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":18:38:18:38|Input EXTFEEDBACK on instance TX_PLL_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":19:39:19:39|Input DYNAMICDELAY on instance TX_PLL_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":22:42:22:42|Input LATCHINPUTVALUE on instance TX_PLL_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":24:30:24:30|Input SDI on instance TX_PLL_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX_PLL.v":26:31:26:31|Input SCLK on instance TX_PLL_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\O_COUNTER.v":23:7:23:15|Synthesizing module O_COUNTER in library work.
+
+@W: CG532 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\O_COUNTER.v":86:2:86:8|Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RX.v":23:7:23:8|Synthesizing module RX in library work.
+
+@W: CG532 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RX.v":66:1:66:7|Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\VGA_CONTROL.v":26:7:26:17|Synthesizing module VGA_CONTROL in library work.
+
+@W: CL169 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\VGA_CONTROL.v":73:4:73:9|Pruning unused register SYNC_BUFF3. Make sure that there are no unused intermediate registers.
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX.v":23:7:23:8|Synthesizing module TX in library work.
+
+@N: CG179 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX.v":80:70:80:85|Removing redundant assignment.
+@N: CG179 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX.v":81:51:81:59|Removing redundant assignment.
+@W: CS263 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX.v":46:51:46:51|Port-width mismatch for port RESET. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CL169 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX.v":70:4:70:9|Pruning unused register VIDEO_STARTED. Make sure that there are no unused intermediate registers.
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":1:7:1:9|Synthesizing module RAM in library work.
+
+@N: CL134 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RAM.v":10:1:10:6|Found RAM mem, depth=16384, width=8
+@N: CG364 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":1:7:1:10|Synthesizing module main in library work.
+
+@W: CS263 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":55:15:55:15|Port-width mismatch for port ENABLE. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CL247 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\main.v":2:18:2:22|Input port bit 0 of DEBUG[7:0] is unused
+
+@N: CL159 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\TX.v":36:10:36:19|Input DEBUG_MODE is unused.
+@N: CL189 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\VGA_CONTROL.v":73:4:73:9|Register bit VGA_X[11] is always 0.
+@W: CL260 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\VGA_CONTROL.v":73:4:73:9|Pruning register bit 11 of VGA_X[11:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL246 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\RX.v":31:21:31:25|Input port bits 1 to 0 of VIDEO[9:0] are unused. Assign logic for all port bits or change the input port size.
 
 At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Mon Sep 10 03:07:12 2018
+# Tue Sep 18 23:38:02 2018
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
 @N|Running in 64-bit mode
-@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":1:7:1:14|Selected library: work cell: PLL_SLOW view verilog as top level
-@N: NF107 :"E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\PLL_SLOW.v":1:7:1:14|Selected library: work cell: PLL_SLOW view verilog as top level
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Mon Sep 10 03:07:12 2018
+# Tue Sep 18 23:38:02 2018
 
 ###########################################################]
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Mon Sep 10 03:07:12 2018
+# Tue Sep 18 23:38:02 2018
 
 ###########################################################]

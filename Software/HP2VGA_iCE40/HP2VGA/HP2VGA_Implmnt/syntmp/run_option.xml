@@ -3,14 +3,14 @@
   Synopsys, Inc.
   Version L-2016.09L+ice40
   Project file E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\HP2VGA_Implmnt\syntmp\run_option.xml
-  Written on Mon Sep 10 03:07:11 2018
+  Written on Tue Sep 18 23:38:01 2018
 
 
 --> 
 <project_attribute_list name="Project Settings"> 
      <option name="project_name" display_name="Project Name">HP2VGA_syn</option>
      <option name="impl_name" display_name="Implementation Name">HP2VGA_Implmnt</option>
-     <option name="top_module" display_name="Top Module"></option>
+     <option name="top_module" display_name="Top Module">main</option>
      <option name="pipe" display_name="Pipelining">1</option>
      <option name="retiming" display_name="Retiming">0</option>
      <option name="resource_sharing" display_name="Resource Sharing">1</option>
