@@ -46,6 +46,7 @@ set_io ADV_B[5] B9 -pullup no
 set_io ADV_R[6] B1 -pullup no
 
 set_io TVP_CLK K6 -pullup yes
+##set_io CLK_100MHz K6 -pullup yes
 set_io TVP_VSYNC J5 -pullup yes
 set_io TVP_HSYNC J7 -pullup yes
 set_io TVP_VIDEO[0] L1 -pullup yes

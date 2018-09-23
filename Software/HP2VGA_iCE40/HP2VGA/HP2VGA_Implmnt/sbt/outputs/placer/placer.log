@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:12:22
 
-* File Generated:     Sep 23 2018 02:39:47
+* File Generated:     Sep 23 2018 23:04:59
 
 * Purpose:            
 
@@ -33,116 +33,105 @@ I2051: Reading of inputs for placer completed successfully
 
 I2053: Starting placement of the design
 =============================================================
-W2715: Warning for set_io Constraint: Ignoring pin assignment for TVP_VIDEO[3], as it is not connected to any PAD
 W2715: Warning for set_io Constraint: Ignoring pin assignment for TVP_VIDEO[1], as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for TVP_VIDEO[8], as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for TVP_VIDEO[7], as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for TVP_VIDEO[6], as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for TVP_VIDEO[5], as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for DEBUG[6], as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for TVP_VIDEO[4], as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for TVP_VIDEO[2], as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for TVP_VIDEO[9], as it is not connected to any PAD
 W2715: Warning for set_io Constraint: Ignoring pin assignment for TVP_VIDEO[0], as it is not connected to any PAD
 
 Input Design Statistics
-    Number of LUTs      	:	174
-    Number of DFFs      	:	240
+    Number of LUTs      	:	246
+    Number of DFFs      	:	227
     Number of DFFs packed to IO	:	0
-    Number of Carrys    	:	69
-    Number of RAMs      	:	0
+    Number of Carrys    	:	79
+    Number of RAMs      	:	32
     Number of ROMs      	:	0
-    Number of IOs       	:	39
+    Number of IOs       	:	48
     Number of GBIOs     	:	1
     Number of GBs       	:	0
     Number of WarmBoot  	:	0
-    Number of PLLs      	:	2
+    Number of PLLs      	:	1
 
 
 Phase 1
 I2077: Start design legalization
 
 Design Legalization Statistics
-    Number of feedthru LUTs inserted to legalize input of DFFs     	:	143
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	147
     Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
-    Number of LUTs replicated for LUTs driving multiple DFFs       	:	0
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	11
     Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
     Number of feedthru LUTs inserted to legalize global signals    	:	1
     Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
-    Total LUTs inserted                                            	:	144
+    Total LUTs inserted                                            	:	159
     Total CARRYs inserted                                          	:	0
 
 
 I2078: Design legalization is completed successfully
-I2088: Phase 1, elapsed time : 0.0 (sec)
+I2088: Phase 1, elapsed time : 0.1 (sec)
 
 
 Phase 2
-I2088: Phase 2, elapsed time : 0.1 (sec)
+I2088: Phase 2, elapsed time : 0.2 (sec)
 
 Phase 3
 SDC-Info-1101: Duty cycle not specified for clock. Assuming 50 percent dutycycle.
 SDC-Info-1101: Duty cycle not specified for clock. Assuming 50 percent dutycycle.
-Info-1404: Inferred PLL generated clock at pll1.PLL_20_TO_100MHz_inst/PLLOUTCORE
-Info-1404: Inferred PLL generated clock at pll1.PLL_20_TO_100MHz_inst/PLLOUTGLOBAL
-Info-1404: Inferred PLL generated clock at pll2.PLL_100_TO_48MHz96_inst/PLLOUTCORE
-Info-1404: Inferred PLL generated clock at pll2.PLL_100_TO_48MHz96_inst/PLLOUTGLOBAL
-Warning-1034: Found non-unate timing arc, from pin "in3" to pin "lcout" of instance "GB_BUFFER_TVP_CLK_c_THRU_LUT4_0_LC_317", in the clock network. Converting the timing arc to positive-unate
+Info-1404: Inferred PLL generated clock at tx_pll.TX_PLL_inst/PLLOUTCORE
+Info-1404: Inferred PLL generated clock at tx_pll.TX_PLL_inst/PLLOUTGLOBAL
+Warning-1034: Found non-unate timing arc, from pin "in3" to pin "lcout" of instance "GB_BUFFER_DEBUG_c_1_c_THRU_LUT4_0_LC_404", in the clock network. Converting the timing arc to positive-unate
 
 Design Statistics after Packing
-    Number of LUTs      	:	319
-    Number of DFFs      	:	240
+    Number of LUTs      	:	406
+    Number of DFFs      	:	227
     Number of DFFs packed to IO	:	0
-    Number of Carrys    	:	69
+    Number of Carrys    	:	79
 
 Device Utilization Summary after Packing
     Sequential LogicCells
-        LUT and DFF      	:	184
-        LUT, DFF and CARRY	:	56
+        LUT and DFF      	:	183
+        LUT, DFF and CARRY	:	44
     Combinational LogicCells
-        Only LUT         	:	66
-        CARRY Only       	:	0
-        LUT with CARRY   	:	13
-    LogicCells                  :	319/7680
-    PLBs                        :	46/960
-    BRAMs                       :	0/32
-    IOs and GBIOs               :	40/93
-    PLLs                        :	2/2
+        Only LUT         	:	145
+        CARRY Only       	:	1
+        LUT with CARRY   	:	34
+    LogicCells                  :	407/7680
+    PLBs                        :	60/960
+    BRAMs                       :	32/32
+    IOs and GBIOs               :	49/93
+    PLLs                        :	1/2
 
 
-I2088: Phase 3, elapsed time : 0.9 (sec)
+I2088: Phase 3, elapsed time : 1.4 (sec)
 
 Phase 4
-I2088: Phase 4, elapsed time : 0.5 (sec)
+I2088: Phase 4, elapsed time : 0.6 (sec)
 
 Phase 5
-I2088: Phase 5, elapsed time : 0.7 (sec)
+I2088: Phase 5, elapsed time : 4.1 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 58.2 (sec)
+I2088: Phase 6, elapsed time : 79.4 (sec)
 
 Final Design Statistics
-    Number of LUTs      	:	319
-    Number of DFFs      	:	240
+    Number of LUTs      	:	406
+    Number of DFFs      	:	227
     Number of DFFs packed to IO	:	0
-    Number of Carrys    	:	69
-    Number of RAMs      	:	0
+    Number of Carrys    	:	79
+    Number of RAMs      	:	32
     Number of ROMs      	:	0
-    Number of IOs       	:	39
+    Number of IOs       	:	48
     Number of GBIOs     	:	1
     Number of GBs       	:	0
     Number of WarmBoot  	:	0
-    Number of PLLs      	:	2
+    Number of PLLs      	:	1
 
 Device Utilization Summary
-    LogicCells                  :	319/7680
-    PLBs                        :	76/960
-    BRAMs                       :	0/32
-    IOs and GBIOs               :	40/93
-    PLLs                        :	2/2
+    LogicCells                  :	407/7680
+    PLBs                        :	123/960
+    BRAMs                       :	32/32
+    IOs and GBIOs               :	49/93
+    PLLs                        :	1/2
 
 
 
@@ -157,14 +146,12 @@ analysis after routing.
 #####################################################################
                      Clock Summary 
 =====================================================================
-Number of clocks: 7
-Clock: TVP_CLK | Frequency: 170.27 MHz | Target: 20.00 MHz
+Number of clocks: 5
+Clock: TVP_CLK | Frequency: 83.38 MHz | Target: 20.00 MHz
 Clock: TX_CLK | Frequency: N/A | Target: 48.76 MHz
 Clock: main|TVP_CLK | Frequency: N/A | Target: 50.00 MHz
-Clock: pll1.PLL_20_TO_100MHz_inst/PLLOUTCORE | Frequency: N/A | Target: 100.00 MHz
-Clock: pll1.PLL_20_TO_100MHz_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 100.00 MHz
-Clock: pll2.PLL_100_TO_48MHz96_inst/PLLOUTCORE | Frequency: 74.28 MHz | Target: 9.79 MHz
-Clock: pll2.PLL_100_TO_48MHz96_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 9.79 MHz
+Clock: tx_pll.TX_PLL_inst/PLLOUTCORE | Frequency: 70.50 MHz | Target: 48.75 MHz
+Clock: tx_pll.TX_PLL_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 48.75 MHz
 
 =====================================================================
                      End of Clock Summary
@@ -172,5 +159,5 @@ Clock: pll2.PLL_100_TO_48MHz96_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 9.79
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 61.9 sec.
+I2076: Placer run-time: 87.5 sec.
 

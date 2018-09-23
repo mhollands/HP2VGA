@@ -24,7 +24,7 @@ module RX(
     input wire O_CLK,
     input wire ENABLE,
     output wire [7:0] BRAM_DIN,
-    output reg [13:0] BRAM_ADDR,
+    output wire [13:0] BRAM_ADDR,
     output wire BRAM_WE,
     input wire O_HS,
     input wire O_VS,
@@ -50,21 +50,21 @@ module RX(
 	  
     always @(posedge O_CLK) begin
         if(O_VS == 0) begin
-           BRAM_ADDR <= 0; 
+           //BRAM_ADDR <= 0; 
         end
         else begin
             if(O_VISIBLE == 1) begin
-                BRAM_ADDR <= BRAM_ADDR + 1;
+               // BRAM_ADDR <= BRAM_ADDR + 1;
             end
         end
     end
-		
-    //assign BRAM_ADDR = O_X + O_Y * 576;
+
+    assign BRAM_ADDR = O_X + O_Y * 576;
     assign BRAM_DIN = VIDEO[9:2];
     assign BRAM_WE = O_VISIBLE;
 	
 	initial begin
-		BRAM_ADDR = 0;	
+		//BRAM_ADDR = 0;	
 	end	
 	
 endmodule

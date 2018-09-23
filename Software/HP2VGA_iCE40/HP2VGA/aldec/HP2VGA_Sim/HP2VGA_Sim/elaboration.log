@@ -1,41 +1,19 @@
-Active-HDL 10.3.3558.6081  2018-09-19 00:10:50
+Active-HDL 10.3.3558.6081  2018-09-23 22:45:58
 
 Elaboration top modules:
-Verilog Module                main_tb
+Verilog Module                RX_tb
 
 
--------------------------------------------------------------------------------------------------------
-Verilog Module                 | Library    | Info | Compiler Version          | Compilation Options
--------------------------------------------------------------------------------------------------------
-main_tb                        | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
-main                           | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
-TX_PLL                         | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
-RX                             | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
-TX                             | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
-RAM                            | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
-SB_PLL40_CORE                  | ovi_ice    |      | 10.3.3558.6081  (Windows) | -v2k5 -vendor lattice
-Sbt_DS_PLL40                   | ovi_ice    |      | 10.3.3558.6081  (Windows) | -v2k5 -vendor lattice
-pllcfg_dynamicsetting_shiftreg | ovi_ice    |      | 10.3.3558.6081  (Windows) | -v2k5 -vendor lattice
-ShiftReg427_DS                 | ovi_ice    |      | 10.3.3558.6081  (Windows) | -v2k5 -vendor lattice
-mux4to1                        | ovi_ice    |      | 10.3.3558.6081  (Windows) | -v2k5 -vendor lattice
-FineDlyAdj                     | ovi_ice    |      | 10.3.3558.6081  (Windows) | -v2k5 -vendor lattice
-ABIWTCZ4                       | ovi_ice    |      | 10.3.3558.6081  (Windows) | -v2k5 -vendor lattice
-Delay4Buf                      | ovi_ice    |      | 10.3.3558.6081  (Windows) | -v2k5 -vendor lattice
-SbtSPLL40                      | ovi_ice    |      | 10.3.3558.6081  (Windows) | -v2k5 -vendor lattice
-ShiftReg427                    | ovi_ice    |      | 10.3.3558.6081  (Windows) | -v2k5 -vendor lattice
-O_COUNTER                      | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
-VGA_CONTROL                    | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
--------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+Verilog Module          | Library    | Info | Compiler Version          | Compilation Options
+----------------------------------------------------------------------------------------------
+RX_tb                   | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
+RX                      | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
+O_COUNTER               | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
+----------------------------------------------------------------------------------------------
 
--------------------------------------------------------------------------------------------------------
-Library                        | Comment
--------------------------------------------------------------------------------------------------------
-hp2vga_sim                     | None
-ovi_ice                        | LATTICE iCEcube2 2016.12, SB ICE VERILOG LIBRARY
--------------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -O5 -L ovi_ice -L ice +access +r main_tb
-
-
-The performance of simulation is reduced. Version Lattice Edition
+----------------------------------------------------------------------------------------------
+Library                 | Comment
+----------------------------------------------------------------------------------------------
+hp2vga_sim              | None
+----------------------------------------------------------------------------------------------

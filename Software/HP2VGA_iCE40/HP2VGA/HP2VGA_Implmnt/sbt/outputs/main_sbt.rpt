@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Sep 23 2018 02:40:57
+* File Generated:     Sep 23 2018 23:06:38
 
 * Purpose:            General info of design implementation
 
@@ -27,106 +27,115 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  240
-    LUTs:                 319
-    RAMs:                 0
-    IOBs:                 40
+    FFs:                  227
+    LUTs:                 406
+    RAMs:                 32
+    IOBs:                 49
     GBs:                  1
-    PLLs:                 2
+    PLLs:                 1
     Warm Boots:           0
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 319/7680
-        Combinational Logic Cells: 79       out of   7680      1.02865%
-        Sequential Logic Cells:    240      out of   7680      3.125%
-        Logic Tiles:               76       out of   960       7.91667%
+    Total Logic Cells: 407/7680
+        Combinational Logic Cells: 180      out of   7680      2.34375%
+        Sequential Logic Cells:    227      out of   7680      2.95573%
+        Logic Tiles:               123      out of   960       12.8125%
     Registers: 
-        Logic Registers:           240      out of   7680      3.125%
+        Logic Registers:           227      out of   7680      2.95573%
         IO Registers:              0        out of   1280      0
-    Block RAMs:                    0        out of   32        0%
+    Block RAMs:                    32       out of   32        100%
     Warm Boots:                    0        out of   1         0%
     Pins:
-        Input Pins:                4        out of   93        4.30108%
-        Output Pins:               36       out of   93        38.7097%
+        Input Pins:                11       out of   93        11.828%
+        Output Pins:               38       out of   93        40.8602%
         InOut Pins:                0        out of   93        0%
     Global Buffers:                1        out of   8         12.5%
-    PLLs:                          2        out of   2         100%
+    PLLs:                          1        out of   2         50%
 
 IO Bank Utilization:
 --------------------
-    Bank 3: 17       out of   26        65.3846%
+    Bank 3: 18       out of   26        69.2308%
     Bank 1: 0        out of   21        0%
     Bank 0: 19       out of   23        82.6087%
-    Bank 2: 4        out of   23        17.3913%
+    Bank 2: 12       out of   23        52.1739%
 
 Detailed I/O Info:
 ------------------
     Input Pins: 
-    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function    Signal Name  
-    ----------  ---------  -----------  -------  -------  -----------    -----------  
-    E2          Input      SB_LVCMOS    Yes      3        Simple Input   DEBUG[7]     
-    J5          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_VSYNC    
-    J7          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_HSYNC    
-    K6          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_CLK      
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function    Signal Name   
+    ----------  ---------  -----------  -------  -------  -----------    -----------   
+    J5          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_VSYNC     
+    J7          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_HSYNC     
+    K3          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_VIDEO[3]  
+    K4          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_VIDEO[5]  
+    K5          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_VIDEO[7]  
+    K6          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_CLK       
+    L2          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_VIDEO[2]  
+    L3          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_VIDEO[4]  
+    L4          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_VIDEO[6]  
+    L5          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_VIDEO[8]  
+    L7          Input      SB_LVCMOS    Yes      2        Simple Input   TVP_VIDEO[9]  
 
     Output Pins: 
-    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function    Signal Name  
-    ----------  ---------  -----------  -------  -------  -----------    -----------  
-    A1          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[0]     
-    A2          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[1]     
-    A3          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[3]     
-    A4          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[5]     
-    A5          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[7]     
-    A6          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[0]     
-    A7          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[1]     
-    A8          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[2]     
-    A9          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[4]     
-    A10         Output     SB_LVCMOS    No       0        Simple Output  ADV_B[6]     
-    A11         Output     SB_LVCMOS    No       0        Simple Output  ADV_B[7]     
-    B1          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[6]     
-    B2          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[7]     
-    B3          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[2]     
-    B4          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[4]     
-    B5          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[6]     
-    B8          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[3]     
-    B9          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[5]     
-    C1          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[4]     
-    C2          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[5]     
-    C3          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[1]     
-    C4          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[0]     
-    C7          Output     SB_LVCMOS    Yes      0        Simple Output  ADV_BLANK_N  
-    C8          Output     SB_LVCMOS    Yes      0        Simple Output  ADV_SYNC_N   
-    C9          Output     SB_LVCMOS    No       0        Simple Output  ADV_CLK      
-    D1          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[2]     
-    D2          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[3]     
-    D3          Output     SB_LVCMOS    No       3        Simple Output  ADV_HSYNC    
-    E1          Output     SB_LVCMOS    No       3        Simple Output  ADV_VSYNC    
-    F1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[5]     
-    G2          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[4]     
-    H1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[3]     
-    H2          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[2]     
-    J1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[1]     
-    J8          Output     SB_LVCMOS    No       2        Simple Output  LED          
-    K1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[0]     
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function    Signal Name   
+    ----------  ---------  -----------  -------  -------  -----------    -----------   
+    A1          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[0]      
+    A2          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[1]      
+    A3          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[3]      
+    A4          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[5]      
+    A5          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[7]      
+    A6          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[0]      
+    A7          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[1]      
+    A8          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[2]      
+    A9          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[4]      
+    A10         Output     SB_LVCMOS    No       0        Simple Output  ADV_B[6]      
+    A11         Output     SB_LVCMOS    No       0        Simple Output  ADV_B[7]      
+    B1          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[6]      
+    B2          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[7]      
+    B3          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[2]      
+    B4          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[4]      
+    B5          Output     SB_LVCMOS    No       0        Simple Output  ADV_G[6]      
+    B8          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[3]      
+    B9          Output     SB_LVCMOS    No       0        Simple Output  ADV_B[5]      
+    C1          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[4]      
+    C2          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[5]      
+    C3          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[1]      
+    C4          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[0]      
+    C7          Output     SB_LVCMOS    Yes      0        Simple Output  ADV_BLANK_N   
+    C8          Output     SB_LVCMOS    Yes      0        Simple Output  ADV_SYNC_N    
+    C9          Output     SB_LVCMOS    No       0        Simple Output  ADV_CLK       
+    D1          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[2]      
+    D2          Output     SB_LVCMOS    No       3        Simple Output  ADV_R[3]      
+    D3          Output     SB_LVCMOS    No       3        Simple Output  ADV_HSYNC     
+    E1          Output     SB_LVCMOS    No       3        Simple Output  ADV_VSYNC     
+    E2          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[7]      
+    F1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[5]      
+    F2          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[6]      
+    G2          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[4]      
+    H1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[3]      
+    H2          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[2]      
+    J1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[1]      
+    J8          Output     SB_LVCMOS    No       2        Simple Output  LED           
+    K1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[0]      
 
 Detailed Global Buffer Info:
 ----------------------------
-    Buffer Number  IO Bank  Driven By  Fanout  Signal Name
-    -------------  -------  ---------  ------  -----------
-    3              2        IO         44      TVP_CLK_c  
+    Buffer Number  IO Bank  Driven By  Fanout  Signal Name  
+    -------------  -------  ---------  ------  -----------  
+    3              2        IO         68      DEBUG_c_1_c  
 
 
 Router Summary:
 ---------------
     Status:  Successful
-    Runtime: 24 seconds
+    Runtime: 35 seconds
 
 Routing Resource Utilization:
 -----------------------------
-              Local line of tile     1829 out of 146184      1.25116%
-                          Span 4      342 out of  29696      1.15167%
-                         Span 12       65 out of   5632      1.15412%
+              Local line of tile     4541 out of 146184      3.10636%
+                          Span 4      972 out of  29696      3.27317%
+                         Span 12      340 out of   5632      6.03693%
                   Global network        1 out of      8      12.5%
-      Vertical Inter-LUT Connect       21 out of   6720      0.3125%
+      Vertical Inter-LUT Connect       35 out of   6720      0.520833%
 

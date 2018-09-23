@@ -1,90 +1,103 @@
 ----------------------------------------------------------------------
 Report for cell main.TECH
-Register bits:  240 of 7680 (3.125%)
+Register bits:  227 of 7680 (2.956%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        69          100.0
-                             SB_DFF         9          100.0
+                           SB_CARRY        79          100.0
+                             SB_DFF        32          100.0
                             SB_DFFE         1          100.0
-                          SB_DFFESR       112          100.0
+                          SB_DFFESR        87          100.0
                           SB_DFFESS        72          100.0
-                          SB_DFFNSR        24          100.0
-                           SB_DFFSR        22          100.0
+                          SB_DFFNSR        12          100.0
+                           SB_DFFSR        23          100.0
                            SB_GB_IO         1          100.0
-                              SB_IO        39          100.0
-                            SB_LUT4       174          100.0
-                      SB_PLL40_CORE         2          100.0
+                              SB_IO        48          100.0
+                            SB_LUT4       246          100.0
+                      SB_PLL40_CORE         1          100.0
+                       SB_RAM2048x2        32          100.0
 SUB MODULES
+                           DIV_BY_5         1
                           O_COUNTER         1
-                 PLL_100_TO_48MHz96         1
-                   PLL_20_TO_100MHz         1
+                                RAM         1
                                  RX         1
                                  TX         1
+                             TX_PLL         1
                         VGA_CONTROL         1
-                              TOTAL       531
+                              TOTAL       641
 ----------------------------------------------------------------------
 Report for cell RX.v1
 Instance Path : receive_module
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        35           50.7
-                             SB_DFF         3           33.3
+                           SB_CARRY        44           55.7
+                             SB_DFF         3            9.4
                             SB_DFFE         1          100.0
-                          SB_DFFESR        29           25.9
-                           SB_DFFSR        10           45.5
-                            SB_LUT4        62           35.6
+                          SB_DFFESR        15           17.2
+                           SB_DFFSR        10           43.5
+                            SB_LUT4        79           32.1
 SUB MODULES
                           O_COUNTER         1
-                              TOTAL       141
+                              TOTAL       153
 ----------------------------------------------------------------------
 Report for cell O_COUNTER.v1
 Instance Path : receive_module.rx_counter
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        22           31.9
-                             SB_DFF         3           33.3
+                           SB_CARRY        37           46.8
+                             SB_DFF         3            9.4
                             SB_DFFE         1          100.0
-                          SB_DFFESR        15           13.4
-                           SB_DFFSR        10           45.5
-                            SB_LUT4        47           27.0
-                              TOTAL        98
-----------------------------------------------------------------------
-Report for cell PLL_20_TO_100MHz.v1
-Instance Path : pll1
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                      SB_PLL40_CORE         1           50.0
-                              TOTAL         1
+                          SB_DFFESR        15           17.2
+                           SB_DFFSR        10           43.5
+                            SB_LUT4        64           26.0
+                              TOTAL       130
 ----------------------------------------------------------------------
 Report for cell TX.v1
 Instance Path : transmit_module
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        34           49.3
-                             SB_DFF         6           66.7
-                          SB_DFFESR        83           74.1
+                           SB_CARRY        35           44.3
+                             SB_DFF        16           50.0
+                          SB_DFFESR        72           82.8
                           SB_DFFESS        72          100.0
-                           SB_DFFSR        12           54.5
-                            SB_LUT4       111           63.8
+                           SB_DFFSR        13           56.5
+                            SB_LUT4       112           45.5
 SUB MODULES
                         VGA_CONTROL         1
-                              TOTAL       319
+                              TOTAL       321
 ----------------------------------------------------------------------
 Report for cell VGA_CONTROL.v1
 Instance Path : transmit_module.video_signal_controller
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        21           30.4
-                             SB_DFF         5           55.6
-                          SB_DFFESR        12           10.7
-                           SB_DFFSR        11           50.0
-                            SB_LUT4        94           54.0
-                              TOTAL       143
+                           SB_CARRY        22           27.8
+                             SB_DFF         4           12.5
+                          SB_DFFESR        12           13.8
+                           SB_DFFSR        12           52.2
+                            SB_LUT4        73           29.7
+                              TOTAL       123
 ----------------------------------------------------------------------
-Report for cell PLL_100_TO_48MHz96.v1
-Instance Path : pll2
+Report for cell DIV_BY_5.v1
+Instance Path : db5
                                   Cell usage:
                                cell     count   Res Usage(%)
-                      SB_PLL40_CORE         1           50.0
+                             SB_DFF         5           15.6
+                          SB_DFFNSR         4           33.3
+                            SB_LUT4         6            2.4
+                              TOTAL        15
+----------------------------------------------------------------------
+Report for cell TX_PLL.v1
+Instance Path : tx_pll
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                      SB_PLL40_CORE         1          100.0
                               TOTAL         1
+----------------------------------------------------------------------
+Report for cell RAM.v1
+Instance Path : line_buffer
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             SB_DFF         8           25.0
+                            SB_LUT4        47           19.1
+                       SB_RAM2048x2        32          100.0
+                              TOTAL        87

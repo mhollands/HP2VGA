@@ -6,4 +6,8 @@
 .\..\..\..\O_COUNTER.v
 .\..\..\..\VGA_CONTROL.v
 .\..\..\..\TX_PLL_FAST.v
+.\src\INPUT_BUFFER.v
 .\src\TestBench\main_TB.v
+.\src\TestBench\TX_TB.v
+.\src\TestBench\INPUT_BUFFER_TB.v
+.\src\TestBench\RX_TB.v

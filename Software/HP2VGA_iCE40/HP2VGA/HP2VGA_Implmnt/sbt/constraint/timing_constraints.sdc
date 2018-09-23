@@ -10,6 +10,7 @@
 
 ####---- Create Clock list ---
 create_clock  -period 50.00 -name {TVP_CLK} [get_ports {TVP_CLK}] 
+create_clock  -period 10.00 -name {CLK_100MHz} [get_ports {CLK_100MHz}] 
 create_clock -period 20.5128 -name {TX_CLK} [get_ports {ADV_CLK}]
 
 ####---- Create Output Delays list ---

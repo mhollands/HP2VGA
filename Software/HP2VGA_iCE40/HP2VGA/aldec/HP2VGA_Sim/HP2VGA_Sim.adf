@@ -3,10 +3,13 @@ Current Flow=Generic
 VCS=0
 version=3
 Current Config=compile
+
 [Configurations]
 compile=HP2VGA_Sim
+
 [Library]
 HP2VGA_Sim=.\HP2VGA_Sim\HP2VGA_Sim.lib
+
 [Settings]
 AccessRead=1
 AccessReadWrite=0
@@ -19,14 +22,33 @@ ENABLE_ADV_DATAFLOW=0
 FLOW_TYPE=HDL
 LANGUAGE=VHDL
 REFRESH_FLOW=1
+fileopenfolder=E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40
+
 [LocalVerilogSets]
 EnableSLP=1
 EnableDebug=0
 LibNames=ovi_ice;ice
+
 [LocalVhdlSets]
 CompileWithDebug=0
+
 [$LibMap$]
 HP2VGA_Sim=.
+
+[ORDER]
+Synchronize=1
+
+[Groups]
+TestBench=1
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
 [Files]
 /..\..\..\..\main.v=-1
 /..\..\..\..\TX_PLL.v=-1
@@ -36,8 +58,20 @@ HP2VGA_Sim=.
 /..\..\..\..\O_COUNTER.v=-1
 /..\..\..\..\VGA_CONTROL.v=-1
 /..\..\..\..\TX_PLL_FAST.v=-1
+/non-synchronised.asdb=-1
+/non-synchronised.awc=-1
+/synchronised.asdb=-1
+/synchronised.awc=-1
+/INPUT_BUFFER.v=-1
 TestBench/main_TB.v=-1
 TestBench/main_TB_runtest.do=-1
+TestBench/TX_TB.v=-1
+TestBench/TX_TB_runtest.do=-1
+TestBench/INPUT_BUFFER_TB.v=-1
+TestBench/INPUT_BUFFER_TB_runtest.do=-1
+TestBench/RX_TB.v=-1
+TestBench/RX_TB_runtest.do=-1
+
 [Files.Data]
 .\..\..\..\main.v=Verilog Source Code
 .\..\..\..\TX_PLL.v=Verilog Source Code
@@ -47,15 +81,17 @@ TestBench/main_TB_runtest.do=-1
 .\..\..\..\O_COUNTER.v=Verilog Source Code
 .\..\..\..\VGA_CONTROL.v=Verilog Source Code
 .\..\..\..\TX_PLL_FAST.v=Verilog Source Code
+.\src\non-synchronised.asdb=Accelerated Waveform File
+.\src\non-synchronised.awc=Accelerated Waveform Configuration
+.\src\synchronised.asdb=Accelerated Waveform File
+.\src\synchronised.awc=Accelerated Waveform Configuration
+.\src\INPUT_BUFFER.v=Verilog Source Code
 .\src\TestBench\main_TB.v=Verilog Test Bench
 .\src\TestBench\main_TB_runtest.do=Macro
-[ORDER]
-Synchronize=1
-[Groups]
-TestBench=1
-[SpecTracer]
-WindowVisible=0
-[HierarchyViewer]
-HierarchyInformation=
-ShowHide=ShowTopLevel
-Selected=
+.\src\TestBench\TX_TB.v=Verilog Test Bench
+.\src\TestBench\TX_TB_runtest.do=Macro
+
+.\src\TestBench\INPUT_BUFFER_TB.v=Verilog Test Bench
+.\src\TestBench\INPUT_BUFFER_TB_runtest.do=Macro
+.\src\TestBench\RX_TB.v=Verilog Test Bench
+.\src\TestBench\RX_TB_runtest.do=Macro

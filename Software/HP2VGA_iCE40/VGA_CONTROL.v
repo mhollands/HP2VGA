@@ -42,9 +42,9 @@ module VGA_CONTROL( input VIDEO_CLK, //CLK input at correct pixel frequency
     //1024x600 48.875MHz
     parameter H_VISIBLE = 1024;
     parameter H_FRONT_PORCH = 40;
-    parameter H_SYNC_PULSE = 104;
-    parameter H_BACK_PORCH = 144;
-    parameter H_TOTAL = 1312;
+    parameter H_SYNC_PULSE = 101;//104
+    parameter H_BACK_PORCH = 141;//144
+    parameter H_TOTAL = 1306;//1312
     parameter V_VISIBLE = 600;
     parameter V_FRONT_PORCH = 1;
     parameter V_SYNC_PULSE = 3;
@@ -100,5 +100,14 @@ module VGA_CONTROL( input VIDEO_CLK, //CLK input at correct pixel frequency
             VGA_X <= 0;
             SYNC_EN_SMOOTH <= 0;
         end
-    end
+    end		   
+	
+	initial begin
+		VGA_X = 1200;
+		VGA_Y = 620;
+		SYNC_EN_SMOOTH = 0;	 
+		SYNC_BUFF1 = 0;
+		SYNC_BUFF2 = 0;
+		SYNC_BUFF3 = 0;
+	end
 endmodule
