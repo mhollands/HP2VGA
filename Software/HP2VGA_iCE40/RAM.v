@@ -14,4 +14,7 @@ module RAM (din, write_en, waddr, wclk, raddr, rclk, dout);//512x8
 	always @(posedge rclk) begin // Read memory.
 		dout <= mem[raddr]; // Using read address bus.
 	end
+	initial begin
+		$readmemh("preload2.mem", mem);
+	end
 endmodule

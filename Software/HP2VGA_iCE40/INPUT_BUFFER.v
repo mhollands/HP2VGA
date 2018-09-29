@@ -6,7 +6,7 @@ module INPUT_BUFFER(input wire CLK,
 
 	reg [BUFF_LENGTH-1:0] BUFFER;
 
-	always @(posedge CLK) begin
+	always @(negedge CLK) begin
 		BUFFER <= {BUFFER[BUFF_LENGTH - 2:0], WIRE_IN};
 		WIRE_OUT <= BUFFER[BUFF_LENGTH-1];
 	end

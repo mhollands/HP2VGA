@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Sep 23 2018 23:06:38
+* File Generated:     Sep 29 2018 12:23:58
 
 * Purpose:            General info of design implementation
 
@@ -17,7 +17,7 @@
 Synthesis/Placement Summary:
 ----------------------------
     Status:  Successful
-    Runtime: 2 seconds
+    Runtime: 1 seconds
 
 Device Info:
 ------------
@@ -27,8 +27,8 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  227
-    LUTs:                 406
+    FFs:                  236
+    LUTs:                 398
     RAMs:                 32
     IOBs:                 49
     GBs:                  1
@@ -37,12 +37,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 407/7680
-        Combinational Logic Cells: 180      out of   7680      2.34375%
-        Sequential Logic Cells:    227      out of   7680      2.95573%
-        Logic Tiles:               123      out of   960       12.8125%
+    Total Logic Cells: 398/7680
+        Combinational Logic Cells: 162      out of   7680      2.10938%
+        Sequential Logic Cells:    236      out of   7680      3.07292%
+        Logic Tiles:               124      out of   960       12.9167%
     Registers: 
-        Logic Registers:           227      out of   7680      2.95573%
+        Logic Registers:           236      out of   7680      3.07292%
         IO Registers:              0        out of   1280      0
     Block RAMs:                    32       out of   32        100%
     Warm Boots:                    0        out of   1         0%
@@ -116,26 +116,26 @@ Detailed I/O Info:
     H1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[3]      
     H2          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[2]      
     J1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[1]      
-    J8          Output     SB_LVCMOS    No       2        Simple Output  LED           
+    J8          Output     SB_LVCMOS    Yes      2        Simple Output  LED           
     K1          Output     SB_LVCMOS    Yes      3        Simple Output  DEBUG[0]      
 
 Detailed Global Buffer Info:
 ----------------------------
-    Buffer Number  IO Bank  Driven By  Fanout  Signal Name  
-    -------------  -------  ---------  ------  -----------  
-    3              2        IO         68      DEBUG_c_1_c  
+    Buffer Number  IO Bank  Driven By  Fanout  Signal Name
+    -------------  -------  ---------  ------  -----------
+    3              2        IO         77      TVP_CLK_c  
 
 
 Router Summary:
 ---------------
     Status:  Successful
-    Runtime: 35 seconds
+    Runtime: 24 seconds
 
 Routing Resource Utilization:
 -----------------------------
-              Local line of tile     4541 out of 146184      3.10636%
-                          Span 4      972 out of  29696      3.27317%
-                         Span 12      340 out of   5632      6.03693%
+              Local line of tile     4444 out of 146184      3.04%
+                          Span 4     1033 out of  29696      3.47858%
+                         Span 12      316 out of   5632      5.6108%
                   Global network        1 out of      8      12.5%
-      Vertical Inter-LUT Connect       35 out of   6720      0.520833%
+      Vertical Inter-LUT Connect       32 out of   6720      0.47619%
 

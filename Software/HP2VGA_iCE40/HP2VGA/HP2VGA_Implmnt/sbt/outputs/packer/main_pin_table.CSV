@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Sep 23 2018 23:06:37
+* File Generated:     Sep 29 2018 12:23:57
 
 * Purpose:            Detailed IO and package pin info
 
@@ -114,7 +114,7 @@ J4, PIO, not used, , , , , , bottomBank
 J5, PIO, TVP_VSYNC, Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
 J6, AVDD_BOT, not used, , , , , , UnknownBank
 J7, PIO, TVP_HSYNC, Input, , SB_LVCMOS, Pull Up, Simple Input, bottomBank
-J8, PIO, LED, Output, , SB_LVCMOS, No Pull Up, Simple Output, bottomBank
+J8, PIO, LED, Output, , SB_LVCMOS, Pull Up, Simple Output, bottomBank
 J9, SPI_SI, not used, , , , , , bottomBank
 J10, PIO, not used, , , , , , rightBank
 J11, PIO, not used, , , , , , rightBank

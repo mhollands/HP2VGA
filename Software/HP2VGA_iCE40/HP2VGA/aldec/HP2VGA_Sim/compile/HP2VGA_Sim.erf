@@ -2,7 +2,7 @@ MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
 UPDATEPROGRESS 35
-MESSAGE_SP VCP2113 "Module RX found in current working library."
+MESSAGE_SP VCP2113 "Module VGA_CONTROL found in current working library."
 MESSAGE "Pass 2. Processing instantiations."
 UPDATEPROGRESS 45
 MESSAGE "Pass 3. Processing behavioral statements."
@@ -10,14 +10,12 @@ UPDATEPROGRESS 80
 MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
-UPDATEPROGRESS 82
-UPDATEPROGRESS 85
-UPDATEPROGRESS 88
-UPDATEPROGRESS 91
-UPDATEPROGRESS 94
-UPDATEPROGRESS 97
+UPDATEPROGRESS 83
+UPDATEPROGRESS 86
+UPDATEPROGRESS 90
+UPDATEPROGRESS 93
+UPDATEPROGRESS 96
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: RX_tb."
 MESSAGE "$root top modules: TX_PLL_FAST main_tb TX_tb INPUT_BUFFER_tb RX_tb."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."

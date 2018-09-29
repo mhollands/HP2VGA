@@ -52,3 +52,5 @@ ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tc
 Check cable connectivity and that the target board is powered up then
 use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
 ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292745569A
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 17 20:44:28 2018...

@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Sep 23 23:04:48 2018
+Sat Sep 29 12:22:32 2018
 
 
 Command Line:  C:\lscc\iCEcube2.2017.08\LSE\bin\nt\synthesis.exe -f HP2VGA_lse.prj 
@@ -88,7 +88,6 @@ Analyzing Verilog file C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADER
 Compile design.
 Compile Design Begin
 Analyzing Verilog file ../main.v. VERI-1482
-WARNING - synthesis: ../main.v(35): /* in comment. VERI-1049
 Analyzing Verilog file ../tx_pll.v. VERI-1482
 Analyzing Verilog file ../ram.v. VERI-1482
 Analyzing Verilog file ../tx.v. VERI-1482
@@ -118,30 +117,20 @@ INFO - synthesis: ../main.v(1): compiling module main. VERI-1018
 INFO - synthesis: ../tx_pll.v(1): compiling module TX_PLL. VERI-1018
 INFO - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(699): compiling module SB_PLL40_CORE(FDA_FEEDBACK=4'b0,FDA_RELATIVE=4'b0,DIVF=7'b0100110,DIVQ=3'b100,FILTER_RANGE=3'b010). VERI-1018
 WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on this instance. VDB-1013
-INFO - synthesis: ../div_by_5.v(1): compiling module DIV_BY_5. VERI-1018
-WARNING - synthesis: ../div_by_5.v(11): expression size 32 truncated to fit in target size 4. VERI-1209
 INFO - synthesis: ../rx.v(23): compiling module RX. VERI-1018
 INFO - synthesis: ../o_counter.v(23): compiling module O_COUNTER. VERI-1018
-WARNING - synthesis: ../o_counter.v(59): expression size 32 truncated to fit in target size 9. VERI-1209
-WARNING - synthesis: ../o_counter.v(62): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: ../o_counter.v(72): expression size 32 truncated to fit in target size 6. VERI-1209
-WARNING - synthesis: ../o_counter.v(83): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: ../o_counter.v(84): expression size 32 truncated to fit in target size 9. VERI-1209
-WARNING - synthesis: ../rx.v(62): expression size 32 truncated to fit in target size 14. VERI-1209
+WARNING - synthesis: ../o_counter.v(82): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: ../o_counter.v(83): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: ../rx.v(57): expression size 32 truncated to fit in target size 14. VERI-1209
 INFO - synthesis: ../tx.v(23): compiling module TX. VERI-1018
 INFO - synthesis: ../vga_control.v(26): compiling module VGA_CONTROL. VERI-1018
-WARNING - synthesis: ../vga_control.v(62): expression size 32 truncated to fit in target size 12. VERI-1209
-WARNING - synthesis: ../vga_control.v(63): expression size 32 truncated to fit in target size 12. VERI-1209
-WARNING - synthesis: ../vga_control.v(66): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: ../vga_control.v(67): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: ../vga_control.v(68): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: ../vga_control.v(86): expression size 32 truncated to fit in target size 12. VERI-1209
-WARNING - synthesis: ../vga_control.v(93): expression size 32 truncated to fit in target size 12. VERI-1209
-WARNING - synthesis: ../tx.v(46): actual bit length 32 differs from formal bit length 1 for port RESET. VERI-1330
-WARNING - synthesis: ../tx.v(60): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: ../tx.v(61): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: ../tx.v(62): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: ../main.v(80): actual bit length 32 differs from formal bit length 1 for port ENABLE. VERI-1330
+WARNING - synthesis: ../vga_control.v(59): expression size 32 truncated to fit in target size 12. VERI-1209
+WARNING - synthesis: ../vga_control.v(60): expression size 32 truncated to fit in target size 12. VERI-1209
+Removed duplicate sequential element VGA_G(8 bit), because it is equivalent to VGA_R
+
+Removed duplicate sequential element VGA_B(8 bit), because it is equivalent to VGA_R
+
+INFO - synthesis: ../input_buffer.v(1): compiling module INPUT_BUFFER. VERI-1018
 INFO - synthesis: ../ram.v(1): compiling module RAM. VERI-1018
 Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
@@ -152,23 +141,22 @@ WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on
 ######## Converting I/O port DEBUG[5] to output.
 ######## Converting I/O port DEBUG[4] to output.
 ######## Converting I/O port DEBUG[3] to output.
+######## Converting I/O port DEBUG[2] to output.
+######## Converting I/O port DEBUG[1] to output.
 ######## Converting I/O port DEBUG[0] to output.
-Removed duplicate sequential element ADV_G(8 bit), because it is equivalent to ADV_R
-
-Removed duplicate sequential element ADV_B(8 bit), because it is equivalent to ADV_R
-
+WARNING - synthesis: Bit 1 of Register \sync_en_input_buffer/BUFFER is stuck at One
+WARNING - synthesis: Bit 0 of Register \sync_en_input_buffer/BUFFER is stuck at One
+WARNING - synthesis: ../input_buffer.v(12): Register \sync_en_input_buffer/WIRE_OUT_8 is stuck at One. VDB-5014
 
 
 
 ######## Found 1 RTL RAMs in the design.
 ######## Mapping RTL RAM \line_buffer/mem to 32 EBR blocks in PSEUDO_DUAL_PORT Mode
 
-######## Converting I/O port DEBUG[2] to output.
-######## Converting I/O port DEBUG[1] to output.
-WARNING - synthesis: ../vga_control.v(103): Register \transmit_module/video_signal_controller/SYNC_EN_SMOOTH_64 is stuck at One. VDB-5014
+WARNING - synthesis: ../vga_control.v(98): Register \transmit_module/video_signal_controller/SYNC_EN_SMOOTH_70 is stuck at One. VDB-5014
 Duplicate register/latch removal. \transmit_module/BRAM_ADDR__rep_1_i0 is a one-to-one match with \transmit_module/BRAM_ADDR__i11.
-Duplicate register/latch removal. \transmit_module/BRAM_ADDR__i12 is a one-to-one match with \transmit_module/BRAM_ADDR__rep_1_i1.
 Duplicate register/latch removal. \transmit_module/BRAM_ADDR__i13 is a one-to-one match with \transmit_module/BRAM_ADDR__rep_1_i2.
+Duplicate register/latch removal. \transmit_module/BRAM_ADDR__i12 is a one-to-one match with \transmit_module/BRAM_ADDR__rep_1_i1.
 WARNING - synthesis: Initial value found on instance \transmit_module/video_signal_controller/VGA_X_i4 will be ignored.
 WARNING - synthesis: Initial value found on instance \transmit_module/video_signal_controller/VGA_X_i5 will be ignored.
 WARNING - synthesis: Initial value found on instance \transmit_module/video_signal_controller/VGA_X_i7 will be ignored.
@@ -193,17 +181,17 @@ Writing scf file : HP2VGA_Implmnt/HP2VGA.scf
 Results of NGD DRC are available in main_drc.log.
 
 ################### Begin Area Report (main)######################
-Number of register bits => 227 of 7680 (2 % )
-SB_CARRY => 79
-SB_DFF => 32
+Number of register bits => 236 of 7680 (3 % )
+SB_CARRY => 70
+SB_DFF => 28
 SB_DFFE => 1
-SB_DFFESR => 87
+SB_DFFESR => 91
 SB_DFFESS => 72
-SB_DFFNSR => 12
-SB_DFFSR => 23
+SB_DFFN => 3
+SB_DFFSR => 41
 SB_GB_IO => 1
 SB_IO => 48
-SB_LUT4 => 246
+SB_LUT4 => 241
 SB_PLL40_CORE => 1
 SB_RAM2048x2 => 32
 ################### End Area Report ##################
@@ -211,23 +199,23 @@ SB_RAM2048x2 => 32
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : tx_pll/ADV_CLK_c, loads : 225
-  Net : DEBUG_c_1_c, loads : 41
+  Net : tx_pll/ADV_CLK_c, loads : 229
+  Net : TVP_CLK_c, loads : 46
 Clock Enable Nets
 Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : transmit_module/video_signal_controller/ADV_VSYNC_c, loads : 133
-  Net : transmit_module/video_signal_controller/n4225, loads : 49
-  Net : transmit_module/video_signal_controller/n4224, loads : 49
-  Net : transmit_module/n28, loads : 32
-  Net : receive_module/rx_counter/RX_ADDR_2, loads : 32
-  Net : receive_module/rx_counter/RX_ADDR_1, loads : 32
-  Net : receive_module/rx_counter/RX_ADDR_0, loads : 32
-  Net : transmit_module/n20, loads : 32
-  Net : transmit_module/n26, loads : 32
-  Net : transmit_module/n25, loads : 32
+  Net : transmit_module/n3797, loads : 50
+  Net : transmit_module/n3798, loads : 50
+  Net : receive_module/RX_ADDR_10, loads : 34
+  Net : receive_module/RX_ADDR_9, loads : 34
+  Net : receive_module/RX_ADDR_8, loads : 34
+  Net : receive_module/RX_ADDR_7, loads : 34
+  Net : receive_module/RX_ADDR_6, loads : 34
+  Net : receive_module/RX_ADDR_5, loads : 34
+  Net : receive_module/RX_ADDR_4, loads : 34
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -237,7 +225,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
-clk1 [get_nets DEBUG_c_1_c]             |   50.000 MHz|   41.134 MHz|    15 *
+clk1 [get_nets TVP_CLK_c]               |   50.000 MHz|   41.703 MHz|    15 *
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
 clk0 [get_nets ADV_CLK_c]               |            -|            -|     0  
@@ -248,8 +236,8 @@ clk0 [get_nets ADV_CLK_c]               |            -|            -|     0
 1 constraints not met.
 
 
-Peak Memory Usage: 41.816  MB
+Peak Memory Usage: 38.125  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 3.094  secs
+Elapsed CPU time for LSE flow : 2.313  secs
 --------------------------------------------------------------

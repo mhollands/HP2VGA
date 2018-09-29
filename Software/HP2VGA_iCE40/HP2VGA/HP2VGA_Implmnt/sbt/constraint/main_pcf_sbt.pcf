@@ -13,7 +13,7 @@
 # ##############################################################################
 
 ###IOSet List 34
-set_io LED J8 -pullup no
+set_io LED J8 -pullup yes
 
 set_io ADV_CLK C9 -pullup no
 set_io ADV_HSYNC D3 -pullup no

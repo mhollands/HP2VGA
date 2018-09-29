@@ -1,33 +1,33 @@
 [COMPILESTATUS|.\..\..\..\main.v]
-FileTimeLow=30690831
-Status=Warning
+FileTimeLow=30693048
+Status=Modified
 
 [COMPILESTATUS|.\..\..\..\TX_PLL.v]
 FileTimeLow=30690461
 Status=Compiled
 
 [COMPILESTATUS|.\..\..\..\RAM.v]
-FileTimeLow=30689233
+FileTimeLow=30692851
 Status=Compiled
 
 [COMPILESTATUS|.\..\..\..\TX.v]
-FileTimeLow=30691025
-Status=Compiled
+FileTimeLow=30693012
+Status=Modified
 
 [COMPILESTATUS|.\..\..\..\RX.v]
-FileTimeLow=30691032
-Status=Compiled
+FileTimeLow=30693026
+Status=Modified
 
 [COMPILESTATUS|.\..\..\..\O_COUNTER.v]
-FileTimeLow=30691036
+FileTimeLow=30692656
 Status=Compiled
 
 [COMPILESTATUS|.\..\..\..\VGA_CONTROL.v]
-FileTimeLow=30690438
-Status=Compiled
+FileTimeLow=30693028
+Status=Modified
 
 [COMPILESTATUS|.\..\..\..\TX_PLL_FAST.v]
-FileTimeLow=30690551
+FileTimeLow=30692051
 Status=Compiled
 
 [CACHEDOC|Aldec.Hde.HdePlugIn.7|.\log\console.log|]
@@ -117,7 +117,7 @@ RunFor=5440000 ns
 CurrentVersion=103
 
 [CACHEDOC|Aldec.Project.Generic.7|.\HP2VGA_Sim.adf|]
-Path=
+Path=/TX_tb
 
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\TestBench/main_TB.v|]
 CurrentLine=0
@@ -138,11 +138,55 @@ Frame=0
 WindowWorkspaceInfo="LAAAAAAAAAABAAAA/////////////////////yoBAAB6AAAAgAcAAMsCAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIAAAAyAAAAAAAAAAAAAAAyAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAEAAAA="
 
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\..\..\RX.v|]
-CurrentLine=0
-CurrentColumn=0
+CurrentLine=19
+CurrentColumn=24
 Bookmarks=-1
 BookmarksLength=3
 CurrentFontSize=-13
 Frame=0
 WindowWorkspaceInfo="LAAAAAAAAAABAAAA/////////////////////yoBAAB6AAAAgAcAAMsCAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIAAAAyAAAAAAAAAAAAAAAyAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAEAAAA="
+
+[COMPILESTATUS|.\src\TestBench\TX_TB.v]
+FileTimeLow=30692185
+Status=Compiled
+
+[COMPILESTATUS|.\src\non-synchronised.asdb]
+FileTimeLow=30692183
+Status=Modified
+
+[COMPILESTATUS|.\src\non-synchronised.awc]
+FileTimeLow=30692183
+Status=Modified
+
+[COMPILESTATUS|.\src\synchronised.asdb]
+FileTimeLow=30692187
+Status=Modified
+
+[COMPILESTATUS|.\src\synchronised.awc]
+FileTimeLow=30692187
+Status=Modified
+
+[COMPILESTATUS|.\src\INPUT_BUFFER.v]
+FileTimeLow=30692188
+Status=Modified
+
+[COMPILESTATUS|.\src\TestBench\TX_TB_runtest.do]
+FileTimeLow=30692177
+Status=Modified
+
+[COMPILESTATUS|.\src\TestBench\INPUT_BUFFER_TB.v]
+FileTimeLow=30692190
+Status=Modified
+
+[COMPILESTATUS|.\src\TestBench\INPUT_BUFFER_TB_runtest.do]
+FileTimeLow=30692188
+Status=Modified
+
+[COMPILESTATUS|.\src\TestBench\RX_TB.v]
+FileTimeLow=30692230
+Status=Modified
+
+[COMPILESTATUS|.\src\TestBench\RX_TB_runtest.do]
+FileTimeLow=30692229
+Status=Modified
 
