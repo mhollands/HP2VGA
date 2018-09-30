@@ -8,6 +8,6 @@ i<>.\..\..\..\VGA_CONTROL.v
 i<>.\..\..\..\TX_PLL_FAST.v
 i<>.\src\TestBench\main_TB.v
 i<>.\src\TestBench\TX_TB.v
-i<>.\src\INPUT_BUFFER.v
 i<>.\src\TestBench\INPUT_BUFFER_TB.v
 i<>.\src\TestBench\RX_TB.v
+i<>.\src\INPUT_BUFFER.v

@@ -23,13 +23,13 @@ module INPUT_BUFFER_tb;
 
 //Internal signals declarations:
 reg CLK;
-reg WIRE_IN;
-wire WIRE_OUT;
+reg [9:0]WIRE_IN;
+wire [8:0]WIRE_OUT;
 
 
 
 // Unit Under Test port map
-INPUT_BUFFER #(5) UUT (.CLK(CLK), .WIRE_IN(WIRE_IN), .WIRE_OUT(WIRE_OUT));
+INPUT_BUFFER #(.BUFF_LENGTH(10), .DATA_WIDTH(9)) UUT (.CLK(CLK), .WIRE_IN(WIRE_IN), .WIRE_OUT(WIRE_OUT));
 	
 	always begin
 		CLK = 0;
@@ -43,7 +43,7 @@ INPUT_BUFFER #(5) UUT (.CLK(CLK), .WIRE_IN(WIRE_IN), .WIRE_OUT(WIRE_OUT));
 		CLK = 0;
 		WIRE_IN = 0;
 		# 100;
-		WIRE_IN = 1;
+		WIRE_IN = 969;
 		# 100;
 		WIRE_IN = 0; 
 	end

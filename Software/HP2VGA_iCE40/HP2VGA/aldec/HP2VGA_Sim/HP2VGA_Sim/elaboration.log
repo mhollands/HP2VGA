@@ -1,15 +1,14 @@
-Active-HDL 10.3.3558.6081  2018-09-27 19:54:55
+Active-HDL 10.3.3558.6081  2018-09-30 17:54:21
 
 Elaboration top modules:
-Verilog Module                TX_tb
+Verilog Module                INPUT_BUFFER_tb
 
 
 ----------------------------------------------------------------------------------------------
 Verilog Module          | Library    | Info | Compiler Version          | Compilation Options
 ----------------------------------------------------------------------------------------------
-TX_tb                   | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
-TX                      | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
-VGA_CONTROL             | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
+INPUT_BUFFER_tb         | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
+INPUT_BUFFER            | hp2vga_sim |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
 ----------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------

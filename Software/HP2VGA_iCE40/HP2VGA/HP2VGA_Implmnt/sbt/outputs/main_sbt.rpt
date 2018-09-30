@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Sep 29 2018 12:23:58
+* File Generated:     Sep 30 2018 19:19:57
 
 * Purpose:            General info of design implementation
 
@@ -17,7 +17,7 @@
 Synthesis/Placement Summary:
 ----------------------------
     Status:  Successful
-    Runtime: 1 seconds
+    Runtime: 3 seconds
 
 Device Info:
 ------------
@@ -27,8 +27,8 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  236
-    LUTs:                 398
+    FFs:                  266
+    LUTs:                 428
     RAMs:                 32
     IOBs:                 49
     GBs:                  1
@@ -37,12 +37,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 398/7680
+    Total Logic Cells: 428/7680
         Combinational Logic Cells: 162      out of   7680      2.10938%
-        Sequential Logic Cells:    236      out of   7680      3.07292%
-        Logic Tiles:               124      out of   960       12.9167%
+        Sequential Logic Cells:    266      out of   7680      3.46354%
+        Logic Tiles:               159      out of   960       16.5625%
     Registers: 
-        Logic Registers:           236      out of   7680      3.07292%
+        Logic Registers:           266      out of   7680      3.46354%
         IO Registers:              0        out of   1280      0
     Block RAMs:                    32       out of   32        100%
     Warm Boots:                    0        out of   1         0%
@@ -121,21 +121,21 @@ Detailed I/O Info:
 
 Detailed Global Buffer Info:
 ----------------------------
-    Buffer Number  IO Bank  Driven By  Fanout  Signal Name
-    -------------  -------  ---------  ------  -----------
-    3              2        IO         77      TVP_CLK_c  
+    Buffer Number  IO Bank  Driven By  Fanout  Signal Name  
+    -------------  -------  ---------  ------  -----------  
+    3              2        IO         107     DEBUG_c_2_c  
 
 
 Router Summary:
 ---------------
     Status:  Successful
-    Runtime: 24 seconds
+    Runtime: 41 seconds
 
 Routing Resource Utilization:
 -----------------------------
-              Local line of tile     4444 out of 146184      3.04%
-                          Span 4     1033 out of  29696      3.47858%
-                         Span 12      316 out of   5632      5.6108%
+              Local line of tile     4669 out of 146184      3.19392%
+                          Span 4     1081 out of  29696      3.64022%
+                         Span 12      326 out of   5632      5.78835%
                   Global network        1 out of      8      12.5%
-      Vertical Inter-LUT Connect       32 out of   6720      0.47619%
+      Vertical Inter-LUT Connect       28 out of   6720      0.416667%
 

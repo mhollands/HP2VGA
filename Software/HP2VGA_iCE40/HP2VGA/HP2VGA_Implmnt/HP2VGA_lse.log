@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Sep 29 12:22:32 2018
+Sun Sep 30 19:16:59 2018
 
 
 Command Line:  C:\lscc\iCEcube2.2017.08\LSE\bin\nt\synthesis.exe -f HP2VGA_lse.prj 
@@ -117,6 +117,8 @@ INFO - synthesis: ../main.v(1): compiling module main. VERI-1018
 INFO - synthesis: ../tx_pll.v(1): compiling module TX_PLL. VERI-1018
 INFO - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(699): compiling module SB_PLL40_CORE(FDA_FEEDBACK=4'b0,FDA_RELATIVE=4'b0,DIVF=7'b0100110,DIVQ=3'b100,FILTER_RANGE=3'b010). VERI-1018
 WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on this instance. VDB-1013
+INFO - synthesis: ../input_buffer.v(2): compiling module INPUT_BUFFER. VERI-1018
+INFO - synthesis: ../input_buffer.v(2): compiling module INPUT_BUFFER(DATA_WIDTH=10). VERI-1018
 INFO - synthesis: ../rx.v(23): compiling module RX. VERI-1018
 INFO - synthesis: ../o_counter.v(23): compiling module O_COUNTER. VERI-1018
 WARNING - synthesis: ../o_counter.v(82): expression size 32 truncated to fit in target size 10. VERI-1209
@@ -130,7 +132,6 @@ Removed duplicate sequential element VGA_G(8 bit), because it is equivalent to V
 
 Removed duplicate sequential element VGA_B(8 bit), because it is equivalent to VGA_R
 
-INFO - synthesis: ../input_buffer.v(1): compiling module INPUT_BUFFER. VERI-1018
 INFO - synthesis: ../ram.v(1): compiling module RAM. VERI-1018
 Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
@@ -141,18 +142,18 @@ WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on
 ######## Converting I/O port DEBUG[5] to output.
 ######## Converting I/O port DEBUG[4] to output.
 ######## Converting I/O port DEBUG[3] to output.
-######## Converting I/O port DEBUG[2] to output.
 ######## Converting I/O port DEBUG[1] to output.
 ######## Converting I/O port DEBUG[0] to output.
-WARNING - synthesis: Bit 1 of Register \sync_en_input_buffer/BUFFER is stuck at One
-WARNING - synthesis: Bit 0 of Register \sync_en_input_buffer/BUFFER is stuck at One
-WARNING - synthesis: ../input_buffer.v(12): Register \sync_en_input_buffer/WIRE_OUT_8 is stuck at One. VDB-5014
+WARNING - synthesis: Bit 1 of Register \sync_en_input_buffer/BUFFER[0] is stuck at One
+WARNING - synthesis: Bit 0 of Register \sync_en_input_buffer/BUFFER[0] is stuck at One
+WARNING - synthesis: ../input_buffer.v(18): Register \sync_en_input_buffer/WIRE_OUT[0]_9 is stuck at One. VDB-5014
 
 
 
 ######## Found 1 RTL RAMs in the design.
 ######## Mapping RTL RAM \line_buffer/mem to 32 EBR blocks in PSEUDO_DUAL_PORT Mode
 
+######## Converting I/O port DEBUG[2] to output.
 WARNING - synthesis: ../vga_control.v(98): Register \transmit_module/video_signal_controller/SYNC_EN_SMOOTH_70 is stuck at One. VDB-5014
 Duplicate register/latch removal. \transmit_module/BRAM_ADDR__rep_1_i0 is a one-to-one match with \transmit_module/BRAM_ADDR__i11.
 Duplicate register/latch removal. \transmit_module/BRAM_ADDR__i13 is a one-to-one match with \transmit_module/BRAM_ADDR__rep_1_i2.
@@ -181,9 +182,9 @@ Writing scf file : HP2VGA_Implmnt/HP2VGA.scf
 Results of NGD DRC are available in main_drc.log.
 
 ################### Begin Area Report (main)######################
-Number of register bits => 236 of 7680 (3 % )
+Number of register bits => 266 of 7680 (3 % )
 SB_CARRY => 70
-SB_DFF => 28
+SB_DFF => 58
 SB_DFFE => 1
 SB_DFFESR => 91
 SB_DFFESS => 72
@@ -200,15 +201,15 @@ SB_RAM2048x2 => 32
 Clock Nets
 Number of Clocks: 2
   Net : tx_pll/ADV_CLK_c, loads : 229
-  Net : TVP_CLK_c, loads : 46
+  Net : DEBUG_c_2_c, loads : 77
 Clock Enable Nets
 Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : transmit_module/video_signal_controller/ADV_VSYNC_c, loads : 133
-  Net : transmit_module/n3797, loads : 50
-  Net : transmit_module/n3798, loads : 50
+  Net : transmit_module/n3635, loads : 50
+  Net : transmit_module/n3636, loads : 50
   Net : receive_module/RX_ADDR_10, loads : 34
   Net : receive_module/RX_ADDR_9, loads : 34
   Net : receive_module/RX_ADDR_8, loads : 34
@@ -225,10 +226,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
-clk1 [get_nets TVP_CLK_c]               |   50.000 MHz|   41.703 MHz|    15 *
+clk1 [get_nets ADV_CLK_c]               |            -|            -|     0  
                                         |             |             |
 create_clock -period 20.000000 -name    |             |             |
-clk0 [get_nets ADV_CLK_c]               |            -|            -|     0  
+clk0 [get_nets DEBUG_c_2_c]             |   50.000 MHz|   41.703 MHz|    15 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -236,8 +237,8 @@ clk0 [get_nets ADV_CLK_c]               |            -|            -|     0
 1 constraints not met.
 
 
-Peak Memory Usage: 38.125  MB
+Peak Memory Usage: 39.223  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.313  secs
+Elapsed CPU time for LSE flow : 4.109  secs
 --------------------------------------------------------------

@@ -1,5 +1,4 @@
 [Files List]
 C:\lscc\iCEcube2.2017.08\Aldec\Active-HDL\vlib\std/src/standard.vhd=S
-E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40/VGA_CONTROL.v=S
-E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40/TX.v=S
-E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\aldec\HP2VGA_Sim/src/TestBench/TX_TB.v=S
+E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\aldec\HP2VGA_Sim/src/INPUT_BUFFER.v=S
+E:\Materials\KDP\Oscilloscope Mod\HP2VGA\Software\HP2VGA_iCE40\HP2VGA\aldec\HP2VGA_Sim/src/TestBench/INPUT_BUFFER_TB.v=S

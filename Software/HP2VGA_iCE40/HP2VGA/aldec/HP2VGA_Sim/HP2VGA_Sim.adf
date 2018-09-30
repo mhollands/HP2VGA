@@ -90,8 +90,8 @@ TestBench/RX_TB_runtest.do=-1
 .\src\TestBench\main_TB_runtest.do=Macro
 .\src\TestBench\TX_TB.v=Verilog Test Bench
 .\src\TestBench\TX_TB_runtest.do=Macro
-
 .\src\TestBench\INPUT_BUFFER_TB.v=Verilog Test Bench
 .\src\TestBench\INPUT_BUFFER_TB_runtest.do=Macro
 .\src\TestBench\RX_TB.v=Verilog Test Bench
 .\src\TestBench\RX_TB_runtest.do=Macro
+

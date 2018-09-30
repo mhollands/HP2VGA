@@ -1,8 +1,8 @@
-81
+91
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
-~M 1 "./../src/INPUT_BUFFER.v" 1 INPUT_BUFFER
-~A 1 "./../src/INPUT_BUFFER.v" 1 INPUT_BUFFER
+~M 1 "./../src/INPUT_BUFFER.v" 2 INPUT_BUFFER
+~A 1 "./../src/INPUT_BUFFER.v" 2 INPUT_BUFFER
 ~M 3 "./../src/TestBench/INPUT_BUFFER_TB.v" 22 INPUT_BUFFER_tb
 ~A 1 "./../src/TestBench/INPUT_BUFFER_TB.v" 22 INPUT_BUFFER_tb
 ~M 1 "./../../../../O_COUNTER.v" 23 O_COUNTER
@@ -21,6 +21,8 @@
 ~A 1 "./../../../../TX_PLL_FAST.v" 1 TX_PLL_FAST
 ~M 3 "./../src/TestBench/TX_TB.v" 22 TX_tb
 ~A 1 "./../src/TestBench/TX_TB.v" 22 TX_tb
+~M 1 "./../src/INPUT_BUFFER.v" 0 UnitScopePackage_2
+~A 1 "./../src/INPUT_BUFFER.v" 0 UnitScopePackage_2
 ~M 1 "./../../../../VGA_CONTROL.v" 26 VGA_CONTROL
 ~A 1 "./../../../../VGA_CONTROL.v" 26 VGA_CONTROL
 ~M 1 "./../../../../main.v" 1 main

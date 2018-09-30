@@ -32,7 +32,13 @@ module main(
 	wire O_VISIBLE;
 	
 	wire TVP_HSYNC_buff;
-	//INPUT_BUFFER tvphsbufer(.CLK(TVP_CLK), .WIRE_IN(TVP_HSYNC), .WIRE_OUT(TVP_HSYNC_buff));
+	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(1)) tvp_hs_buffer(.CLK(TVP_CLK), .WIRE_IN(TVP_HSYNC), .WIRE_OUT(TVP_HSYNC_buff));
+
+	wire TVP_VSYNC_buff;
+	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(1)) tvp_vs_buffer(.CLK(~TVP_CLK), .WIRE_IN(TVP_VSYNC), .WIRE_OUT(TVP_VSYNC_buff));
+
+	wire [9:0] TVP_VIDEO_buff;
+	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(10)) tvp_video_buffer(.CLK(TVP_CLK), .WIRE_IN(TVP_VIDEO), .WIRE_OUT(TVP_VIDEO_buff));
 
 	RX receive_module(
 			.O_CLK(TVP_CLK),
@@ -40,9 +46,9 @@ module main(
 		    .BRAM_ADDR(RX_ADDR),
 		    .BRAM_DIN(RX_DATA),
 		    .BRAM_WE(RX_WE),
-		    .O_HS(TVP_HSYNC),
-		    .O_VS(TVP_VSYNC),
-		    .VIDEO(TVP_VIDEO),
+		    .O_HS(TVP_HSYNC_buff),
+		    .O_VS(TVP_VSYNC_buff),
+		    .VIDEO(TVP_VIDEO_buff),
 		    .PULSE_1HZ(PULSE_1HZ),
 		    .SYNC(RX_TX_SYNC),
 		    .O_VISIBLE(O_VISIBLE));
@@ -70,10 +76,9 @@ module main(
 			    .VGA_VISIBLE(VGA_VISIBLE),
 			    .DEBUG_MODE(1'b0));
 
-	INPUT_BUFFER sync_buffer(.CLK(TX_CLK), .WIRE_IN(RX_TX_SYNC), .WIRE_OUT(RX_TX_SYNC_BUFF));
+	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(1)) sync_buffer(.CLK(TX_CLK), .WIRE_IN(RX_TX_SYNC), .WIRE_OUT(RX_TX_SYNC_BUFF));
 
-	//assign VGA_DEBUG_MODE = ~DEBUG[6];
-	INPUT_BUFFER sync_en_input_buffer(.CLK(TX_CLK), .WIRE_IN(1'b1), .WIRE_OUT(SYNC_ENABLE));
+	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(1)) sync_en_input_buffer(.CLK(TX_CLK), .WIRE_IN(1'b1), .WIRE_OUT(SYNC_ENABLE));
 
 	assign ADV_R = R_T;
 	assign ADV_G = G_T;
@@ -100,8 +105,8 @@ module main(
 		flippy <= ~flippy;
 	end
 
-	assign DEBUG[7:0] = 0;
-	//assign DEBUG[6:0] = {1'b1, 1'b1, VGA_VISIBLE, TX_ADDR[0], ADV_VSYNC, ADV_HSYNC, TX_CLK};
-	//assign DEBUG[7:0] = {TVP_VIDEO[9:4], TVP_HSYNC, TVP_VSYNC};
+	//assign DEBUG[7:0] = 0;
+	//assign DEBUG[6:0] = {1'VGA_VISIBLE, TX_ADDR[0], ADV_VSYNC, ADV_HSYNC, TVP_CLK, TX_CLK};
+	assign DEBUG[7:0] = {TVP_VIDEO[9:6], O_VISIBLE, TVP_CLK, TVP_HSYNC, TVP_VSYNC};
 
 endmodule
