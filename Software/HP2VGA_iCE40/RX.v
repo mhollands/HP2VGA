@@ -31,7 +31,8 @@ module RX(
     input wire [9:0] VIDEO,
     output wire PULSE_1HZ, 
     output wire SYNC,
-    output wire O_VISIBLE
+    output wire O_VISIBLE,
+    output wire O_SYNC_BAD
     );
     	
     wire [9:0] O_X;
@@ -47,7 +48,13 @@ module RX(
                             .O_VISIBLE(O_VISIBLE),
                             .PULSE_1HZ(PULSE_1HZ),
                             .SYNC(SYNC));
-	  
+	
+    RX_SYNC_WATCHDOG sync_wd(   .CLK(O_CLK),
+                                .VISIBLE(O_VISIBLE),
+                                .VIDEO(VIDEO),
+                                .VSYNC(O_VS),
+                                .SYNC_BAD(O_SYNC_BAD));
+
     always @(posedge O_CLK) begin
         if(O_VS == 0) begin
            BRAM_ADDR <= 0; 

@@ -42,6 +42,7 @@
 -ver "../PLL_20_TO_100MHz.v"
 -ver "../DIV_BY_5.v"
 -ver "../INPUT_BUFFER.v"
+-ver "../RX_SYNC_WATCHDOG.v"
 -p "E:/Materials/KDP/Oscilloscope Mod/HP2VGA/Software/HP2VGA_iCE40/HP2VGA"
 
 #set result format/file last

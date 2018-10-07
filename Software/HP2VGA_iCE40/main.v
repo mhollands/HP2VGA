@@ -30,12 +30,14 @@ module main(
 	wire PULSE_1HZ;
 	wire [7:0] RX_DATA;
 	wire O_VISIBLE;
-	
+	wire O_SYNC_BAD;
+
 	wire TVP_HSYNC_buff;
 	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(1)) tvp_hs_buffer(.CLK(TVP_CLK), .WIRE_IN(TVP_HSYNC), .WIRE_OUT(TVP_HSYNC_buff));
 
+	//VSYNC in not aligned to negative edge so use inverse clock
 	wire TVP_VSYNC_buff;
-	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(1)) tvp_vs_buffer(.CLK(~TVP_CLK), .WIRE_IN(TVP_VSYNC), .WIRE_OUT(TVP_VSYNC_buff));
+	INPUT_BUFFER #(.BUFF_LENGTH(3), .DATA_WIDTH(1)) tvp_vs_buffer(.CLK(TVP_CLK), .WIRE_IN(TVP_VSYNC), .WIRE_OUT(TVP_VSYNC_buff));
 
 	wire [9:0] TVP_VIDEO_buff;
 	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(10)) tvp_video_buffer(.CLK(TVP_CLK), .WIRE_IN(TVP_VIDEO), .WIRE_OUT(TVP_VIDEO_buff));
@@ -51,7 +53,8 @@ module main(
 		    .VIDEO(TVP_VIDEO_buff),
 		    .PULSE_1HZ(PULSE_1HZ),
 		    .SYNC(RX_TX_SYNC),
-		    .O_VISIBLE(O_VISIBLE));
+		    .O_VISIBLE(O_VISIBLE),
+		    .O_SYNC_BAD(O_SYNC_BAD));
 	
 	// Instantiate TX Module
 	wire [13:0] TX_ADDR;
@@ -98,7 +101,7 @@ module main(
 	assign ADV_SYNC_N = 0;
 	assign ADV_BLANK_N = 1;
 
-	assign LED = PULSE_1HZ;
+	assign LED = PULSE_1HZ | O_SYNC_BAD;
 
 	reg flippy;
 	always @(posedge TVP_CLK) begin
@@ -107,6 +110,6 @@ module main(
 
 	//assign DEBUG[7:0] = 0;
 	//assign DEBUG[6:0] = {1'VGA_VISIBLE, TX_ADDR[0], ADV_VSYNC, ADV_HSYNC, TVP_CLK, TX_CLK};
-	assign DEBUG[7:0] = {TVP_VIDEO[9:6], O_VISIBLE, TVP_CLK, TVP_HSYNC, TVP_VSYNC};
+	assign DEBUG[7:0] = {TVP_VIDEO[9:5], O_VISIBLE, TVP_CLK, TVP_HSYNC, TVP_VSYNC, O_SYNC_BAD};
 
 endmodule

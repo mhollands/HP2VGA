@@ -78,7 +78,7 @@ module O_COUNTER( input wire ENABLE, //enable module
             old_HS <= O_HS;
             old_VS <= O_VS;
 
-            O_VISIBLE <= ENABLE && (X >= H_FRONT_PORCH && X < H_FRONT_PORCH + H_VISIBLE) && (Y >= V_FRONT_PORCH && Y < V_FRONT_PORCH + V_VISIBLE);
+            O_VISIBLE <= ENABLE && (X >= H_FRONT_PORCH - 1 && X < H_FRONT_PORCH + H_VISIBLE - 1) && (Y >= V_FRONT_PORCH && Y < V_FRONT_PORCH + V_VISIBLE);
             O_X <= X - H_FRONT_PORCH;
             O_Y <= Y - V_FRONT_PORCH;
         end

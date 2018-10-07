@@ -21,6 +21,7 @@ add_file -verilog -lib work "../PLL_100_TO_20MHz.v"
 add_file -verilog -lib work "../PLL_20_TO_100MHz.v" 
 add_file -verilog -lib work "../DIV_BY_5.v" 
 add_file -verilog -lib work "../INPUT_BUFFER.v" 
+add_file -verilog -lib work "../RX_SYNC_WATCHDOG.v" 
 #implementation: "HP2VGA_Implmnt"
 impl -add HP2VGA_Implmnt -type fpga
 
