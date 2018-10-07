@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Oct 07 19:42:10 2018
+Sun Oct 07 23:09:39 2018
 
 
 Command Line:  C:\lscc\iCEcube2.2017.08\LSE\bin\nt\synthesis.exe -f HP2VGA_lse.prj 
@@ -74,11 +74,6 @@ Verilog design file = ../TX.v
 Verilog design file = ../RX.v
 Verilog design file = ../O_COUNTER.v
 Verilog design file = ../VGA_CONTROL.v
-Verilog design file = ../TX_PLL_FAST.v
-Verilog design file = ../PLL_100_TO_48MHz96.v
-Verilog design file = ../PLL_100_TO_20MHz.v
-Verilog design file = ../PLL_20_TO_100MHz.v
-Verilog design file = ../DIV_BY_5.v
 Verilog design file = ../INPUT_BUFFER.v
 Verilog design file = ../RX_SYNC_WATCHDOG.v
 -sdc option: SDC file input not used.
@@ -95,11 +90,6 @@ Analyzing Verilog file ../tx.v. VERI-1482
 Analyzing Verilog file ../rx.v. VERI-1482
 Analyzing Verilog file ../o_counter.v. VERI-1482
 Analyzing Verilog file ../vga_control.v. VERI-1482
-Analyzing Verilog file ../tx_pll_fast.v. VERI-1482
-Analyzing Verilog file ../pll_100_to_48mhz96.v. VERI-1482
-Analyzing Verilog file ../pll_100_to_20mhz.v. VERI-1482
-Analyzing Verilog file ../pll_20_to_100mhz.v. VERI-1482
-Analyzing Verilog file ../div_by_5.v. VERI-1482
 Analyzing Verilog file ../input_buffer.v. VERI-1482
 Analyzing Verilog file ../rx_sync_watchdog.v. VERI-1482
 Analyzing Verilog file C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
@@ -137,7 +127,7 @@ Removed duplicate sequential element VGA_G(8 bit), because it is equivalent to V
 Removed duplicate sequential element VGA_B(8 bit), because it is equivalent to VGA_R
 
 INFO - synthesis: ../ram.v(1): compiling module RAM. VERI-1018
-WARNING - synthesis: ../main.v(113): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: ../main.v(106): expression size 9 truncated to fit in target size 8. VERI-1209
 Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
 Top-level module name = main.
@@ -212,8 +202,8 @@ Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : transmit_module/video_signal_controller/ADV_VSYNC_c, loads : 133
-  Net : transmit_module/n3682, loads : 50
-  Net : transmit_module/n3683, loads : 50
+  Net : transmit_module/n3679, loads : 50
+  Net : transmit_module/n3680, loads : 50
   Net : receive_module/RX_ADDR_10, loads : 34
   Net : receive_module/RX_ADDR_9, loads : 34
   Net : receive_module/RX_ADDR_8, loads : 34
@@ -241,8 +231,8 @@ clk0 [get_nets DEBUG_c_3_c]             |   50.000 MHz|   41.703 MHz|    15 *
 1 constraints not met.
 
 
-Peak Memory Usage: 38.859  MB
+Peak Memory Usage: 38.348  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 4.844  secs
+Elapsed CPU time for LSE flow : 5.328  secs
 --------------------------------------------------------------

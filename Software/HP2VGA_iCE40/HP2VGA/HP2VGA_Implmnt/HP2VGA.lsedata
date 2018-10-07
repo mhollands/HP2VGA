@@ -81,6 +81,79 @@
         Instances in netlist: 166
     -->
 
+    <instance  name = "tvp_hs_buffer/BUFFER[0]"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "tvp_hs_buffer/gnd"  />
+        <nitem  name = "DEBUG[3]"  />
+        <nitem  name = "DEBUG[2]"  />
+        <nitem  name = "tvp_hs_buffer/BUFFER[1][0]"  />
+        <nitem  name = "tvp_hs_buffer/BUFFER[0][0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "tx_pll/TX_PLL_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "REFERENCECLK"  direction = "in"  />
+        <pitem  name = "RESETB"  direction = "in"  />
+        <pitem  name = "BYPASS"  direction = "in"  />
+        <pitem  name = "PLLOUTCORE"  direction = "out"  />
+        <pitem  name = "PLLOUTGLOBAL"  direction = "out"  />
+        <pitem  name = "LOCK"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "DEBUG[3]"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "ADV_CLK"  />
+        <nitem  name = "tx_pll/PLLOUTGLOBAL"  />
+        <nitem  name = "tx_pll/LOCK"  />
+        </nets>
+    </instance>
+
+    <instance  name = "PULSE_1HZ_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "PULSE_1HZ"  />
+        <nitem  name = "DEBUG[0]"  />
+        <nitem  name = "LED"  />
+        </nets>
+    </instance>
+
+    <instance  name = "tvp_hs_buffer/WIRE_OUT[0]_9"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "tvp_hs_buffer/gnd"  />
+        <nitem  name = "DEBUG[3]"  />
+        <nitem  name = "TVP_HSYNC_buff"  />
+        <nitem  name = "tvp_hs_buffer/BUFFER[1][0]"  />
+        </nets>
+    </instance>
+
     <instance  name = "tvp_vs_buffer/BUFFER[0]"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "reset[0]"  direction = "in"  />
@@ -108,59 +181,6 @@
         </nets>
     </instance>
 
-    <instance  name = "tvp_hs_buffer/WIRE_OUT[0]_9"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "d"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "tvp_hs_buffer/gnd"  />
-        <nitem  name = "DEBUG[3]"  />
-        <nitem  name = "TVP_HSYNC_buff"  />
-        <nitem  name = "tvp_hs_buffer/BUFFER[1][0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "PULSE_1HZ_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "PULSE_1HZ"  />
-        <nitem  name = "DEBUG[0]"  />
-        <nitem  name = "LED"  />
-        </nets>
-    </instance>
-
-    <instance  name = "tvp_hs_buffer/BUFFER[0]"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "reset[0]"  direction = "in"  />
-        <pitem  name = "reset[1]"  direction = "in"  />
-        <pitem  name = "set[0]"  direction = "in"  />
-        <pitem  name = "set[1]"  direction = "in"  />
-        <pitem  name = "clock"  direction = "in"  />
-        <pitem  name = "d[0]"  direction = "in"  />
-        <pitem  name = "q[1]"  direction = "out"  />
-        <pitem  name = "q[0]"  direction = "out"  />
-        <pitem  name = "d[1]"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "tvp_hs_buffer/gnd"  />
-        <nitem  name = "DEBUG[3]"  />
-        <nitem  name = "DEBUG[2]"  />
-        <nitem  name = "tvp_hs_buffer/BUFFER[1][0]"  />
-        <nitem  name = "tvp_hs_buffer/BUFFER[0][0]"  />
-        </nets>
-    </instance>
-
     <instance  name = "tvp_vs_buffer/WIRE_OUT[0]_9"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "r"  direction = "in"  />
@@ -175,26 +195,6 @@
         <nitem  name = "DEBUG[3]"  />
         <nitem  name = "TVP_VSYNC_buff"  />
         <nitem  name = "tvp_vs_buffer/BUFFER[2][0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "tx_pll/TX_PLL_inst"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "REFERENCECLK"  direction = "in"  />
-        <pitem  name = "RESETB"  direction = "in"  />
-        <pitem  name = "BYPASS"  direction = "in"  />
-        <pitem  name = "PLLOUTCORE"  direction = "out"  />
-        <pitem  name = "PLLOUTGLOBAL"  direction = "out"  />
-        <pitem  name = "LOCK"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "DEBUG[3]"  />
-        <nitem  name = "pwr"  />
-        <nitem  name = "gnd"  />
-        <nitem  name = "ADV_CLK"  />
-        <nitem  name = "tx_pll/PLLOUTGLOBAL"  />
-        <nitem  name = "tx_pll/LOCK"  />
         </nets>
     </instance>
 
@@ -287,10 +287,10 @@
         <nitem  name = "tvp_video_buffer/gnd"  />
         <nitem  name = "DEBUG[3]"  />
         <nitem  name = "TVP_VIDEO[9]"  />
-        <nitem  name = "TVP_VIDEO[8]"  />
         <nitem  name = "DEBUG[7]"  />
         <nitem  name = "DEBUG[6]"  />
         <nitem  name = "DEBUG[5]"  />
+        <nitem  name = "TVP_VIDEO[5]"  />
         <nitem  name = "TVP_VIDEO[4]"  />
         <nitem  name = "TVP_VIDEO[3]"  />
         <nitem  name = "TVP_VIDEO[2]"  />
@@ -9064,9 +9064,9 @@
     -->
 
     <regs>
-        <reg  name = "tvp_vs_buffer/BUFFER[0]"  />
-        <reg  name = "tvp_hs_buffer/WIRE_OUT[0]_9"  />
         <reg  name = "tvp_hs_buffer/BUFFER[0]"  />
+        <reg  name = "tvp_hs_buffer/WIRE_OUT[0]_9"  />
+        <reg  name = "tvp_vs_buffer/BUFFER[0]"  />
         <reg  name = "tvp_vs_buffer/WIRE_OUT[0]_9"  />
         <reg  name = "tvp_video_buffer/BUFFER[0]"  />
         <reg  name = "tvp_video_buffer/WIRE_OUT"  />

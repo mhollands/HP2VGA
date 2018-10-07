@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:12:22
 
-* File Generated:     Oct 7 2018 19:42:26
+* File Generated:     Oct 7 2018 23:09:54
 
 * Purpose:            
 
@@ -72,7 +72,7 @@ I2088: Phase 1, elapsed time : 0.1 (sec)
 
 
 Phase 2
-I2088: Phase 2, elapsed time : 0.3 (sec)
+I2088: Phase 2, elapsed time : 0.2 (sec)
 
 Phase 3
 SDC-Info-1101: Duty cycle not specified for clock. Assuming 50 percent dutycycle.
@@ -102,16 +102,16 @@ Device Utilization Summary after Packing
     PLLs                        :	1/2
 
 
-I2088: Phase 3, elapsed time : 2.0 (sec)
+I2088: Phase 3, elapsed time : 2.1 (sec)
 
 Phase 4
-I2088: Phase 4, elapsed time : 0.7 (sec)
+I2088: Phase 4, elapsed time : 0.8 (sec)
 
 Phase 5
-I2088: Phase 5, elapsed time : 5.6 (sec)
+I2088: Phase 5, elapsed time : 6.1 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 101.5 (sec)
+I2088: Phase 6, elapsed time : 160.5 (sec)
 
 Final Design Statistics
     Number of LUTs      	:	434
@@ -128,7 +128,7 @@ Final Design Statistics
 
 Device Utilization Summary
     LogicCells                  :	434/7680
-    PLBs                        :	153/960
+    PLBs                        :	139/960
     BRAMs                       :	32/32
     IOs and GBIOs               :	49/93
     PLLs                        :	1/2
@@ -147,7 +147,7 @@ analysis after routing.
                      Clock Summary 
 =====================================================================
 Number of clocks: 5
-Clock: TVP_CLK | Frequency: 133.34 MHz | Target: 20.00 MHz
+Clock: TVP_CLK | Frequency: 157.18 MHz | Target: 20.00 MHz
 Clock: TX_CLK | Frequency: N/A | Target: 48.76 MHz
 Clock: main|TVP_CLK | Frequency: N/A | Target: 50.00 MHz
 Clock: tx_pll.TX_PLL_inst/PLLOUTCORE | Frequency: 85.31 MHz | Target: 48.75 MHz
@@ -159,5 +159,5 @@ Clock: tx_pll.TX_PLL_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 48.75 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 112.8 sec.
+I2076: Placer run-time: 172.2 sec.
 

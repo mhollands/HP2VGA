@@ -32,9 +32,7 @@ module TX(
     output wire VGA_VS,
     input wire VGA_SYNC,
     input wire VGA_SYNC_EN,
-    output wire VGA_VISIBLE,
-    input DEBUG_MODE
-    );
+    output wire VGA_VISIBLE);
     
     //define VGA controller
     //wire VGA_VISIBLE, VGA_VISIBLE_X, VGA_VISIBLE_Y; 

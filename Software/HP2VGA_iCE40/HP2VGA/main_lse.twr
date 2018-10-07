@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Sun Oct 07 19:42:14 2018
+Sun Oct 07 23:09:44 2018
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -50,31 +50,31 @@ Error:  The following path violates requirements by 3.979ns
 L_CO        ---     0.367              C to Q              \receive_module/BRAM_ADDR__i0 (from DEBUG_c_3_c)
 Route         3   e 1.831                                  RX_ADDR[0]
 LUT4        ---     0.408             I0 to CO             \receive_module/add_12_2
-Route         2   e 1.158                                  \receive_module/n3149
+Route         2   e 1.158                                  \receive_module/n3146
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_3
-Route         2   e 1.158                                  \receive_module/n3150
+Route         2   e 1.158                                  \receive_module/n3147
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_4
-Route         2   e 1.158                                  \receive_module/n3151
+Route         2   e 1.158                                  \receive_module/n3148
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_5
-Route         2   e 1.158                                  \receive_module/n3152
+Route         2   e 1.158                                  \receive_module/n3149
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_6
-Route         2   e 1.158                                  \receive_module/n3153
+Route         2   e 1.158                                  \receive_module/n3150
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_7
-Route         2   e 1.158                                  \receive_module/n3154
+Route         2   e 1.158                                  \receive_module/n3151
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_8
-Route         2   e 1.158                                  \receive_module/n3155
+Route         2   e 1.158                                  \receive_module/n3152
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_9
-Route         2   e 1.158                                  \receive_module/n3156
+Route         2   e 1.158                                  \receive_module/n3153
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_10
-Route         2   e 1.158                                  \receive_module/n3157
+Route         2   e 1.158                                  \receive_module/n3154
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_11
-Route         2   e 1.158                                  \receive_module/n3158
+Route         2   e 1.158                                  \receive_module/n3155
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_12
-Route         2   e 1.158                                  \receive_module/n3159
+Route         2   e 1.158                                  \receive_module/n3156
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_13
-Route         2   e 1.158                                  \receive_module/n3160
+Route         2   e 1.158                                  \receive_module/n3157
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_14
-Route         1   e 1.020                                  \receive_module/n3161
+Route         1   e 1.020                                  \receive_module/n3158
 LUT4        ---     0.408             I3 to O              \receive_module/add_12_15_lut
 Route         1   e 1.020                                  \receive_module/n124
                   --------
@@ -102,29 +102,29 @@ Error:  The following path violates requirements by 2.551ns
 L_CO        ---     0.367              C to Q              \receive_module/BRAM_ADDR__i0 (from DEBUG_c_3_c)
 Route         3   e 1.831                                  RX_ADDR[0]
 LUT4        ---     0.408             I0 to CO             \receive_module/add_12_2
-Route         2   e 1.158                                  \receive_module/n3149
+Route         2   e 1.158                                  \receive_module/n3146
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_3
-Route         2   e 1.158                                  \receive_module/n3150
+Route         2   e 1.158                                  \receive_module/n3147
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_4
-Route         2   e 1.158                                  \receive_module/n3151
+Route         2   e 1.158                                  \receive_module/n3148
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_5
-Route         2   e 1.158                                  \receive_module/n3152
+Route         2   e 1.158                                  \receive_module/n3149
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_6
-Route         2   e 1.158                                  \receive_module/n3153
+Route         2   e 1.158                                  \receive_module/n3150
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_7
-Route         2   e 1.158                                  \receive_module/n3154
+Route         2   e 1.158                                  \receive_module/n3151
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_8
-Route         2   e 1.158                                  \receive_module/n3155
+Route         2   e 1.158                                  \receive_module/n3152
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_9
-Route         2   e 1.158                                  \receive_module/n3156
+Route         2   e 1.158                                  \receive_module/n3153
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_10
-Route         2   e 1.158                                  \receive_module/n3157
+Route         2   e 1.158                                  \receive_module/n3154
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_11
-Route         2   e 1.158                                  \receive_module/n3158
+Route         2   e 1.158                                  \receive_module/n3155
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_12
-Route         2   e 1.158                                  \receive_module/n3159
+Route         2   e 1.158                                  \receive_module/n3156
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_13
-Route         2   e 1.158                                  \receive_module/n3160
+Route         2   e 1.158                                  \receive_module/n3157
 LUT4        ---     0.408             I3 to O              \receive_module/add_12_14_lut
 Route         1   e 1.020                                  \receive_module/n125
                   --------
@@ -152,29 +152,29 @@ Error:  The following path violates requirements by 2.413ns
 L_CO        ---     0.367              C to Q              \receive_module/BRAM_ADDR__i1 (from DEBUG_c_3_c)
 Route         3   e 1.831                                  RX_ADDR[1]
 LUT4        ---     0.408             I0 to CO             \receive_module/add_12_3
-Route         2   e 1.158                                  \receive_module/n3150
+Route         2   e 1.158                                  \receive_module/n3147
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_4
-Route         2   e 1.158                                  \receive_module/n3151
+Route         2   e 1.158                                  \receive_module/n3148
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_5
-Route         2   e 1.158                                  \receive_module/n3152
+Route         2   e 1.158                                  \receive_module/n3149
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_6
-Route         2   e 1.158                                  \receive_module/n3153
+Route         2   e 1.158                                  \receive_module/n3150
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_7
-Route         2   e 1.158                                  \receive_module/n3154
+Route         2   e 1.158                                  \receive_module/n3151
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_8
-Route         2   e 1.158                                  \receive_module/n3155
+Route         2   e 1.158                                  \receive_module/n3152
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_9
-Route         2   e 1.158                                  \receive_module/n3156
+Route         2   e 1.158                                  \receive_module/n3153
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_10
-Route         2   e 1.158                                  \receive_module/n3157
+Route         2   e 1.158                                  \receive_module/n3154
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_11
-Route         2   e 1.158                                  \receive_module/n3158
+Route         2   e 1.158                                  \receive_module/n3155
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_12
-Route         2   e 1.158                                  \receive_module/n3159
+Route         2   e 1.158                                  \receive_module/n3156
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_13
-Route         2   e 1.158                                  \receive_module/n3160
+Route         2   e 1.158                                  \receive_module/n3157
 LUT4        ---     0.408             CI to CO             \receive_module/add_12_14
-Route         1   e 1.020                                  \receive_module/n3161
+Route         1   e 1.020                                  \receive_module/n3158
 LUT4        ---     0.408             I3 to O              \receive_module/add_12_15_lut
 Route         1   e 1.020                                  \receive_module/n124
                   --------
@@ -203,6 +203,12 @@ clk0 [get_nets DEBUG_c_3_c]             |    20.000 ns|    23.979 ns|    15 *
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
+\receive_module/n3148                   |       2|       7|     99.00%
+                                        |        |        |
+\receive_module/n3149                   |       2|       7|     99.00%
+                                        |        |        |
+\receive_module/n3150                   |       2|       7|     99.00%
+                                        |        |        |
 \receive_module/n3151                   |       2|       7|     99.00%
                                         |        |        |
 \receive_module/n3152                   |       2|       7|     99.00%
@@ -213,25 +219,19 @@ Critical Nets                           |   Loads|  Errors| % of total
                                         |        |        |
 \receive_module/n3155                   |       2|       7|     99.00%
                                         |        |        |
-\receive_module/n3156                   |       2|       7|     99.00%
+\receive_module/n3147                   |       2|       6|     85.71%
                                         |        |        |
-\receive_module/n3157                   |       2|       7|     99.00%
+\receive_module/n3156                   |       2|       6|     85.71%
                                         |        |        |
-\receive_module/n3158                   |       2|       7|     99.00%
-                                        |        |        |
-\receive_module/n3150                   |       2|       6|     85.71%
-                                        |        |        |
-\receive_module/n3159                   |       2|       6|     85.71%
-                                        |        |        |
-\receive_module/n3160                   |       2|       5|     71.43%
+\receive_module/n3157                   |       2|       5|     71.43%
                                         |        |        |
 RX_ADDR[0]                              |       3|       4|     57.14%
                                         |        |        |
-\receive_module/n3149                   |       2|       4|     57.14%
+\receive_module/n3146                   |       2|       4|     57.14%
                                         |        |        |
 \receive_module/n124                    |       1|       3|     42.86%
                                         |        |        |
-\receive_module/n3161                   |       1|       3|     42.86%
+\receive_module/n3158                   |       1|       3|     42.86%
                                         |        |        |
 RX_ADDR[1]                              |       3|       2|     28.57%
                                         |        |        |
@@ -243,7 +243,7 @@ RX_ADDR[2]                              |       3|       1|     14.29%
                                         |        |        |
 \receive_module/n127                    |       1|       1|     14.29%
                                         |        |        |
-\receive_module/n2755                   |       1|       1|     14.29%
+\receive_module/n2752                   |       1|       1|     14.29%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -256,5 +256,5 @@ Timing errors: 7  Score: 12607
 Constraints cover  600 paths, 197 nets, and 573 connections (35.9% coverage)
 
 
-Peak memory: 40747008 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 40210432 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
