@@ -1,52 +1,52 @@
 // Verilog netlist produced by program LSE :  version Diamond Version 0.0.0
-// Netlist written on Sun Oct 07 23:09:44 2018
+// Netlist written on Mon Oct 29 22:24:32 2018
 //
 // Verilog Description of module main
 //
 
 module main (DEBUG, TVP_CLK, TVP_HSYNC, TVP_VSYNC, TVP_VIDEO, LED, 
             ADV_HSYNC, ADV_VSYNC, ADV_R, ADV_G, ADV_B, ADV_CLK, 
-            ADV_SYNC_N, ADV_BLANK_N) /* synthesis syn_module_defined=1 */ ;   // ../main.v(1[8:12])
-    output [7:0]DEBUG;   // ../main.v(2[19:24])
-    input TVP_CLK;   // ../main.v(3[13:20])
-    input TVP_HSYNC;   // ../main.v(4[13:22])
-    input TVP_VSYNC;   // ../main.v(5[13:22])
-    input [9:0]TVP_VIDEO;   // ../main.v(6[19:28])
-    output LED;   // ../main.v(7[14:17])
-    output ADV_HSYNC;   // ../main.v(8[14:23])
-    output ADV_VSYNC;   // ../main.v(9[14:23])
-    output [7:0]ADV_R;   // ../main.v(10[20:25])
-    output [7:0]ADV_G;   // ../main.v(11[20:25])
-    output [7:0]ADV_B;   // ../main.v(12[20:25])
-    output ADV_CLK;   // ../main.v(13[14:21])
-    output ADV_SYNC_N;   // ../main.v(14[14:24])
-    output ADV_BLANK_N;   // ../main.v(15[14:25])
+            ADV_SYNC_N, ADV_BLANK_N) /* synthesis syn_module_defined=1 */ ;   // ../main.v(6[8:12])
+    output [7:0]DEBUG;   // ../main.v(7[19:24])
+    input TVP_CLK;   // ../main.v(8[13:20])
+    input TVP_HSYNC;   // ../main.v(9[13:22])
+    input TVP_VSYNC;   // ../main.v(10[13:22])
+    input [9:0]TVP_VIDEO;   // ../main.v(11[19:28])
+    output LED;   // ../main.v(12[14:17])
+    output ADV_HSYNC;   // ../main.v(13[14:23])
+    output ADV_VSYNC;   // ../main.v(14[14:23])
+    output [7:0]ADV_R;   // ../main.v(15[20:25])
+    output [7:0]ADV_G;   // ../main.v(16[20:25])
+    output [7:0]ADV_B;   // ../main.v(17[20:25])
+    output ADV_CLK;   // ../main.v(18[14:21])
+    output ADV_SYNC_N;   // ../main.v(19[14:24])
+    output ADV_BLANK_N;   // ../main.v(20[14:25])
     
-    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(2[19:24])
-    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(13[14:21])
+    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(7[19:24])
+    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(18[14:21])
     
     wire GND_net, VCC_net, DEBUG_c_7_c, DEBUG_c_6_c, DEBUG_c_5_c, 
         DEBUG_c_4, DEBUG_c_2_c, DEBUG_c_1_c, DEBUG_c_0, TVP_VIDEO_c_9, 
         TVP_VIDEO_c_5, TVP_VIDEO_c_4, TVP_VIDEO_c_3, TVP_VIDEO_c_2, 
         LED_c, ADV_HSYNC_c, ADV_VSYNC_c, ADV_B_c, n1812, n1813, 
         n1814, n1815, n1816, n1817, n1818, RX_TX_SYNC;
-    wire [13:0]RX_ADDR;   // ../main.v(28[14:21])
+    wire [13:0]RX_ADDR;   // ../main.v(33[14:21])
     
     wire PULSE_1HZ;
-    wire [7:0]RX_DATA;   // ../main.v(31[13:20])
+    wire [7:0]RX_DATA;   // ../main.v(36[13:20])
     
     wire TVP_HSYNC_buff, TVP_VSYNC_buff;
-    wire [13:0]TX_ADDR;   // ../main.v(60[14:21])
-    wire [7:0]TX_DATA;   // ../main.v(61[13:20])
+    wire [13:0]TX_ADDR;   // ../main.v(67[14:21])
+    wire [7:0]TX_DATA;   // ../main.v(68[13:20])
     
     wire RX_TX_SYNC_BUFF, n20, n28, n26, n25, n18, n19, n27, 
         n24, n23, n22, n21;
     
     VCC i2 (.Y(VCC_net));
     INPUT_BUFFER_U0 sync_buffer (.WIRE_IN({RX_TX_SYNC}), .ADV_CLK_c(ADV_CLK_c), 
-            .WIRE_OUT({RX_TX_SYNC_BUFF})) /* synthesis syn_module_defined=1 */ ;   // ../main.v(80[50:125])
+            .WIRE_OUT({RX_TX_SYNC_BUFF})) /* synthesis syn_module_defined=1 */ ;   // ../main.v(88[50:125])
     \INPUT_BUFFER(BUFF_LENGTH=3)  tvp_vs_buffer (.WIRE_OUT({TVP_VSYNC_buff}), 
-            .DEBUG_c_3_c(DEBUG_c_3_c), .DEBUG_c_1_c(DEBUG_c_1_c)) /* synthesis syn_module_defined=1 */ ;   // ../main.v(40[50:126])
+            .DEBUG_c_3_c(DEBUG_c_3_c), .DEBUG_c_1_c(DEBUG_c_1_c)) /* synthesis syn_module_defined=1 */ ;   // ../main.v(46[50:126])
     SB_IO ADV_G_pad_2 (.PACKAGE_PIN(ADV_G[2]), .OUTPUT_ENABLE(VCC_net), 
           .D_OUT_0(n1816));   // C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam ADV_G_pad_2.PIN_TYPE = 6'b011001;
@@ -209,7 +209,7 @@ module main (DEBUG, TVP_CLK, TVP_HSYNC, TVP_VSYNC, TVP_VIDEO, LED,
     defparam DEBUG_pad_7.NEG_TRIGGER = 1'b0;
     defparam DEBUG_pad_7.IO_STANDARD = "SB_LVCMOS";
     INPUT_BUFFER tvp_hs_buffer (.WIRE_OUT({TVP_HSYNC_buff}), .DEBUG_c_3_c(DEBUG_c_3_c), 
-            .DEBUG_c_2_c(DEBUG_c_2_c)) /* synthesis syn_module_defined=1 */ ;   // ../main.v(36[50:126])
+            .DEBUG_c_2_c(DEBUG_c_2_c)) /* synthesis syn_module_defined=1 */ ;   // ../main.v(42[50:126])
     GND i1 (.Y(GND_net));
     SB_IO TVP_VIDEO_pad_2 (.PACKAGE_PIN(TVP_VIDEO[2]), .OUTPUT_ENABLE(VCC_net), 
           .D_IN_0(TVP_VIDEO_c_2));   // C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
@@ -224,7 +224,7 @@ module main (DEBUG, TVP_CLK, TVP_HSYNC, TVP_VSYNC, TVP_VIDEO, LED,
        .n1817(n1817), .n18(n18), .n27(n27), .n19(n19), .n20(n20), 
        .n21(n21), .n22(n22), .n23(n23), .n24(n24), .n25(n25), .n26(n26), 
        .\TX_ADDR[11] (TX_ADDR[11]), .n1818(n1818), .VCC_net(VCC_net), 
-       .WIRE_OUT({RX_TX_SYNC_BUFF})) /* synthesis syn_module_defined=1 */ ;   // ../main.v(66[5] 78[34])
+       .WIRE_OUT({RX_TX_SYNC_BUFF})) /* synthesis syn_module_defined=1 */ ;   // ../main.v(73[5] 85[34])
     SB_IO ADV_G_pad_1 (.PACKAGE_PIN(ADV_G[1]), .OUTPUT_ENABLE(VCC_net), 
           .D_OUT_0(n1817));   // C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam ADV_G_pad_1.PIN_TYPE = 6'b011001;
@@ -286,7 +286,7 @@ module main (DEBUG, TVP_CLK, TVP_HSYNC, TVP_VSYNC, TVP_VIDEO, LED,
     defparam DEBUG_c_2_pad.NEG_TRIGGER = 1'b0;
     defparam DEBUG_c_2_pad.IO_STANDARD = "SB_LVCMOS";
     SB_GB_IO DEBUG_c_3_pad (.PACKAGE_PIN(TVP_CLK), .OUTPUT_ENABLE(VCC_net), 
-            .GLOBAL_BUFFER_OUTPUT(DEBUG_c_3_c));   // ../main.v(3[13:20])
+            .GLOBAL_BUFFER_OUTPUT(DEBUG_c_3_c));   // ../main.v(8[13:20])
     defparam DEBUG_c_3_pad.PIN_TYPE = 6'b000001;
     defparam DEBUG_c_3_pad.PULLUP = 1'b0;
     defparam DEBUG_c_3_pad.NEG_TRIGGER = 1'b0;
@@ -354,23 +354,23 @@ module main (DEBUG, TVP_CLK, TVP_HSYNC, TVP_VSYNC, TVP_VIDEO, LED,
        .VCC_net(VCC_net), .DEBUG_c_4(DEBUG_c_4), .DEBUG_c_0(DEBUG_c_0), 
        .\RX_DATA[7] (RX_DATA[7]), .\RX_DATA[6] (RX_DATA[6]), .\RX_DATA[5] (RX_DATA[5]), 
        .\RX_DATA[4] (RX_DATA[4]), .WIRE_OUT({TVP_VSYNC_buff}), .PULSE_1HZ(PULSE_1HZ), 
-       .WIRE_OUT_adj_2({TVP_HSYNC_buff}), .WIRE_IN({RX_TX_SYNC})) /* synthesis syn_module_defined=1 */ ;   // ../main.v(45[5] 57[31])
+       .WIRE_OUT_adj_2({TVP_HSYNC_buff}), .WIRE_IN({RX_TX_SYNC})) /* synthesis syn_module_defined=1 */ ;   // ../main.v(52[5] 64[31])
     SB_LUT4 PULSE_1HZ_I_0_2_lut (.I0(PULSE_1HZ), .I1(DEBUG_c_0), .I2(GND_net), 
-            .I3(GND_net), .O(LED_c));   // ../main.v(102[15:37])
+            .I3(GND_net), .O(LED_c));   // ../main.v(111[15:37])
     defparam PULSE_1HZ_I_0_2_lut.LUT_INIT = 16'heeee;
     \INPUT_BUFFER(DATA_WIDTH=10)  tvp_video_buffer (.TVP_VIDEO_c_2(TVP_VIDEO_c_2), 
             .DEBUG_c_3_c(DEBUG_c_3_c), .RX_DATA({RX_DATA}), .TVP_VIDEO_c_9(TVP_VIDEO_c_9), 
             .DEBUG_c_7_c(DEBUG_c_7_c), .DEBUG_c_6_c(DEBUG_c_6_c), .DEBUG_c_5_c(DEBUG_c_5_c), 
             .TVP_VIDEO_c_5(TVP_VIDEO_c_5), .TVP_VIDEO_c_4(TVP_VIDEO_c_4), 
-            .TVP_VIDEO_c_3(TVP_VIDEO_c_3)) /* synthesis syn_module_defined=1 */ ;   // ../main.v(43[51:130])
+            .TVP_VIDEO_c_3(TVP_VIDEO_c_3)) /* synthesis syn_module_defined=1 */ ;   // ../main.v(50[51:130])
     RAM line_buffer (.\TX_ADDR[12] (TX_ADDR[12]), .\TX_ADDR[11] (TX_ADDR[11]), 
         .\TX_ADDR[13] (TX_ADDR[13]), .TX_DATA({TX_DATA}), .ADV_CLK_c(ADV_CLK_c), 
         .GND_net(GND_net), .RX_ADDR({RX_ADDR}), .n28(n28), .n27(n27), 
         .n26(n26), .n25(n25), .n24(n24), .n23(n23), .n22(n22), .n21(n21), 
         .n20(n20), .n19(n19), .n18(n18), .RX_DATA({RX_DATA}), .DEBUG_c_3_c(DEBUG_c_3_c), 
-        .VCC_net(VCC_net), .DEBUG_c_4(DEBUG_c_4)) /* synthesis syn_module_defined=1 */ ;   // ../main.v(89[6] 95[21])
+        .VCC_net(VCC_net), .DEBUG_c_4(DEBUG_c_4)) /* synthesis syn_module_defined=1 */ ;   // ../main.v(98[6] 104[21])
     TX_PLL tx_pll (.DEBUG_c_3_c(DEBUG_c_3_c), .VCC_net(VCC_net), .GND_net(GND_net), 
-           .ADV_CLK_c(ADV_CLK_c)) /* synthesis syn_module_defined=1 */ ;   // ../main.v(20[9] 24[27])
+           .ADV_CLK_c(ADV_CLK_c)) /* synthesis syn_module_defined=1 */ ;   // ../main.v(25[9] 29[27])
     
 endmodule
 //
@@ -382,13 +382,13 @@ module INPUT_BUFFER_U0 (WIRE_IN, ADV_CLK_c, WIRE_OUT) /* synthesis syn_module_de
     input ADV_CLK_c;
     output [0:0]WIRE_OUT;
     
-    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(13[14:21])
-    wire [0:0]\BUFFER[0] ;   // ../input_buffer.v(7[23:29])
-    wire [0:0]\BUFFER[1] ;   // ../input_buffer.v(7[23:29])
+    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(18[14:21])
+    wire [0:0]\BUFFER[0] ;   // ../input_buffer.v(12[23:29])
+    wire [0:0]\BUFFER[1] ;   // ../input_buffer.v(12[23:29])
     
-    SB_DFF BUFFER_0__i1 (.Q(\BUFFER[0] [0]), .C(ADV_CLK_c), .D(WIRE_IN[0]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF WIRE_OUT_0__9 (.Q(WIRE_OUT[0]), .C(ADV_CLK_c), .D(\BUFFER[1] [0]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i2 (.Q(\BUFFER[1] [0]), .C(ADV_CLK_c), .D(\BUFFER[0] [0]));   // ../input_buffer.v(9[9] 18[5])
+    SB_DFF BUFFER_0__i1 (.Q(\BUFFER[0] [0]), .C(ADV_CLK_c), .D(WIRE_IN[0]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF WIRE_OUT_0__9 (.Q(WIRE_OUT[0]), .C(ADV_CLK_c), .D(\BUFFER[1] [0]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i2 (.Q(\BUFFER[1] [0]), .C(ADV_CLK_c), .D(\BUFFER[0] [0]));   // ../input_buffer.v(14[9] 22[5])
     
 endmodule
 //
@@ -400,15 +400,15 @@ module \INPUT_BUFFER(BUFF_LENGTH=3)  (WIRE_OUT, DEBUG_c_3_c, DEBUG_c_1_c) /* syn
     input DEBUG_c_3_c;
     input DEBUG_c_1_c;
     
-    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(2[19:24])
-    wire [0:0]\BUFFER[2] ;   // ../input_buffer.v(7[23:29])
-    wire [0:0]\BUFFER[1] ;   // ../input_buffer.v(7[23:29])
-    wire [0:0]\BUFFER[0] ;   // ../input_buffer.v(7[23:29])
+    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(7[19:24])
+    wire [0:0]\BUFFER[2] ;   // ../input_buffer.v(12[23:29])
+    wire [0:0]\BUFFER[1] ;   // ../input_buffer.v(12[23:29])
+    wire [0:0]\BUFFER[0] ;   // ../input_buffer.v(12[23:29])
     
-    SB_DFF WIRE_OUT_0__9 (.Q(WIRE_OUT[0]), .C(DEBUG_c_3_c), .D(\BUFFER[2] [0]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i3 (.Q(\BUFFER[2] [0]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [0]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i2 (.Q(\BUFFER[1] [0]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [0]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i1 (.Q(\BUFFER[0] [0]), .C(DEBUG_c_3_c), .D(DEBUG_c_1_c));   // ../input_buffer.v(9[9] 18[5])
+    SB_DFF WIRE_OUT_0__9 (.Q(WIRE_OUT[0]), .C(DEBUG_c_3_c), .D(\BUFFER[2] [0]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i3 (.Q(\BUFFER[2] [0]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [0]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i2 (.Q(\BUFFER[1] [0]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [0]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i1 (.Q(\BUFFER[0] [0]), .C(DEBUG_c_3_c), .D(DEBUG_c_1_c));   // ../input_buffer.v(14[9] 22[5])
     
 endmodule
 //
@@ -420,13 +420,13 @@ module INPUT_BUFFER (WIRE_OUT, DEBUG_c_3_c, DEBUG_c_2_c) /* synthesis syn_module
     input DEBUG_c_3_c;
     input DEBUG_c_2_c;
     
-    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(2[19:24])
-    wire [0:0]\BUFFER[1] ;   // ../input_buffer.v(7[23:29])
-    wire [0:0]\BUFFER[0] ;   // ../input_buffer.v(7[23:29])
+    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(7[19:24])
+    wire [0:0]\BUFFER[1] ;   // ../input_buffer.v(12[23:29])
+    wire [0:0]\BUFFER[0] ;   // ../input_buffer.v(12[23:29])
     
-    SB_DFF WIRE_OUT_0__9 (.Q(WIRE_OUT[0]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [0]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i1 (.Q(\BUFFER[0] [0]), .C(DEBUG_c_3_c), .D(DEBUG_c_2_c));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i2 (.Q(\BUFFER[1] [0]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [0]));   // ../input_buffer.v(9[9] 18[5])
+    SB_DFF WIRE_OUT_0__9 (.Q(WIRE_OUT[0]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [0]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i1 (.Q(\BUFFER[0] [0]), .C(DEBUG_c_3_c), .D(DEBUG_c_2_c));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i2 (.Q(\BUFFER[1] [0]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [0]));   // ../input_buffer.v(14[9] 22[5])
     
 endmodule
 //
@@ -467,11 +467,11 @@ module TX (n28, ADV_CLK_c, \TX_ADDR[12] , ADV_VSYNC_c, GND_net, \TX_ADDR[13] ,
     input VCC_net;
     input [0:0]WIRE_OUT;
     
-    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(13[14:21])
-    wire [13:0]TX_ADDR;   // ../main.v(60[14:21])
+    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(18[14:21])
+    wire [13:0]TX_ADDR;   // ../main.v(67[14:21])
     
     wire n2310;
-    wire [13:0]ADDR_Y_COMPONENT;   // ../tx.v(60[16:32])
+    wire [13:0]ADDR_Y_COMPONENT;   // ../tx.v(42[16:32])
     
     wire n3168, n3169;
     wire [13:0]n118;
@@ -480,37 +480,37 @@ module TX (n28, ADV_CLK_c, \TX_ADDR[12] , ADV_VSYNC_c, GND_net, \TX_ADDR[13] ,
     wire [13:0]BRAM_ADDR_13__N_292;
     
     wire n2070, old_VGA_HS, n2385;
-    wire [99:0]Y_DELTA_PATTERN;   // ../tx.v(59[16:31])
+    wire [99:0]Y_DELTA_PATTERN;   // ../tx.v(41[16:31])
     wire [13:0]n102;
     
     wire n3166, n3165, n3164, VGA_VISIBLE;
     wire [13:0]n133;
     
     wire n3163, n3162, n3161, n3160, n3675, n3159;
-    wire [15:0]X_DELTA_PATTERN;   // ../tx.v(58[16:31])
+    wire [15:0]X_DELTA_PATTERN;   // ../tx.v(40[16:31])
     
     wire VGA_VISIBLE_Y, n2206, n3679, n3680, n2084, n3171, n3170;
     
-    SB_DFF BRAM_ADDR__i0 (.Q(TX_ADDR[0]), .C(ADV_CLK_c), .D(n28));   // ../tx.v(66[12] 92[8])
+    SB_DFF BRAM_ADDR__i0 (.Q(TX_ADDR[0]), .C(ADV_CLK_c), .D(n28));   // ../tx.v(46[12] 77[8])
     SB_DFFESR ADDR_Y_COMPONENT__i12 (.Q(ADDR_Y_COMPONENT[12]), .C(ADV_CLK_c), 
-            .E(n2310), .D(\TX_ADDR[12] ), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(\TX_ADDR[12] ), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_CARRY add_13_12 (.CI(n3168), .I0(TX_ADDR[10]), .I1(GND_net), .CO(n3169));
     SB_LUT4 add_13_11_lut (.I0(GND_net), .I1(TX_ADDR[9]), .I2(GND_net), 
             .I3(n3167), .O(n118[9])) /* synthesis syn_instantiated=1 */ ;
     defparam add_13_11_lut.LUT_INIT = 16'hC33C;
     SB_DFFESR BRAM_ADDR__i13 (.Q(\TX_ADDR[13] ), .C(ADV_CLK_c), .E(n2070), 
-            .D(BRAM_ADDR_13__N_292[13]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .D(BRAM_ADDR_13__N_292[13]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_CARRY add_13_11 (.CI(n3167), .I0(TX_ADDR[9]), .I1(GND_net), .CO(n3168));
-    SB_DFF old_VGA_HS_40 (.Q(old_VGA_HS), .C(ADV_CLK_c), .D(ADV_HSYNC_c));   // ../tx.v(66[12] 92[8])
-    SB_DFFSR VGA_R__i8 (.Q(ADV_B_c), .C(ADV_CLK_c), .D(TX_DATA[7]), .R(n2385));   // ../tx.v(66[12] 92[8])
-    SB_DFFSR VGA_R__i7 (.Q(n1812), .C(ADV_CLK_c), .D(TX_DATA[6]), .R(n2385));   // ../tx.v(66[12] 92[8])
-    SB_DFFSR VGA_R__i6 (.Q(n1813), .C(ADV_CLK_c), .D(TX_DATA[5]), .R(n2385));   // ../tx.v(66[12] 92[8])
-    SB_DFFSR VGA_R__i5 (.Q(n1814), .C(ADV_CLK_c), .D(TX_DATA[4]), .R(n2385));   // ../tx.v(66[12] 92[8])
+    SB_DFF old_VGA_HS_40 (.Q(old_VGA_HS), .C(ADV_CLK_c), .D(ADV_HSYNC_c));   // ../tx.v(46[12] 77[8])
+    SB_DFFSR VGA_R__i8 (.Q(ADV_B_c), .C(ADV_CLK_c), .D(TX_DATA[7]), .R(n2385));   // ../tx.v(46[12] 77[8])
+    SB_DFFSR VGA_R__i7 (.Q(n1812), .C(ADV_CLK_c), .D(TX_DATA[6]), .R(n2385));   // ../tx.v(46[12] 77[8])
+    SB_DFFSR VGA_R__i6 (.Q(n1813), .C(ADV_CLK_c), .D(TX_DATA[5]), .R(n2385));   // ../tx.v(46[12] 77[8])
+    SB_DFFSR VGA_R__i5 (.Q(n1814), .C(ADV_CLK_c), .D(TX_DATA[4]), .R(n2385));   // ../tx.v(46[12] 77[8])
     SB_LUT4 mux_12_i2_3_lut (.I0(ADDR_Y_COMPONENT[1]), .I1(TX_ADDR[1]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[1]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[1]));   // ../tx.v(63[30:81])
     defparam mux_12_i2_3_lut.LUT_INIT = 16'hcaca;
-    SB_DFFSR VGA_R__i4 (.Q(n1815), .C(ADV_CLK_c), .D(TX_DATA[3]), .R(n2385));   // ../tx.v(66[12] 92[8])
-    SB_DFFSR VGA_R__i3 (.Q(n1816), .C(ADV_CLK_c), .D(TX_DATA[2]), .R(n2385));   // ../tx.v(66[12] 92[8])
+    SB_DFFSR VGA_R__i4 (.Q(n1815), .C(ADV_CLK_c), .D(TX_DATA[3]), .R(n2385));   // ../tx.v(46[12] 77[8])
+    SB_DFFSR VGA_R__i3 (.Q(n1816), .C(ADV_CLK_c), .D(TX_DATA[2]), .R(n2385));   // ../tx.v(46[12] 77[8])
     SB_LUT4 add_13_10_lut (.I0(GND_net), .I1(TX_ADDR[8]), .I2(GND_net), 
             .I3(n3166), .O(n118[8])) /* synthesis syn_instantiated=1 */ ;
     defparam add_13_10_lut.LUT_INIT = 16'hC33C;
@@ -524,9 +524,9 @@ module TX (n28, ADV_CLK_c, \TX_ADDR[12] , ADV_VSYNC_c, GND_net, \TX_ADDR[13] ,
     defparam add_13_8_lut.LUT_INIT = 16'hC33C;
     SB_CARRY add_13_8 (.CI(n3164), .I0(TX_ADDR[6]), .I1(GND_net), .CO(n3165));
     SB_LUT4 mux_14_i2_3_lut (.I0(TX_ADDR[1]), .I1(n118[1]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[1]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[1]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i2_3_lut.LUT_INIT = 16'hcaca;
-    SB_DFFSR VGA_R__i2 (.Q(n1817), .C(ADV_CLK_c), .D(TX_DATA[1]), .R(n2385));   // ../tx.v(66[12] 92[8])
+    SB_DFFSR VGA_R__i2 (.Q(n1817), .C(ADV_CLK_c), .D(TX_DATA[1]), .R(n2385));   // ../tx.v(46[12] 77[8])
     SB_LUT4 add_13_7_lut (.I0(GND_net), .I1(TX_ADDR[5]), .I2(GND_net), 
             .I3(n3163), .O(n118[5])) /* synthesis syn_instantiated=1 */ ;
     defparam add_13_7_lut.LUT_INIT = 16'hC33C;
@@ -542,379 +542,379 @@ module TX (n28, ADV_CLK_c, \TX_ADDR[12] , ADV_VSYNC_c, GND_net, \TX_ADDR[13] ,
     SB_LUT4 add_13_4_lut (.I0(GND_net), .I1(TX_ADDR[2]), .I2(GND_net), 
             .I3(n3160), .O(n118[2])) /* synthesis syn_instantiated=1 */ ;
     defparam add_13_4_lut.LUT_INIT = 16'hC33C;
-    SB_DFF BRAM_ADDR__i10 (.Q(TX_ADDR[10]), .C(ADV_CLK_c), .D(n18));   // ../tx.v(66[12] 92[8])
+    SB_DFF BRAM_ADDR__i10 (.Q(TX_ADDR[10]), .C(ADV_CLK_c), .D(n18));   // ../tx.v(46[12] 77[8])
     SB_LUT4 i1643_4_lut (.I0(n133[1]), .I1(ADV_VSYNC_c), .I2(n102[1]), 
-            .I3(n3675), .O(n27));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n27));   // ../tx.v(46[12] 77[8])
     defparam i1643_4_lut.LUT_INIT = 16'h3022;
     SB_LUT4 mux_12_i3_3_lut (.I0(ADDR_Y_COMPONENT[2]), .I1(TX_ADDR[2]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[2]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[2]));   // ../tx.v(63[30:81])
     defparam mux_12_i3_3_lut.LUT_INIT = 16'hcaca;
     SB_CARRY add_13_4 (.CI(n3160), .I0(TX_ADDR[2]), .I1(GND_net), .CO(n3161));
     SB_LUT4 add_13_3_lut (.I0(GND_net), .I1(TX_ADDR[1]), .I2(GND_net), 
             .I3(n3159), .O(n118[1])) /* synthesis syn_instantiated=1 */ ;
     defparam add_13_3_lut.LUT_INIT = 16'hC33C;
     SB_LUT4 mux_14_i3_3_lut (.I0(TX_ADDR[2]), .I1(n118[2]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[2]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[2]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i3_3_lut.LUT_INIT = 16'hcaca;
-    SB_DFF BRAM_ADDR__i9 (.Q(TX_ADDR[9]), .C(ADV_CLK_c), .D(n19));   // ../tx.v(66[12] 92[8])
-    SB_DFF BRAM_ADDR__i8 (.Q(TX_ADDR[8]), .C(ADV_CLK_c), .D(n20));   // ../tx.v(66[12] 92[8])
-    SB_DFF BRAM_ADDR__i7 (.Q(TX_ADDR[7]), .C(ADV_CLK_c), .D(n21));   // ../tx.v(66[12] 92[8])
-    SB_DFF BRAM_ADDR__i6 (.Q(TX_ADDR[6]), .C(ADV_CLK_c), .D(n22));   // ../tx.v(66[12] 92[8])
-    SB_DFF BRAM_ADDR__i5 (.Q(TX_ADDR[5]), .C(ADV_CLK_c), .D(n23));   // ../tx.v(66[12] 92[8])
-    SB_DFF BRAM_ADDR__i4 (.Q(TX_ADDR[4]), .C(ADV_CLK_c), .D(n24));   // ../tx.v(66[12] 92[8])
+    SB_DFF BRAM_ADDR__i9 (.Q(TX_ADDR[9]), .C(ADV_CLK_c), .D(n19));   // ../tx.v(46[12] 77[8])
+    SB_DFF BRAM_ADDR__i8 (.Q(TX_ADDR[8]), .C(ADV_CLK_c), .D(n20));   // ../tx.v(46[12] 77[8])
+    SB_DFF BRAM_ADDR__i7 (.Q(TX_ADDR[7]), .C(ADV_CLK_c), .D(n21));   // ../tx.v(46[12] 77[8])
+    SB_DFF BRAM_ADDR__i6 (.Q(TX_ADDR[6]), .C(ADV_CLK_c), .D(n22));   // ../tx.v(46[12] 77[8])
+    SB_DFF BRAM_ADDR__i5 (.Q(TX_ADDR[5]), .C(ADV_CLK_c), .D(n23));   // ../tx.v(46[12] 77[8])
+    SB_DFF BRAM_ADDR__i4 (.Q(TX_ADDR[4]), .C(ADV_CLK_c), .D(n24));   // ../tx.v(46[12] 77[8])
     SB_CARRY add_13_3 (.CI(n3159), .I0(TX_ADDR[1]), .I1(GND_net), .CO(n3160));
-    SB_DFF BRAM_ADDR__i3 (.Q(TX_ADDR[3]), .C(ADV_CLK_c), .D(n25));   // ../tx.v(66[12] 92[8])
+    SB_DFF BRAM_ADDR__i3 (.Q(TX_ADDR[3]), .C(ADV_CLK_c), .D(n25));   // ../tx.v(46[12] 77[8])
     SB_LUT4 add_13_2_lut (.I0(GND_net), .I1(TX_ADDR[0]), .I2(X_DELTA_PATTERN[0]), 
             .I3(GND_net), .O(n118[0])) /* synthesis syn_instantiated=1 */ ;
     defparam add_13_2_lut.LUT_INIT = 16'hC33C;
     SB_CARRY add_13_2 (.CI(GND_net), .I0(TX_ADDR[0]), .I1(X_DELTA_PATTERN[0]), 
             .CO(n3159));
-    SB_DFF BRAM_ADDR__i2 (.Q(TX_ADDR[2]), .C(ADV_CLK_c), .D(n26));   // ../tx.v(66[12] 92[8])
-    SB_DFF BRAM_ADDR__i1 (.Q(TX_ADDR[1]), .C(ADV_CLK_c), .D(n27));   // ../tx.v(66[12] 92[8])
+    SB_DFF BRAM_ADDR__i2 (.Q(TX_ADDR[2]), .C(ADV_CLK_c), .D(n26));   // ../tx.v(46[12] 77[8])
+    SB_DFF BRAM_ADDR__i1 (.Q(TX_ADDR[1]), .C(ADV_CLK_c), .D(n27));   // ../tx.v(46[12] 77[8])
     SB_LUT4 i1644_4_lut (.I0(n133[2]), .I1(ADV_VSYNC_c), .I2(n102[2]), 
-            .I3(n3675), .O(n26));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n26));   // ../tx.v(46[12] 77[8])
     defparam i1644_4_lut.LUT_INIT = 16'h3022;
     SB_LUT4 mux_12_i4_3_lut (.I0(ADDR_Y_COMPONENT[3]), .I1(TX_ADDR[3]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[3]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[3]));   // ../tx.v(63[30:81])
     defparam mux_12_i4_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i124_2_lut_4_lut (.I0(ADV_HSYNC_c), .I1(VGA_VISIBLE_Y), .I2(old_VGA_HS), 
-            .I3(ADV_VSYNC_c), .O(n2206));   // ../tx.v(78[16:63])
+            .I3(ADV_VSYNC_c), .O(n2206));   // ../tx.v(59[16:63])
     defparam i124_2_lut_4_lut.LUT_INIT = 16'hff40;
     SB_DFFESR ADDR_Y_COMPONENT__i11 (.Q(ADDR_Y_COMPONENT[11]), .C(ADV_CLK_c), 
-            .E(n2310), .D(\TX_ADDR[11] ), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(\TX_ADDR[11] ), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_LUT4 mux_14_i4_3_lut (.I0(TX_ADDR[3]), .I1(n118[3]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[3]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[3]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i4_3_lut.LUT_INIT = 16'hcaca;
     SB_DFFESR ADDR_Y_COMPONENT__i10 (.Q(ADDR_Y_COMPONENT[10]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[10]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[10]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_LUT4 i1645_4_lut (.I0(n133[3]), .I1(ADV_VSYNC_c), .I2(n102[3]), 
-            .I3(n3675), .O(n25));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n25));   // ../tx.v(46[12] 77[8])
     defparam i1645_4_lut.LUT_INIT = 16'h3022;
     SB_DFFESR ADDR_Y_COMPONENT__i9 (.Q(ADDR_Y_COMPONENT[9]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[9]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[9]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_LUT4 i2_3_lut_rep_19 (.I0(ADV_HSYNC_c), .I1(VGA_VISIBLE_Y), .I2(old_VGA_HS), 
-            .I3(GND_net), .O(n3675));   // ../tx.v(78[16:63])
+            .I3(GND_net), .O(n3675));   // ../tx.v(59[16:63])
     defparam i2_3_lut_rep_19.LUT_INIT = 16'h4040;
     SB_DFFESR ADDR_Y_COMPONENT__i8 (.Q(ADDR_Y_COMPONENT[8]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[8]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[8]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR ADDR_Y_COMPONENT__i7 (.Q(ADDR_Y_COMPONENT[7]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[7]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[7]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR ADDR_Y_COMPONENT__i6 (.Q(ADDR_Y_COMPONENT[6]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[6]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[6]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR ADDR_Y_COMPONENT__i5 (.Q(ADDR_Y_COMPONENT[5]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[5]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[5]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR ADDR_Y_COMPONENT__i4 (.Q(ADDR_Y_COMPONENT[4]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[4]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[4]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR ADDR_Y_COMPONENT__i3 (.Q(ADDR_Y_COMPONENT[3]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[3]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[3]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR ADDR_Y_COMPONENT__i2 (.Q(ADDR_Y_COMPONENT[2]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[2]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[2]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR ADDR_Y_COMPONENT__i1 (.Q(ADDR_Y_COMPONENT[1]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[1]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[1]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i99 (.Q(Y_DELTA_PATTERN[99]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[0]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[0]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i98 (.Q(Y_DELTA_PATTERN[98]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[99]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[99]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i97 (.Q(Y_DELTA_PATTERN[97]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[98]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[98]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i96 (.Q(Y_DELTA_PATTERN[96]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[97]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[97]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i95 (.Q(Y_DELTA_PATTERN[95]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[96]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[96]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i94 (.Q(Y_DELTA_PATTERN[94]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[95]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[95]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i93 (.Q(Y_DELTA_PATTERN[93]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[94]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[94]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i92 (.Q(Y_DELTA_PATTERN[92]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[93]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[93]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i91 (.Q(Y_DELTA_PATTERN[91]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[92]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[92]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i90 (.Q(Y_DELTA_PATTERN[90]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[91]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[91]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i89 (.Q(Y_DELTA_PATTERN[89]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[90]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[90]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i88 (.Q(Y_DELTA_PATTERN[88]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[89]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[89]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i87 (.Q(Y_DELTA_PATTERN[87]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[88]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[88]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i86 (.Q(Y_DELTA_PATTERN[86]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[87]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[87]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i85 (.Q(Y_DELTA_PATTERN[85]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[86]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[86]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i84 (.Q(Y_DELTA_PATTERN[84]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[85]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[85]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i83 (.Q(Y_DELTA_PATTERN[83]), .C(ADV_CLK_c), 
-            .E(n2206), .D(Y_DELTA_PATTERN[84]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2206), .D(Y_DELTA_PATTERN[84]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i82 (.Q(Y_DELTA_PATTERN[82]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[83]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[83]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i81 (.Q(Y_DELTA_PATTERN[81]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[82]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[82]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i80 (.Q(Y_DELTA_PATTERN[80]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[81]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[81]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i79 (.Q(Y_DELTA_PATTERN[79]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[80]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[80]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i78 (.Q(Y_DELTA_PATTERN[78]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[79]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[79]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i77 (.Q(Y_DELTA_PATTERN[77]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[78]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[78]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i76 (.Q(Y_DELTA_PATTERN[76]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[77]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[77]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i75 (.Q(Y_DELTA_PATTERN[75]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[76]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[76]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i74 (.Q(Y_DELTA_PATTERN[74]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[75]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[75]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i73 (.Q(Y_DELTA_PATTERN[73]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[74]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[74]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i72 (.Q(Y_DELTA_PATTERN[72]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[73]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[73]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i71 (.Q(Y_DELTA_PATTERN[71]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[72]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[72]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i70 (.Q(Y_DELTA_PATTERN[70]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[71]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[71]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i69 (.Q(Y_DELTA_PATTERN[69]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[70]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[70]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i68 (.Q(Y_DELTA_PATTERN[68]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[69]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[69]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i67 (.Q(Y_DELTA_PATTERN[67]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[68]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[68]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i66 (.Q(Y_DELTA_PATTERN[66]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[67]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[67]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i65 (.Q(Y_DELTA_PATTERN[65]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[66]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[66]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i64 (.Q(Y_DELTA_PATTERN[64]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[65]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[65]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i63 (.Q(Y_DELTA_PATTERN[63]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[64]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[64]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i62 (.Q(Y_DELTA_PATTERN[62]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[63]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[63]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i61 (.Q(Y_DELTA_PATTERN[61]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[62]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[62]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i60 (.Q(Y_DELTA_PATTERN[60]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[61]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[61]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i59 (.Q(Y_DELTA_PATTERN[59]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[60]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[60]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i58 (.Q(Y_DELTA_PATTERN[58]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[59]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[59]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i57 (.Q(Y_DELTA_PATTERN[57]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[58]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[58]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i56 (.Q(Y_DELTA_PATTERN[56]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[57]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[57]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i55 (.Q(Y_DELTA_PATTERN[55]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[56]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[56]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i54 (.Q(Y_DELTA_PATTERN[54]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[55]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[55]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i53 (.Q(Y_DELTA_PATTERN[53]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[54]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[54]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i52 (.Q(Y_DELTA_PATTERN[52]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[53]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[53]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i51 (.Q(Y_DELTA_PATTERN[51]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[52]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[52]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i50 (.Q(Y_DELTA_PATTERN[50]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[51]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[51]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i49 (.Q(Y_DELTA_PATTERN[49]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[50]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[50]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i48 (.Q(Y_DELTA_PATTERN[48]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[49]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[49]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i47 (.Q(Y_DELTA_PATTERN[47]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[48]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[48]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i46 (.Q(Y_DELTA_PATTERN[46]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[47]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[47]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i45 (.Q(Y_DELTA_PATTERN[45]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[46]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[46]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i44 (.Q(Y_DELTA_PATTERN[44]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[45]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[45]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i43 (.Q(Y_DELTA_PATTERN[43]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[44]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[44]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i42 (.Q(Y_DELTA_PATTERN[42]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[43]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[43]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i41 (.Q(Y_DELTA_PATTERN[41]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[42]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[42]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i40 (.Q(Y_DELTA_PATTERN[40]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[41]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[41]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i39 (.Q(Y_DELTA_PATTERN[39]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[40]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[40]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i38 (.Q(Y_DELTA_PATTERN[38]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[39]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[39]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i37 (.Q(Y_DELTA_PATTERN[37]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[38]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[38]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i36 (.Q(Y_DELTA_PATTERN[36]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[37]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[37]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i35 (.Q(Y_DELTA_PATTERN[35]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[36]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[36]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i34 (.Q(Y_DELTA_PATTERN[34]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[35]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[35]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i33 (.Q(Y_DELTA_PATTERN[33]), .C(ADV_CLK_c), 
-            .E(n3680), .D(Y_DELTA_PATTERN[34]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3680), .D(Y_DELTA_PATTERN[34]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i32 (.Q(Y_DELTA_PATTERN[32]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[33]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[33]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i31 (.Q(Y_DELTA_PATTERN[31]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[32]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[32]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i30 (.Q(Y_DELTA_PATTERN[30]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[31]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[31]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i29 (.Q(Y_DELTA_PATTERN[29]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[30]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[30]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i28 (.Q(Y_DELTA_PATTERN[28]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[29]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[29]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i27 (.Q(Y_DELTA_PATTERN[27]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[28]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[28]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i26 (.Q(Y_DELTA_PATTERN[26]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[27]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[27]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i25 (.Q(Y_DELTA_PATTERN[25]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[26]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[26]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i24 (.Q(Y_DELTA_PATTERN[24]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[25]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[25]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i23 (.Q(Y_DELTA_PATTERN[23]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[24]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[24]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i22 (.Q(Y_DELTA_PATTERN[22]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[23]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[23]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i21 (.Q(Y_DELTA_PATTERN[21]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[22]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[22]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i20 (.Q(Y_DELTA_PATTERN[20]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[21]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[21]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i19 (.Q(Y_DELTA_PATTERN[19]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[20]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[20]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i18 (.Q(Y_DELTA_PATTERN[18]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[19]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[19]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_LUT4 mux_12_i5_3_lut (.I0(ADDR_Y_COMPONENT[4]), .I1(TX_ADDR[4]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[4]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[4]));   // ../tx.v(63[30:81])
     defparam mux_12_i5_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 mux_14_i5_3_lut (.I0(TX_ADDR[4]), .I1(n118[4]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[4]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[4]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i5_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i1646_4_lut (.I0(n133[4]), .I1(ADV_VSYNC_c), .I2(n102[4]), 
-            .I3(n3675), .O(n24));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n24));   // ../tx.v(46[12] 77[8])
     defparam i1646_4_lut.LUT_INIT = 16'h3022;
     SB_LUT4 mux_12_i6_3_lut (.I0(ADDR_Y_COMPONENT[5]), .I1(TX_ADDR[5]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[5]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[5]));   // ../tx.v(63[30:81])
     defparam mux_12_i6_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 mux_14_i6_3_lut (.I0(TX_ADDR[5]), .I1(n118[5]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[5]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[5]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i6_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i1647_4_lut (.I0(n133[5]), .I1(ADV_VSYNC_c), .I2(n102[5]), 
-            .I3(n3675), .O(n23));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n23));   // ../tx.v(46[12] 77[8])
     defparam i1647_4_lut.LUT_INIT = 16'h3022;
     SB_LUT4 mux_12_i7_3_lut (.I0(ADDR_Y_COMPONENT[6]), .I1(TX_ADDR[6]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[6]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[6]));   // ../tx.v(63[30:81])
     defparam mux_12_i7_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i1696_4_lut (.I0(ADV_VSYNC_c), .I1(VGA_VISIBLE), .I2(Y_DELTA_PATTERN[0]), 
             .I3(n3675), .O(n2070));
     defparam i1696_4_lut.LUT_INIT = 16'hafee;
     SB_LUT4 mux_14_i7_3_lut (.I0(TX_ADDR[6]), .I1(n118[6]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[6]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[6]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i7_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i1648_4_lut (.I0(n133[6]), .I1(ADV_VSYNC_c), .I2(n102[6]), 
-            .I3(n3675), .O(n22));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n22));   // ../tx.v(46[12] 77[8])
     defparam i1648_4_lut.LUT_INIT = 16'h3022;
     SB_LUT4 mux_12_i8_3_lut (.I0(ADDR_Y_COMPONENT[7]), .I1(TX_ADDR[7]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[7]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[7]));   // ../tx.v(63[30:81])
     defparam mux_12_i8_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 mux_14_i8_3_lut (.I0(TX_ADDR[7]), .I1(n118[7]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[7]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[7]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i8_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 mux_18_i14_3_lut (.I0(n118[13]), .I1(ADDR_Y_COMPONENT[13]), 
-            .I2(n3675), .I3(GND_net), .O(BRAM_ADDR_13__N_292[13]));   // ../tx.v(83[22] 88[16])
+            .I2(n3675), .I3(GND_net), .O(BRAM_ADDR_13__N_292[13]));   // ../tx.v(65[22] 73[16])
     defparam mux_18_i14_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i1649_4_lut (.I0(n133[7]), .I1(ADV_VSYNC_c), .I2(n102[7]), 
-            .I3(n3675), .O(n21));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n21));   // ../tx.v(46[12] 77[8])
     defparam i1649_4_lut.LUT_INIT = 16'h3022;
     SB_LUT4 mux_12_i9_3_lut (.I0(ADDR_Y_COMPONENT[8]), .I1(TX_ADDR[8]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[8]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[8]));   // ../tx.v(63[30:81])
     defparam mux_12_i9_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 mux_14_i9_3_lut (.I0(TX_ADDR[8]), .I1(n118[8]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[8]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[8]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i9_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i1650_4_lut (.I0(n133[8]), .I1(ADV_VSYNC_c), .I2(n102[8]), 
-            .I3(n3675), .O(n20));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n20));   // ../tx.v(46[12] 77[8])
     defparam i1650_4_lut.LUT_INIT = 16'h3022;
     SB_LUT4 mux_12_i10_3_lut (.I0(ADDR_Y_COMPONENT[9]), .I1(TX_ADDR[9]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[9]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[9]));   // ../tx.v(63[30:81])
     defparam mux_12_i10_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 mux_14_i10_3_lut (.I0(TX_ADDR[9]), .I1(n118[9]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[9]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[9]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i10_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i1651_4_lut (.I0(n133[9]), .I1(ADV_VSYNC_c), .I2(n102[9]), 
-            .I3(n3675), .O(n19));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n19));   // ../tx.v(46[12] 77[8])
     defparam i1651_4_lut.LUT_INIT = 16'h3022;
     SB_LUT4 i1_3_lut (.I0(n3675), .I1(ADV_VSYNC_c), .I2(Y_DELTA_PATTERN[0]), 
             .I3(GND_net), .O(n2310));
     defparam i1_3_lut.LUT_INIT = 16'hecec;
     SB_LUT4 mux_18_i13_3_lut (.I0(n118[12]), .I1(ADDR_Y_COMPONENT[12]), 
-            .I2(n3675), .I3(GND_net), .O(BRAM_ADDR_13__N_292[12]));   // ../tx.v(83[22] 88[16])
+            .I2(n3675), .I3(GND_net), .O(BRAM_ADDR_13__N_292[12]));   // ../tx.v(65[22] 73[16])
     defparam mux_18_i13_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 mux_12_i11_3_lut (.I0(ADDR_Y_COMPONENT[10]), .I1(TX_ADDR[10]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[10]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[10]));   // ../tx.v(63[30:81])
     defparam mux_12_i11_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 mux_14_i11_3_lut (.I0(TX_ADDR[10]), .I1(n118[10]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[10]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[10]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i11_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i1652_4_lut (.I0(n133[10]), .I1(ADV_VSYNC_c), .I2(n102[10]), 
-            .I3(n3675), .O(n18));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n18));   // ../tx.v(46[12] 77[8])
     defparam i1652_4_lut.LUT_INIT = 16'h3022;
     SB_LUT4 mux_12_i1_3_lut (.I0(ADDR_Y_COMPONENT[0]), .I1(TX_ADDR[0]), 
-            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[0]));   // ../tx.v(81[30:81])
+            .I2(Y_DELTA_PATTERN[0]), .I3(GND_net), .O(n102[0]));   // ../tx.v(63[30:81])
     defparam mux_12_i1_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 mux_14_i1_3_lut (.I0(TX_ADDR[0]), .I1(n118[0]), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n133[0]));   // ../tx.v(84[17] 87[20])
+            .I3(GND_net), .O(n133[0]));   // ../tx.v(67[17] 72[20])
     defparam mux_14_i1_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 mux_18_i12_3_lut (.I0(n118[11]), .I1(ADDR_Y_COMPONENT[11]), 
-            .I2(n3675), .I3(GND_net), .O(BRAM_ADDR_13__N_292[11]));   // ../tx.v(83[22] 88[16])
+            .I2(n3675), .I3(GND_net), .O(BRAM_ADDR_13__N_292[11]));   // ../tx.v(65[22] 73[16])
     defparam mux_18_i12_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i2_3_lut (.I0(n3675), .I1(ADV_VSYNC_c), .I2(VGA_VISIBLE), 
-            .I3(GND_net), .O(n2084));   // ../tx.v(77[18] 89[12])
+            .I3(GND_net), .O(n2084));   // ../tx.v(58[18] 74[12])
     defparam i2_3_lut.LUT_INIT = 16'hfefe;
     SB_DFFESR ADDR_Y_COMPONENT__i0 (.Q(ADDR_Y_COMPONENT[0]), .C(ADV_CLK_c), 
-            .E(n2310), .D(TX_ADDR[0]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(TX_ADDR[0]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i0 (.Q(Y_DELTA_PATTERN[0]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[1]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[1]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS X_DELTA_PATTERN_i0 (.Q(X_DELTA_PATTERN[0]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[1]), .S(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[1]), .S(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESR BRAM_ADDR__rep_1_i0 (.Q(\TX_ADDR[11] ), .C(ADV_CLK_c), .E(n2070), 
-            .D(BRAM_ADDR_13__N_292[11]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
-    SB_DFFSR VGA_R__i1 (.Q(n1818), .C(ADV_CLK_c), .D(TX_DATA[0]), .R(n2385));   // ../tx.v(66[12] 92[8])
+            .D(BRAM_ADDR_13__N_292[11]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
+    SB_DFFSR VGA_R__i1 (.Q(n1818), .C(ADV_CLK_c), .D(TX_DATA[0]), .R(n2385));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i17 (.Q(Y_DELTA_PATTERN[17]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[18]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[18]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i16 (.Q(Y_DELTA_PATTERN[16]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[17]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[17]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i15 (.Q(Y_DELTA_PATTERN[15]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[16]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[16]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i14 (.Q(Y_DELTA_PATTERN[14]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[15]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[15]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i13 (.Q(Y_DELTA_PATTERN[13]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[14]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[14]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i12 (.Q(Y_DELTA_PATTERN[12]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[13]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[13]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i11 (.Q(Y_DELTA_PATTERN[11]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[12]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[12]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i10 (.Q(Y_DELTA_PATTERN[10]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[11]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[11]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i9 (.Q(Y_DELTA_PATTERN[9]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[10]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[10]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i8 (.Q(Y_DELTA_PATTERN[8]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[9]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[9]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i7 (.Q(Y_DELTA_PATTERN[7]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[8]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[8]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i6 (.Q(Y_DELTA_PATTERN[6]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[7]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[7]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i5 (.Q(Y_DELTA_PATTERN[5]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[6]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[6]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i4 (.Q(Y_DELTA_PATTERN[4]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[5]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[5]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i3 (.Q(Y_DELTA_PATTERN[3]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[4]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[4]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESR Y_DELTA_PATTERN_i2 (.Q(Y_DELTA_PATTERN[2]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[3]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[3]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS Y_DELTA_PATTERN_i1 (.Q(Y_DELTA_PATTERN[1]), .C(ADV_CLK_c), 
-            .E(n3679), .D(Y_DELTA_PATTERN[2]), .S(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n3679), .D(Y_DELTA_PATTERN[2]), .S(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_DFFESS X_DELTA_PATTERN_i15 (.Q(X_DELTA_PATTERN[15]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[0]), .S(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[0]), .S(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESR X_DELTA_PATTERN_i14 (.Q(X_DELTA_PATTERN[14]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[15]), .R(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[15]), .R(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESS X_DELTA_PATTERN_i13 (.Q(X_DELTA_PATTERN[13]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[14]), .S(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[14]), .S(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESR X_DELTA_PATTERN_i12 (.Q(X_DELTA_PATTERN[12]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[13]), .R(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[13]), .R(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESR ADDR_Y_COMPONENT__i13 (.Q(ADDR_Y_COMPONENT[13]), .C(ADV_CLK_c), 
-            .E(n2310), .D(\TX_ADDR[13] ), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .E(n2310), .D(\TX_ADDR[13] ), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_LUT4 add_13_15_lut (.I0(GND_net), .I1(\TX_ADDR[13] ), .I2(GND_net), 
             .I3(n3171), .O(n118[13])) /* synthesis syn_instantiated=1 */ ;
     defparam add_13_15_lut.LUT_INIT = 16'hC33C;
@@ -929,45 +929,45 @@ module TX (n28, ADV_CLK_c, \TX_ADDR[12] , ADV_VSYNC_c, GND_net, \TX_ADDR[13] ,
     SB_CARRY add_13_13 (.CI(n3169), .I0(\TX_ADDR[11] ), .I1(GND_net), 
             .CO(n3170));
     SB_DFFESS X_DELTA_PATTERN_i11 (.Q(X_DELTA_PATTERN[11]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[12]), .S(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[12]), .S(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESR X_DELTA_PATTERN_i10 (.Q(X_DELTA_PATTERN[10]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[11]), .R(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[11]), .R(n3679));   // ../tx.v(46[12] 77[8])
     SB_LUT4 add_13_12_lut (.I0(GND_net), .I1(TX_ADDR[10]), .I2(GND_net), 
             .I3(n3168), .O(n118[10])) /* synthesis syn_instantiated=1 */ ;
     defparam add_13_12_lut.LUT_INIT = 16'hC33C;
     SB_LUT4 i1637_4_lut (.I0(n133[0]), .I1(ADV_VSYNC_c), .I2(n102[0]), 
-            .I3(n3675), .O(n28));   // ../tx.v(66[12] 92[8])
+            .I3(n3675), .O(n28));   // ../tx.v(46[12] 77[8])
     defparam i1637_4_lut.LUT_INIT = 16'h3022;
     SB_DFFESS X_DELTA_PATTERN_i9 (.Q(X_DELTA_PATTERN[9]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[10]), .S(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[10]), .S(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESR X_DELTA_PATTERN_i8 (.Q(X_DELTA_PATTERN[8]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[9]), .R(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[9]), .R(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESS X_DELTA_PATTERN_i7 (.Q(X_DELTA_PATTERN[7]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[8]), .S(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[8]), .S(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESS X_DELTA_PATTERN_i6 (.Q(X_DELTA_PATTERN[6]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[7]), .S(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[7]), .S(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESR X_DELTA_PATTERN_i5 (.Q(X_DELTA_PATTERN[5]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[6]), .R(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[6]), .R(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESS X_DELTA_PATTERN_i4 (.Q(X_DELTA_PATTERN[4]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[5]), .S(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[5]), .S(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESR X_DELTA_PATTERN_i3 (.Q(X_DELTA_PATTERN[3]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[4]), .R(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[4]), .R(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESS X_DELTA_PATTERN_i2 (.Q(X_DELTA_PATTERN[2]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[3]), .S(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[3]), .S(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESR X_DELTA_PATTERN_i1 (.Q(X_DELTA_PATTERN[1]), .C(ADV_CLK_c), 
-            .E(n2084), .D(X_DELTA_PATTERN[2]), .R(n3679));   // ../tx.v(66[12] 92[8])
+            .E(n2084), .D(X_DELTA_PATTERN[2]), .R(n3679));   // ../tx.v(46[12] 77[8])
     SB_DFFESR BRAM_ADDR__i12 (.Q(\TX_ADDR[12] ), .C(ADV_CLK_c), .E(n2070), 
-            .D(BRAM_ADDR_13__N_292[12]), .R(ADV_VSYNC_c));   // ../tx.v(66[12] 92[8])
+            .D(BRAM_ADDR_13__N_292[12]), .R(ADV_VSYNC_c));   // ../tx.v(46[12] 77[8])
     SB_LUT4 i124_2_lut_4_lut_rep_24 (.I0(ADV_HSYNC_c), .I1(VGA_VISIBLE_Y), 
-            .I2(old_VGA_HS), .I3(ADV_VSYNC_c), .O(n3680));   // ../tx.v(78[16:63])
+            .I2(old_VGA_HS), .I3(ADV_VSYNC_c), .O(n3680));   // ../tx.v(59[16:63])
     defparam i124_2_lut_4_lut_rep_24.LUT_INIT = 16'hff40;
     SB_LUT4 i124_2_lut_4_lut_rep_23 (.I0(ADV_HSYNC_c), .I1(VGA_VISIBLE_Y), 
-            .I2(old_VGA_HS), .I3(ADV_VSYNC_c), .O(n3679));   // ../tx.v(78[16:63])
+            .I2(old_VGA_HS), .I3(ADV_VSYNC_c), .O(n3679));   // ../tx.v(59[16:63])
     defparam i124_2_lut_4_lut_rep_23.LUT_INIT = 16'hff40;
     VGA_CONTROL video_signal_controller (.GND_net(GND_net), .VGA_VISIBLE_Y(VGA_VISIBLE_Y), 
             .ADV_CLK_c(ADV_CLK_c), .VGA_VISIBLE(VGA_VISIBLE), .ADV_HSYNC_c(ADV_HSYNC_c), 
             .ADV_VSYNC_c(ADV_VSYNC_c), .VCC_net(VCC_net), .n2385(n2385), 
-            .WIRE_OUT({WIRE_OUT})) /* synthesis syn_module_defined=1 */ ;   // ../tx.v(42[17] 56[67])
+            .WIRE_OUT({WIRE_OUT})) /* synthesis syn_module_defined=1 */ ;   // ../tx.v(24[17] 38[67])
     
 endmodule
 //
@@ -986,13 +986,13 @@ module VGA_CONTROL (GND_net, VGA_VISIBLE_Y, ADV_CLK_c, VGA_VISIBLE,
     output n2385;
     input [0:0]WIRE_OUT;
     
-    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(13[14:21])
+    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(18[14:21])
     wire [11:0]n249;
-    wire [11:0]VGA_Y;   // ../vga_control.v(54[23:28])
+    wire [11:0]VGA_Y;   // ../vga_control.v(38[23:28])
     
     wire n3199, n3200, n3198, n3375, n6, n2016, n3197, n3196, 
         n3195, n3194, n3193, n3192, VGA_VISIBLE_Y_N_591;
-    wire [11:0]VGA_X;   // ../vga_control.v(54[16:21])
+    wire [11:0]VGA_X;   // ../vga_control.v(38[16:21])
     
     wire n3676, n3482, VGA_VISIBLE_N_583, VGA_HS_N_577, VGA_VS_N_580;
     wire [11:0]n229;
@@ -1040,28 +1040,28 @@ module VGA_CONTROL (GND_net, VGA_VISIBLE_Y, ADV_CLK_c, VGA_VISIBLE,
     SB_LUT4 add_42_4_lut (.I0(GND_net), .I1(VGA_Y[2]), .I2(GND_net), .I3(n3192), 
             .O(n249[2])) /* synthesis syn_instantiated=1 */ ;
     defparam add_42_4_lut.LUT_INIT = 16'hC33C;
-    SB_DFF VGA_VISIBLE_Y_64 (.Q(VGA_VISIBLE_Y), .C(ADV_CLK_c), .D(VGA_VISIBLE_Y_N_591));   // ../vga_control.v(69[12] 98[8])
+    SB_DFF VGA_VISIBLE_Y_64 (.Q(VGA_VISIBLE_Y), .C(ADV_CLK_c), .D(VGA_VISIBLE_Y_N_591));   // ../vga_control.v(52[12] 86[8])
     SB_LUT4 i506_2_lut_rep_20 (.I0(VGA_X[1]), .I1(VGA_X[2]), .I2(GND_net), 
             .I3(GND_net), .O(n3676));
     defparam i506_2_lut_rep_20.LUT_INIT = 16'heeee;
     SB_LUT4 i2_3_lut (.I0(VGA_Y[2]), .I1(VGA_Y[3]), .I2(VGA_Y[1]), .I3(GND_net), 
             .O(n3482));
     defparam i2_3_lut.LUT_INIT = 16'h8080;
-    SB_DFF VGA_VISIBLE_65 (.Q(VGA_VISIBLE), .C(ADV_CLK_c), .D(VGA_VISIBLE_N_583));   // ../vga_control.v(69[12] 98[8])
-    SB_DFF VGA_HS_66 (.Q(ADV_HSYNC_c), .C(ADV_CLK_c), .D(VGA_HS_N_577));   // ../vga_control.v(69[12] 98[8])
-    SB_DFF VGA_VS_67 (.Q(ADV_VSYNC_c), .C(ADV_CLK_c), .D(VGA_VS_N_580));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i0 (.Q(VGA_X[0]), .C(ADV_CLK_c), .D(n229[0]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i1 (.Q(VGA_X[1]), .C(ADV_CLK_c), .D(n229[1]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i2 (.Q(VGA_X[2]), .C(ADV_CLK_c), .D(n229[2]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i3 (.Q(VGA_X[3]), .C(ADV_CLK_c), .D(n229[3]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i4 (.Q(VGA_X[4]), .C(ADV_CLK_c), .D(n229[4]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i5 (.Q(VGA_X[5]), .C(ADV_CLK_c), .D(n229[5]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i6 (.Q(VGA_X[6]), .C(ADV_CLK_c), .D(n229[6]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i7 (.Q(VGA_X[7]), .C(ADV_CLK_c), .D(n229[7]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i8 (.Q(VGA_X[8]), .C(ADV_CLK_c), .D(n229[8]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i9 (.Q(VGA_X[9]), .C(ADV_CLK_c), .D(n229[9]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i10 (.Q(VGA_X[10]), .C(ADV_CLK_c), .D(n229[10]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
-    SB_DFFSR VGA_X_i11 (.Q(VGA_X[11]), .C(ADV_CLK_c), .D(n229[11]), .R(n2047));   // ../vga_control.v(69[12] 98[8])
+    SB_DFF VGA_VISIBLE_65 (.Q(VGA_VISIBLE), .C(ADV_CLK_c), .D(VGA_VISIBLE_N_583));   // ../vga_control.v(52[12] 86[8])
+    SB_DFF VGA_HS_66 (.Q(ADV_HSYNC_c), .C(ADV_CLK_c), .D(VGA_HS_N_577));   // ../vga_control.v(52[12] 86[8])
+    SB_DFF VGA_VS_67 (.Q(ADV_VSYNC_c), .C(ADV_CLK_c), .D(VGA_VS_N_580));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i0 (.Q(VGA_X[0]), .C(ADV_CLK_c), .D(n229[0]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i1 (.Q(VGA_X[1]), .C(ADV_CLK_c), .D(n229[1]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i2 (.Q(VGA_X[2]), .C(ADV_CLK_c), .D(n229[2]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i3 (.Q(VGA_X[3]), .C(ADV_CLK_c), .D(n229[3]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i4 (.Q(VGA_X[4]), .C(ADV_CLK_c), .D(n229[4]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i5 (.Q(VGA_X[5]), .C(ADV_CLK_c), .D(n229[5]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i6 (.Q(VGA_X[6]), .C(ADV_CLK_c), .D(n229[6]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i7 (.Q(VGA_X[7]), .C(ADV_CLK_c), .D(n229[7]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i8 (.Q(VGA_X[8]), .C(ADV_CLK_c), .D(n229[8]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i9 (.Q(VGA_X[9]), .C(ADV_CLK_c), .D(n229[9]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i10 (.Q(VGA_X[10]), .C(ADV_CLK_c), .D(n229[10]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
+    SB_DFFSR VGA_X_i11 (.Q(VGA_X[11]), .C(ADV_CLK_c), .D(n229[11]), .R(n2047));   // ../vga_control.v(52[12] 86[8])
     SB_CARRY add_42_4 (.CI(n3192), .I0(VGA_Y[2]), .I1(GND_net), .CO(n3193));
     SB_LUT4 add_42_3_lut (.I0(GND_net), .I1(VGA_Y[1]), .I2(GND_net), .I3(n3191), 
             .O(n249[1])) /* synthesis syn_instantiated=1 */ ;
@@ -1100,10 +1100,10 @@ module VGA_CONTROL (GND_net, VGA_VISIBLE_Y, ADV_CLK_c, VGA_VISIBLE,
             .O(n229[6])) /* synthesis syn_instantiated=1 */ ;
     defparam add_35_8_lut.LUT_INIT = 16'hC33C;
     SB_DFFESR VGA_Y_i6 (.Q(VGA_Y[6]), .C(ADV_CLK_c), .E(n2047), .D(n249[6]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_CARRY add_35_8 (.CI(n3185), .I0(VGA_X[6]), .I1(GND_net), .CO(n3186));
     SB_DFFESR VGA_Y_i5 (.Q(VGA_Y[5]), .C(ADV_CLK_c), .E(n2047), .D(n249[5]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_LUT4 add_35_7_lut (.I0(GND_net), .I1(VGA_X[5]), .I2(GND_net), .I3(n3184), 
             .O(n229[5])) /* synthesis syn_instantiated=1 */ ;
     defparam add_35_7_lut.LUT_INIT = 16'hC33C;
@@ -1125,7 +1125,7 @@ module VGA_CONTROL (GND_net, VGA_VISIBLE_Y, ADV_CLK_c, VGA_VISIBLE,
     defparam add_35_3_lut.LUT_INIT = 16'hC33C;
     SB_CARRY add_35_3 (.CI(n3180), .I0(VGA_X[1]), .I1(GND_net), .CO(n3181));
     SB_LUT4 i1141_1_lut (.I0(VGA_VISIBLE), .I1(GND_net), .I2(GND_net), 
-            .I3(GND_net), .O(n2385));   // ../vga_control.v(69[12] 98[8])
+            .I3(GND_net), .O(n2385));   // ../vga_control.v(52[12] 86[8])
     defparam i1141_1_lut.LUT_INIT = 16'h5555;
     SB_LUT4 add_35_2_lut (.I0(GND_net), .I1(VGA_X[0]), .I2(GND_net), .I3(VCC_net), 
             .O(n229[0])) /* synthesis syn_instantiated=1 */ ;
@@ -1138,18 +1138,18 @@ module VGA_CONTROL (GND_net, VGA_VISIBLE_Y, ADV_CLK_c, VGA_VISIBLE,
             .I3(VGA_Y[3]), .O(VGA_VISIBLE_N_588));
     defparam i1_4_lut_adj_28.LUT_INIT = 16'hfcec;
     SB_LUT4 VGA_VISIBLE_N_588_I_0_2_lut (.I0(VGA_VISIBLE_N_588), .I1(n3379), 
-            .I2(GND_net), .I3(GND_net), .O(VGA_VISIBLE_Y_N_591));   // ../vga_control.v(72[26:101])
+            .I2(GND_net), .I3(GND_net), .O(VGA_VISIBLE_Y_N_591));   // ../vga_control.v(56[26:101])
     defparam VGA_VISIBLE_N_588_I_0_2_lut.LUT_INIT = 16'h2222;
     SB_DFFESR VGA_Y_i11 (.Q(VGA_Y[11]), .C(ADV_CLK_c), .E(n2047), .D(n249[11]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_DFFESR VGA_Y_i10 (.Q(VGA_Y[10]), .C(ADV_CLK_c), .E(n2047), .D(n249[10]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_DFFESR VGA_Y_i9 (.Q(VGA_Y[9]), .C(ADV_CLK_c), .E(n2047), .D(n249[9]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_DFFESR VGA_Y_i8 (.Q(VGA_Y[8]), .C(ADV_CLK_c), .E(n2047), .D(n249[8]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_DFFESR VGA_Y_i7 (.Q(VGA_Y[7]), .C(ADV_CLK_c), .E(n2047), .D(n249[7]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_LUT4 i1729_4_lut (.I0(n2955), .I1(VGA_X[8]), .I2(n2014), .I3(n3363), 
             .O(n2972));
     defparam i1729_4_lut.LUT_INIT = 16'hc8c0;
@@ -1175,13 +1175,13 @@ module VGA_CONTROL (GND_net, VGA_VISIBLE_Y, ADV_CLK_c, VGA_VISIBLE,
             .O(n7));
     defparam i2_4_lut_adj_32.LUT_INIT = 16'h0544;
     SB_LUT4 i2239_4_lut (.I0(n7), .I1(VGA_X[9]), .I2(VGA_X[11]), .I3(VGA_X[8]), 
-            .O(VGA_HS_N_577));   // ../vga_control.v(75[19:88])
+            .O(VGA_HS_N_577));   // ../vga_control.v(60[19:88])
     defparam i2239_4_lut.LUT_INIT = 16'hfffd;
     SB_LUT4 i1_2_lut_adj_33 (.I0(VGA_X[4]), .I1(VGA_X[3]), .I2(GND_net), 
             .I3(GND_net), .O(n3363));
     defparam i1_2_lut_adj_33.LUT_INIT = 16'h8888;
     SB_LUT4 i2_3_lut_adj_34 (.I0(VGA_X[5]), .I1(VGA_X[6]), .I2(VGA_X[7]), 
-            .I3(GND_net), .O(n2014));   // ../vga_control.v(75[49:87])
+            .I3(GND_net), .O(n2014));   // ../vga_control.v(60[49:87])
     defparam i2_3_lut_adj_34.LUT_INIT = 16'hfefe;
     SB_LUT4 i1761_4_lut (.I0(n3676), .I1(VGA_X[8]), .I2(n2014), .I3(n3363), 
             .O(n3004));
@@ -1206,17 +1206,17 @@ module VGA_CONTROL (GND_net, VGA_VISIBLE_Y, ADV_CLK_c, VGA_VISIBLE,
     defparam add_42_12_lut.LUT_INIT = 16'hC33C;
     SB_CARRY add_42_12 (.CI(n3200), .I0(VGA_Y[10]), .I1(GND_net), .CO(n3201));
     SB_DFFESR VGA_Y_i4 (.Q(VGA_Y[4]), .C(ADV_CLK_c), .E(n2047), .D(n249[4]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_DFFESR VGA_Y_i3 (.Q(VGA_Y[3]), .C(ADV_CLK_c), .E(n2047), .D(n249[3]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_DFFESR VGA_Y_i2 (.Q(VGA_Y[2]), .C(ADV_CLK_c), .E(n2047), .D(n249[2]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_DFFESR VGA_Y_i1 (.Q(VGA_Y[1]), .C(ADV_CLK_c), .E(n2047), .D(n249[1]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_DFFESR VGA_Y_i0 (.Q(VGA_Y[0]), .C(ADV_CLK_c), .E(n2047), .D(n249[0]), 
-            .R(n2395));   // ../vga_control.v(69[12] 98[8])
+            .R(n2395));   // ../vga_control.v(52[12] 86[8])
     SB_LUT4 i1160_2_lut (.I0(n2047), .I1(WIRE_OUT[0]), .I2(GND_net), .I3(GND_net), 
-            .O(n2395));   // ../vga_control.v(69[12] 98[8])
+            .O(n2395));   // ../vga_control.v(52[12] 86[8])
     defparam i1160_2_lut.LUT_INIT = 16'h8888;
     SB_LUT4 i1_2_lut_3_lut (.I0(VGA_Y[10]), .I1(VGA_Y[11]), .I2(VGA_Y[6]), 
             .I3(GND_net), .O(n6));
@@ -1251,7 +1251,7 @@ module RX (RX_ADDR, GND_net, DEBUG_c_3_c, VCC_net, DEBUG_c_4, DEBUG_c_0,
     input [0:0]WIRE_OUT_adj_2;
     output [0:0]WIRE_IN;
     
-    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(2[19:24])
+    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(7[19:24])
     wire [13:0]n123;
     
     wire n3158, n3157, n3156, n3155, n3154, n3153, n3152, n3151, 
@@ -1299,11 +1299,11 @@ module RX (RX_ADDR, GND_net, DEBUG_c_3_c, VCC_net, DEBUG_c_4, DEBUG_c_0,
     defparam add_12_6_lut.LUT_INIT = 16'hC33C;
     SB_CARRY add_12_6 (.CI(n3149), .I0(RX_ADDR[4]), .I1(GND_net), .CO(n3150));
     SB_DFFESR BRAM_ADDR__i11 (.Q(RX_ADDR[11]), .C(DEBUG_c_3_c), .E(n3671), 
-            .D(n123[11]), .R(n3674));   // ../rx.v(58[12] 67[8])
+            .D(n123[11]), .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_DFFESR BRAM_ADDR__i12 (.Q(RX_ADDR[12]), .C(DEBUG_c_3_c), .E(n3671), 
-            .D(n123[12]), .R(n3674));   // ../rx.v(58[12] 67[8])
+            .D(n123[12]), .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_DFFESR BRAM_ADDR__i13 (.Q(RX_ADDR[13]), .C(DEBUG_c_3_c), .E(n3671), 
-            .D(n123[13]), .R(n3674));   // ../rx.v(58[12] 67[8])
+            .D(n123[13]), .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_LUT4 add_12_5_lut (.I0(GND_net), .I1(RX_ADDR[3]), .I2(GND_net), 
             .I3(n3148), .O(n123[3])) /* synthesis syn_instantiated=1 */ ;
     defparam add_12_5_lut.LUT_INIT = 16'hC33C;
@@ -1316,36 +1316,36 @@ module RX (RX_ADDR, GND_net, DEBUG_c_3_c, VCC_net, DEBUG_c_4, DEBUG_c_0,
             .I3(n3146), .O(n123[1])) /* synthesis syn_instantiated=1 */ ;
     defparam add_12_3_lut.LUT_INIT = 16'hC33C;
     SB_DFFSR BRAM_ADDR__i0 (.Q(RX_ADDR[0]), .C(DEBUG_c_3_c), .D(n2754), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_CARRY add_12_3 (.CI(n3146), .I0(RX_ADDR[1]), .I1(GND_net), .CO(n3147));
     SB_DFFSR BRAM_ADDR__i10 (.Q(RX_ADDR[10]), .C(DEBUG_c_3_c), .D(n2752), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_LUT4 add_12_2_lut (.I0(GND_net), .I1(RX_ADDR[0]), .I2(GND_net), 
             .I3(VCC_net), .O(n123[0])) /* synthesis syn_instantiated=1 */ ;
     defparam add_12_2_lut.LUT_INIT = 16'hC33C;
     SB_DFFSR BRAM_ADDR__i9 (.Q(RX_ADDR[9]), .C(DEBUG_c_3_c), .D(n2750), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_DFFSR BRAM_ADDR__i8 (.Q(RX_ADDR[8]), .C(DEBUG_c_3_c), .D(n2748), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_DFFSR BRAM_ADDR__i7 (.Q(RX_ADDR[7]), .C(DEBUG_c_3_c), .D(n2746), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_DFFSR BRAM_ADDR__i6 (.Q(RX_ADDR[6]), .C(DEBUG_c_3_c), .D(n2744), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_DFFSR BRAM_ADDR__i5 (.Q(RX_ADDR[5]), .C(DEBUG_c_3_c), .D(n2742), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_DFFSR BRAM_ADDR__i4 (.Q(RX_ADDR[4]), .C(DEBUG_c_3_c), .D(n2740), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_CARRY add_12_2 (.CI(VCC_net), .I0(RX_ADDR[0]), .I1(GND_net), .CO(n3146));
     SB_DFFSR BRAM_ADDR__i3 (.Q(RX_ADDR[3]), .C(DEBUG_c_3_c), .D(n2738), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_DFFSR BRAM_ADDR__i2 (.Q(RX_ADDR[2]), .C(DEBUG_c_3_c), .D(n2736), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     SB_DFFSR BRAM_ADDR__i1 (.Q(RX_ADDR[1]), .C(DEBUG_c_3_c), .D(n2734), 
-            .R(n3674));   // ../rx.v(58[12] 67[8])
+            .R(n3674));   // ../rx.v(44[12] 53[8])
     RX_SYNC_WATCHDOG sync_wd (.DEBUG_c_4(DEBUG_c_4), .DEBUG_c_3_c(DEBUG_c_3_c), 
             .DEBUG_c_0(DEBUG_c_0), .\RX_DATA[7] (\RX_DATA[7] ), .\RX_DATA[6] (\RX_DATA[6] ), 
             .GND_net(GND_net), .\RX_DATA[5] (\RX_DATA[5] ), .\RX_DATA[4] (\RX_DATA[4] ), 
-            .WIRE_OUT({WIRE_OUT})) /* synthesis syn_module_defined=1 */ ;   // ../rx.v(52[22] 56[55])
+            .WIRE_OUT({WIRE_OUT})) /* synthesis syn_module_defined=1 */ ;   // ../rx.v(37[22] 41[55])
     O_COUNTER rx_counter (.PULSE_1HZ(PULSE_1HZ), .GND_net(GND_net), .WIRE_OUT({WIRE_OUT_adj_2}), 
             .DEBUG_c_3_c(DEBUG_c_3_c), .WIRE_OUT_adj_1({WIRE_OUT}), .DEBUG_c_4(DEBUG_c_4), 
             .WIRE_IN({WIRE_IN}), .n3674(n3674), .\RX_ADDR[10] (RX_ADDR[10]), 
@@ -1359,7 +1359,7 @@ module RX (RX_ADDR, GND_net, DEBUG_c_3_c, VCC_net, DEBUG_c_4, DEBUG_c_0,
             .n130(n123[7]), .n2746(n2746), .\RX_ADDR[8] (RX_ADDR[8]), 
             .n129(n123[8]), .n2748(n2748), .\RX_ADDR[9] (RX_ADDR[9]), 
             .n128(n123[9]), .n2750(n2750), .\RX_ADDR[0] (RX_ADDR[0]), 
-            .n137(n123[0]), .n2754(n2754), .n3671(n3671)) /* synthesis syn_module_defined=1 */ ;   // ../rx.v(42[15] 50[41])
+            .n137(n123[0]), .n2754(n2754), .n3671(n3671)) /* synthesis syn_module_defined=1 */ ;   // ../rx.v(26[15] 34[41])
     
 endmodule
 //
@@ -1378,12 +1378,12 @@ module RX_SYNC_WATCHDOG (DEBUG_c_4, DEBUG_c_3_c, DEBUG_c_0, \RX_DATA[7] ,
     input \RX_DATA[4] ;
     input [0:0]WIRE_OUT;
     
-    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(2[19:24])
+    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(7[19:24])
     
     wire old_visible, n14, n6, n4;
     
-    SB_DFF old_visible_17 (.Q(old_visible), .C(DEBUG_c_3_c), .D(DEBUG_c_4));   // ../rx_sync_watchdog.v(10[12] 25[8])
-    SB_DFF SYNC_BAD_16 (.Q(DEBUG_c_0), .C(DEBUG_c_3_c), .D(n14));   // ../rx_sync_watchdog.v(10[12] 25[8])
+    SB_DFF old_visible_17 (.Q(old_visible), .C(DEBUG_c_3_c), .D(DEBUG_c_4));   // ../rx_sync_watchdog.v(15[12] 33[8])
+    SB_DFF SYNC_BAD_16 (.Q(DEBUG_c_0), .C(DEBUG_c_3_c), .D(n14));   // ../rx_sync_watchdog.v(15[12] 33[8])
     SB_LUT4 i2_2_lut (.I0(\RX_DATA[7] ), .I1(\RX_DATA[6] ), .I2(GND_net), 
             .I3(GND_net), .O(n6));
     defparam i2_2_lut.LUT_INIT = 16'heeee;
@@ -1391,7 +1391,7 @@ module RX_SYNC_WATCHDOG (DEBUG_c_4, DEBUG_c_3_c, DEBUG_c_0, \RX_DATA[7] ,
             .O(n4));
     defparam i1_4_lut.LUT_INIT = 16'haaab;
     SB_LUT4 i2248_4_lut (.I0(WIRE_OUT[0]), .I1(DEBUG_c_0), .I2(old_visible), 
-            .I3(n4), .O(n14));   // ../rx_sync_watchdog.v(10[12] 25[8])
+            .I3(n4), .O(n14));   // ../rx_sync_watchdog.v(15[12] 33[8])
     defparam i2248_4_lut.LUT_INIT = 16'h88a8;
     
 endmodule
@@ -1451,22 +1451,22 @@ module O_COUNTER (PULSE_1HZ, GND_net, WIRE_OUT, DEBUG_c_3_c, WIRE_OUT_adj_1,
     output n2754;
     output n3671;
     
-    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(2[19:24])
+    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(7[19:24])
     
     wire n11, PULSE_1HZ_N_110, old_HS;
-    wire [8:0]Y;   // ../o_counter.v(48[19:20])
+    wire [8:0]Y;   // ../o_counter.v(31[19:20])
     
     wire n3450, old_VS, O_VISIBLE_N_99, SYNC_N_114;
     wire [8:0]n1;
     
     wire n2078;
     wire [9:0]n45;
-    wire [9:0]X;   // ../o_counter.v(47[19:20])
+    wire [9:0]X;   // ../o_counter.v(30[19:20])
     
     wire n3, n3452, n3222, n3455, n7, n6, n3426, n39, n5, 
         n4, n3478, n3677, n4_adj_612, n54, n3672;
     wire [5:0]n29;
-    wire [5:0]FRAME_COUNTER;   // ../o_counter.v(46[19:32])
+    wire [5:0]FRAME_COUNTER;   // ../o_counter.v(29[19:32])
     
     wire n2547, n3179, n3178, n10, n14, n3215, n3214, n3213, 
         n3212, n3211, n3210, n3209, n3208, n3207, n3206, n3205, 
@@ -1476,16 +1476,16 @@ module O_COUNTER (PULSE_1HZ, GND_net, WIRE_OUT, DEBUG_c_3_c, WIRE_OUT_adj_1,
     SB_LUT4 i1_2_lut (.I0(PULSE_1HZ), .I1(n11), .I2(GND_net), .I3(GND_net), 
             .O(PULSE_1HZ_N_110));
     defparam i1_2_lut.LUT_INIT = 16'h9999;
-    SB_DFF old_HS_51 (.Q(old_HS), .C(DEBUG_c_3_c), .D(WIRE_OUT[0]));   // ../o_counter.v(51[16] 84[12])
+    SB_DFF old_HS_51 (.Q(old_HS), .C(DEBUG_c_3_c), .D(WIRE_OUT[0]));   // ../o_counter.v(34[16] 67[12])
     SB_LUT4 i2_3_lut (.I0(Y[1]), .I1(Y[0]), .I2(Y[2]), .I3(GND_net), 
             .O(n3450));
     defparam i2_3_lut.LUT_INIT = 16'hfefe;
-    SB_DFF old_VS_52 (.Q(old_VS), .C(DEBUG_c_3_c), .D(WIRE_OUT_adj_1[0]));   // ../o_counter.v(51[16] 84[12])
-    SB_DFF O_VISIBLE_53 (.Q(DEBUG_c_4), .C(DEBUG_c_3_c), .D(O_VISIBLE_N_99));   // ../o_counter.v(51[16] 84[12])
-    SB_DFF SYNC_46 (.Q(WIRE_IN[0]), .C(DEBUG_c_3_c), .D(SYNC_N_114));   // ../o_counter.v(51[16] 84[12])
+    SB_DFF old_VS_52 (.Q(old_VS), .C(DEBUG_c_3_c), .D(WIRE_OUT_adj_1[0]));   // ../o_counter.v(34[16] 67[12])
+    SB_DFF O_VISIBLE_53 (.Q(DEBUG_c_4), .C(DEBUG_c_3_c), .D(O_VISIBLE_N_99));   // ../o_counter.v(34[16] 67[12])
+    SB_DFF SYNC_46 (.Q(WIRE_IN[0]), .C(DEBUG_c_3_c), .D(SYNC_N_114));   // ../o_counter.v(34[16] 67[12])
     SB_DFFESR Y__i2 (.Q(Y[2]), .C(DEBUG_c_3_c), .E(n2078), .D(n1[2]), 
-            .R(n3674));   // ../o_counter.v(51[16] 84[12])
-    SB_DFFSR X_243__i0 (.Q(X[0]), .C(DEBUG_c_3_c), .D(n45[0]), .R(n3));   // ../o_counter.v(62[26:35])
+            .R(n3674));   // ../o_counter.v(34[16] 67[12])
+    SB_DFFSR X_243__i0 (.Q(X[0]), .C(DEBUG_c_3_c), .D(n45[0]), .R(n3));   // ../o_counter.v(45[26:35])
     SB_LUT4 i2_4_lut (.I0(Y[2]), .I1(Y[3]), .I2(Y[0]), .I3(Y[1]), .O(n3452));
     defparam i2_4_lut.LUT_INIT = 16'hfeee;
     SB_LUT4 i3_4_lut (.I0(n3222), .I1(X[4]), .I2(X[5]), .I3(X[3]), .O(n3455));
@@ -1505,13 +1505,13 @@ module O_COUNTER (PULSE_1HZ, GND_net, WIRE_OUT, DEBUG_c_3_c, WIRE_OUT_adj_1,
     SB_LUT4 i2245_4_lut (.I0(Y[8]), .I1(n54), .I2(n4_adj_612), .I3(n3478), 
             .O(O_VISIBLE_N_99));
     defparam i2245_4_lut.LUT_INIT = 16'h1300;
-    SB_DFFE PULSE_1HZ_49 (.Q(PULSE_1HZ), .C(DEBUG_c_3_c), .E(n3672), .D(PULSE_1HZ_N_110));   // ../o_counter.v(51[16] 84[12])
+    SB_DFFE PULSE_1HZ_49 (.Q(PULSE_1HZ), .C(DEBUG_c_3_c), .E(n3672), .D(PULSE_1HZ_N_110));   // ../o_counter.v(34[16] 67[12])
     SB_DFFESR FRAME_COUNTER_244__i3 (.Q(FRAME_COUNTER[3]), .C(DEBUG_c_3_c), 
-            .E(n3672), .D(n29[3]), .R(n2547));   // ../o_counter.v(72[46:66])
+            .E(n3672), .D(n29[3]), .R(n2547));   // ../o_counter.v(55[46:66])
     SB_DFFESR FRAME_COUNTER_244__i2 (.Q(FRAME_COUNTER[2]), .C(DEBUG_c_3_c), 
-            .E(n3672), .D(n29[2]), .R(n2547));   // ../o_counter.v(72[46:66])
+            .E(n3672), .D(n29[2]), .R(n2547));   // ../o_counter.v(55[46:66])
     SB_DFFESR FRAME_COUNTER_244__i1 (.Q(FRAME_COUNTER[1]), .C(DEBUG_c_3_c), 
-            .E(n3672), .D(n29[1]), .R(n2547));   // ../o_counter.v(72[46:66])
+            .E(n3672), .D(n29[1]), .R(n2547));   // ../o_counter.v(55[46:66])
     SB_LUT4 add_5_10_lut (.I0(GND_net), .I1(Y[8]), .I2(GND_net), .I3(n3179), 
             .O(n1[8])) /* synthesis syn_instantiated=1 */ ;
     defparam add_5_10_lut.LUT_INIT = 16'hC33C;
@@ -1519,19 +1519,19 @@ module O_COUNTER (PULSE_1HZ, GND_net, WIRE_OUT, DEBUG_c_3_c, WIRE_OUT_adj_1,
             .O(n1[7])) /* synthesis syn_instantiated=1 */ ;
     defparam add_5_9_lut.LUT_INIT = 16'hC33C;
     SB_LUT4 i5_1_lut (.I0(WIRE_OUT[0]), .I1(GND_net), .I2(GND_net), .I3(GND_net), 
-            .O(n3));   // ../o_counter.v(56[19:33])
+            .O(n3));   // ../o_counter.v(39[19:33])
     defparam i5_1_lut.LUT_INIT = 16'h5555;
     SB_LUT4 i1304_2_lut_3_lut_3_lut (.I0(WIRE_OUT_adj_1[0]), .I1(n11), .I2(old_VS), 
-            .I3(GND_net), .O(n2547));   // ../o_counter.v(65[19:33])
+            .I3(GND_net), .O(n2547));   // ../o_counter.v(48[19:33])
     defparam i1304_2_lut_3_lut_3_lut.LUT_INIT = 16'h1010;
     SB_LUT4 i1508_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[10] ), 
-            .I2(n127), .I3(DEBUG_c_4), .O(n2752));   // ../o_counter.v(65[19:33])
+            .I2(n127), .I3(DEBUG_c_4), .O(n2752));   // ../o_counter.v(48[19:33])
     defparam i1508_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
     SB_LUT4 i249_3_lut (.I0(old_HS), .I1(WIRE_OUT_adj_1[0]), .I2(WIRE_OUT[0]), 
             .I3(GND_net), .O(n2078));
     defparam i249_3_lut.LUT_INIT = 16'h3b3b;
     SB_LUT4 i1490_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[1] ), 
-            .I2(n136), .I3(DEBUG_c_4), .O(n2734));   // ../o_counter.v(65[19:33])
+            .I2(n136), .I3(DEBUG_c_4), .O(n2734));   // ../o_counter.v(48[19:33])
     defparam i1490_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
     SB_LUT4 i2_2_lut (.I0(Y[7]), .I1(Y[4]), .I2(GND_net), .I3(GND_net), 
             .O(n10));
@@ -1539,19 +1539,19 @@ module O_COUNTER (PULSE_1HZ, GND_net, WIRE_OUT, DEBUG_c_3_c, WIRE_OUT_adj_1,
     SB_LUT4 i6_4_lut (.I0(Y[8]), .I1(Y[2]), .I2(Y[1]), .I3(Y[3]), .O(n14));
     defparam i6_4_lut.LUT_INIT = 16'hfbff;
     SB_LUT4 i1492_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[2] ), 
-            .I2(n135), .I3(DEBUG_c_4), .O(n2736));   // ../o_counter.v(65[19:33])
+            .I2(n135), .I3(DEBUG_c_4), .O(n2736));   // ../o_counter.v(48[19:33])
     defparam i1492_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
     SB_LUT4 i1494_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[3] ), 
-            .I2(n134), .I3(DEBUG_c_4), .O(n2738));   // ../o_counter.v(65[19:33])
+            .I2(n134), .I3(DEBUG_c_4), .O(n2738));   // ../o_counter.v(48[19:33])
     defparam i1494_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
     SB_LUT4 i1496_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[4] ), 
-            .I2(n133), .I3(DEBUG_c_4), .O(n2740));   // ../o_counter.v(65[19:33])
+            .I2(n133), .I3(DEBUG_c_4), .O(n2740));   // ../o_counter.v(48[19:33])
     defparam i1496_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
     SB_LUT4 i1498_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[5] ), 
-            .I2(n132), .I3(DEBUG_c_4), .O(n2742));   // ../o_counter.v(65[19:33])
+            .I2(n132), .I3(DEBUG_c_4), .O(n2742));   // ../o_counter.v(48[19:33])
     defparam i1498_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
     SB_LUT4 i2242_4_lut (.I0(Y[0]), .I1(n14), .I2(n10), .I3(n3677), 
-            .O(SYNC_N_114));   // ../o_counter.v(53[21:33])
+            .O(SYNC_N_114));   // ../o_counter.v(36[21:33])
     defparam i2242_4_lut.LUT_INIT = 16'h0001;
     SB_LUT4 X_243_add_4_11_lut (.I0(GND_net), .I1(GND_net), .I2(X[9]), 
             .I3(n3215), .O(n45[9])) /* synthesis syn_instantiated=1 */ ;
@@ -1591,7 +1591,7 @@ module O_COUNTER (PULSE_1HZ, GND_net, WIRE_OUT, DEBUG_c_3_c, WIRE_OUT_adj_1,
     SB_LUT4 X_243_add_4_2_lut (.I0(GND_net), .I1(GND_net), .I2(X[0]), 
             .I3(VCC_net), .O(n45[0])) /* synthesis syn_instantiated=1 */ ;
     defparam X_243_add_4_2_lut.LUT_INIT = 16'hC33C;
-    SB_DFFSR X_243__i1 (.Q(X[1]), .C(DEBUG_c_3_c), .D(n45[1]), .R(n3));   // ../o_counter.v(62[26:35])
+    SB_DFFSR X_243__i1 (.Q(X[1]), .C(DEBUG_c_3_c), .D(n45[1]), .R(n3));   // ../o_counter.v(45[26:35])
     SB_CARRY X_243_add_4_2 (.CI(VCC_net), .I0(GND_net), .I1(X[0]), .CO(n3207));
     SB_LUT4 FRAME_COUNTER_244_add_4_7_lut (.I0(GND_net), .I1(GND_net), .I2(FRAME_COUNTER[5]), 
             .I3(n3206), .O(n29[5])) /* synthesis syn_instantiated=1 */ ;
@@ -1621,34 +1621,34 @@ module O_COUNTER (PULSE_1HZ, GND_net, WIRE_OUT, DEBUG_c_3_c, WIRE_OUT_adj_1,
     defparam FRAME_COUNTER_244_add_4_2_lut.LUT_INIT = 16'hC33C;
     SB_CARRY FRAME_COUNTER_244_add_4_2 (.CI(VCC_net), .I0(GND_net), .I1(FRAME_COUNTER[0]), 
             .CO(n3202));
-    SB_DFFSR X_243__i2 (.Q(X[2]), .C(DEBUG_c_3_c), .D(n45[2]), .R(n3));   // ../o_counter.v(62[26:35])
+    SB_DFFSR X_243__i2 (.Q(X[2]), .C(DEBUG_c_3_c), .D(n45[2]), .R(n3));   // ../o_counter.v(45[26:35])
     SB_LUT4 i2_3_lut_adj_23 (.I0(X[0]), .I1(X[2]), .I2(X[1]), .I3(GND_net), 
             .O(n3222));
     defparam i2_3_lut_adj_23.LUT_INIT = 16'h8080;
     SB_LUT4 i1500_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[6] ), 
-            .I2(n131), .I3(DEBUG_c_4), .O(n2744));   // ../o_counter.v(65[19:33])
+            .I2(n131), .I3(DEBUG_c_4), .O(n2744));   // ../o_counter.v(48[19:33])
     defparam i1500_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
-    SB_DFFSR X_243__i3 (.Q(X[3]), .C(DEBUG_c_3_c), .D(n45[3]), .R(n3));   // ../o_counter.v(62[26:35])
-    SB_DFFSR X_243__i4 (.Q(X[4]), .C(DEBUG_c_3_c), .D(n45[4]), .R(n3));   // ../o_counter.v(62[26:35])
-    SB_DFFSR X_243__i5 (.Q(X[5]), .C(DEBUG_c_3_c), .D(n45[5]), .R(n3));   // ../o_counter.v(62[26:35])
-    SB_DFFSR X_243__i6 (.Q(X[6]), .C(DEBUG_c_3_c), .D(n45[6]), .R(n3));   // ../o_counter.v(62[26:35])
-    SB_DFFSR X_243__i7 (.Q(X[7]), .C(DEBUG_c_3_c), .D(n45[7]), .R(n3));   // ../o_counter.v(62[26:35])
-    SB_DFFSR X_243__i8 (.Q(X[8]), .C(DEBUG_c_3_c), .D(n45[8]), .R(n3));   // ../o_counter.v(62[26:35])
-    SB_DFFSR X_243__i9 (.Q(X[9]), .C(DEBUG_c_3_c), .D(n45[9]), .R(n3));   // ../o_counter.v(62[26:35])
+    SB_DFFSR X_243__i3 (.Q(X[3]), .C(DEBUG_c_3_c), .D(n45[3]), .R(n3));   // ../o_counter.v(45[26:35])
+    SB_DFFSR X_243__i4 (.Q(X[4]), .C(DEBUG_c_3_c), .D(n45[4]), .R(n3));   // ../o_counter.v(45[26:35])
+    SB_DFFSR X_243__i5 (.Q(X[5]), .C(DEBUG_c_3_c), .D(n45[5]), .R(n3));   // ../o_counter.v(45[26:35])
+    SB_DFFSR X_243__i6 (.Q(X[6]), .C(DEBUG_c_3_c), .D(n45[6]), .R(n3));   // ../o_counter.v(45[26:35])
+    SB_DFFSR X_243__i7 (.Q(X[7]), .C(DEBUG_c_3_c), .D(n45[7]), .R(n3));   // ../o_counter.v(45[26:35])
+    SB_DFFSR X_243__i8 (.Q(X[8]), .C(DEBUG_c_3_c), .D(n45[8]), .R(n3));   // ../o_counter.v(45[26:35])
+    SB_DFFSR X_243__i9 (.Q(X[9]), .C(DEBUG_c_3_c), .D(n45[9]), .R(n3));   // ../o_counter.v(45[26:35])
     SB_LUT4 i1_2_lut_adj_24 (.I0(X[6]), .I1(X[4]), .I2(GND_net), .I3(GND_net), 
             .O(n6));
     defparam i1_2_lut_adj_24.LUT_INIT = 16'heeee;
     SB_LUT4 i1502_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[7] ), 
-            .I2(n130), .I3(DEBUG_c_4), .O(n2746));   // ../o_counter.v(65[19:33])
+            .I2(n130), .I3(DEBUG_c_4), .O(n2746));   // ../o_counter.v(48[19:33])
     defparam i1502_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
     SB_LUT4 i1504_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[8] ), 
-            .I2(n129), .I3(DEBUG_c_4), .O(n2748));   // ../o_counter.v(65[19:33])
+            .I2(n129), .I3(DEBUG_c_4), .O(n2748));   // ../o_counter.v(48[19:33])
     defparam i1504_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
     SB_LUT4 i1506_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[9] ), 
-            .I2(n128), .I3(DEBUG_c_4), .O(n2750));   // ../o_counter.v(65[19:33])
+            .I2(n128), .I3(DEBUG_c_4), .O(n2750));   // ../o_counter.v(48[19:33])
     defparam i1506_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
     SB_LUT4 i131_2_lut_rep_16_2_lut (.I0(WIRE_OUT_adj_1[0]), .I1(old_VS), 
-            .I2(GND_net), .I3(GND_net), .O(n3672));   // ../o_counter.v(65[19:33])
+            .I2(GND_net), .I3(GND_net), .O(n3672));   // ../o_counter.v(48[19:33])
     defparam i131_2_lut_rep_16_2_lut.LUT_INIT = 16'h4444;
     SB_CARRY add_5_9 (.CI(n3178), .I0(Y[7]), .I1(GND_net), .CO(n3179));
     SB_LUT4 add_5_8_lut (.I0(GND_net), .I1(Y[6]), .I2(GND_net), .I3(n3177), 
@@ -1680,28 +1680,28 @@ module O_COUNTER (PULSE_1HZ, GND_net, WIRE_OUT, DEBUG_c_3_c, WIRE_OUT_adj_1,
     defparam add_5_2_lut.LUT_INIT = 16'hC33C;
     SB_CARRY add_5_2 (.CI(VCC_net), .I0(Y[0]), .I1(GND_net), .CO(n3172));
     SB_LUT4 i1510_3_lut_4_lut_4_lut (.I0(WIRE_OUT_adj_1[0]), .I1(\RX_ADDR[0] ), 
-            .I2(n137), .I3(DEBUG_c_4), .O(n2754));   // ../o_counter.v(65[19:33])
+            .I2(n137), .I3(DEBUG_c_4), .O(n2754));   // ../o_counter.v(48[19:33])
     defparam i1510_3_lut_4_lut_4_lut.LUT_INIT = 16'hf0d8;
     SB_LUT4 i246_2_lut_rep_15_2_lut (.I0(WIRE_OUT_adj_1[0]), .I1(DEBUG_c_4), 
-            .I2(GND_net), .I3(GND_net), .O(n3671));   // ../o_counter.v(65[19:33])
+            .I2(GND_net), .I3(GND_net), .O(n3671));   // ../o_counter.v(48[19:33])
     defparam i246_2_lut_rep_15_2_lut.LUT_INIT = 16'hdddd;
     SB_LUT4 i2_2_lut_adj_25 (.I0(X[5]), .I1(X[3]), .I2(GND_net), .I3(GND_net), 
             .O(n7));
     defparam i2_2_lut_adj_25.LUT_INIT = 16'heeee;
     SB_LUT4 O_VS_I_0_1_lut_rep_18 (.I0(WIRE_OUT_adj_1[0]), .I1(GND_net), 
-            .I2(GND_net), .I3(GND_net), .O(n3674));   // ../o_counter.v(65[19:33])
+            .I2(GND_net), .I3(GND_net), .O(n3674));   // ../o_counter.v(48[19:33])
     defparam O_VS_I_0_1_lut_rep_18.LUT_INIT = 16'h5555;
     SB_DFFESR Y__i0 (.Q(Y[0]), .C(DEBUG_c_3_c), .E(n2078), .D(n1[0]), 
-            .R(n3674));   // ../o_counter.v(51[16] 84[12])
+            .R(n3674));   // ../o_counter.v(34[16] 67[12])
     SB_DFFESR FRAME_COUNTER_244__i0 (.Q(FRAME_COUNTER[0]), .C(DEBUG_c_3_c), 
-            .E(n3672), .D(n29[0]), .R(n2547));   // ../o_counter.v(72[46:66])
+            .E(n3672), .D(n29[0]), .R(n2547));   // ../o_counter.v(55[46:66])
     SB_DFFESR Y__i8 (.Q(Y[8]), .C(DEBUG_c_3_c), .E(n2078), .D(n1[8]), 
-            .R(n3674));   // ../o_counter.v(51[16] 84[12])
+            .R(n3674));   // ../o_counter.v(34[16] 67[12])
     SB_LUT4 i1_2_lut_3_lut (.I0(Y[5]), .I1(Y[6]), .I2(Y[7]), .I3(GND_net), 
-            .O(n5));   // ../o_counter.v(81[124:153])
+            .O(n5));   // ../o_counter.v(64[124:153])
     defparam i1_2_lut_3_lut.LUT_INIT = 16'hfefe;
     SB_LUT4 i606_2_lut_rep_21 (.I0(Y[5]), .I1(Y[6]), .I2(GND_net), .I3(GND_net), 
-            .O(n3677));   // ../o_counter.v(81[124:153])
+            .O(n3677));   // ../o_counter.v(64[124:153])
     defparam i606_2_lut_rep_21.LUT_INIT = 16'heeee;
     SB_LUT4 i1_2_lut_adj_26 (.I0(FRAME_COUNTER[2]), .I1(FRAME_COUNTER[4]), 
             .I2(GND_net), .I3(GND_net), .O(n7_adj_619));
@@ -1716,21 +1716,21 @@ module O_COUNTER (PULSE_1HZ, GND_net, WIRE_OUT, DEBUG_c_3_c, WIRE_OUT_adj_1,
             .O(n4));
     defparam i1_2_lut_adj_27.LUT_INIT = 16'h8888;
     SB_DFFESR Y__i7 (.Q(Y[7]), .C(DEBUG_c_3_c), .E(n2078), .D(n1[7]), 
-            .R(n3674));   // ../o_counter.v(51[16] 84[12])
+            .R(n3674));   // ../o_counter.v(34[16] 67[12])
     SB_DFFESR Y__i6 (.Q(Y[6]), .C(DEBUG_c_3_c), .E(n2078), .D(n1[6]), 
-            .R(n3674));   // ../o_counter.v(51[16] 84[12])
+            .R(n3674));   // ../o_counter.v(34[16] 67[12])
     SB_DFFESR Y__i5 (.Q(Y[5]), .C(DEBUG_c_3_c), .E(n2078), .D(n1[5]), 
-            .R(n3674));   // ../o_counter.v(51[16] 84[12])
+            .R(n3674));   // ../o_counter.v(34[16] 67[12])
     SB_DFFESR Y__i4 (.Q(Y[4]), .C(DEBUG_c_3_c), .E(n2078), .D(n1[4]), 
-            .R(n3674));   // ../o_counter.v(51[16] 84[12])
+            .R(n3674));   // ../o_counter.v(34[16] 67[12])
     SB_DFFESR FRAME_COUNTER_244__i5 (.Q(FRAME_COUNTER[5]), .C(DEBUG_c_3_c), 
-            .E(n3672), .D(n29[5]), .R(n2547));   // ../o_counter.v(72[46:66])
+            .E(n3672), .D(n29[5]), .R(n2547));   // ../o_counter.v(55[46:66])
     SB_DFFESR FRAME_COUNTER_244__i4 (.Q(FRAME_COUNTER[4]), .C(DEBUG_c_3_c), 
-            .E(n3672), .D(n29[4]), .R(n2547));   // ../o_counter.v(72[46:66])
+            .E(n3672), .D(n29[4]), .R(n2547));   // ../o_counter.v(55[46:66])
     SB_DFFESR Y__i3 (.Q(Y[3]), .C(DEBUG_c_3_c), .E(n2078), .D(n1[3]), 
-            .R(n3674));   // ../o_counter.v(51[16] 84[12])
+            .R(n3674));   // ../o_counter.v(34[16] 67[12])
     SB_DFFESR Y__i1 (.Q(Y[1]), .C(DEBUG_c_3_c), .E(n2078), .D(n1[1]), 
-            .R(n3674));   // ../o_counter.v(51[16] 84[12])
+            .R(n3674));   // ../o_counter.v(34[16] 67[12])
     
 endmodule
 //
@@ -1751,34 +1751,34 @@ module \INPUT_BUFFER(DATA_WIDTH=10)  (TVP_VIDEO_c_2, DEBUG_c_3_c, RX_DATA,
     input TVP_VIDEO_c_4;
     input TVP_VIDEO_c_3;
     
-    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(2[19:24])
-    wire [9:0]\BUFFER[0] ;   // ../input_buffer.v(7[23:29])
-    wire [9:0]\BUFFER[1] ;   // ../input_buffer.v(7[23:29])
+    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(7[19:24])
+    wire [9:0]\BUFFER[0] ;   // ../input_buffer.v(12[23:29])
+    wire [9:0]\BUFFER[1] ;   // ../input_buffer.v(12[23:29])
     
-    SB_DFF BUFFER_0__i1 (.Q(\BUFFER[0] [2]), .C(DEBUG_c_3_c), .D(TVP_VIDEO_c_2));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF WIRE_OUT_i0 (.Q(RX_DATA[0]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [2]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF WIRE_OUT_i7 (.Q(RX_DATA[7]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [9]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF WIRE_OUT_i6 (.Q(RX_DATA[6]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [8]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF WIRE_OUT_i5 (.Q(RX_DATA[5]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [7]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF WIRE_OUT_i4 (.Q(RX_DATA[4]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [6]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF WIRE_OUT_i3 (.Q(RX_DATA[3]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [5]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF WIRE_OUT_i2 (.Q(RX_DATA[2]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [4]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF WIRE_OUT_i1 (.Q(RX_DATA[1]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [3]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i16 (.Q(\BUFFER[1] [9]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [9]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i15 (.Q(\BUFFER[1] [8]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [8]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i14 (.Q(\BUFFER[1] [7]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [7]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i13 (.Q(\BUFFER[1] [6]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [6]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i12 (.Q(\BUFFER[1] [5]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [5]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i11 (.Q(\BUFFER[1] [4]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [4]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i10 (.Q(\BUFFER[1] [3]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [3]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i9 (.Q(\BUFFER[1] [2]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [2]));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i8 (.Q(\BUFFER[0] [9]), .C(DEBUG_c_3_c), .D(TVP_VIDEO_c_9));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i7 (.Q(\BUFFER[0] [8]), .C(DEBUG_c_3_c), .D(DEBUG_c_7_c));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i6 (.Q(\BUFFER[0] [7]), .C(DEBUG_c_3_c), .D(DEBUG_c_6_c));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i5 (.Q(\BUFFER[0] [6]), .C(DEBUG_c_3_c), .D(DEBUG_c_5_c));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i4 (.Q(\BUFFER[0] [5]), .C(DEBUG_c_3_c), .D(TVP_VIDEO_c_5));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i3 (.Q(\BUFFER[0] [4]), .C(DEBUG_c_3_c), .D(TVP_VIDEO_c_4));   // ../input_buffer.v(9[9] 18[5])
-    SB_DFF BUFFER_0__i2 (.Q(\BUFFER[0] [3]), .C(DEBUG_c_3_c), .D(TVP_VIDEO_c_3));   // ../input_buffer.v(9[9] 18[5])
+    SB_DFF BUFFER_0__i1 (.Q(\BUFFER[0] [2]), .C(DEBUG_c_3_c), .D(TVP_VIDEO_c_2));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF WIRE_OUT_i0 (.Q(RX_DATA[0]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [2]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF WIRE_OUT_i7 (.Q(RX_DATA[7]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [9]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF WIRE_OUT_i6 (.Q(RX_DATA[6]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [8]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF WIRE_OUT_i5 (.Q(RX_DATA[5]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [7]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF WIRE_OUT_i4 (.Q(RX_DATA[4]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [6]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF WIRE_OUT_i3 (.Q(RX_DATA[3]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [5]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF WIRE_OUT_i2 (.Q(RX_DATA[2]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [4]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF WIRE_OUT_i1 (.Q(RX_DATA[1]), .C(DEBUG_c_3_c), .D(\BUFFER[1] [3]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i16 (.Q(\BUFFER[1] [9]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [9]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i15 (.Q(\BUFFER[1] [8]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [8]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i14 (.Q(\BUFFER[1] [7]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [7]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i13 (.Q(\BUFFER[1] [6]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [6]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i12 (.Q(\BUFFER[1] [5]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [5]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i11 (.Q(\BUFFER[1] [4]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [4]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i10 (.Q(\BUFFER[1] [3]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [3]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i9 (.Q(\BUFFER[1] [2]), .C(DEBUG_c_3_c), .D(\BUFFER[0] [2]));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i8 (.Q(\BUFFER[0] [9]), .C(DEBUG_c_3_c), .D(TVP_VIDEO_c_9));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i7 (.Q(\BUFFER[0] [8]), .C(DEBUG_c_3_c), .D(DEBUG_c_7_c));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i6 (.Q(\BUFFER[0] [7]), .C(DEBUG_c_3_c), .D(DEBUG_c_6_c));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i5 (.Q(\BUFFER[0] [6]), .C(DEBUG_c_3_c), .D(DEBUG_c_5_c));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i4 (.Q(\BUFFER[0] [5]), .C(DEBUG_c_3_c), .D(TVP_VIDEO_c_5));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i3 (.Q(\BUFFER[0] [4]), .C(DEBUG_c_3_c), .D(TVP_VIDEO_c_4));   // ../input_buffer.v(14[9] 22[5])
+    SB_DFF BUFFER_0__i2 (.Q(\BUFFER[0] [3]), .C(DEBUG_c_3_c), .D(TVP_VIDEO_c_3));   // ../input_buffer.v(14[9] 22[5])
     
 endmodule
 //
@@ -1812,8 +1812,8 @@ module RAM (\TX_ADDR[12] , \TX_ADDR[11] , \TX_ADDR[13] , TX_DATA, ADV_CLK_c,
     input VCC_net;
     input DEBUG_c_4;
     
-    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(13[14:21])
-    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(2[19:24])
+    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(18[14:21])
+    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(7[19:24])
     
     wire n3629, n465, n457, n3632, n588, n596, n3623, n532, 
         n524, n3626, n3617, n3531, n3530;
@@ -1843,7 +1843,7 @@ module RAM (\TX_ADDR[12] , \TX_ADDR[11] , \TX_ADDR[13] , TX_DATA, ADV_CLK_c,
     SB_LUT4 n3617_bdd_4_lut (.I0(n3617), .I1(n3531), .I2(n3530), .I3(\TX_ADDR[13] ), 
             .O(dout_7__N_604[7]));
     defparam n3617_bdd_4_lut.LUT_INIT = 16'haad8;
-    SB_DFF dout_i0 (.Q(TX_DATA[0]), .C(ADV_CLK_c), .D(dout_7__N_604[0]));   // ../ram.v(14[9] 16[5])
+    SB_DFF dout_i0 (.Q(TX_DATA[0]), .C(ADV_CLK_c), .D(dout_7__N_604[0]));   // ../ram.v(20[9] 22[5])
     SB_LUT4 TX_ADDR_12__bdd_4_lut_2276 (.I0(\TX_ADDR[12] ), .I1(n3533), 
             .I2(n3534), .I3(\TX_ADDR[13] ), .O(n3611));
     defparam TX_ADDR_12__bdd_4_lut_2276.LUT_INIT = 16'he4aa;
@@ -2571,13 +2571,13 @@ module RAM (\TX_ADDR[12] , \TX_ADDR[11] , \TX_ADDR[13] , TX_DATA, ADV_CLK_c,
     SB_LUT4 n3647_bdd_4_lut (.I0(n3647), .I1(n530), .I2(n522), .I3(\TX_ADDR[12] ), 
             .O(n3650));
     defparam n3647_bdd_4_lut.LUT_INIT = 16'haad8;
-    SB_DFF dout_i1 (.Q(TX_DATA[1]), .C(ADV_CLK_c), .D(dout_7__N_604[1]));   // ../ram.v(14[9] 16[5])
-    SB_DFF dout_i2 (.Q(TX_DATA[2]), .C(ADV_CLK_c), .D(dout_7__N_604[2]));   // ../ram.v(14[9] 16[5])
-    SB_DFF dout_i3 (.Q(TX_DATA[3]), .C(ADV_CLK_c), .D(dout_7__N_604[3]));   // ../ram.v(14[9] 16[5])
-    SB_DFF dout_i4 (.Q(TX_DATA[4]), .C(ADV_CLK_c), .D(dout_7__N_604[4]));   // ../ram.v(14[9] 16[5])
-    SB_DFF dout_i5 (.Q(TX_DATA[5]), .C(ADV_CLK_c), .D(dout_7__N_604[5]));   // ../ram.v(14[9] 16[5])
-    SB_DFF dout_i6 (.Q(TX_DATA[6]), .C(ADV_CLK_c), .D(dout_7__N_604[6]));   // ../ram.v(14[9] 16[5])
-    SB_DFF dout_i7 (.Q(TX_DATA[7]), .C(ADV_CLK_c), .D(dout_7__N_604[7]));   // ../ram.v(14[9] 16[5])
+    SB_DFF dout_i1 (.Q(TX_DATA[1]), .C(ADV_CLK_c), .D(dout_7__N_604[1]));   // ../ram.v(20[9] 22[5])
+    SB_DFF dout_i2 (.Q(TX_DATA[2]), .C(ADV_CLK_c), .D(dout_7__N_604[2]));   // ../ram.v(20[9] 22[5])
+    SB_DFF dout_i3 (.Q(TX_DATA[3]), .C(ADV_CLK_c), .D(dout_7__N_604[3]));   // ../ram.v(20[9] 22[5])
+    SB_DFF dout_i4 (.Q(TX_DATA[4]), .C(ADV_CLK_c), .D(dout_7__N_604[4]));   // ../ram.v(20[9] 22[5])
+    SB_DFF dout_i5 (.Q(TX_DATA[5]), .C(ADV_CLK_c), .D(dout_7__N_604[5]));   // ../ram.v(20[9] 22[5])
+    SB_DFF dout_i6 (.Q(TX_DATA[6]), .C(ADV_CLK_c), .D(dout_7__N_604[6]));   // ../ram.v(20[9] 22[5])
+    SB_DFF dout_i7 (.Q(TX_DATA[7]), .C(ADV_CLK_c), .D(dout_7__N_604[7]));   // ../ram.v(20[9] 22[5])
     SB_LUT4 TX_ADDR_11__bdd_4_lut_2301 (.I0(\TX_ADDR[11] ), .I1(n585), .I2(n593), 
             .I3(\TX_ADDR[12] ), .O(n3641));
     defparam TX_ADDR_11__bdd_4_lut_2301.LUT_INIT = 16'he4aa;
@@ -2600,13 +2600,13 @@ module RAM (\TX_ADDR[12] , \TX_ADDR[11] , \TX_ADDR[13] , TX_DATA, ADV_CLK_c,
             .O(n3596));
     defparam n3593_bdd_4_lut.LUT_INIT = 16'haad8;
     SB_LUT4 i1_2_lut_3_lut_4_lut (.I0(DEBUG_c_4), .I1(RX_ADDR[13]), .I2(RX_ADDR[12]), 
-            .I3(RX_ADDR[11]), .O(n539));   // ../ram.v(12[4:14])
+            .I3(RX_ADDR[11]), .O(n539));   // ../ram.v(18[4:14])
     defparam i1_2_lut_3_lut_4_lut.LUT_INIT = 16'h0800;
     SB_LUT4 i1_2_lut_3_lut_4_lut_adj_14 (.I0(DEBUG_c_4), .I1(RX_ADDR[13]), 
-            .I2(RX_ADDR[11]), .I3(RX_ADDR[12]), .O(n538));   // ../ram.v(12[4:14])
+            .I2(RX_ADDR[11]), .I3(RX_ADDR[12]), .O(n538));   // ../ram.v(18[4:14])
     defparam i1_2_lut_3_lut_4_lut_adj_14.LUT_INIT = 16'h0008;
     SB_LUT4 i1_2_lut_3_lut_4_lut_adj_15 (.I0(DEBUG_c_4), .I1(RX_ADDR[13]), 
-            .I2(RX_ADDR[11]), .I3(RX_ADDR[12]), .O(n602));   // ../ram.v(12[4:14])
+            .I2(RX_ADDR[11]), .I3(RX_ADDR[12]), .O(n602));   // ../ram.v(18[4:14])
     defparam i1_2_lut_3_lut_4_lut_adj_15.LUT_INIT = 16'h0800;
     SB_LUT4 i2203_3_lut (.I0(n591), .I1(n599), .I2(\TX_ADDR[11] ), .I3(GND_net), 
             .O(n3540));
@@ -2615,22 +2615,22 @@ module RAM (\TX_ADDR[12] , \TX_ADDR[11] , \TX_ADDR[13] , TX_DATA, ADV_CLK_c,
             .O(n3539));
     defparam i2202_3_lut.LUT_INIT = 16'hcaca;
     SB_LUT4 i1_2_lut_3_lut_4_lut_adj_16 (.I0(DEBUG_c_4), .I1(RX_ADDR[13]), 
-            .I2(RX_ADDR[12]), .I3(RX_ADDR[11]), .O(n603));   // ../ram.v(12[4:14])
+            .I2(RX_ADDR[12]), .I3(RX_ADDR[11]), .O(n603));   // ../ram.v(18[4:14])
     defparam i1_2_lut_3_lut_4_lut_adj_16.LUT_INIT = 16'h8000;
     SB_LUT4 i1_2_lut_3_lut_4_lut_adj_17 (.I0(RX_ADDR[12]), .I1(RX_ADDR[11]), 
             .I2(RX_ADDR[13]), .I3(DEBUG_c_4), .O(n473));
     defparam i1_2_lut_3_lut_4_lut_adj_17.LUT_INIT = 16'h0100;
     SB_LUT4 i1_2_lut_3_lut_4_lut_adj_18 (.I0(DEBUG_c_4), .I1(RX_ADDR[13]), 
-            .I2(RX_ADDR[12]), .I3(RX_ADDR[11]), .O(n474));   // ../ram.v(12[4:14])
+            .I2(RX_ADDR[12]), .I3(RX_ADDR[11]), .O(n474));   // ../ram.v(18[4:14])
     defparam i1_2_lut_3_lut_4_lut_adj_18.LUT_INIT = 16'h0200;
     SB_LUT4 i1_2_lut_3_lut_4_lut_adj_19 (.I0(DEBUG_c_4), .I1(RX_ADDR[13]), 
-            .I2(RX_ADDR[11]), .I3(RX_ADDR[12]), .O(n570));   // ../ram.v(12[4:14])
+            .I2(RX_ADDR[11]), .I3(RX_ADDR[12]), .O(n570));   // ../ram.v(18[4:14])
     defparam i1_2_lut_3_lut_4_lut_adj_19.LUT_INIT = 16'h0200;
     SB_LUT4 TX_ADDR_11__bdd_4_lut_2257 (.I0(\TX_ADDR[11] ), .I1(n556), .I2(n564), 
             .I3(\TX_ADDR[12] ), .O(n3587));
     defparam TX_ADDR_11__bdd_4_lut_2257.LUT_INIT = 16'he4aa;
     SB_LUT4 i1_2_lut_3_lut_4_lut_adj_20 (.I0(DEBUG_c_4), .I1(RX_ADDR[13]), 
-            .I2(RX_ADDR[12]), .I3(RX_ADDR[11]), .O(n571));   // ../ram.v(12[4:14])
+            .I2(RX_ADDR[12]), .I3(RX_ADDR[11]), .O(n571));   // ../ram.v(18[4:14])
     defparam i1_2_lut_3_lut_4_lut_adj_20.LUT_INIT = 16'h2000;
     SB_LUT4 n3587_bdd_4_lut (.I0(n3587), .I1(n467), .I2(n459), .I3(\TX_ADDR[12] ), 
             .O(n3590));
@@ -2647,11 +2647,11 @@ module TX_PLL (DEBUG_c_3_c, VCC_net, GND_net, ADV_CLK_c) /* synthesis syn_module
     input GND_net;
     output ADV_CLK_c;
     
-    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(2[19:24])
-    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(13[14:21])
+    wire DEBUG_c_3_c /* synthesis SET_AS_NETWORK=DEBUG_c_3_c, is_clock=1 */ ;   // ../main.v(7[19:24])
+    wire ADV_CLK_c /* synthesis is_clock=1, SET_AS_NETWORK=ADV_CLK_c */ ;   // ../main.v(18[14:21])
     
     SB_PLL40_CORE TX_PLL_inst (.REFERENCECLK(DEBUG_c_3_c), .PLLOUTCORE(ADV_CLK_c), 
-            .BYPASS(GND_net), .RESETB(VCC_net)) /* synthesis syn_instantiated=1, LSE_LINE_FILE_ID=13, LSE_LCOL=9, LSE_RCOL=27, LSE_LLINE=20, LSE_RLINE=24 */ ;   // ../main.v(20[9] 24[27])
+            .BYPASS(GND_net), .RESETB(VCC_net)) /* synthesis syn_instantiated=1, LSE_LINE_FILE_ID=13, LSE_LCOL=9, LSE_RCOL=27, LSE_LLINE=25, LSE_RLINE=29 */ ;   // ../main.v(25[9] 29[27])
     defparam TX_PLL_inst.FEEDBACK_PATH = "SIMPLE";
     defparam TX_PLL_inst.DELAY_ADJUSTMENT_MODE_FEEDBACK = "FIXED";
     defparam TX_PLL_inst.DELAY_ADJUSTMENT_MODE_RELATIVE = "FIXED";

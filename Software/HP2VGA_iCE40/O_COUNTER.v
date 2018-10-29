@@ -1,24 +1,7 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 22.04.2018 23:04:04
-// Design Name: 
-// Module Name: o_counter
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:z
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
+// Engineer: Matt Hollands
+// Project: HP2VGA
+// Website: projects.matthollands.com
+// Date: 2016-2018
 
 module O_COUNTER( input wire ENABLE, //enable module
                   input wire O_CLK, //pixel clock for oscilloscope
@@ -26,9 +9,9 @@ module O_COUNTER( input wire ENABLE, //enable module
                   output reg [8:0] O_Y, //y position of vga
                   input wire O_HS, //horizontal sync
                   input wire O_VS, //vertical sync
-                  output reg O_VISIBLE,
-                  output reg PULSE_1HZ,
-                  output reg SYNC);
+                  output reg O_VISIBLE, //are we in visible section
+                  output reg PULSE_1HZ, //output 1Hz pulse
+                  output reg SYNC); //output synchronisation signal to synchronise tx module
         
         parameter H_VISIBLE = 576;
         parameter H_FRONT_PORCH = 136;

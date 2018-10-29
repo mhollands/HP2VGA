@@ -3,31 +3,31 @@ HP2VGA_ATTiny87.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000042  00800100  000001de  00000272  2**0
+  0 .data         00000046  00800100  00000230  000002c4  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000001de  00000000  00000000  00000094  2**1
+  1 .text         00000230  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          00000001  00800142  00800142  000002b4  2**0
+  2 .bss          00000001  00800146  00800146  0000030a  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  000002b4  2**0
+  3 .comment      00000030  00000000  00000000  0000030a  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002e4  2**2
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000033c  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000068  00000000  00000000  00000320  2**0
+  5 .debug_aranges 00000068  00000000  00000000  00000378  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00000b08  00000000  00000000  00000388  2**0
+  6 .debug_info   00000bae  00000000  00000000  000003e0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000887  00000000  00000000  00000e90  2**0
+  7 .debug_abbrev 000008a5  00000000  00000000  00000f8e  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   000005bd  00000000  00000000  00001717  2**0
+  8 .debug_line   000005f3  00000000  00000000  00001833  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000000c8  00000000  00000000  00001cd4  2**2
+  9 .debug_frame  000000d8  00000000  00000000  00001e28  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000004d4  00000000  00000000  00001d9c  2**0
+ 10 .debug_str    000004fd  00000000  00000000  00001f00  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    0000027b  00000000  00000000  00002270  2**0
+ 11 .debug_loc    00000329  00000000  00000000  000023fd  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000060  00000000  00000000  000024eb  2**0
+ 12 .debug_ranges 00000060  00000000  00000000  00002726  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -66,18 +66,18 @@ Disassembly of section .text:
   34:	11 e0       	ldi	r17, 0x01	; 1
   36:	a0 e0       	ldi	r26, 0x00	; 0
   38:	b1 e0       	ldi	r27, 0x01	; 1
-  3a:	ee ed       	ldi	r30, 0xDE	; 222
-  3c:	f1 e0       	ldi	r31, 0x01	; 1
+  3a:	e0 e3       	ldi	r30, 0x30	; 48
+  3c:	f2 e0       	ldi	r31, 0x02	; 2
   3e:	02 c0       	rjmp	.+4      	; 0x44 <__SREG__+0x5>
   40:	05 90       	lpm	r0, Z+
   42:	0d 92       	st	X+, r0
-  44:	a2 34       	cpi	r26, 0x42	; 66
+  44:	a6 34       	cpi	r26, 0x46	; 70
   46:	b1 07       	cpc	r27, r17
   48:	d9 f7       	brne	.-10     	; 0x40 <__SREG__+0x1>
 
 0000004a <__do_clear_bss>:
   4a:	21 e0       	ldi	r18, 0x01	; 1
-  4c:	a2 e4       	ldi	r26, 0x42	; 66
+  4c:	a6 e4       	ldi	r26, 0x46	; 70
   4e:	b1 e0       	ldi	r27, 0x01	; 1
   50:	01 c0       	rjmp	.+2      	; 0x54 <.do_clear_bss_start>
 
@@ -85,11 +85,11 @@ Disassembly of section .text:
   52:	1d 92       	st	X+, r1
 
 00000054 <.do_clear_bss_start>:
-  54:	a3 34       	cpi	r26, 0x43	; 67
+  54:	a7 34       	cpi	r26, 0x47	; 71
   56:	b2 07       	cpc	r27, r18
   58:	e1 f7       	brne	.-8      	; 0x52 <.do_clear_bss_loop>
   5a:	08 d0       	rcall	.+16     	; 0x6c <main>
-  5c:	be c0       	rjmp	.+380    	; 0x1da <_exit>
+  5c:	e7 c0       	rjmp	.+462    	; 0x22c <_exit>
 
 0000005e <__bad_interrupt>:
   5e:	d0 cf       	rjmp	.-96     	; 0x0 <__vectors>
@@ -115,347 +115,407 @@ void TVP_RESET(bool enable)
 
 0000006c <main>:
 
+uint8_t msg_w_phase[3] = {TVP_W,TVP_HPLL_PHASE, 0x01};
 uint8_t msg_r_chiprev[4] = {TVP_W,TVP_CHIP_REV,TVP_R, 0xFF};
 
 int main(void)
 {
+  6c:	cf 93       	push	r28
+  6e:	df 93       	push	r29
+  70:	00 d0       	rcall	.+0      	; 0x72 <main+0x6>
+  72:	cd b7       	in	r28, 0x3d	; 61
+  74:	de b7       	in	r29, 0x3e	; 62
 	sei();
-  6c:	78 94       	sei
+  76:	78 94       	sei
 	//DDRB |= 0x08; //Set FPGA_FB1 as output (PB3)
 	DDRB |= 0x20; //Set TVP_RESET as output (PB5)
-  6e:	25 9a       	sbi	0x04, 5	; 4
+  78:	25 9a       	sbi	0x04, 5	; 4
 	DDRB |= 0x40; //Set TVP_PWDN as output (PB6)
-  70:	26 9a       	sbi	0x04, 6	; 4
+  7a:	26 9a       	sbi	0x04, 6	; 4
 	PORTB |= 0x05; //Set SDA and SCL as outputs (PB0/PB2)
-  72:	85 b1       	in	r24, 0x05	; 5
-  74:	85 60       	ori	r24, 0x05	; 5
-  76:	85 b9       	out	0x05, r24	; 5
+  7c:	85 b1       	in	r24, 0x05	; 5
+  7e:	85 60       	ori	r24, 0x05	; 5
+  80:	85 b9       	out	0x05, r24	; 5
 	//DDRA |= 0x01; //Set FPGA_RESET as output (PA0)
 
 	TVP_RESET(true); //Put TVP into reset
-  78:	81 e0       	ldi	r24, 0x01	; 1
-  7a:	f2 df       	rcall	.-28     	; 0x60 <TVP_RESET>
+  82:	81 e0       	ldi	r24, 0x01	; 1
+  84:	ed df       	rcall	.-38     	; 0x60 <TVP_RESET>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-  7c:	2f ef       	ldi	r18, 0xFF	; 255
-  7e:	89 e6       	ldi	r24, 0x69	; 105
-  80:	98 e1       	ldi	r25, 0x18	; 24
-  82:	21 50       	subi	r18, 0x01	; 1
-  84:	80 40       	sbci	r24, 0x00	; 0
-  86:	90 40       	sbci	r25, 0x00	; 0
-  88:	e1 f7       	brne	.-8      	; 0x82 <main+0x16>
-  8a:	00 c0       	rjmp	.+0      	; 0x8c <main+0x20>
-  8c:	00 00       	nop
+  86:	2f ef       	ldi	r18, 0xFF	; 255
+  88:	89 e6       	ldi	r24, 0x69	; 105
+  8a:	98 e1       	ldi	r25, 0x18	; 24
+  8c:	21 50       	subi	r18, 0x01	; 1
+  8e:	80 40       	sbci	r24, 0x00	; 0
+  90:	90 40       	sbci	r25, 0x00	; 0
+  92:	e1 f7       	brne	.-8      	; 0x8c <main+0x20>
+  94:	00 c0       	rjmp	.+0      	; 0x96 <main+0x2a>
+  96:	00 00       	nop
 	//PORTA &= ~0x01; //Put the FPGA into reset
 	
 	_delay_ms(1000); //(TVP must be held in reset for 5ms after power up)
 	
 	TVP_RESET(false); //Bring TVP out of reset
-  8e:	80 e0       	ldi	r24, 0x00	; 0
-  90:	e7 df       	rcall	.-50     	; 0x60 <TVP_RESET>
-  92:	2f ef       	ldi	r18, 0xFF	; 255
-  94:	80 e7       	ldi	r24, 0x70	; 112
-  96:	92 e0       	ldi	r25, 0x02	; 2
-  98:	21 50       	subi	r18, 0x01	; 1
-  9a:	80 40       	sbci	r24, 0x00	; 0
-  9c:	90 40       	sbci	r25, 0x00	; 0
-  9e:	e1 f7       	brne	.-8      	; 0x98 <main+0x2c>
-  a0:	00 c0       	rjmp	.+0      	; 0xa2 <main+0x36>
-  a2:	00 00       	nop
+  98:	80 e0       	ldi	r24, 0x00	; 0
+  9a:	e2 df       	rcall	.-60     	; 0x60 <TVP_RESET>
+  9c:	ef ef       	ldi	r30, 0xFF	; 255
+  9e:	f0 e7       	ldi	r31, 0x70	; 112
+  a0:	22 e0       	ldi	r18, 0x02	; 2
+  a2:	e1 50       	subi	r30, 0x01	; 1
+  a4:	f0 40       	sbci	r31, 0x00	; 0
+  a6:	20 40       	sbci	r18, 0x00	; 0
+  a8:	e1 f7       	brne	.-8      	; 0xa2 <main+0x36>
+  aa:	00 c0       	rjmp	.+0      	; 0xac <main+0x40>
+  ac:	00 00       	nop
 	//PORTA |= 0x01; //Bring FPGA back out of reset	
 	
 	_delay_ms(100); //No I2C traffic for 1us after reset is released
 	//TVP_PWDN(true); // Put TVP into power down
     
 	usiTwiMasterInitialize();
-  a4:	24 d0       	rcall	.+72     	; 0xee <usiTwiMasterInitialize>
+  ae:	48 d0       	rcall	.+144    	; 0x140 <usiTwiMasterInitialize>
 	usiTwiStartTransceiverWithData(reg_setting, 66);
-  a6:	62 e4       	ldi	r22, 0x42	; 66
-  a8:	80 e0       	ldi	r24, 0x00	; 0
-  aa:	91 e0       	ldi	r25, 0x01	; 1
-  ac:	2e d0       	rcall	.+92     	; 0x10a <usiTwiStartTransceiverWithData>
-  ae:	ff cf       	rjmp	.-2      	; 0xae <main+0x42>
+  b0:	62 e4       	ldi	r22, 0x42	; 66
+  b2:	83 e0       	ldi	r24, 0x03	; 3
+  b4:	91 e0       	ldi	r25, 0x01	; 1
+  b6:	52 d0       	rcall	.+164    	; 0x15c <usiTwiStartTransceiverWithData>
+	uint8_t phase_options[2] = {0x11, 0x91};
+  b8:	81 e1       	ldi	r24, 0x11	; 17
+  ba:	89 83       	std	Y+1, r24	; 0x01
+  bc:	81 e9       	ldi	r24, 0x91	; 145
+  be:	8a 83       	std	Y+2, r24	; 0x02
+	uint8_t selected_phase = 0;
+  c0:	10 e0       	ldi	r17, 0x00	; 0
+    while (1) 
+    {
+		_delay_ms(16);
+		if((PINB & 0x02) == 0x02)
+		{
+			msg_w_phase[2] = phase_options[(selected_phase & 0x01)];
+  c2:	0f 2e       	mov	r0, r31
+  c4:	f0 e0       	ldi	r31, 0x00	; 0
+  c6:	cf 2e       	mov	r12, r31
+  c8:	f1 e0       	ldi	r31, 0x01	; 1
+  ca:	df 2e       	mov	r13, r31
+  cc:	f0 2d       	mov	r31, r0
+  ce:	8f ef       	ldi	r24, 0xFF	; 255
+  d0:	9c e7       	ldi	r25, 0x7C	; 124
+  d2:	01 97       	sbiw	r24, 0x01	; 1
+  d4:	f1 f7       	brne	.-4      	; 0xd2 <main+0x66>
+  d6:	00 c0       	rjmp	.+0      	; 0xd8 <main+0x6c>
+  d8:	00 00       	nop
+	uint8_t phase_options[2] = {0x11, 0x91};
+	uint8_t selected_phase = 0;
+    while (1) 
+    {
+		_delay_ms(16);
+		if((PINB & 0x02) == 0x02)
+  da:	19 9b       	sbis	0x03, 1	; 3
+  dc:	f8 cf       	rjmp	.-16     	; 0xce <main+0x62>
+		{
+			msg_w_phase[2] = phase_options[(selected_phase & 0x01)];
+  de:	10 fb       	bst	r17, 0
+  e0:	ee 24       	eor	r14, r14
+  e2:	e0 f8       	bld	r14, 0
+  e4:	f1 2c       	mov	r15, r1
+  e6:	e1 e0       	ldi	r30, 0x01	; 1
+  e8:	f0 e0       	ldi	r31, 0x00	; 0
+  ea:	ec 0f       	add	r30, r28
+  ec:	fd 1f       	adc	r31, r29
+  ee:	ee 0d       	add	r30, r14
+  f0:	ff 1d       	adc	r31, r15
+  f2:	80 81       	ld	r24, Z
+  f4:	f6 01       	movw	r30, r12
+  f6:	82 83       	std	Z+2, r24	; 0x02
+			selected_phase++;
+  f8:	1f 5f       	subi	r17, 0xFF	; 255
+			usiTwiStartTransceiverWithData(msg_w_phase, 3);
+  fa:	63 e0       	ldi	r22, 0x03	; 3
+  fc:	c6 01       	movw	r24, r12
+  fe:	2e d0       	rcall	.+92     	; 0x15c <usiTwiStartTransceiverWithData>
+ 100:	e6 cf       	rjmp	.-52     	; 0xce <main+0x62>
 
-000000b0 <usiTwiMasterTransfer>:
+00000102 <usiTwiMasterTransfer>:
 )
 {
 
   return errorState;  // Return error state.
 
 } // end usiTwiGetStateInfo
-  b0:	80 93 b9 00 	sts	0x00B9, r24	; 0x8000b9 <__EEPROM_REGION_LENGTH__+0x7f00b9>
-  b4:	22 e0       	ldi	r18, 0x02	; 2
-  b6:	e8 eb       	ldi	r30, 0xB8	; 184
-  b8:	f0 e0       	ldi	r31, 0x00	; 0
-  ba:	9b e2       	ldi	r25, 0x2B	; 43
-  bc:	a9 eb       	ldi	r26, 0xB9	; 185
-  be:	b0 e0       	ldi	r27, 0x00	; 0
-  c0:	82 2f       	mov	r24, r18
-  c2:	8a 95       	dec	r24
-  c4:	f1 f7       	brne	.-4      	; 0xc2 <usiTwiMasterTransfer+0x12>
-  c6:	90 83       	st	Z, r25
-  c8:	1a 9b       	sbis	0x03, 2	; 3
-  ca:	fe cf       	rjmp	.-4      	; 0xc8 <usiTwiMasterTransfer+0x18>
-  cc:	82 2f       	mov	r24, r18
-  ce:	8a 95       	dec	r24
-  d0:	f1 f7       	brne	.-4      	; 0xce <usiTwiMasterTransfer+0x1e>
-  d2:	90 83       	st	Z, r25
-  d4:	8c 91       	ld	r24, X
-  d6:	86 ff       	sbrs	r24, 6
-  d8:	f3 cf       	rjmp	.-26     	; 0xc0 <usiTwiMasterTransfer+0x10>
-  da:	82 e0       	ldi	r24, 0x02	; 2
-  dc:	8a 95       	dec	r24
-  de:	f1 f7       	brne	.-4      	; 0xdc <usiTwiMasterTransfer+0x2c>
-  e0:	ea eb       	ldi	r30, 0xBA	; 186
-  e2:	f0 e0       	ldi	r31, 0x00	; 0
-  e4:	80 81       	ld	r24, Z
-  e6:	9f ef       	ldi	r25, 0xFF	; 255
-  e8:	90 83       	st	Z, r25
-  ea:	20 9a       	sbi	0x04, 0	; 4
-  ec:	08 95       	ret
+ 102:	80 93 b9 00 	sts	0x00B9, r24	; 0x8000b9 <__EEPROM_REGION_LENGTH__+0x7f00b9>
+ 106:	22 e0       	ldi	r18, 0x02	; 2
+ 108:	e8 eb       	ldi	r30, 0xB8	; 184
+ 10a:	f0 e0       	ldi	r31, 0x00	; 0
+ 10c:	9b e2       	ldi	r25, 0x2B	; 43
+ 10e:	a9 eb       	ldi	r26, 0xB9	; 185
+ 110:	b0 e0       	ldi	r27, 0x00	; 0
+ 112:	82 2f       	mov	r24, r18
+ 114:	8a 95       	dec	r24
+ 116:	f1 f7       	brne	.-4      	; 0x114 <usiTwiMasterTransfer+0x12>
+ 118:	90 83       	st	Z, r25
+ 11a:	1a 9b       	sbis	0x03, 2	; 3
+ 11c:	fe cf       	rjmp	.-4      	; 0x11a <usiTwiMasterTransfer+0x18>
+ 11e:	82 2f       	mov	r24, r18
+ 120:	8a 95       	dec	r24
+ 122:	f1 f7       	brne	.-4      	; 0x120 <usiTwiMasterTransfer+0x1e>
+ 124:	90 83       	st	Z, r25
+ 126:	8c 91       	ld	r24, X
+ 128:	86 ff       	sbrs	r24, 6
+ 12a:	f3 cf       	rjmp	.-26     	; 0x112 <usiTwiMasterTransfer+0x10>
+ 12c:	82 e0       	ldi	r24, 0x02	; 2
+ 12e:	8a 95       	dec	r24
+ 130:	f1 f7       	brne	.-4      	; 0x12e <usiTwiMasterTransfer+0x2c>
+ 132:	ea eb       	ldi	r30, 0xBA	; 186
+ 134:	f0 e0       	ldi	r31, 0x00	; 0
+ 136:	80 81       	ld	r24, Z
+ 138:	9f ef       	ldi	r25, 0xFF	; 255
+ 13a:	90 83       	st	Z, r25
+ 13c:	20 9a       	sbi	0x04, 0	; 4
+ 13e:	08 95       	ret
 
-000000ee <usiTwiMasterInitialize>:
-  ee:	28 9a       	sbi	0x05, 0	; 5
-  f0:	2a 9a       	sbi	0x05, 2	; 5
-  f2:	22 9a       	sbi	0x04, 2	; 4
-  f4:	20 9a       	sbi	0x04, 0	; 4
-  f6:	8f ef       	ldi	r24, 0xFF	; 255
-  f8:	80 93 ba 00 	sts	0x00BA, r24	; 0x8000ba <__EEPROM_REGION_LENGTH__+0x7f00ba>
-  fc:	8a e2       	ldi	r24, 0x2A	; 42
-  fe:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <__EEPROM_REGION_LENGTH__+0x7f00b8>
- 102:	80 ef       	ldi	r24, 0xF0	; 240
- 104:	80 93 b9 00 	sts	0x00B9, r24	; 0x8000b9 <__EEPROM_REGION_LENGTH__+0x7f00b9>
- 108:	08 95       	ret
+00000140 <usiTwiMasterInitialize>:
+ 140:	28 9a       	sbi	0x05, 0	; 5
+ 142:	2a 9a       	sbi	0x05, 2	; 5
+ 144:	22 9a       	sbi	0x04, 2	; 4
+ 146:	20 9a       	sbi	0x04, 0	; 4
+ 148:	8f ef       	ldi	r24, 0xFF	; 255
+ 14a:	80 93 ba 00 	sts	0x00BA, r24	; 0x8000ba <__EEPROM_REGION_LENGTH__+0x7f00ba>
+ 14e:	8a e2       	ldi	r24, 0x2A	; 42
+ 150:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <__EEPROM_REGION_LENGTH__+0x7f00b8>
+ 154:	80 ef       	ldi	r24, 0xF0	; 240
+ 156:	80 93 b9 00 	sts	0x00B9, r24	; 0x8000b9 <__EEPROM_REGION_LENGTH__+0x7f00b9>
+ 15a:	08 95       	ret
 
-0000010a <usiTwiStartTransceiverWithData>:
+0000015c <usiTwiStartTransceiverWithData>:
 bool
 usiTwiStartTransceiverWithData(
   uint8_t *msg,
   uint8_t msgSize
 )
 {
- 10a:	bf 92       	push	r11
- 10c:	cf 92       	push	r12
- 10e:	df 92       	push	r13
- 110:	ef 92       	push	r14
- 112:	ff 92       	push	r15
- 114:	0f 93       	push	r16
- 116:	1f 93       	push	r17
- 118:	cf 93       	push	r28
- 11a:	df 93       	push	r29
- 11c:	ec 01       	movw	r28, r24
- 11e:	16 2f       	mov	r17, r22
+ 15c:	bf 92       	push	r11
+ 15e:	cf 92       	push	r12
+ 160:	df 92       	push	r13
+ 162:	ef 92       	push	r14
+ 164:	ff 92       	push	r15
+ 166:	0f 93       	push	r16
+ 168:	1f 93       	push	r17
+ 16a:	cf 93       	push	r28
+ 16c:	df 93       	push	r29
+ 16e:	ec 01       	movw	r28, r24
+ 170:	16 2f       	mov	r17, r22
     // Prepare register value to: Clear flags, and
     ( 1 << USISIF ) | ( 1 << USIOIF ) | ( 1 << USIPF ) | ( 1 << USIDC) |
     // set USI to shift 1 bit i.e. count 2 clock edges.
     ( 0xE << USICNT0 );
 
   errorState = 0;
- 120:	10 92 42 01 	sts	0x0142, r1	; 0x800142 <__data_end>
- 124:	98 81       	ld	r25, Y
- 126:	91 70       	andi	r25, 0x01	; 1
- 128:	c9 2e       	mov	r12, r25
+ 172:	10 92 46 01 	sts	0x0146, r1	; 0x800146 <__data_end>
+ 176:	98 81       	ld	r25, Y
+ 178:	91 70       	andi	r25, 0x01	; 1
+ 17a:	c9 2e       	mov	r12, r25
   // The LSB in the address byte determines if is a masterRead or masterWrite
   // operation.
   masterWriteDataMode = ( *msg & ( 1 << TWI_READ_BIT ) ) ? false : true;
 
   // Release SCL to ensure that (repeated) Start can be performed
   PORT_USI |= ( 1 << PIN_USI_SCL );
- 12a:	2a 9a       	sbi	0x05, 2	; 5
+ 17c:	2a 9a       	sbi	0x05, 2	; 5
 
   // Verify that SCL becomes high.
   while ( !( PORT_USI & ( 1 << PIN_USI_SCL ) ) );
- 12c:	2a 9b       	sbis	0x05, 2	; 5
- 12e:	fe cf       	rjmp	.-4      	; 0x12c <usiTwiStartTransceiverWithData+0x22>
+ 17e:	2a 9b       	sbis	0x05, 2	; 5
+ 180:	fe cf       	rjmp	.-4      	; 0x17e <usiTwiStartTransceiverWithData+0x22>
     can be achieved.
 */
 void
 _delay_loop_1(uint8_t __count)
 {
 	__asm__ volatile (
- 130:	92 e0       	ldi	r25, 0x02	; 2
- 132:	89 2f       	mov	r24, r25
- 134:	8a 95       	dec	r24
- 136:	f1 f7       	brne	.-4      	; 0x134 <usiTwiStartTransceiverWithData+0x2a>
+ 182:	92 e0       	ldi	r25, 0x02	; 2
+ 184:	89 2f       	mov	r24, r25
+ 186:	8a 95       	dec	r24
+ 188:	f1 f7       	brne	.-4      	; 0x186 <usiTwiStartTransceiverWithData+0x2a>
   // Delay for T2TWI if TWI_STANDARD_MODE
   _delay_loop_1( T2_TWI );
 #endif
 
 // Generate Start Condition
   PORT_USI &= ~( 1 << PIN_USI_SDA );  // Force SDA LOW.
- 138:	28 98       	cbi	0x05, 0	; 5
- 13a:	89 2f       	mov	r24, r25
- 13c:	8a 95       	dec	r24
- 13e:	f1 f7       	brne	.-4      	; 0x13c <usiTwiStartTransceiverWithData+0x32>
+ 18a:	28 98       	cbi	0x05, 0	; 5
+ 18c:	89 2f       	mov	r24, r25
+ 18e:	8a 95       	dec	r24
+ 190:	f1 f7       	brne	.-4      	; 0x18e <usiTwiStartTransceiverWithData+0x32>
   _delay_loop_1( T4_TWI );
   PORT_USI &= ~( 1 << PIN_USI_SCL );  // Pull SCL LOW.
- 140:	2a 98       	cbi	0x05, 2	; 5
- 142:	9a 95       	dec	r25
- 144:	f1 f7       	brne	.-4      	; 0x142 <usiTwiStartTransceiverWithData+0x38>
+ 192:	2a 98       	cbi	0x05, 2	; 5
+ 194:	9a 95       	dec	r25
+ 196:	f1 f7       	brne	.-4      	; 0x194 <usiTwiStartTransceiverWithData+0x38>
   _delay_loop_1( T4_TWI );
   PORT_USI |= ( 1 << PIN_USI_SDA );   // Release SDA.
- 146:	28 9a       	sbi	0x05, 0	; 5
+ 198:	28 9a       	sbi	0x05, 0	; 5
     // set USI to shift 1 bit i.e. count 2 clock edges.
     ( 0xE << USICNT0 );
 
   errorState = 0;
 
   addressMode = true;
- 148:	01 e0       	ldi	r16, 0x01	; 1
+ 19a:	01 e0       	ldi	r16, 0x01	; 1
 
     if ( addressMode || masterWriteDataMode )
     {
       // Write a byte
       PORT_USI &= ~( 1 << PIN_USI_SCL );          // Pull SCL LOW.
       USIDR = *(msg++);                           // Setup data.
- 14a:	0f 2e       	mov	r0, r31
- 14c:	fa eb       	ldi	r31, 0xBA	; 186
- 14e:	ef 2e       	mov	r14, r31
- 150:	f1 2c       	mov	r15, r1
- 152:	f0 2d       	mov	r31, r0
+ 19c:	0f 2e       	mov	r0, r31
+ 19e:	fa eb       	ldi	r31, 0xBA	; 186
+ 1a0:	ef 2e       	mov	r14, r31
+ 1a2:	f1 2c       	mov	r15, r1
+ 1a4:	f0 2d       	mov	r31, r0
 
       // Prepare to generate ACK (or NACK in case of End Of Transmission)
       if ( msgSize == 1)
       {
         // Transmission of last byte was performed.
         USIDR = 0xFF;                           // Load NACK to confirm End Of
- 154:	bb 24       	eor	r11, r11
- 156:	ba 94       	dec	r11
- 158:	d1 2c       	mov	r13, r1
+ 1a6:	bb 24       	eor	r11, r11
+ 1a8:	ba 94       	dec	r11
+ 1aa:	d1 2c       	mov	r13, r1
   do
   {
 
     // If masterWrite cycle (or inital address tranmission)
 
     if ( addressMode || masterWriteDataMode )
- 15a:	01 11       	cpse	r16, r1
- 15c:	02 c0       	rjmp	.+4      	; 0x162 <usiTwiStartTransceiverWithData+0x58>
- 15e:	c1 10       	cpse	r12, r1
- 160:	14 c0       	rjmp	.+40     	; 0x18a <usiTwiStartTransceiverWithData+0x80>
+ 1ac:	01 11       	cpse	r16, r1
+ 1ae:	02 c0       	rjmp	.+4      	; 0x1b4 <usiTwiStartTransceiverWithData+0x58>
+ 1b0:	c1 10       	cpse	r12, r1
+ 1b2:	14 c0       	rjmp	.+40     	; 0x1dc <usiTwiStartTransceiverWithData+0x80>
     {
       // Write a byte
       PORT_USI &= ~( 1 << PIN_USI_SCL );          // Pull SCL LOW.
- 162:	2a 98       	cbi	0x05, 2	; 5
+ 1b4:	2a 98       	cbi	0x05, 2	; 5
       USIDR = *(msg++);                           // Setup data.
- 164:	88 81       	ld	r24, Y
- 166:	f7 01       	movw	r30, r14
- 168:	80 83       	st	Z, r24
+ 1b6:	88 81       	ld	r24, Y
+ 1b8:	f7 01       	movw	r30, r14
+ 1ba:	80 83       	st	Z, r24
       usiTwiMasterTransfer( tempUSISR_8bit );     // Send 8 bits on bus.
- 16a:	80 ef       	ldi	r24, 0xF0	; 240
- 16c:	a1 df       	rcall	.-190    	; 0xb0 <usiTwiMasterTransfer>
+ 1bc:	80 ef       	ldi	r24, 0xF0	; 240
+ 1be:	a1 df       	rcall	.-190    	; 0x102 <usiTwiMasterTransfer>
       
       // Clock and verify (N)ACK from slave
       DDR_USI &= ~( 1 << PIN_USI_SDA );          // Enable SDA as input.
- 16e:	20 98       	cbi	0x04, 0	; 4
+ 1c0:	20 98       	cbi	0x04, 0	; 4
       if ( usiTwiMasterTransfer( tempUSISR_1bit ) & ( 1 << TWI_NACK_BIT ) )
- 170:	8e ef       	ldi	r24, 0xFE	; 254
- 172:	9e df       	rcall	.-196    	; 0xb0 <usiTwiMasterTransfer>
- 174:	80 ff       	sbrs	r24, 0
- 176:	16 c0       	rjmp	.+44     	; 0x1a4 <usiTwiStartTransceiverWithData+0x9a>
+ 1c2:	8e ef       	ldi	r24, 0xFE	; 254
+ 1c4:	9e df       	rcall	.-196    	; 0x102 <usiTwiMasterTransfer>
+ 1c6:	80 ff       	sbrs	r24, 0
+ 1c8:	16 c0       	rjmp	.+44     	; 0x1f6 <usiTwiStartTransceiverWithData+0x9a>
       {
         errorState = addressMode ?
- 178:	01 11       	cpse	r16, r1
- 17a:	02 c0       	rjmp	.+4      	; 0x180 <usiTwiStartTransceiverWithData+0x76>
- 17c:	85 e0       	ldi	r24, 0x05	; 5
- 17e:	01 c0       	rjmp	.+2      	; 0x182 <usiTwiStartTransceiverWithData+0x78>
- 180:	86 e0       	ldi	r24, 0x06	; 6
- 182:	80 93 42 01 	sts	0x0142, r24	; 0x800142 <__data_end>
+ 1ca:	01 11       	cpse	r16, r1
+ 1cc:	02 c0       	rjmp	.+4      	; 0x1d2 <usiTwiStartTransceiverWithData+0x76>
+ 1ce:	85 e0       	ldi	r24, 0x05	; 5
+ 1d0:	01 c0       	rjmp	.+2      	; 0x1d4 <usiTwiStartTransceiverWithData+0x78>
+ 1d2:	86 e0       	ldi	r24, 0x06	; 6
+ 1d4:	80 93 46 01 	sts	0x0146, r24	; 0x800146 <__data_end>
              USI_TWI_NO_ACK_ON_ADDRESS :
              USI_TWI_NO_ACK_ON_DATA;
         return false;
- 186:	80 e0       	ldi	r24, 0x00	; 0
- 188:	1e c0       	rjmp	.+60     	; 0x1c6 <usiTwiStartTransceiverWithData+0xbc>
+ 1d8:	80 e0       	ldi	r24, 0x00	; 0
+ 1da:	1e c0       	rjmp	.+60     	; 0x218 <usiTwiStartTransceiverWithData+0xbc>
 
     // Else masterRead cycle
     else
     {
       // Read a data byte
       DDR_USI &= ~( 1 << PIN_USI_SDA );          // Enable SDA as input.
- 18a:	20 98       	cbi	0x04, 0	; 4
+ 1dc:	20 98       	cbi	0x04, 0	; 4
       *(msg++) = usiTwiMasterTransfer( tempUSISR_8bit );
- 18c:	80 ef       	ldi	r24, 0xF0	; 240
- 18e:	90 df       	rcall	.-224    	; 0xb0 <usiTwiMasterTransfer>
- 190:	88 83       	st	Y, r24
+ 1de:	80 ef       	ldi	r24, 0xF0	; 240
+ 1e0:	90 df       	rcall	.-224    	; 0x102 <usiTwiMasterTransfer>
+ 1e2:	88 83       	st	Y, r24
 
       // Prepare to generate ACK (or NACK in case of End Of Transmission)
       if ( msgSize == 1)
- 192:	11 30       	cpi	r17, 0x01	; 1
- 194:	19 f4       	brne	.+6      	; 0x19c <usiTwiStartTransceiverWithData+0x92>
+ 1e4:	11 30       	cpi	r17, 0x01	; 1
+ 1e6:	19 f4       	brne	.+6      	; 0x1ee <usiTwiStartTransceiverWithData+0x92>
       {
         // Transmission of last byte was performed.
         USIDR = 0xFF;                           // Load NACK to confirm End Of
- 196:	f7 01       	movw	r30, r14
- 198:	b0 82       	st	Z, r11
- 19a:	02 c0       	rjmp	.+4      	; 0x1a0 <usiTwiStartTransceiverWithData+0x96>
+ 1e8:	f7 01       	movw	r30, r14
+ 1ea:	b0 82       	st	Z, r11
+ 1ec:	02 c0       	rjmp	.+4      	; 0x1f2 <usiTwiStartTransceiverWithData+0x96>
                                                 // Transmission.
       }
       else
       {
         USIDR = 0x00;                          // Load ACK. Set data register
- 19c:	f7 01       	movw	r30, r14
- 19e:	10 82       	st	Z, r1
+ 1ee:	f7 01       	movw	r30, r14
+ 1f0:	10 82       	st	Z, r1
                                                // bit 7 (output for SDA) low.
       }
       // Generate ACK/NACK.
       usiTwiMasterTransfer( tempUSISR_1bit );
- 1a0:	8e ef       	ldi	r24, 0xFE	; 254
- 1a2:	86 df       	rcall	.-244    	; 0xb0 <usiTwiMasterTransfer>
+ 1f2:	8e ef       	ldi	r24, 0xFE	; 254
+ 1f4:	86 df       	rcall	.-244    	; 0x102 <usiTwiMasterTransfer>
     }
 
   }
   while ( --msgSize );                         // Until all data sent/received.
- 1a4:	11 50       	subi	r17, 0x01	; 1
- 1a6:	21 96       	adiw	r28, 0x01	; 1
- 1a8:	0d 2d       	mov	r16, r13
- 1aa:	11 11       	cpse	r17, r1
- 1ac:	d6 cf       	rjmp	.-84     	; 0x15a <usiTwiStartTransceiverWithData+0x50>
+ 1f6:	11 50       	subi	r17, 0x01	; 1
+ 1f8:	21 96       	adiw	r28, 0x01	; 1
+ 1fa:	0d 2d       	mov	r16, r13
+ 1fc:	11 11       	cpse	r17, r1
+ 1fe:	d6 cf       	rjmp	.-84     	; 0x1ac <usiTwiStartTransceiverWithData+0x50>
 usiTwiMasterStop(
   void
 )
 {
 
   PORT_USI &= ~( 1 << PIN_USI_SDA );              // Pull SDA low.
- 1ae:	28 98       	cbi	0x05, 0	; 5
+ 200:	28 98       	cbi	0x05, 0	; 5
   PORT_USI |= ( 1 << PIN_USI_SCL );               // Release SCL.
- 1b0:	2a 9a       	sbi	0x05, 2	; 5
+ 202:	2a 9a       	sbi	0x05, 2	; 5
   while ( !( PIN_USI & ( 1 << PIN_USI_SCL ) ) );  // Wait for SCL to go high.
- 1b2:	1a 9b       	sbis	0x03, 2	; 3
- 1b4:	fe cf       	rjmp	.-4      	; 0x1b2 <usiTwiStartTransceiverWithData+0xa8>
- 1b6:	82 e0       	ldi	r24, 0x02	; 2
- 1b8:	98 2f       	mov	r25, r24
- 1ba:	9a 95       	dec	r25
- 1bc:	f1 f7       	brne	.-4      	; 0x1ba <usiTwiStartTransceiverWithData+0xb0>
+ 204:	1a 9b       	sbis	0x03, 2	; 3
+ 206:	fe cf       	rjmp	.-4      	; 0x204 <usiTwiStartTransceiverWithData+0xa8>
+ 208:	82 e0       	ldi	r24, 0x02	; 2
+ 20a:	98 2f       	mov	r25, r24
+ 20c:	9a 95       	dec	r25
+ 20e:	f1 f7       	brne	.-4      	; 0x20c <usiTwiStartTransceiverWithData+0xb0>
   _delay_loop_1( T4_TWI );
   PORT_USI |= ( 1 << PIN_USI_SDA );               // Release SDA.
- 1be:	28 9a       	sbi	0x05, 0	; 5
- 1c0:	8a 95       	dec	r24
- 1c2:	f1 f7       	brne	.-4      	; 0x1c0 <usiTwiStartTransceiverWithData+0xb6>
+ 210:	28 9a       	sbi	0x05, 0	; 5
+ 212:	8a 95       	dec	r24
+ 214:	f1 f7       	brne	.-4      	; 0x212 <usiTwiStartTransceiverWithData+0xb6>
   while ( --msgSize );                         // Until all data sent/received.
   
   usiTwiMasterStop( );                         // Send a STOP condition on the TWI bus.
 
   /* Transmission successfully completed*/
   return true;
- 1c4:	81 e0       	ldi	r24, 0x01	; 1
+ 216:	81 e0       	ldi	r24, 0x01	; 1
 
 } // end usiTwiStartTransceiverWithData
- 1c6:	df 91       	pop	r29
- 1c8:	cf 91       	pop	r28
- 1ca:	1f 91       	pop	r17
- 1cc:	0f 91       	pop	r16
- 1ce:	ff 90       	pop	r15
- 1d0:	ef 90       	pop	r14
- 1d2:	df 90       	pop	r13
- 1d4:	cf 90       	pop	r12
- 1d6:	bf 90       	pop	r11
- 1d8:	08 95       	ret
+ 218:	df 91       	pop	r29
+ 21a:	cf 91       	pop	r28
+ 21c:	1f 91       	pop	r17
+ 21e:	0f 91       	pop	r16
+ 220:	ff 90       	pop	r15
+ 222:	ef 90       	pop	r14
+ 224:	df 90       	pop	r13
+ 226:	cf 90       	pop	r12
+ 228:	bf 90       	pop	r11
+ 22a:	08 95       	ret
 
-000001da <_exit>:
- 1da:	f8 94       	cli
+0000022c <_exit>:
+ 22c:	f8 94       	cli
 
-000001dc <__stop_program>:
- 1dc:	ff cf       	rjmp	.-2      	; 0x1dc <__stop_program>
+0000022e <__stop_program>:
+ 22e:	ff cf       	rjmp	.-2      	; 0x22e <__stop_program>

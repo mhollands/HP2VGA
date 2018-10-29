@@ -1,44 +1,28 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 22.04.2018 21:51:51
-// Design Name: 
-// Module Name: RX
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
+// Engineer: Matt Hollands
+// Project: HP2VGA
+// Website: projects.matthollands.com
+// Date: 2016-2018
 
 module RX(
-    input wire O_CLK,
-    input wire ENABLE,
-    output wire [7:0] BRAM_DIN,
-    output reg [13:0] BRAM_ADDR,
-    output wire BRAM_WE,
-    input wire O_HS,
-    input wire O_VS,
-    input wire [9:0] VIDEO,
-    output wire PULSE_1HZ, 
-    output wire SYNC,
-    output wire O_VISIBLE,
-    output wire O_SYNC_BAD
+    input wire O_CLK, //main pixel clock
+    input wire ENABLE, // active high
+    output wire [7:0] BRAM_DIN, //data to write to bram
+    output reg [13:0] BRAM_ADDR, //address of bram to write to
+    output wire BRAM_WE, //bram write enable
+    input wire O_HS, //incoming hsync
+    input wire O_VS, //incoming vsync
+    input wire [9:0] VIDEO, //incoming video
+    output wire PULSE_1HZ,  //output pulse at 1hz
+    output wire SYNC, //output to synchronise TX module
+    output wire O_VISIBLE, //are we in the visible region?
+    output wire O_SYNC_BAD //high if the ADC clock sync is bad
     );
     	
+    //keep track of current pixel
     wire [9:0] O_X;
     wire [8:0] O_Y;
-    //wire O_VISIBLE;
       	
+    //cunt signals so we know whre we are in the frame
     O_COUNTER rx_counter(   .O_CLK(O_CLK),
                             .ENABLE(ENABLE),
                             .O_X(O_X),
@@ -49,12 +33,14 @@ module RX(
                             .PULSE_1HZ(PULSE_1HZ),
                             .SYNC(SYNC));
 	
+    //Check for back synchronisation between video data and ADC clock
     RX_SYNC_WATCHDOG sync_wd(   .CLK(O_CLK),
                                 .VISIBLE(O_VISIBLE),
                                 .VIDEO(VIDEO),
                                 .VSYNC(O_VS),
                                 .SYNC_BAD(O_SYNC_BAD));
 
+    //When visible increment address, reset at vsync
     always @(posedge O_CLK) begin
         if(O_VS == 0) begin
            BRAM_ADDR <= 0; 
@@ -66,9 +52,8 @@ module RX(
         end
     end
 
-    //assign BRAM_ADDR = O_X + O_Y * 576;
-    assign BRAM_DIN = VIDEO[9:2];
-    assign BRAM_WE = O_VISIBLE;
+    assign BRAM_DIN = VIDEO[9:2]; //write out the top 8 bits
+    assign BRAM_WE = O_VISIBLE; //write during visible region
 	
 	initial begin
 		//BRAM_ADDR = 0;	

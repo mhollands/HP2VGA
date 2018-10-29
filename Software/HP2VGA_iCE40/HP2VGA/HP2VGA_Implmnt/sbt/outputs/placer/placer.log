@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:12:22
 
-* File Generated:     Oct 7 2018 23:09:54
+* File Generated:     Oct 29 2018 22:24:38
 
 * Purpose:            
 
@@ -72,7 +72,7 @@ I2088: Phase 1, elapsed time : 0.1 (sec)
 
 
 Phase 2
-I2088: Phase 2, elapsed time : 0.2 (sec)
+I2088: Phase 2, elapsed time : 0.1 (sec)
 
 Phase 3
 SDC-Info-1101: Duty cycle not specified for clock. Assuming 50 percent dutycycle.
@@ -102,16 +102,16 @@ Device Utilization Summary after Packing
     PLLs                        :	1/2
 
 
-I2088: Phase 3, elapsed time : 2.1 (sec)
+I2088: Phase 3, elapsed time : 1.2 (sec)
 
 Phase 4
-I2088: Phase 4, elapsed time : 0.8 (sec)
+I2088: Phase 4, elapsed time : 0.5 (sec)
 
 Phase 5
-I2088: Phase 5, elapsed time : 6.1 (sec)
+I2088: Phase 5, elapsed time : 3.2 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 160.5 (sec)
+I2088: Phase 6, elapsed time : 84.3 (sec)
 
 Final Design Statistics
     Number of LUTs      	:	434
@@ -159,5 +159,5 @@ Clock: tx_pll.TX_PLL_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 48.75 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 172.2 sec.
+I2076: Placer run-time: 90.9 sec.
 

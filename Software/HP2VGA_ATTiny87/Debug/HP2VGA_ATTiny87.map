@@ -197,7 +197,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x1de
+.text           0x00000000      0x230
  *(.vectors)
  .vectors       0x00000000       0x28 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny87/avr25/crtattiny87.o
                 0x00000000                __vector_default
@@ -281,21 +281,21 @@ END GROUP
  .text.TVP_RESET
                 0x00000060        0xc main.o
                 0x00000060                TVP_RESET
- .text.main     0x0000006c       0x44 main.o
+ .text.main     0x0000006c       0x96 main.o
                 0x0000006c                main
  .text.usiTwiMasterTransfer
-                0x000000b0       0x3e usiTwiMaster.o
+                0x00000102       0x3e usiTwiMaster.o
  .text.usiTwiMasterInitialize
-                0x000000ee       0x1c usiTwiMaster.o
-                0x000000ee                usiTwiMasterInitialize
+                0x00000140       0x1c usiTwiMaster.o
+                0x00000140                usiTwiMasterInitialize
  .text.usiTwiStartTransceiverWithData
-                0x0000010a       0xd0 usiTwiMaster.o
-                0x0000010a                usiTwiStartTransceiverWithData
-                0x000001da                . = ALIGN (0x2)
+                0x0000015c       0xd0 usiTwiMaster.o
+                0x0000015c                usiTwiStartTransceiverWithData
+                0x0000022c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000001da        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25\libgcc.a(_exit.o)
-                0x000001da                _exit
-                0x000001da                exit
+ .fini9         0x0000022c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25\libgcc.a(_exit.o)
+                0x0000022c                _exit
+                0x0000022c                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -314,40 +314,44 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000001da        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25\libgcc.a(_exit.o)
+ .fini0         0x0000022c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25\libgcc.a(_exit.o)
  *(.fini0)
-                0x000001de                _etext = .
+                0x00000230                _etext = .
 
-.data           0x00800100       0x42 load address 0x000001de
+.data           0x00800100       0x46 load address 0x00000230
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
+ .data.msg_w_phase
+                0x00800100        0x3 main.o
+                0x00800100                msg_w_phase
  .data.reg_setting
-                0x00800100       0x42 main.o
-                0x00800100                reg_setting
+                0x00800103       0x42 main.o
+                0x00800103                reg_setting
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x00800142                . = ALIGN (0x2)
-                0x00800142                _edata = .
-                0x00800142                PROVIDE (__data_end, .)
+                0x00800146                . = ALIGN (0x2)
+ *fill*         0x00800145        0x1 
+                0x00800146                _edata = .
+                0x00800146                PROVIDE (__data_end, .)
 
-.bss            0x00800142        0x1
-                0x00800142                PROVIDE (__bss_start, .)
+.bss            0x00800146        0x1
+                0x00800146                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.errorState
-                0x00800142        0x1 usiTwiMaster.o
+                0x00800146        0x1 usiTwiMaster.o
  *(COMMON)
-                0x00800143                PROVIDE (__bss_end, .)
-                0x000001de                __data_load_start = LOADADDR (.data)
-                0x00000220                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800147                PROVIDE (__bss_end, .)
+                0x00000230                __data_load_start = LOADADDR (.data)
+                0x00000276                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800143        0x0
+.noinit         0x00800147        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800143                _end = .
+                0x00800147                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -423,41 +427,41 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xb08
+.debug_info     0x00000000      0xbae
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5e2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny87/avr25/crtattiny87.o
- .debug_info    0x000005e2      0x253 main.o
- .debug_info    0x00000835      0x2d3 usiTwiMaster.o
+ .debug_info    0x000005e2      0x2f9 main.o
+ .debug_info    0x000008db      0x2d3 usiTwiMaster.o
 
-.debug_abbrev   0x00000000      0x887
+.debug_abbrev   0x00000000      0x8a5
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x591 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny87/avr25/crtattiny87.o
- .debug_abbrev  0x00000591      0x14d main.o
- .debug_abbrev  0x000006de      0x1a9 usiTwiMaster.o
+ .debug_abbrev  0x00000591      0x16b main.o
+ .debug_abbrev  0x000006fc      0x1a9 usiTwiMaster.o
 
-.debug_line     0x00000000      0x5bd
+.debug_line     0x00000000      0x5f3
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x10f C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny87/avr25/crtattiny87.o
- .debug_line    0x0000010f      0x1ad main.o
- .debug_line    0x000002bc      0x301 usiTwiMaster.o
+ .debug_line    0x0000010f      0x1e3 main.o
+ .debug_line    0x000002f2      0x301 usiTwiMaster.o
 
-.debug_frame    0x00000000       0xc8
+.debug_frame    0x00000000       0xd8
  *(.debug_frame)
- .debug_frame   0x00000000       0x44 main.o
- .debug_frame   0x00000044       0x84 usiTwiMaster.o
+ .debug_frame   0x00000000       0x54 main.o
+ .debug_frame   0x00000054       0x84 usiTwiMaster.o
 
-.debug_str      0x00000000      0x4d4
+.debug_str      0x00000000      0x4fd
  *(.debug_str)
  .debug_str     0x00000000      0x217 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.2.118/gcc/dev/attiny87/avr25/crtattiny87.o
- .debug_str     0x00000217      0x204 main.o
-                                0x238 (size before relaxing)
- .debug_str     0x0000041b       0xb9 usiTwiMaster.o
+ .debug_str     0x00000217      0x22d main.o
+                                0x261 (size before relaxing)
+ .debug_str     0x00000444       0xb9 usiTwiMaster.o
                                 0x258 (size before relaxing)
 
-.debug_loc      0x00000000      0x27b
+.debug_loc      0x00000000      0x329
  *(.debug_loc)
- .debug_loc     0x00000000       0x90 main.o
- .debug_loc     0x00000090      0x1eb usiTwiMaster.o
+ .debug_loc     0x00000000      0x13e main.o
+ .debug_loc     0x0000013e      0x1eb usiTwiMaster.o
 
 .debug_macinfo
  *(.debug_macinfo)

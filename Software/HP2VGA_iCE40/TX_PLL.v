@@ -1,3 +1,8 @@
+// Engineer: Matt Hollands
+// Project: HP2VGA
+// Website: projects.matthollands.com
+// Date: 2016-2018
+
 module TX_PLL(REFERENCECLK,
               PLLOUTCORE,
               PLLOUTGLOBAL,

@@ -1,3 +1,9 @@
+// Engineer: Matt Hollands
+// Project: HP2VGA
+// Website: projects.matthollands.com
+// Date: 2016-2018
+
+//From the Lattice memory usage guide
 module RAM (din, write_en, waddr, wclk, raddr, rclk, dout);//512x8
 	parameter addr_width = 14;
 	parameter data_width = 8;

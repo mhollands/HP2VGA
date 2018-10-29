@@ -1,3 +1,8 @@
+// Engineer: Matt Hollands
+// Project: HP2VGA
+// Website: projects.matthollands.com
+// Date: 2016-2018
+
 module main(
 	inout wire [7:0] DEBUG, 
 	input wire TVP_CLK, 
@@ -32,6 +37,7 @@ module main(
 	wire O_VISIBLE;
 	wire O_SYNC_BAD;
 
+	//Buffer the HSYNC input
 	wire TVP_HSYNC_buff;
 	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(1)) tvp_hs_buffer(.CLK(TVP_CLK), .WIRE_IN(TVP_HSYNC), .WIRE_OUT(TVP_HSYNC_buff));
 
@@ -39,12 +45,13 @@ module main(
 	wire TVP_VSYNC_buff;
 	INPUT_BUFFER #(.BUFF_LENGTH(3), .DATA_WIDTH(1)) tvp_vs_buffer(.CLK(TVP_CLK), .WIRE_IN(TVP_VSYNC), .WIRE_OUT(TVP_VSYNC_buff));
 
+	//Buffer TVP_VIDEO
 	wire [9:0] TVP_VIDEO_buff;
 	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(10)) tvp_video_buffer(.CLK(TVP_CLK), .WIRE_IN(TVP_VIDEO), .WIRE_OUT(TVP_VIDEO_buff));
 
 	RX receive_module(
-			.O_CLK(TVP_CLK),
-		    .ENABLE(1'b1),
+			.O_CLK(TVP_CLK), //Main Clock
+		    .ENABLE(1'b1), // Enable Active high
 		    .BRAM_ADDR(RX_ADDR),
 		    .BRAM_DIN(RX_DATA),
 		    .BRAM_WE(RX_WE),
@@ -77,8 +84,10 @@ module main(
 			    .VGA_SYNC_EN(SYNC_ENABLE),
 			    .VGA_VISIBLE(VGA_VISIBLE));
 
+	// Buffer RX_TX_SYNC which crosses clock domains
 	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(1)) sync_buffer(.CLK(TX_CLK), .WIRE_IN(RX_TX_SYNC), .WIRE_OUT(RX_TX_SYNC_BUFF));
 
+	// Buffer debug input
 	INPUT_BUFFER #(.BUFF_LENGTH(2), .DATA_WIDTH(1)) sync_en_input_buffer(.CLK(TX_CLK), .WIRE_IN(1'b1), .WIRE_OUT(SYNC_ENABLE));
 
 	assign ADV_R = R_T;

@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Oct 7 2018 23:13:00
+* File Generated:     Oct 29 2018 22:26:17
 
 * Purpose:            General info of design implementation
 
@@ -173,4 +173,4 @@ Maximum number of input pins per logic tile: 26
 Average number of input pins per logic tile: 6.80
 
 ***** Run Time Info *****
-Run Time:  3
+Run Time:  2

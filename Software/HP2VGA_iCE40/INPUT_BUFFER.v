@@ -1,4 +1,9 @@
+// Engineer: Matt Hollands
+// Project: HP2VGA
+// Website: projects.matthollands.com
+// Date: 2016-2018
 
+//Buffer the given signal for a given number of clock periods
 module INPUT_BUFFER #(parameter BUFF_LENGTH = 2, parameter DATA_WIDTH = 1)
 					(input wire CLK,
 					input wire [DATA_WIDTH-1:0] WIRE_IN,
@@ -12,7 +17,6 @@ module INPUT_BUFFER #(parameter BUFF_LENGTH = 2, parameter DATA_WIDTH = 1)
    			BUFFER[i] <= BUFFER[i-1];
   		end
 
-		//BUFFER <= {BUFFER[BUFF_LENGTH - 2:0], WIRE_IN};
 		BUFFER[0] <= WIRE_IN;
 		WIRE_OUT <= BUFFER[BUFF_LENGTH-1];
 	end

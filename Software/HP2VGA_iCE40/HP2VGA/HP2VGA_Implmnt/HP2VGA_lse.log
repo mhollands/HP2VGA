@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Oct 07 23:09:39 2018
+Mon Oct 29 22:24:29 2018
 
 
 Command Line:  C:\lscc\iCEcube2.2017.08\LSE\bin\nt\synthesis.exe -f HP2VGA_lse.prj 
@@ -105,33 +105,33 @@ WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/
 WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
 WARNING - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
 Top module name (Verilog): main
-INFO - synthesis: ../main.v(1): compiling module main. VERI-1018
-INFO - synthesis: ../tx_pll.v(1): compiling module TX_PLL. VERI-1018
+INFO - synthesis: ../main.v(6): compiling module main. VERI-1018
+INFO - synthesis: ../tx_pll.v(6): compiling module TX_PLL. VERI-1018
 INFO - synthesis: C:/lscc/iCEcube2.2017.08/LSE/userware/NT/SYNTHESIS_HEADERS/sb_ice40.v(699): compiling module SB_PLL40_CORE(FDA_FEEDBACK=4'b0,FDA_RELATIVE=4'b0,DIVF=7'b0100110,DIVQ=3'b100,FILTER_RANGE=3'b010). VERI-1018
-WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on this instance. VDB-1013
-INFO - synthesis: ../input_buffer.v(2): compiling module INPUT_BUFFER. VERI-1018
-INFO - synthesis: ../input_buffer.v(2): compiling module INPUT_BUFFER(BUFF_LENGTH=3). VERI-1018
-INFO - synthesis: ../input_buffer.v(2): compiling module INPUT_BUFFER(DATA_WIDTH=10). VERI-1018
-INFO - synthesis: ../rx.v(23): compiling module RX. VERI-1018
-INFO - synthesis: ../o_counter.v(23): compiling module O_COUNTER. VERI-1018
-WARNING - synthesis: ../o_counter.v(82): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: ../o_counter.v(83): expression size 32 truncated to fit in target size 9. VERI-1209
-INFO - synthesis: ../rx_sync_watchdog.v(1): compiling module RX_SYNC_WATCHDOG. VERI-1018
-WARNING - synthesis: ../rx.v(64): expression size 32 truncated to fit in target size 14. VERI-1209
-INFO - synthesis: ../tx.v(23): compiling module TX. VERI-1018
-INFO - synthesis: ../vga_control.v(26): compiling module VGA_CONTROL. VERI-1018
-WARNING - synthesis: ../vga_control.v(59): expression size 32 truncated to fit in target size 12. VERI-1209
-WARNING - synthesis: ../vga_control.v(60): expression size 32 truncated to fit in target size 12. VERI-1209
+WARNING - synthesis: ../tx_pll.v(31): input port EXTFEEDBACK is not connected on this instance. VDB-1013
+INFO - synthesis: ../input_buffer.v(7): compiling module INPUT_BUFFER. VERI-1018
+INFO - synthesis: ../input_buffer.v(7): compiling module INPUT_BUFFER(BUFF_LENGTH=3). VERI-1018
+INFO - synthesis: ../input_buffer.v(7): compiling module INPUT_BUFFER(DATA_WIDTH=10). VERI-1018
+INFO - synthesis: ../rx.v(6): compiling module RX. VERI-1018
+INFO - synthesis: ../o_counter.v(6): compiling module O_COUNTER. VERI-1018
+WARNING - synthesis: ../o_counter.v(65): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: ../o_counter.v(66): expression size 32 truncated to fit in target size 9. VERI-1209
+INFO - synthesis: ../rx_sync_watchdog.v(6): compiling module RX_SYNC_WATCHDOG. VERI-1018
+WARNING - synthesis: ../rx.v(50): expression size 32 truncated to fit in target size 14. VERI-1209
+INFO - synthesis: ../tx.v(6): compiling module TX. VERI-1018
+INFO - synthesis: ../vga_control.v(10): compiling module VGA_CONTROL. VERI-1018
+WARNING - synthesis: ../vga_control.v(41): expression size 32 truncated to fit in target size 12. VERI-1209
+WARNING - synthesis: ../vga_control.v(42): expression size 32 truncated to fit in target size 12. VERI-1209
 Removed duplicate sequential element VGA_G(8 bit), because it is equivalent to VGA_R
 
 Removed duplicate sequential element VGA_B(8 bit), because it is equivalent to VGA_R
 
-INFO - synthesis: ../ram.v(1): compiling module RAM. VERI-1018
-WARNING - synthesis: ../main.v(106): expression size 9 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: ../ram.v(7): compiling module RAM. VERI-1018
+WARNING - synthesis: ../main.v(115): expression size 9 truncated to fit in target size 8. VERI-1209
 Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
 Top-level module name = main.
-WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on this instance. VDB-1013
+WARNING - synthesis: ../tx_pll.v(31): input port EXTFEEDBACK is not connected on this instance. VDB-1013
 ######## Converting I/O port DEBUG[7] to output.
 ######## Converting I/O port DEBUG[6] to output.
 ######## Converting I/O port DEBUG[5] to output.
@@ -141,7 +141,7 @@ WARNING - synthesis: ../tx_pll.v(26): input port EXTFEEDBACK is not connected on
 ######## Converting I/O port DEBUG[0] to output.
 WARNING - synthesis: Bit 1 of Register \sync_en_input_buffer/BUFFER[0] is stuck at One
 WARNING - synthesis: Bit 0 of Register \sync_en_input_buffer/BUFFER[0] is stuck at One
-WARNING - synthesis: ../input_buffer.v(18): Register \sync_en_input_buffer/WIRE_OUT[0]_9 is stuck at One. VDB-5014
+WARNING - synthesis: ../input_buffer.v(22): Register \sync_en_input_buffer/WIRE_OUT[0]_9 is stuck at One. VDB-5014
 
 
 
@@ -149,7 +149,7 @@ WARNING - synthesis: ../input_buffer.v(18): Register \sync_en_input_buffer/WIRE_
 ######## Mapping RTL RAM \line_buffer/mem to 32 EBR blocks in PSEUDO_DUAL_PORT Mode
 
 ######## Converting I/O port DEBUG[3] to output.
-WARNING - synthesis: ../vga_control.v(98): Register \transmit_module/video_signal_controller/SYNC_EN_SMOOTH_70 is stuck at One. VDB-5014
+WARNING - synthesis: ../vga_control.v(86): Register \transmit_module/video_signal_controller/SYNC_EN_SMOOTH_70 is stuck at One. VDB-5014
 Duplicate register/latch removal. \transmit_module/BRAM_ADDR__rep_1_i0 is a one-to-one match with \transmit_module/BRAM_ADDR__i11.
 Duplicate register/latch removal. \transmit_module/BRAM_ADDR__i13 is a one-to-one match with \transmit_module/BRAM_ADDR__rep_1_i2.
 Duplicate register/latch removal. \transmit_module/BRAM_ADDR__i12 is a one-to-one match with \transmit_module/BRAM_ADDR__rep_1_i1.
@@ -231,8 +231,8 @@ clk0 [get_nets DEBUG_c_3_c]             |   50.000 MHz|   41.703 MHz|    15 *
 1 constraints not met.
 
 
-Peak Memory Usage: 38.348  MB
+Peak Memory Usage: 38.359  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 5.328  secs
+Elapsed CPU time for LSE flow : 2.516  secs
 --------------------------------------------------------------
